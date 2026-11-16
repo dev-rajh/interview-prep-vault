@@ -66,6 +66,7 @@ LABEL = re.compile(r"^(?:the\s+)?(?:challenge|task|question|scenario|problem|goa
 # narrative sentences that trail or break a question ("The twist? I had to...", "Why interviewers ask this…")
 META_SENTENCE = re.compile(
     r"^(?:the\s+twist|why\s+(?:this|interviewers|they|do|is)|what\s+this\s+(?:tests|question)|"
+    r"what\s+[\w\s]{2,40}?\s+(?:really\s+|actually\s+)?(?:tests?|asks?|looks?|expects?|checks?)\b|\S+\s+hidden filter|"
     r"key\s+takeaway|takeaway|note\b|p\.?s\.?\b|credits|reality|lesson|most candidates|"
     r"interviewers\s+(?:are|love|use|ask)|this\s+(?:question|is|one)|reality check|bonus\b|also\b|"
     r"follow\s+(?:me|up\b)|follow-up\b|the\s+reason|in\s+my\s+(?:case|interview)|what\s+i\s+(?:did|learned))",
@@ -145,7 +146,7 @@ def split_questions(text: str) -> list:
         if NOISE.search(line) or META.match(line) or SQLCODE.match(line):
             cur = None
             continue
-        if META_SENTENCE.match(line):
+        if META_SENTENCE.match(MARKER.sub("", line).strip()):
             if cur:
                 out.append(cur)
             cur = None
@@ -246,7 +247,18 @@ def dedupe(items: list) -> list:
 
 
 FIELD_RULES = [
-    ("Behavioral", r"tell me about|why do you want|describe a (time|situation|challenging)|how do you (handle|prioriti|manage|communicate)|stakeholder|conflict|deadline|take ownership|production failure you|mistake you"),
+    # Behavioral = people/process questions. "How do you handle X" is only behavioral when X is
+    # human-context (conflicts, stakeholders, deadlines) — technical handles (nulls, skew, late data) stay technical.
+    ("Behavioral", r"tell me about (a|your|the)\b|why do you want\b|why (?:this company|do you want to join)|"
+                   r"describe a (?:time|situation|challenging|project)\b|"
+                   r"(?:handle|resolve|manage|deal with|navigate)\s+(?:a\s+|an\s+|the\s+|your\s+)?"
+                   r"(?:conflicts?|misalignment|stakeholders?|deadline|pressure|disagreement|cross[- ]|"
+                   r"changing priorities|conflicting|workload|dependent (?:teams|scripts)|team)\b|"
+                   r"prioriti[sz]e[^.?!]*deadline|communicate[^.?!]*stakeholders?|"
+                   r"conflicts? between|cross-functional|tight deadline|under pressure|"
+                   r"salary (?:expectation|discussion|negotiation)|notice period|mistake you (?:made|have)|"
+                   r"took ownership|ownership of|why (?:should we hire|do you want to join)|hr (?:round|interview)|"
+                   r"work (?:location|under)|delivery (?:timelines|under)|business stakeholders"),
     ("System Design", r"system design|design a|design an|architecture|medallion|bronze|scalable|fault.tolerant|end.to.end|lakehouse|multi.tenant|real.time pipeline|data platform"),
     ("DSA", r"\bdsa\b|linked list|binary search|sliding window|two.pointer|lru|anagram|palindrome|heap|time complexit|\bo\(.+\)|merge k sorted|cycle in"),
     ("PySpark", r"pyspark|dataframe|rdd|withcolumn|explode|spark session|spark udf|catalyst|spark (job|ui|shuffle)"),
