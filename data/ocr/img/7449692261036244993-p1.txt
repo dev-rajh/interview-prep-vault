@@ -1,0 +1,16 @@
+Snowflake
+Interview Cheatsheet
+
+Complete Visual Guide for Data Engineers
+
+Vishal Kaushal
+
+@CloudLearning’ ard
+
+Architecture « Caching = Virtual Warehouse
+Tables + Views + Streams + Tasks + Stages
+Ale Formats © Zero-Copy Gone + Time Travel
+
+Dynamic Masking » Roles = Performance Optimization
+
+youtube.coml@CloudLearnéng¥ ard

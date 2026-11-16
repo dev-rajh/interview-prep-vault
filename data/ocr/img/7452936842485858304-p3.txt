@@ -1,0 +1,11 @@
+SELECT *,
+DENSE_RANKD) OVER (PARTITION OY user_id ORDER BY traraction_amowe DESC)
+AS tan_rank
+PROM trassactions
+) Parked tone
+WHERE ten_rank © 2;
+
+Find hours where mo eveets occurred, assuring cominuous hourly logs are expected,
+
+2024-06-01 03:00)
+2024-06-01 04:00:00)

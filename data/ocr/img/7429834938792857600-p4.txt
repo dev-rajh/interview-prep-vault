@@ -1,0 +1,27 @@
+TOOL TIP
+
+ata cleaning (also called data deansing) ts the process of finding and dealing with problematic data
+points within a data set Date cleaning can involve {ising of removing incomplete data, cross checking
+data against o validated date set, standardizing consistent data, and more, Data sciertets usually
+spend S03 to BO of their time cleaning clita before they car start analyzing ft,
+
+In this ebook, we describe simple, yet crucial, techniques to help yau clean your data
+effectively. In case you wish to apply this leaning in the future, we have incorporated
+a number of examples and exercises to give you hands-on learning, AB you need &
+Microsoft Excel (versions 2007 of above). Don’t worry if you are unfarniliar with Excel
+— each chapter will teach you everything you need to knerey
+
+The examples and exercses will use a sample data set for sales transactions of a
+durneny e-commerce partal, XY Zshopping.com. You can download the sarnple cata sel
+here, The Excel spreadsheat has tea sheets — Sales Data and Demographic Data, We
+recommend that you use this data set for getting hands-on learning on the topics as you
+come across How-to’ exercises during your reading. The solutions to these exercises
+have been included at the end of the book.
+
+There are eight chapters in this ebook, each cowering a distinct aspect of data cleaning
+— defining data structure using rows, columns, and unique identifiers; basic sanity
+checks; defining question types; identifying and dealing with missing values and
+outliers; conditional questions; and a case study highlighting the importance of data
+cleaning fram one of our actual deployments,
+
+Excited? Great, let's get started!

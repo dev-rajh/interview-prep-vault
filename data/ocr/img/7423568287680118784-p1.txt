@@ -1,0 +1,42 @@
+accenture c;J
+
+Data Engineer Interview Questions
+Round-1
+Experience: 2-5 Year
+
+1. Tell me about yourself and your current project
+
+Amswer
+
+I'm a Data Engineer with around 5—4 years of experience. Ie my cenrent propect, | work on
+building end-to-eed data pipelines ming Azure Dada Factory, Dusabricks, and Azare [hata
+Lake
+
+My role involves ingesting data from multiple sources Whe detabases and APIs. transfonning
+it ing PySpark, aed shorieg i in curated layers following medaliion architeeture | also
+focus on performance runing, handling fiilures. and sepporting analytics teams.
+
+Whal Accenture checks:
+Clarity, architecture uidertaadtg, and heen concep
+
+2. Explain your end-to-cad data pipeline
+
+Amaw er:
+
+We ingest data frome source sypsterns wing ADF pipelines
+
+Raw chets lands ie Brome layer in ATMS
+
+Demabricks procewers this data wing PySpark oo clean, deduplicate, aed apply business rales,
+then merves it to Silver and Caldd
+
+Finally, the curated dats es ward by Power Bil or downstream applications
+
+Tip
+Alweys explan esing layers + tools, mon theory
+
+3. What is Azure Data Factory and why did you ase it?
+
+Aaseer
+ADF is an onchesirtion tool. | used itso schedule pipelines, manage dependencies. und
+

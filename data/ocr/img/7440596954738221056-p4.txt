@@ -1,0 +1,17 @@
+4. EXCLUDE <COL>
+
+This not standard in SQL but is a feature found in
+some SQL dialects, such as BigQuery.
+
+It allows you to easily select all columns from a table
+except one or more specified columns.
+
+This improves readability and reduces repetitive code.
+
+SELECT coli, col2, col3, col5 -- manually
+excluding col4
+FROM table;
+
+SELECT * EXCLUDE col4
+FROM table;
+

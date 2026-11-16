@@ -1,0 +1,9 @@
+RIGHT APPROACH WRONG APPROACH
+
+Use Proper JOIN Keys Using Functions on Indexed Columns
+SELECT o.order_id, c.customer_name SELECT *
+FROM orders o FROM orders
+JOIN Customers ¢ WHERE YEAR(order_date) = 2025;
+On o.customer_id = c.customer_id;
+RESULT — RESULT —
+Faster execution | Elficier processing Slow emecution | High resource usage

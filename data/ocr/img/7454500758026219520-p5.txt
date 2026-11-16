@@ -1,0 +1,15 @@
+5) Combine datasets
+
+When to use:
+* Combine buyer and seller records
+* Append same-schema tables
+
+« Stack archived vs current
+
+Merge buyers and sellers into one user list
+
+SELECT user_id FROM buyers
+UNION ALL
+SELECT user_id FROM sellers;
+
+Tip: Use “UNION ALL* if you don't need duplicate removal

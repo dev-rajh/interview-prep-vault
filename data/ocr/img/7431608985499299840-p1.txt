@@ -1,0 +1,14 @@
+Question #6: Top N Records Per Group
+The Question:
+
+"Find the top 3 highest-paid employees in each
+department."
+
+What they're testing:
+Do you understand partitioning and ranking?
+
+Most people get this wrong |
+
+This is where window functions shine.
+
+Swipe for the answer

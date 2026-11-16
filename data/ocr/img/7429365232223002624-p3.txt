@@ -1,0 +1,25 @@
+LARGEST DEPARTMENT
+
+Find the department with the most employee:
+
+ees |
+| dept_id emp_id dept_id
+
+104 A 101
+| 182 8 |
+| 102 t |
+
+Order by count dese Limit 4
+SELECT dept_id
+
+FROM employees
+
+GROUP BY dept_id
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+Next: Missing Ids +
+
+ANANDUARAYANAN S
+y
+

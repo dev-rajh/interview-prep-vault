@@ -1,0 +1,21 @@
+| Probiem 4/20 ) (mera)
+Fraud Check
+
+Find customers who purchased more than once in the same day.
+
+DATE cUusT_ID DATE
+2024-01-01 Las | 2624-01-01
+
+2624-81-82
+
+SELECT customer_id, purchase_date
+FROM sales
+
+GROUP BY customer_id, purchase_date
+HAVING COUNT(*) > 1;
+
+Neat: Seperting
+
+Anandnarayanan S
+The 20-Pattern SOL Cheat Sheet
+

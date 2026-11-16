@@ -1,0 +1,16 @@
+3) Conditional counts (funnels)
+
+When to use:
+* Count based on status or stage
+« Compare Completed vs Cancelled
+
+« Build funnel breakdowns
+
+Get number of Completed and Cancelled orders
+
+SELECT
+SUM(CASE WHEN status = 'Completed’ THEN 1 ELSE 0 END) AS completec_orders,
+SUM/[CASE WHEN status = 'Cancelled’ THEN 1 ELSE 0 END) AS cancelled_orders
+FROM orders;
+
+Tip: Conditional “SUM is more flexible than “COUNT|IF{...))"

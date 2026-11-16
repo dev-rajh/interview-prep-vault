@@ -1,0 +1,37 @@
+These 7 SQL Patterns Will
+Solve 80% of Your Interview
+Questions
+
+Day 3 The Aggregation Pattern
+
+What is the Join Master Pattern?
+
+Combines multiple tables using INNER, LEFT, RIGHT, FULL, SELF, and CROSS
+JOINS to relate data across entities. Solves 70% of real-world SQ¢ queries in
+data roles.
+
+Real examples:
+e Users + Orders = User spending behavior
+« Departments + Employees © Department headcount
+
+« Customers + Transactions = Customer lifetime value
+
+Why Joins Matter in Interviews
+Tests if you can:
+
+* Identity entity relationships
+
+* Handle NULLS correctly
+
+* Predict row courts
+
+« Use lable ahases properly
+
+* Choose correct join type
+Mastery unlocks 70% of SOL interview problems.
+
+1. INNER JOIN (Intersection)
+Core idea: “Only matching records from both tables”
+
+Returns; Only rows where match exists in BOTH tables
+Row count: « smaller table

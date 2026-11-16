@@ -1,0 +1,106 @@
+No Sales
+
+Find employees who have never made a sale.
+
+\ YSOL / SQL StevER
+
+SELECT e.id, e.name
+
+FROM employees e
+
+LEFT JOIN sales s ON e.id = s.emp_id
+WHERE s.sale_id IS NULL;
+
+Next: Oote Rath
+
+Anandnarayanan S fm save |
+The 20-Pattern SOL Cheat Sheet
+
+
+Avg Tenure
+
+Calculate average years of service per department.
+
+MIRED
+2020-01-61
+
+2022-81-81
+
+(_MYSoL / Sgt Stnren
+
+SELECT dept_id,
+AVG(TIMESTAMPDIFF(YEAR, hire_date, CURDATE()))
+AS avg_tenure
+
+FROM employees
+
+GROUP BY dept_id:
+
+Wout: STILE Sindee
+
+Anandnarayanan S fm save |
+The 20-Pattern SOL Cheat Sheet
+
+
+3) (ncnosorr >)
+Top Earners
+
+Get employees in the top 10% salary bracket of their dept.
+
+SELECT * FROM (
+SELECT *, NTILE(10) OVER(
+PARTITION BY dept_id ORDER BY salary DESC
+) as decile
+FROM employees
+) sub
+WHERE decile = 1;
+
+Next: Freed Detection
+
+Anandnarayanan S fm save |
+The 20-Pattern SQL Cheat Sheet
+
+
+| Probiem 4/20 ) (mera)
+Fraud Check
+
+Find customers who purchased more than once in the same day.
+
+DATE cUusT_ID DATE
+2024-01-01 Las | 2624-01-01
+
+2624-81-82
+
+SELECT customer_id, purchase_date
+FROM sales
+
+GROUP BY customer_id, purchase_date
+HAVING COUNT(*) > 1;
+
+Neat: Seperting
+
+Anandnarayanan S
+The 20-Pattern SOL Cheat Sheet
+
+
+(eerux)
+Dept Counts
+
+List all departments and their employee counts (including zero).
+
+SOLUTION
+
+(_MYSoL / Sgt Stnren
+
+SELECT d.dept_name, COUNT(e.id)
+
+FROM departments d
+
+LEFT JOIN employees e ON d.id = e.dept_id
+GROUP BY d.dept_name;
+
+Heat: Gate Quality
+
+Anandnarayanan S
+The 20-Pattern SOL Cheat Sheet
+

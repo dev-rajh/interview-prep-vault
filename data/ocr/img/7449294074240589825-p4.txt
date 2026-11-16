@@ -1,0 +1,21 @@
+Gin Swipe —
+
+Running Totals
+
+Calculate a cumulative sum over time.
+
+SELECT
+date,
+daily_revenue,
+
+SUM(daily_revenue) OVER (
+ORDER BY date
+) AS running_total
+FROM revenue;
+
+The window function Shows up in
+No GROUP BY does the finance and
+needed accumulation row by growth
+
+row questions
+

@@ -1,0 +1,36 @@
+b. Find the toca Mighett ialary ay a Catal rare uileg Pyiparte.
+Semaric: Vou Save a Cyt Frame of ernmtopee saleries and marty find Ihe second Mines salary
+thom pyopark tq) port Window
+
+hom pypipart sel functions eepert col, dere_rak
+
+window4pec = Window crceriigjcod “salary” | deucl |)
+@i_weth_rack = cfwiteColurnn| rank”, ceene_rank|| cverjwinceewSpec||
+second_highew salary © dt with rank Sherjool[* rank”) ee 2)setert| salary")
+
+second _tighew_salary. show!)
+2. Coun the sunnber of ft voters in cart Colne of a PySeark Datatrame.
+Stenarice Geen a DaraFrane, deetity tow maty fad valeds Gach cokens contents.
+
+fron Syspark sgl lanelions impor col, inet, wen, COM
+
+ff saber jocartiiwteee|rinaeric) | cole) haul [| cf] abaifec| for cin dl coder [) owt)
+
+1. Catcabrte the moving seerage Creer a window ot ] rows
+
+Seeman: For a crock price caraiet cokubne a merang zeerage ower Me act I day.
+form ey ypark.col import Window
+
+trom pytpark sql fonctions impart avg
+
+window4ipas = Wiedow.crthorty[ "dete )rcerifictwom|.2. th
+d@i_with_mereng_avg = dl withColene|mereng_ovg’,. gg” pric reer [erirckri pec}
+
+with _mererg_avg-thowt)
+
+4. Rencwe duplicate rome based on a subset of colrere in a PySpark CutaFrame.
+Seemaricc You seed to remove duptcates from a DataFrome bated on certale coher,
+dle @.dropustomesy colveend”, “ookend™]}
+
+di stow!)
+

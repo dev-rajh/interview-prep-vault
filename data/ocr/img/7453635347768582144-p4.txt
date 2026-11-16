@@ -1,0 +1,19 @@
+4) Matches or misses (anti-join)
+
+When to use:
+* Find users with no orders
+« Spot unmatched records
+
+* Common audit/debug pattern
+
+Get users who don't have any matching orders
+
+SELECT u*
+FROM users u
+WHERE NOT EXISTS [
+
+SELECT]
+FROM orders o
+WHERE o.user_id = u.user_id
+;
+

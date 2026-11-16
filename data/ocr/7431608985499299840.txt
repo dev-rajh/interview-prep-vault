@@ -1,0 +1,52 @@
+Question #6: Top N Records Per Group
+The Question:
+
+"Find the top 3 highest-paid employees in each
+department."
+
+What they're testing:
+Do you understand partitioning and ranking?
+
+Most people get this wrong |
+
+This is where window functions shine.
+
+Swipe for the answer
+
+The Solution:
+WITH ranked_employees AS (
+SELECT
+department,
+employee_name,
+ROW_NUMBER() OVER
+(PARTITION BY department
+ORDER BY salary DESC) as rank
+FROM employees
+)
+SELECT
+department,
+employee_name,
+
+salary
+FROM ranked_employees
+WHERE rank <= 3;
+
+Key phrase: "PARTITION BY resets the ranking for each group”
+Follow-up they'll ask: "What if you want bottom 32"
+Your answer: Change ORDER BY salary DESC to ASC
+
+Question #7: Find Gaps in Sequential Data
+
+The
+
+"Find missing order [Ds in a sequence"
+
+What they're testing:
+
+Can you identify missing records?
+
+Most people get this wrong |
+
+Useful for finding failed transactions or system errors.
+
+Swipe for the answer >

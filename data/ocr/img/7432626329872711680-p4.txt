@@ -1,0 +1,36 @@
+SQL Data Types
+
+© Qata Types define the type of data that can be stored in a table column.
+© Mensures data integrity and optienizes storage.
+
+Commanly used Data Types are-
+A. Mring Datatypes: It stores text strings.
+
+1. CHAR.
+© Can stare characters of fixed length.
+© The site paraeneter specifies the coluenn length in characters can
+be from O16 255,
+
+2. WARCHAR-
+* Can store characters up to given length.
+« The size parameter specifies the maximum column langth in
+characters can be fram 0 to 65535.
+
+B. Numeric Datatypes: These datatypes store numbers, bath integer and
+floating paint number.
+
+1. INT-
+* Used far storing whale numbers without decimal,
+
+2, FLOAT-
+© Used for storing numbers without decenal.
+® Float gives approximate value while performing calculations.
+
+3. Decimal (P, 5)-
+
+© Used to store numbers with a fixed number of decimal places,
+® Gecimal gives exact value.
+
+* Total range of digits can be 1-38, [Precision-P)
+
+© Range after decal should be 0-30. (Scale-$)

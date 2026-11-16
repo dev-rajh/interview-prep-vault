@@ -1,0 +1,22 @@
+Standardizing Data Formats
+
+Inconsistent data formats, especially with text, can cause
+issues when performing comparisons or analysis.
+
+Solution: Use UPPER(), LOWER{), and TRIM() to standardize
+text formats.
+
+Code Example:
+
+LOWER(first_name) standardized_name
+
+customers;
+
+Explanation:
+
+e LOWER/) converts text to lowercase, ensuring
+consistent formatting.
+
+e This is especially useful when performing
+case-sensitive comparisons, avoiding mismatches
+due to inconsistent capitalization.

@@ -1,0 +1,52 @@
+11. What is a CTE (Common Table Expression), and how is it
+used?
+
+Definition:
+
+A CTE (Common Table Expression) 5 a temporary, named result set that you can
+reference within a SQG query.
+
+It improves readability and simplifies complex subqueries or recursive logic.
+
+Syntax:
+
+WITH che_narne AS [
+_ SELECT ..
+
+}
+SELECT * PROM cte_name;
+
+Example — Filter top-paid employees using CTE:
+
+WITH HighEarers AS {
+
+SELECT emp_id, name, salary
+
+FROM employers
+
+WHERE salary > 100000
+}
+SELECT * FROM HighEamers;
+Benefits:
+
++ Reusable and readable
+
+" Allows recursion (@.9., Hierarchical data)
+* Avoids repeating subqueries
+
+12. Write a query to identify customers who have made
+transactions above $5,000 multiple times.
+Agsuené transactions table has
+customer_id, (ransaction_annount
+SELECT customer_id, COUNT(*) AS high_walue_tons:
+PROM transactions
+WHERE transaction_amourt > 5000
+GROUP BY customer id
+HAVING COUNT(*} > 1;
+Explanation:
+« Filters high-value transactions (> $5000).
+* Groups them by customer.
++ Retunns customers who've dane this more than once.
+
+13. Explain the difference between DELETE and TRUNCATE
+commands.

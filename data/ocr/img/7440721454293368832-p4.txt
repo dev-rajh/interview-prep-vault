@@ -1,0 +1,58 @@
+8. Explain the difference between UNION and UNION ALL.
+Feature UNION UNION ALL
+
+Cuplicates Removes duplicates Keeps all rows, including duplicates
+Performance Slower (because of sorting) Faster (no de-dupkcation)
+
+Use case = When you want distinct rows When duplicates are meaningful
+
+Example:
+
+SELECT oty FROM customers
+
+UNDON
+
+SELECT city FROM vendars;
+
+— Rebus a unique bst of cities.
+
+SELECT city FROM customers
+
+UNION ALL
+
+SELECT city PROM vendars;
+
+— Returns all cities, induding duplicates.
+
+9. How do you use a CASE statement in SQL? Provide an
+example.
+
+CASE lets you write conditional logic in SQL (similar to IF/ ELSE),
+SELECT name, salary,
+CASE
+WHEN salary >= LO0000 THEN High’
+WHEN salary >= S0000 THEN Medium’
+ELSE ‘Low’
+END AS solary_category
+FROM empkryees:
+Explanation:
++ Assigns a cabegory based on salary value.
+* Warks inside SELECT, WHERE, ORDER BY, etc.
+
+10. Write a query to calculate the cumulative sum of sales.
+Assuene table sales has:
+
+order_date, product_k, sales_amount
+
+SBLECT order_date, product_id, sales_amourtt,
+
+SUM(sales_amount} OVER (PARTITION 8Y product_id ORDER BY order_cabe) AS
+cumulative_sales
+FROM sales;
+
+i
+
+» SUM(...) OVER (...) calculates 2 running total per product based on order date.
+
+" PARTITION 8Y groups by product, and ORDER BY ensures the acounulation follows
+cChromaliogical order.

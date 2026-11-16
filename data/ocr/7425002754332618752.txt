@@ -1,0 +1,187 @@
+b
+ss Topic
+JADE Pipelines
+
+1 What they asked me
+
+Explain how you dewige o data pipeline fer daily lecretecetal lagesdon from On-Prem
+SL to ADLS
+
+What I said
+I described a wep iecremcital Now
+
+et watermark from contol tahle via Lookup actnaty
+ADP Capy Acttity with quer:
+SelLecyT * FROM Crderea
+S. WHERE Mooifiedete Sivacteblas( "Last LosdWatersark'| |
+Write to AIMLS @ Panqeet tonne (Brome)
+Preces udng PySpark in Detbncks — Clean. dedupe, join — Silver Zone.
+Update @atermark ater successtnl mun
+
+‘Tips
+
+TechM lowes “ETL — Delta — Parquet —~ Waterrerk” words
+MMcatiim Brena — Silver — Gold fones fir premium impression
+
+2 What they asked me
+
+foie PySperk job is show. Wil steps do pou take to oplimmre a?
+
+
+What I wid
+J explimed 5 optimization tactics
+Check Spark U1 for diufiled sages
+Broadcast small lookup:
+» af = big. jain ibroadcast (lookupi, "id")
+Repartitien by key to avoed sheer
+
+Cache frequently reused DeteFrames.
+Use Parquet Delta for better bO
+
+‘Tips
+
+They Wael Speck perfiriemce inmights.
+Sebeaticn whale", “partitions”, “tata skew"
+
+3 What they asked me
+
+Witte SOL to fetch Ord highest salary wehou! wing LIMIT of TOP
+
+WHERE salary > «.salery
+le
+
+Tips
+
+De NOT we LIMIT) TOP — they’ se sesing ranlong logic.
+Micatios aliemate soletioe: DENSE RANK).
+
+4 What they asked me
+
+How do you handle schema drift while mgestng JSON files @ ADLS?
+
+What I said
+
+Beabled awte schema inference in PySperk
+
+Use! Delta with mergeSchema=T rue
+
+df. write. format ("delta") option (“sergeidciers",
+"Erie" | .eodec"append”) , save ipethi
+
+Added a schema validation layer to log memeiches.
+
+
+Tips
+
+Schemm drift baadimg is a favorite TechM question.
+Use the terms:
+
+f/f ahem evolution
+
+7 merge eho
+¥ validation
+
+5 What they asked me
+Whee & the difference between managed and external tables m [stabricks?
+What I said
+
+© Masaged table: Detebncks memages beth schema + dma; deleting whte delenes dita
+s External table: Only menedata in metesnore, dota eves in extemal loownen (eager)
+
+Tips
+Sage “In production. we prefer extersal tables to avced socidental deletion.”
+
+6 What they asked me
+
+How do pou handle duplicates 1 PySperk?
+
+What | said
+
+Case i: Exact duplicates
+
+df - df .dgoptuplioanest)
+Case 2; Keep latest record
+
+fram pyepark.agl.window lapore Window
+
+"rn", com _rusberi| ovectel) ofilteri*ca = L*!
+
+Use wlndew Bamctlons for peal pipelmes — they love thet
+
+7 What they asked me
+
+
+How do you perform SCD Type? mn Delta Lake
+
+Mention “hash compansom + merge” — real enterprise logic.
+
+8 What they asked me
+
+Wher ane che acheartages of Parquet over CSV
+
+What I iid
+
+Colummar
+
+Compocsed
+
+Foster scanning
+
+Supports predicate pishdown
+Good for amalynoal werkloods
+
+Tips
+Use the keyword: predicate pushdewn fir bons points
+
+9 What they asked me
+
+Your ADF pipeline sucecedts, but date is misting in target. What do you check?
+
+What | sak
+
+Volhdate (ber conelitivms.
+
+Check mapping nade Copy Activity
+
+Validate Join conditions im Dieta Flow | PySpark
+Compre source vs target counts m control whte
+
+
+They tet your woubleshootme style — keep it strectured
+
+10 What they asked me
+
+Explain Partitioning in Speck and bow ine comes
+Wheat | aiid
+
+Pactmomng distributes cha scros: multiple files:
+Good for:
+« Filrenng
+
+© Paalkian
+« Fister reads
+
+Tips
+Prefer partition columns vith bow cardinality
+
+11 What they asked me
+
+How do pou load epe files fester m ADF?
+
+What | said
+taeble parallel copy
+Use binary copy for large blobs
+
+Split file mito waltiple partitions
+Load as Parquet instead of CSV
+
+Tips
+
+TechM loves ooet-periomiance Mg ALSWwers.
+
+12 What they asked me
+
+Wher & the difference between Inner join aed [eft anti poln”
+
+What I suid
+

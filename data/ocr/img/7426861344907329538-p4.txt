@@ -1,0 +1,41 @@
+QU) What are Stages in Snowflake and what types exist?
+Answer:
+
+A Stage is a named cloud storage location from which dala can be loaded into Snosflake or
+unbaded from Snowflake. Types (1) Intemal Stages — storage manmaged by Smowfiake. Subtypes:
+User Stage [each user has one by default, referenced os @)~), Table Stage (one per table,
+referenced aa @itablanamna), Narnad inarnal Stage jaapicity created, stared Bry wees) (2)
+Extemal Stages — point to extemal doud storage (53, GCS, Azure Blob) outside Snowflake.
+
+Named and require cloud credentials or AM eoles. Best practos: Lise named stages for production
+Pipelines for charity and mousateity, Exterral stages are preferred whan Gala originates torn aateerval
+aySheMns and you want to avoid Wansfaring data ino Sncwilake's tamed storage fest.
+
+O12 Explain the COPY INTO command and ita key optices.
+
+Arawer;
+COPY INTO is Snowfake’s primary bulk dom loading command. Syntax COPY INTO <table>
+FROM «stage FILE FORMAT =(_.) [opto]. Key options (1) FILE_FORMAT — specifies format
+(CSV. JSON, Parquet, ORC, Aveo, XML) with optors like FIELD | DELIMITER, SHIP_HEADER,
+DATE_FORMAT, COMPRESSION (27) ON ERROR — controts error handling: CONTINUE (skp
+bad rows), SKIP_FILE {stop file on error), ABORT_STATEMENT (deloull, rollback on any error). (3)
+PURGE = TRUE — removes flv from atege afer maccHevhal ined (4) FORCE = TRUE — reloads
+files van i they ward previously loaded (bypasses logd history’ (5) PATTERN — loads only fas
+matching 2 reges pattem. $5) VALIDATION_MODE — vabdates without loading
+(RETURN_ERRORS or RETURN _»_ROWS) Secedate trcks which dies have been baded and
+avoit dupliies unieas FORCE = TRUE
+
+OD Wheat  Seowpipe and how does it work?
+Answer:
+
+Snowpice 6 Snovwlake’s continuous. serweress data ingeston service for near-real-time loading.
+Unbke COPY INTO (batch-based Snosppe automatcally ingests fies as soon os fhey amve no
+Sioud slorage Incalion, How ® works: lan dad tg attr (2). An event notification
+(84 809, GCS Pub/Eub, Azure Event Grid) triggers Smowpipe. (3) Snowpige queues fe fle and
+uses 2 Snowlake-managed (serveriess) compute pool fo run a COPY INTO statement defined in
+the pipe (4) Dots appears in She teeget inble within seconds tn minutes, Sooepips is telied based
+on compule used per file Ibacked [per-aecord telling) Ifa ideal for areaming scenarios fhe oT dala,
+cicksinaams, or log ingestion where waiting for a bath window is not acceptable.
+
+O14. What tt Zaro-Copy Cloning in Snowflake?
+Answer;

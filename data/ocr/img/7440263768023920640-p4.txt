@@ -1,0 +1,45 @@
+17, Find All Employees with Salary Reteeen BOOGD ane 100000 [Microsctt!
+
+SELECT *
+FROM Employee
+WHERE salary BETHEEM Siten AND beeen;
+
+11. Get Monthly Sates Rewenue anc Order Caunt |Gocgiie|
+
+SELECT TO_CHAR{arder_date, ‘YeVY-M8") AS month,
+Som(total_aseuit) 6S total_reverue,
+
+COUNT (arder_id) &5 order_coust
+
+FROM Orders
+
+GROUP OY TO_CMAA(order_ date, “VYT¥-8H");
+
+19, Frank Em@loyees by Salary Withia Each Department (Amazon)
+
+SELECT employee_id, department_id, salary,
+MAME) OVER (PARTITION BY departeent_id O8DER GY salary DESC) AS salery_rk
+FROM Employes;
+
+20, Fied Customecs Who Placed Orders Peery March in 2022 (Meta)
+
+SELECT customer_id
+
+FROM Orders
+
+WIERE EXTRACT(VEAR FROM order date) = 2025
+
+GROUP OF cemtomer_id
+
+HAWING COUNT(DISTINCT TO_CHAA(order date, “YYFY-M')} © 12;
+
+71. Find Moving Average of Gales Over the Last 3 Days (Minreseft)
+
+SELECT arder_date,
+AWG(total amoust) OVER ¢
+ORDER BY order_date
+Fils BETWEEN 2 PRECKOING AAD CURSENT GOW
+,
+FROM Orders;
+
+Page 4 of >

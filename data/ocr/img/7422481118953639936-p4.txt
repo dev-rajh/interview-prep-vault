@@ -1,0 +1,24 @@
+DSA Question
+
+6. Solve the Group Anagrams problem:
+
++ Input: ["eat’, “tea”, "tan", “ate”, "nat", "bat"]
+
+* Output: [["bat"], ["tan’,"nat’], ["eat","tea’,"ate")]
+
+* Approach: Use a dictionary with sorted strings as
+
+keys to group anagrams.
+
+PySpark
+
+7. Write a PySpark script to union two datasets with
+different schemas.
+
+* Handle different row counts, column names, and
+schema mismatches.
+
+* Approach: Use column alignment and
+unionByName(allowMissingColumns=True).
+
+Ankita Gulati Shubh Goyal

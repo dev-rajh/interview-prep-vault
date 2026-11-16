@@ -1,0 +1,11 @@
+LINKEDIN a
+
+—_
+
+> Aggregates + NULL
+
+COUNT(column) ignores NULL
+
+COUNT(*) doesn’t
+
+Q AYUSH KUMAR

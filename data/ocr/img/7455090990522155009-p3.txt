@@ -1,0 +1,19 @@
+co
+
+RECURSIVE SOLUTION
+
+WITH RECURSIVE number_sequence AS (
+
+SELECT MIN(id) AS num FROM your table
+UNION ALL
+
+SELECT num * 1 FROM number_sequence
+
+)
+
+SELECT ns.num AS Missing_Values
+
+FROM number_sec ce ns
+
+LLOW FOR MORE SQL PATTERNS
+

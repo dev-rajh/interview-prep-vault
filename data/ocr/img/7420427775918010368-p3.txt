@@ -1,0 +1,59 @@
+Whar caimes Spark perfomance maues?
+‘LD Best practices tor perlownasce sein?
+
+Day 9 - Incremental Load & SCD
+
+fh Wher & an increrresttal eed?
+
+2 Dileence betes All and increta! need?
+3 When & Sioety Chargieg Dirension (SCD)?
+
+40 ‘Wher & SCD Type 17
+
+§ ‘Wher & SCD Type 27
+
+& Ditwence betwee SOD Type 1 and Tepe 27
+7 Wher cokenns are used in SCD Type 27
+
+& How cin you implement SCD Type 2 using Deka?
+G Wher & a cumogete bey?
+
+2D How do you hence deletes in SCD?
+
+Day 10 - Window Functions
+
+Lo Well are nando fonction in Spek?
+
+2 (Olkesence: betes vorebow butcten anal group by?
+3 Wiest & pertibory in ebtcien?
+
+4 Wiha & ortkerty in wiedoe?
+
+S ‘Weal & eow_nuriberi)7
+
+6G (Oilkesence betwee nach ated cerree_tek?
+
+7 Wheat are bag ceed ed furcticets?
+
+& Hoe are edie fenciorrs uend for deupbcaten?
+Q Wheil & sowaBetweun?
+
+10 Parkernatce consaberaborn of were funcioss?
+
+Day 11 - Spark SQL Optimization
+
+2 Wher & Tungsten ceccution engine?
+
+4 ‘Wher & predicae pustoiwe?
+
+§ ‘Whe 6 column prusing?
+
+G ‘Wher & paniion pring?
+
+7 Whe eacvetie?
+
+B Wher & 4 Groeddoam join?
+
+G Wher 6 Adaptive Query Eosouten (QE)?
+
+1D How do OPTIMIZE ang ZOADER help Spark SOL?

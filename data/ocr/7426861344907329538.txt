@@ -1,0 +1,222 @@
+€ SNOWFLAKE
+
+Mock Interview: Questions & Answers
+
+Data Engiieering. Analytics & Adminstration
+Cowors. Come Coscepts | Pofornanoe | Security | Archtectro | Foal-Woed Soorice
+
+01. What ls Snowflake and how does it differ from traditional data warehouses?
+
+Arawer:
+Srowllake is a cloud-netes data pation bell on & unique malb-chster shared cats architecture,
+Unbke tractiional dat warehouses (2.9, Crack, Teradata) hal Sgnly couple compute and storage
+on feed hardware, Snowlake completoly soparaies storage from compute. Storage sits in cloud
+object storage (59, Azure Blob, G65) and compute 6 handled by ‘virtual Warehouses thal can
+scale independently, This means you can acike storage witioul Buying more cormpute, and vice
+versa. Traditional marchouses require capacty planning upfront, while Snowflake scales elastically.
+Snowflake also offers automatic query optieization, bull-in compression. zero-copy cloning, and
+true mult-cloud support.
+
+G2: Explain the three layors of Seowfiake's archiecturc.
+
+Auawer:
+Snowflakes architecture hea fren distinct! layers. (1) Storage Layer — Dale is stored in a
+compressed, columnar format in cloud object storage (SASCSizure Blob). Snowlake manages al
+aspects of storage including compression, metadata. and statistics, Dinta is stored in micro-
+partibors (typically 50-500 ME compressed) (2) Compute Layer (Query Procaesing) — Virtual
+Wiaeoinouses ara independant MPP [massively parallel processing) clusters thal execute queries.
+They access dota from storage Sut do not store data themectwes Multiple sarshouses can run
+
+simulsneousty on the same cain without contenbon, Ch) Clad Sereoes Layer — The brain of
+
+Snewfilake. Handles suiheicaton, medala management query Oplitizabon, query parsing,
+transaction management, and infaatuctuies management. hvala eprint a
+is always running.
+
+‘G2. What are micro-partitions in Smowllake? How do they help with query performance?
+
+Arcawer:
+Micro-partiions are he furdamental storage urel in Snowtais, Ab dete in Seorefiaie tatsbecs
+auiomatioally divided iio micro-partitions, which are contiguous units of storage ranging from 60
+MB to 500 M8. of uncompressed data (much smaller when comperssed). Each miceo-parttion
+stores dats in colummar format and contains metadata sbout the rows & holds — inducing the
+minnac values, full counts, and distinc! value counts for each coluen. This metadata anabhes
+Partition Pruning (also called Micro-Partiion Pruning): during query exaoution, the query optimizer
+reads the metadata and stips entre mcro-parttions that cannot contzen esfevani data based on the
+WHERE causes, This drarrestically reduces 91D and speeds up queries, sepecielly on large table
+With selective fillers.
+
+© What is Clustering im Snowfiske and when should you use it?
+answer
+
+(Clustering ofers to how data is co4ocated wthin mcro-partifions. By datault, Snowflake dustors
+dats based on nserton onder, Wher inttes grow very large and queries frequently filter on speciic
+calurins, the defied chistarings mary ceaull in queries scanning many micro-partlions, Exolici
+Clustering Keys can be defined so that Snowflake auiomatoaly re-chusters data, grouping rows
+wih similar values together in the same micro-partitions. Ths improves pruning effectiveness. You
+should use custenng when: (a) 2 isdle is very lange (hundreds of GH o> TB), (b} query filers
+frequently target specific colutins, (c| tie table is frequanty queried Bul not bequanty updated.
+Clustering Mas a cost (Aunomatic Clustering service credits), so f should not be appbed to small or
+frequently loaded tables.
+
+‘OS. What is the ditterenoe between a Virtual Warchouse and a Cloud Servioes layer?
+
+Arawer:
+4 Vielual Warehouse (WH) i & comput cater thal executes SOL queries. it i uaer-provisiored,
+can be slared/suspended¥asized on demand, and con@umes Smowsfake credits based on runtime.
+Virwal Warehouses handle DML, DOL, and cate Inading operations. The Gioud Services Layer, on
+the other hand, is always cunning and is tally managed by Snowflake. Il handing metadata
+Managarant, query compilation and optimization, authentication and authorization, fansacton
+coordination, and infrastructure management. Cloud Services does not execute query data
+processing — that is the warehouse's job. Cloud Servoes charges apply only if they exceed 10% of
+daly warehouse compute credits: ohenwise they are induced at no esdra change
+
+‘Of What Is the Result Cache and how oan it improwe performance?
+Answer:
+
+Snowilake mainiains a Resull Cache (also called Query Fiesull Cache) in the Cloud Saréoes Layer.
+When a query is executed, Snowfake stores the result for 24 hours. H the esact same query is
+executed again — by any user on the same scoount — ond the underteng data has not changed,
+Snewilake retums the cached maul Patenthy withoul apinning up a Virtual Warehouse, This means
+20r0 COMpUTS credit usage for repeated identical queries. The cache is invalidated whan: (aj tha
+
+table data changes, (b) 24 hours have passed, [c| fhe query uses mon-detenmiedstic
+functions like CURRENT _TIMESTAME)) or RANDOM). Bees! practos: deegn dashboards and fl
+nok io ube parameterized Queries Lo Lake advantage of reall caching
+
+O° What ie the diHeconce between T-shirt sires for Virtual Warehooses (XS, 5, iM, L, etc J?
+answer:
+
+Srowllske Viral Warehouses scale in sine using T-shiri sng 5, $, MLL, XL, 2XL, SOL. 4x,
+S2L and 6L. Each size doubles tha compute rsources and credit consumption of the pravious:
+XS = 1 cradbhouwr, S=2,M=4,.L=8, XL = 06, 241 = 32, and so on. Larger warnhouses have
+more nodes in the MPP cluster. enabling them to handis mone data in parallel and run complen
+
+most workoads. Scale up for complex analyaics or large data loads, then scale back down or
+suspend fhe mmeshouse when adie,
+
+‘Of How does Mulli-Cluster Warehouse help with concurrency?
+Answer:
+
+A Muli-Cluster Warehouse (MCW) allows a single virtual wardhouse to automatically scale out by
+adding additional warehouse clusters when demand increases, and scale back in when kad
+decreases. This is especially useful for concurrent user workloads where many users run queries
+aimullaneously — & Common scene in Bireporting took, Without MCW, queries queue up if te
+warahouse bb busy. With MCW: Snowdiake monitors the query queue and automatically provisions
+additional dusters (up to the configured maximum) Scaling polices can be set to Economy
+(conserves credits, waits before adding clusters) or Standard limmeciotely adds clusters when
+queuing occurs) MCW is availabiy on Erterprise edition and above. It aches Be concurrency
+problam withoul requiting users to anually manage multige warehouses
+
+‘O) What query optimization techniques can you use im Snowtlake?
+
+Arawer;
+Key optimization techniques include (1) Leverage Micro-Partiton Pruning — appty selective
+WHERE fitters on coluinma with good candieahly io teduoe scared paritiona, (2) Une Chaatering
+Keys on lange, frequently fhared tables. (3) Awokd SELECT * — select only the columns you need
+(colummar storage makes this highly efector). (4) Use LIMIT ond appropriate thers to reduce result
+sets. (5) Ansiyze QUERY PRROPILE — Snowliske's query profiling tool shows execution plans,
+operator coats, and api-io-cisk wamings. (6) Avoid expensive operations lke crow joie and large
+Cartesian products. (7) Use CTEs and proper join order — place the most selective flier first. {8}
+Consider Search Optienization Senice for point lookups on large tables. (9) Use appropriate
+warehouse sine for the workload,
+
+‘O10 What s Query Spilling and how do you resolve it?
+Angwer:
+
+Spilling occurs whan & Virtual Warehouse runs oul of in-memory space during quary aeecuton and
+must write intermediate data to local disk (spill to local disk) or, worse, fo remote storage (spill to
+remote disk) Soil to local disk causes modeente slowdowns spill to remote disk causes severe
+Performance degradaton. Spilling is vieibie in the Query Profile as orange of fad operators.
+Riesohtion strategies: (1) Scala up the Virtual Warehouse to a larger sine — more mammary per
+nods reduces sping. (2) Optmine the query — reduce intermediate result sizes via better dering,
+pushing peecicates cartier. or odting unecessary aggregations (-}) Gresk complex queries into
+amaliar stapes using CTEs of lamporary tables. (4) Check for data shaw — skewed dala causes
+some nodes to process much more data than afters.
+
+QU) What are Stages in Snowflake and what types exist?
+Answer:
+
+A Stage is a named cloud storage location from which dala can be loaded into Snosflake or
+unbaded from Snowflake. Types (1) Intemal Stages — storage manmaged by Smowfiake. Subtypes:
+User Stage [each user has one by default, referenced os @)~), Table Stage (one per table,
+referenced aa @itablanamna), Narnad inarnal Stage jaapicity created, stared Bry wees) (2)
+Extemal Stages — point to extemal doud storage (53, GCS, Azure Blob) outside Snowflake.
+
+Named and require cloud credentials or AM eoles. Best practos: Lise named stages for production
+Pipelines for charity and mousateity, Exterral stages are preferred whan Gala originates torn aateerval
+aySheMns and you want to avoid Wansfaring data ino Sncwilake's tamed storage fest.
+
+O12 Explain the COPY INTO command and ita key optices.
+
+Arawer;
+COPY INTO is Snowfake’s primary bulk dom loading command. Syntax COPY INTO <table>
+FROM «stage FILE FORMAT =(_.) [opto]. Key options (1) FILE_FORMAT — specifies format
+(CSV. JSON, Parquet, ORC, Aveo, XML) with optors like FIELD | DELIMITER, SHIP_HEADER,
+DATE_FORMAT, COMPRESSION (27) ON ERROR — controts error handling: CONTINUE (skp
+bad rows), SKIP_FILE {stop file on error), ABORT_STATEMENT (deloull, rollback on any error). (3)
+PURGE = TRUE — removes flv from atege afer maccHevhal ined (4) FORCE = TRUE — reloads
+files van i they ward previously loaded (bypasses logd history’ (5) PATTERN — loads only fas
+matching 2 reges pattem. $5) VALIDATION_MODE — vabdates without loading
+(RETURN_ERRORS or RETURN _»_ROWS) Secedate trcks which dies have been baded and
+avoit dupliies unieas FORCE = TRUE
+
+OD Wheat  Seowpipe and how does it work?
+Answer:
+
+Snowpice 6 Snovwlake’s continuous. serweress data ingeston service for near-real-time loading.
+Unbke COPY INTO (batch-based Snosppe automatcally ingests fies as soon os fhey amve no
+Sioud slorage Incalion, How ® works: lan dad tg attr (2). An event notification
+(84 809, GCS Pub/Eub, Azure Event Grid) triggers Smowpipe. (3) Snowpige queues fe fle and
+uses 2 Snowlake-managed (serveriess) compute pool fo run a COPY INTO statement defined in
+the pipe (4) Dots appears in She teeget inble within seconds tn minutes, Sooepips is telied based
+on compule used per file Ibacked [per-aecord telling) Ifa ideal for areaming scenarios fhe oT dala,
+cicksinaams, or log ingestion where waiting for a bath window is not acceptable.
+
+O14. What tt Zaro-Copy Cloning in Snowflake?
+Answer;
+
+Zer-Copy Cloning = 2 Seowtiske feature hal creates an retant copy of a csighase. echems, or
+tabla without duplicating the undarlying data. When you rin CREATE TABLE my clone CLONE
+original_table, Snowflake creates a new metadata entry pointing to the same micro-paritions as fhe
+ongins!, No date is physicaly coped, so tis instantaneous and free ino extra storage cost]
+Storage costs only acoue when Gala in the clone dhwnges from the orignal — new or modified
+mitto-pariiions ara crealed far changed data (oopry-on-mrita samantics) Zaro-Copy Cloning is
+extremely useful for: (a) creating dewtest environments from production data instandy, (b) ornating
+backups belore a destructive operation, [c) A/S testing diate transiormation logic. (o) data science
+experiments without impacting promuction.
+
+O12 Exphin Snowfiake’s Released Acoess Control (RBAC) model.
+Anawar:
+
+Snowflake uses a hiorarchical Role-Gased Access Control (RAC) modal. Key concepts: (1) Roka
+— Named collectons of prv@ieges. Bullen roles: MOCOUNTADIMIN (highest), SYSADMIN,
+SECURITYADMIN, USERADMIN, PUBLIC, (2) Privileges — permissions granted In roles (e.g.
+SELECT. INSERT, USAGE, CREATE TASLE) (3) Uners — axsigned one of more roles, A user's
+active role dotennines what they can do. (4) Role hierarchy — roles can be gramed to other roles,
+creating a trerarchy. 4 parent role inherits af povileges of chekd roles. Best peactoe: Follow principle
+of leaet priviege, Comate funcdonal roles (6.9, arehyet_roke, loader_role) and grant them to users
+father than grating piviegas direchy. Use SYSADMIN for object managarant, SECURITY ADMIN
+for rokvusar managemant, and ACOOUNTADMIN only when absolutely necessary.
+
+O16 What b Dynaeic Data Masking in Seowflake?
+
+Arawer:
+Gyrerms Dats Masiong (ODM) is 9 colundewe! secunty festure that masks sensitive date a! query
+fifte hated on the role of the user executing Ihe query, A making policy a SOL hunction that
+defines how data should be displayed to different roles. When a masking policy is atlached to a
+column, ful-priviege users see the octual cata while lower-prieiege users see masked data (e.g...
+‘XAX-MX-1234" inetoad of T2EAS-BT RY, Po ciel perder acer adi clea
+masking only happans during quary execution Thi is ideal for complying mith regulators Ghee
+GDPR, HIPGA, and PCI-DSS. You can cenate policies to show partial data (last 4 digits), hasin
+values, or entirety replace sensfve wolues based on role.
+
+O17. What 6 Row-Level Seourity in Snowflake and how is & implemented?
+
+Asawa:
+Fiew-Lewel Security (RLS) in Srovdiake is implemented rough Fire Acces Polices A row acces
+poloy Is a scheme-ievel object that defines a boolean oxpression determining which rows are
+visible to which weers.or eofes. The policy is attached fo a table and evaluated at query time. For
+
+exampls, a sales table might have o pobry thal onhe rete rows where eegian =
+CURRENT ROLE:), ensuring sales ropa in the Wast region only see West data. Flow Access

@@ -1,0 +1,15 @@
+5. Transpose rows into columns
+using CASE
+
+¢ SELECT
+
+* user_id,
+
+* MAX(CASE WHEN month = ‘Jan' THEN spend
+END) AS Jan,
+
+* MAX(CASE WHEN month = 'Feb' THEN spend
+END) AS Feb
+
+* FROM user_spend
+* GROUP BY user_id;

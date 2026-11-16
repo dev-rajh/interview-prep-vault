@@ -1,0 +1,45 @@
+(@ The Strong Answer (Stands Out)
+
+“A, Guster is the compute infastructure - a group of VMs running Spark. & has a
+dnver node [coordinates work) and worker nodes (esecute tasks). Clusters can be
+interactve (for development) or job dusters (spin wp for one yob. terminate alter}. A
+job is a schedvied execution of notebooks or soupts - it defines WHAT runs, WHEN it
+puns. and on WHAT chater, Jobe can create their oan job Gusiers (more moleted,
+Ccil-eHicent) or wie écaing interactive cheaters,”
+
+Key concapts to mention:
+» Orwer node ws worker nodes
+> Interactve dusters vs job clusters
+-  dobe deine: what when, whech duster
+-  Aeboereling for vere workloads
+- Coal implicatons of duster chains
+
+Y What Interviewers Are Testing
+
+Do you understand Databricks infrastructure basics? Shoes you can work in a production
+ervironment.
+
+(®@ Question 5: How do you read a CSV file and write it as a Delta
+table?
+
+A The Weak Answer (Pass, but not impressive}
+“spark read.cev] path’) write sormartf deity ) save path ye
+
+Why this is weak; Minima! code wifhtoul mentoring important optore,
+
+(i The Strong Answer (Stands Out)
+
+"Td wee spark eoad option (header, ‘true’ option(inlerSchama’,
+
+‘hue’ |.cev['source_paiy’) fo read wih headers and aulomatic type inference. For
+production, fd detine the scheme eaptcfy instead of infemng - it's faster and catches
+dats issues earthy Then write with
+
+merits foerreat| Gea’) mocdeC overwrite’) seventies Tadhet ry table’), Using saveAs Tate
+regiilers fin the mertioee ao others can dnd it, I'd alka Consider partigandly for lange
+tables thet are commonly filtered by a cohumn like date”
+
+Key concepts to mention:
+- Nesder and schema inference options
+
+Cetelegieeerwki

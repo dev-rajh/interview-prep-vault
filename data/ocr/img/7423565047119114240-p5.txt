@@ -1,0 +1,40 @@
+2. Sink dataset jArure SQL / Synapse SADLS)
+* Parameters mirror source (pSchama, pTabla, oDb, pL5) of for lake targets: pComnaine,
+oFoider, oFileNanmne.
+
+C} Pipstine outline
+
+Parameters (at pipeling bevel): mone required, but you can add runlevel filters (eg.,
+pOrlySchens, pOntyTabte)
+
+Activities
+
+1. Lookup (name: GaoCantige
+Query acteye rows
+
+2. SELECT * FROM et TableCopyContg WHERE Isfctive = 1
+Set First row only © false.
+4. Forach ower Gactivity|"GeiConfig}canputvolue Sat batchCount ja.g., 5-10) 1a comerol
+porallolisn
+* Inaide ForEach:
+olf Ram|}.LoadType == Full’
+© Optional Stared Procedures / Serigt ectivity (nama: PreFull| ta run
+inervy).PreCopyScript or a ganarabed
+© TRUNCATE TASLE [ochema]jtable} om the sink. Copy Data activity
+(name: Copy Fut)
+© Source: tale or SELECT * FROM [SourceScherma] (SourceT able]
+© Sink: aink tlablaMtile; enable Auto maging when achenas are idantecal.
+
+* Turing: paralietCopies, sgiWriterUseTabteLock = tre, bulk
+inseet/batching settings.
+
+2 Else (Incremental)
+Sat Vareite jor directly in source query) to build predicate:
+
+* ®oonom|SELECT * FROM |', Remi) SourceSchema, ‘11°,
+iten).SourceTable, '] °. WHERE *, tami.vatermarkColumn, * > *,
+case bhumerio|nem|)LastWatermark ali),
+iten().LastWatennarkValue, concer”,
+item). LastWotenmorkValue, '"")} 1
+
+® Copy Dats activity name: Copyincr] with above Source query.

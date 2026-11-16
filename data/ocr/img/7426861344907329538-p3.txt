@@ -1,0 +1,46 @@
+Srowllske Viral Warehouses scale in sine using T-shiri sng 5, $, MLL, XL, 2XL, SOL. 4x,
+S2L and 6L. Each size doubles tha compute rsources and credit consumption of the pravious:
+XS = 1 cradbhouwr, S=2,M=4,.L=8, XL = 06, 241 = 32, and so on. Larger warnhouses have
+more nodes in the MPP cluster. enabling them to handis mone data in parallel and run complen
+
+most workoads. Scale up for complex analyaics or large data loads, then scale back down or
+suspend fhe mmeshouse when adie,
+
+‘Of How does Mulli-Cluster Warehouse help with concurrency?
+Answer:
+
+A Muli-Cluster Warehouse (MCW) allows a single virtual wardhouse to automatically scale out by
+adding additional warehouse clusters when demand increases, and scale back in when kad
+decreases. This is especially useful for concurrent user workloads where many users run queries
+aimullaneously — & Common scene in Bireporting took, Without MCW, queries queue up if te
+warahouse bb busy. With MCW: Snowdiake monitors the query queue and automatically provisions
+additional dusters (up to the configured maximum) Scaling polices can be set to Economy
+(conserves credits, waits before adding clusters) or Standard limmeciotely adds clusters when
+queuing occurs) MCW is availabiy on Erterprise edition and above. It aches Be concurrency
+problam withoul requiting users to anually manage multige warehouses
+
+‘O) What query optimization techniques can you use im Snowtlake?
+
+Arawer;
+Key optimization techniques include (1) Leverage Micro-Partiton Pruning — appty selective
+WHERE fitters on coluinma with good candieahly io teduoe scared paritiona, (2) Une Chaatering
+Keys on lange, frequently fhared tables. (3) Awokd SELECT * — select only the columns you need
+(colummar storage makes this highly efector). (4) Use LIMIT ond appropriate thers to reduce result
+sets. (5) Ansiyze QUERY PRROPILE — Snowliske's query profiling tool shows execution plans,
+operator coats, and api-io-cisk wamings. (6) Avoid expensive operations lke crow joie and large
+Cartesian products. (7) Use CTEs and proper join order — place the most selective flier first. {8}
+Consider Search Optienization Senice for point lookups on large tables. (9) Use appropriate
+warehouse sine for the workload,
+
+‘O10 What s Query Spilling and how do you resolve it?
+Angwer:
+
+Spilling occurs whan & Virtual Warehouse runs oul of in-memory space during quary aeecuton and
+must write intermediate data to local disk (spill to local disk) or, worse, fo remote storage (spill to
+remote disk) Soil to local disk causes modeente slowdowns spill to remote disk causes severe
+Performance degradaton. Spilling is vieibie in the Query Profile as orange of fad operators.
+Riesohtion strategies: (1) Scala up the Virtual Warehouse to a larger sine — more mammary per
+nods reduces sping. (2) Optmine the query — reduce intermediate result sizes via better dering,
+pushing peecicates cartier. or odting unecessary aggregations (-}) Gresk complex queries into
+amaliar stapes using CTEs of lamporary tables. (4) Check for data shaw — skewed dala causes
+some nodes to process much more data than afters.

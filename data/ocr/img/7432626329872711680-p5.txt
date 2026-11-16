@@ -1,0 +1,31 @@
+C Date and Time Datatypes- These datatypes stores date and time.
+
+*® DATE. Stores date values (Farmat:- Yer-MM-D0).
+© TIME- Stores time yahies [Foerat: HH:MM:55).
+
+® DATETIME: Stores both date and time values (Format: YY-Mi-DD
+HH: feIh: SS).
+
+D, BIT Dasatype- BIT data type can store either True or False values
+(represents by 1 ane O),
+
+Example-
+
+CREATE TABLE Employees [
+EmployeeiD INT,
+FirstName VARCHAR(SD),
+LastName CHARI 2D),
+Salary DECIMAL(10, 2},
+BirthDate DATE,
+HireTime TIME,
+
+IsActive BIT
+
+iF
+
+* SQL commands are instructions,
+
+© fis used to communicate with the database to perform tasks, functions
+and queries of data.
+
+® There are free types of SOL commands.

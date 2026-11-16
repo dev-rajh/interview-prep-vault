@@ -1,0 +1,122 @@
+RECENT CUSTOMERS ONLY
+
+= ri
+aaa
+
+cust_id order _date oust_id
+
+1m 2024-04-01 101
+| 182 2822-85-01 |
+
+SELECT cust_id
+
+FROM orders
+GROUP BY cust_id
+HAVING MINCorder_date) > CURRENT_DATE - INTERVAL ‘4 months’;
+
+Next: Calendar Table +
+
+ANANDUARAYANAN S
+y
+
+
+3 GOOGLE
+
+order_id order _date
+
+doy count
+| 1 2024-01-04 | 2024-01-02 8
+
+— |
+
+2 2824-81-83
+
+Solution
+
+Generate missing dates wsing Recursive CTE
+WITH RECURSIVE Dates AS (
+SELECT MIN(order_date) AS day FROM orders
+UNION ALL
+SELECT day + INTERVAL 1 DAY FROM Dates
+
+WHERE day < (SELECT MAX(order_date) FROM orders)
+)
+SELECT d.day, COUNT(o.order_id)
+FROM Dates d
+LEFT JOIN orders o ON d.day = o.order_date
+GROUP BY 1;
+
+Mext: Largest Dept +
+
+ANAADNARAYANAN S
+Fe
+
+
+LARGEST DEPARTMENT
+
+Find the department with the most employee:
+
+ees |
+| dept_id emp_id dept_id
+
+104 A 101
+| 182 8 |
+| 102 t |
+
+Order by count dese Limit 4
+SELECT dept_id
+
+FROM employees
+
+GROUP BY dept_id
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+Next: Missing Ids +
+
+ANANDUARAYANAN S
+y
+
+
+Problem 4/20 (tem /ser100 ) | @META
+Missina EMPLOYEE IDS
+
+Find gaps in employes IDs.
+— a
+id name missing_id
+1 Alice 2
+
+| 5 Bob |
+
+SELECT id + 1 AS missing_id
+FROM employees e
+WHERE NOT EXISTS (
+SELECT 1 FROM employees WHERE id = e.id + 1
+
+)
+ORDER BY id;
+
+MWext: Seniority Anomaly *
+
+$ 5 Qe°0sT 0) SAVE
+Fy G2 GE
+
+
+(==) QUETEERE
+SEMORITY ANOMALY
+
+| Alice 2020 2021
+
+Compare dotes in self join
+
+SELECT e. name
+
+FROM employees e
+JOIN employees m ON e.manager_id = m.id
+WHERE e.hire_date < m.hire_date;
+
+Next: Salary > Avg +
+
+ANANDUARAYANAN S
+y
+

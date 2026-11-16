@@ -1,0 +1,85 @@
+/
+DATA ENGINEERING [i I
+
+SCD MASTER GUIDE
+
+FOR INTERVIEWS
+Concepts + Real Examples
+
+[|
+
+WHAT IS AWN SCb?
+
+Handling Data Changes
+
+Scenario:
+An employee gets promoted.
+A product price changes.
+
+Question: How do we store this change?
+A: Forget the old value?
+
+B: Keep a history Log?
+
+C: Keep only the previous value?
+
+© SCDs (Slowly Changing Dimensions) are design patterns used in Data
+Warehousing to manage how data changes over time.
+
+Follow for more about SGL and DATA
+
+
+SCD TYPE 6
+
+Fixed Attribute
+
+Hire_Date
+
+John 2828-81-01 John 2828-81-81
+
+eo Ignore_Update.sql
+
+UPDATE Employees
+SET Hire_Date = '2025-61-81"
+WHERE ID = 161;
+
+Immutable. Use Type 0 for data that should NEVER change, Like Original Hire
+Date or Date of Birth,
+
+
+SCD TYPE )
+
+Overwrite
+
+AFTER (HisToey Lost):
+
+BEFORE:
+[ro [Product [rice | [10 rrowuct | rice
+Mouse 508 House $45
+
+UPDATE Products
+SET Price = 45
+WHERE ID = 560;
+
+»  Overwrite. No history is kept. If you run a report for “Last Year's Revenue’, it
+F wi incorrectly use the NEW price ($45),
+
+
+rw]
+
+SCD TYPE 2
+
+New Row (History)
+
+SCENARIO: SARAH MOVES LawDow -> Paes
+
+eo Version_Contrel.sqt
+
+UPDATE Thl SET Active='N', End=NOW() WHERE ID=1;
+
+INSERT INTO Tbl (ID, City, Active, Start)
+VALUES (1, ‘Paris’, ‘Y', NOW());
+
+my Gold Standard. Tracks full history by adding rows. “London” record is closed
+(Active=N), “Paris” record is opened.
+

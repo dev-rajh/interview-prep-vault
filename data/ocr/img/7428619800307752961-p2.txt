@@ -1,0 +1,11 @@
+product_id,
+(revenue) AS total_revenve
+
+FROM sales
+
+WHERE order_date SETWEEN (QUART
+GROUP BY product_id
+DRADER BY total_revenue OE!
+
+INIT
+

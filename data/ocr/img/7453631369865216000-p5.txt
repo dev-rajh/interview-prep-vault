@@ -1,0 +1,40 @@
+11, Filter paws Gased an 4 condinios,
+
+Senarice You wart to ther oely Those customers eho mace purchases over EL000.
+di_fered = df (teridl gerchate_sneunt » 1008)
+
+di_fiteredl dowd)
+
+MM. Patten « SON column in Pyipaerk.
+Sumario: Your Datal rane contain « ISON cpoluren, and you want to exteact specific fieics from &
+from pywpart.wq functions import tom juon, col
+fom pyrpart agi pypesinepon Srecil ype, Seructheeds, Sering Ty pe
+scheme © SructTyoel!
+Sructheial “sane”, String! yped), True,
+Sructhiel "age", Swing? ei). Treet
+b
+di = ft wthtolume|{jeon_date” from_jent|ood pom_catumn” |, achernall
+
+dl setect{ juae_data care”, “jeon_dalaage”L stow)
+
+5, Comvert a PySpark CotaPrane colurmm to a bet.
+
+feemaric: Convert 3 colume from your DataProme into a ligt for further procesing
+
+colume_Est = afselect|"colume_nane”) rd atMae beribets « 0) collect)
+
+Df. Handle MULL values by replacing therm with a default valee.
+Seeneric: Replece of WLLL values in the “soles” cohen with ©.
+df = fra sales”: Of)
+
+dishow()
+
+2), Perforce « uelf-jole on a PySperk Ovtel ree.
+
+Stemaricc You awe a tierarchy of erepieyees anc wart to find each enployeer's manager,
+
+d1_sell_join © gly") cide elise "62%, coll el menuager_ki™) om oot ed -emphoper_it™, “Winer™) ',
+sHecicol"el enplowee_pame"| coll"s2 employec_name”| aie “morager_rame"})
+
+d1_sell_join show)
+

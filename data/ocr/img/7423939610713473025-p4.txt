@@ -1,0 +1,49 @@
+G Advanced Delta Lake Feanures
+6.1. Whee Hie?
+6.2 Wiel aw Pre te cortanaetdts bo saber iratids about a Labo?
+6S What is ie sya to displery the Drea Lake tes?
+Gd Denes the Chvitn Lake fies, their torrad are Gireciory eres
+6.5. What doas fhe ruery engine do using the baraaction lagu whan son yuaory a Deda Lavoe table?
+000. What commands Gp yoru tn to compact areal Ses ered reer tobe?
+67, Howe ds you savin a Rstory of Mae Dafometiorns?
+Be How de you qmery andl tod Beck 1 previous nable version?
+| BR. het coremaad do poe us: to clean ap stale damn Wes aad whet ane fhe consequences of wsing thie
+cortuwnt? 7
+0.20. Ung Delta Cocte
+7. Cuabeses ancl Tatrhes oo Cutebricies
+: 7.1. wharis the syeuncm create 2 database wir detail focanion |e kocamion specwedy?
+7.2. ‘Whoa is the ayrenc in cate a dhvtabeew win apeciies ocean?
+1. Howe ds you get terzeiate onfornanen of a coche? Where we the darabeees. coced jditerence
+tetwwen datauie re cantor kecdtieny) :
+Ta WnO0S the Det pracioe teteint Conateg danabenes?
+7S. Where te Syren for creating # inbie in a dimabase wim cleft Keoanion and ineenieeg chen? Whe is Pe
+prance Fo tae ir dncabee with camore bacarion?
+70 Where are rranmged tities incated ina iatabase and bese cas you fied ther iscatoa?
+17. ‘toi is ir sree fy crelan ah acid nie?
+TA. ‘Whar hoggens when pow Wop lites (tleseace between a raregsd and ae Urvranged table}?
+Te eho is the command to drop the eieabase cond its urndertying tnbles and views?
+6. Views and CTs on Cecnbricke
+aa. Wowy com you ahem wet of tates red views?
+‘BR. = Witeal ch Bee i eteod Leteveen Whee, Tere Vernd 6 hota Teng Vari
+6.4, hewn he cena tor ener?
+6.4, Do wews ganas pnaierhing Bes?
+BUG. Whern are gical ierap views momeed?
+ILE. What is the npmece to select from gicbel erp seve?
+67. Winal aee CTE a7 Whe ob lhe ytd?
+BE Whee is ie Satan OD areas reatiane Coherwy abaces ang a CTE?
+BR What is the yma tor deteeng.a CTE ina CTE?
+89D. Wow is thes eyntec tor detining a CTE nasteery?
+0031. Wher on fhe spre for deter @ CTE ine tgquery eee
+02. Wiest on fee aprtactor deherga CTE ina pecs occ) eeereerd?
+9. Bewortny Guna Dieecnty trom Files
+6.5, How de 0a) query cea fee 9 single te?
+* BU. How do you cremte references to flex?
+9.4. How de you atta! bee Vike ad rin adores?
+a5, Hite de you cannot te ew irae ond Portada at fhe Whar a typo une come Aor ts?
+$4, Prowtging Options for Gxtemwd Sources
+111, Rapdain wiry eeecatag a cect query agpenm CSW Wan rarely conurre the dansed rest,
+102. Dwncciee the myntar required to ecdract dats frome reat formats agpared coder! wou
+‘ 10.3. Win haggena be the dada, rretadada ral opbore chstrey lable ectarabas fee theoe ecdernal soars?
+10.4. Does ihe cohene onder mater 4 acicirionad cow cata hes are ackded tb ire souecm anOCROey al a lane
+
+age?

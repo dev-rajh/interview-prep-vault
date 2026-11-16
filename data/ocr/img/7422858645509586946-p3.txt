@@ -1,0 +1,27 @@
+3. ROW_NUMBER
+
+Incredibly useful when it comes to cleaning data.
+
+ROW_NUMBER () can be used to identifying and
+removing duplicates, and detecting gaps in data.
+
+It can be used to select a SINGLE row based on
+conditions such as latest record, highest/lowest value
+etc.
+
+WITH RankedOrders AS (
+SELECT
+customer_id,
+order id,
+ROW NUMBER() OVER (PARTITION BY customer id ORDER BY order
+
+_date DESC) AS rn
+FROM orders
+
+}
+
+SELECT. *
+
+FROM Rankedorders
+WHERE rn = 1;
+

@@ -1,0 +1,39 @@
+10 Interview Questions for Junior Databricks Data
+Engineer Roles ($80-100k)
+
+The Fundamentals That Get You Hired
+
+Benaking imo Datebicks Data Engineering? Junior interiies last whether you uncersierad ee
+fundamentals - hot obecura adpe casi.
+
+Companies hiring al $20-?00k want to see: you understand core concepts, you oan leam quickly,
+and you have the right mental models to grow.
+
+What's insade:
+
+- Al 10 questions with cataled aearwers
+- Weak va Strong answar comparison
+- Ker concepts to mention
+
+- Whal nionviqwars are realy testing
+
+(® Question 1; What's the difference between a transformation
+and an action in Spark?
+
+A The Weak Answer (Pass, but not imeressive}
+"Traratormations charge data, actors ratumn reqults.”
+
+Why thts Is weak: Technically correct but doesn’t show understanding of WHY tvs matters.
+
+(2 The Strang Answer (Stands Out)
+“Traralorealions are lazy - they bulk’ up a logical plan Bul don) aaecule until an
+acton riggers them Exarnples: filler(), saect|) groupGy(). Actions trigger actual
+computation and ratuen reaults to the driver or write to storage. Examples: court},
+collect}, show(), write|). This matiers because Spark cam optimize the entire chain of
+fTansformajors before exeouting. Hf! call df-fhen().select). then), Spark combines
+these into one optimized pass through the dota.”
+
+Key concepls to mention:
+- Lay evaluation and query optimization
+
+‘See more Oetetricks fee on Datel regress vi

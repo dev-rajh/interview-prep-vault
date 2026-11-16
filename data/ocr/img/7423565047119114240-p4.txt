@@ -1,0 +1,40 @@
+ADF Copy all tables from a source to 5 terget with a motadate-drven pipeline Below iss prown
+Gaaign that scales, is aay to govern, and aupperts both full and incrammrnal loada.
+
+4) Metadatsa model {in Azure SQL / Synapse SOL / dedicated contig DB}
+
+Create a control table that tests whet to copy and how
+
+CREATE TABLE etUTableCopyContig
+‘
+Contigid INT IDENTITY|1,1| PRIMARY KEY,
+SourcaLinkedSarvica NVARCHAR 100) MOT NLILL,
+SourceaDh NVARCHARII28) NOT NULL,
+SourceSchama NVARCHAR(I23) NOT MLAL,
+Sourcelablea = NVAACHAR|126) WOT NULL,
+SrkbLrkedService NWARCHARIIO0) NOT NULL,
+SrkDb AVARCOMAPRY 12) NOT MALL,
+SrkSchema NVAROMARLT2&) NOT MULL,
+SwkTable NVARCHAR 123) NOT MULL,
+LoadType YAACHAA|20) NOT NULL CHECK (LoadType IM |Full’, Incrementat’|},
+VirnonmarkColumn NWARCHAR(128) NULL, - e.g. ModifiedDote, LastUpdotedTs
+LastWatermarkVolue NVARCHAR 122) NULL, — store lastimax value joaced
+KeyColumns NVARCHARZ000) NULL, -- comma-separated keys tor upsert
+PreCopySerigt NVARCHARIMAX|NULL, = -- optional DDL/DML
+PoarlesyScript NVARCHARIMAX|NULL, = -- optional DOL/DML
+faActive BIT NOT NULL DEF AMAT (1),
+Notes NVARCHAR 4000) NULL
+ih
+
+Options: add Additional Properties (JSON) for column mappings, fle fornets, partition Penge,
+ote,
+
+B) Pormeterined datasats
+1. Source dataset (Azure SO8 example)
+* Purameters; pSchera, pTatle. pOb, pLS
+
+* Tabla: Bihorrae 10} 41}. pipelined) parameters oSchema,
+fipelned.parmeters.oTablel}
+
+* Unked senice name is Gynamic via o global parameter of switch jor use seperate
+dotesets per LS if you prefer ermpbcity),

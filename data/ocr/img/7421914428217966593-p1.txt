@@ -1,0 +1,9 @@
+1. Second highest salary
+
+SELECT MAX(salary)
+FROM employees
+
+WHERE salary < (SELECT MAX(salary) FROM
+employees);
+
+Uses subquery to exclude the top salary.

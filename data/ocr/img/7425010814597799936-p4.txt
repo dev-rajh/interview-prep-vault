@@ -1,0 +1,36 @@
+What I saki
+
+leomsider:
+Hiph-cardimaliry (S001 preliemed ror parmtons}
+Query patterns (ilste-bersod)
+Tile siae expectations
+
+Awoud overparuicume
+
+Example:
+Pyntition by orcer date (year, meral) hin MOT by coscsmer_ta.
+
+Tips
+« Always wam aboot “too many partilioms » ema! file problem”.
+
+7 Question: Data Quality Framework in
+Databricks
+
+What they osked me
+“Tew de yo. apply TQ in your Sawer zone?”
+What I sak
+DX) Rules appbed:
+Null cheeks
+Triplicate cheeks
+Patten checks
+Range cheeks
+Retecence mieprity validation
+
+Tewelid rows stored mac
+
+reilver/orreces<tables/ddalens
+
+Tips
+« Pemwen LOVES error elder t+ replay seers.
+
+Scanned by CamScanner

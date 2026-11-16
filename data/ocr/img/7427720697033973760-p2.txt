@@ -1,0 +1,32 @@
+) Column Maw | Type |
+
+ie Serene
+| AdiressId =| int |
+| Persona =| Let |
+| city | varchar |
+| State | varchar |
+Sacer esaaeduas Sraeenees +
+
+AdiressiId is the prisary wey column for this table,
+
+Write a SQL query for a report that provides the following ifcemation ter each
+person in the Person tab, ragardiess if there is an address for each of those
+
+pecpk:
+
+=
+
+Firsttyee, LastMome, City, State
+
+Solution
+
+SELECT p. Firsthame, p.LastMaee, a. City, a.5tete
+FROM Person p
+
+LEFT DIR Andress a
+
+ON p.Personid = a.Persondd;
+
+176. Second Highest Salary | Fasy | LeetCode
+
+Witte a SOL query to get the second highest salary from the Eeployee TabR.

@@ -1,0 +1,17 @@
+*
+
+1. Find duplicate records in a table
+
+SELECT columni, column2, COUNT(*)
+FROM your_table
+
+GROUP BY columni, column2
+
+HAVING COUNT(*) > 1;
+
+amazon
+———)
+
+Ff) @Tajamulkhann »
+
+@Tajamul.datascientist

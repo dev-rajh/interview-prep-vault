@@ -1,0 +1,283 @@
+Real SQL Interview Questions with
+10-20 LPA Package
+
+SQL Questions
+
+1. Write a query to find employees with the second highest salary
+in a table.
+
+Ta solve this, use a subquery to first find the maximum salary, then filter out that value bo get the
+
+second highest
+
+Example:
+
+SELECT MAX{salary) AS second_highest_salary
+
+FROM em
+
+WHERE salary < (SELECT MAX{salary) FROM employees);
+
+Explanation:
+
++ Inner query (SELECT MAX salary) FROM employees) finds the highest salary.
+* ‘The outer query then finds the maximum salary less than that, which is the second
+highest.
+
+Tip: To handle tes or retrieve mukiple employees with the same second-highest salary,
+you can also use DENSE RANKL) with a CTE
+
+2. Explain the difference between INNER JOIN and OUTER
+
+JOIN with examples.
+INMER JOIN:
+Returns only matching records from both tables.
+SELECT e.name, d.depariment_name
+FROM emphryers &
+INNER JOIN departments d ON e.department_id = d.department_id;
+« Output: Onhy employees who belong to 4 department.
+LEFT OUTER DOIN:
+Retuns all records from the left table, and matching records from the right table, If mo
+mistch, NULL is returned.
+SELECT é.name, d.department_naene
+FROM amployees @
+LEFT JOON departments d OM e.depertment_id = d.department_id;
+» Quiput: All enployees, with department info where available,
+RIGHT OUTER )OIN:
+Returns all records from the right table, amd matching records from the left.
+FULL OUTER JOIN:
+
+Returns all records from both tables, matching where possible.
+
+Difference:
+« INNER JOIN = tersection (matched Gata onby)
+* OUTER JOIN = union + NULLs (matched + unmatched data)
+
+3. Write a query to fetch the second-highest salary from an
+
+employee table.
+
+Option 1: Using DISTINCT, ORDER BY, and LIMIT (MySQL/PostgresSQL)
+SELECT DISTINCT salary
+
+PROM employees
+
+ORDER BY salary DESC
+
+LIMIT 1 OFFSET 1;
+
+Option 2: Using subquery (Generic SQL)
+
+SELECT MAX/salary)
+
+FROM employees
+
+WHERE salary < (SELECT MAX(salary) PROM employees);
+Explanation:
+
+» The subquery fetches the highest salary,
++ The outer query finds the maximum salary less than the highest — giving the secomd-
+highest.
+
+4. How do you use GROUP BY and HAVING together? Provide
+
+an example,
+
+Use GROUP BY to group data and HAVING to filter aggregated results (unlike WHERE,
+which fillers raw rows),
+
+SELECT depanment_ic, COUNT(*) AS emp_count
+
+FROM em
+
+GROUP BY department_id
+
+RAVING COUNT(") > 5;
+
+Explanation:
+
+» Groups employees by Gepamtment.
++ Fillers groups where the court of empkryees is more than 5.
+
+5. Write a query to find employees earning more than their
+
+managers.
+
+fasumne the table employees has:
+
+emo_id, name, salary, manager_id
+
+SELECT e.name AS employee_name, esalary, m.name AS manager_name, m.salary AS
+menager_salary
+
+FROM emphryees @
+
+JOIN employees m ON e.manager id = mueng_id
+WHERE e.salary > msalary;
+Explanation:
+
++ Seif-join: matches employees (2) with their managers (Mm),
++ Fitters those where employee's salary > manager's salary.
+
+6. What is a window function in SQL? Provide examples of
+ROW_NUMBER and RANK.
+
+Definition:
+
+Awindow function performs calculations across a set of table rows related to the quent
+row — without collapsing rows tke GROUP Br.
+
+FUNCTION _NAME() OVER (PARTITION BY column ORDER BY column}
+
+Example: ROW_MUMBER()
+op rahe Sequential number to each row within a partition,
+SELECT name, department, salary,
+ROW_NUMBER/) OVER (PARTITION 8Y department ORDER BY salary DESC) AS row_num
+FROM employees;
+» Esch employee within the same department gets 4 row number based on salary rank
+(highest first}.
+
+Example: RANK()
+Aeaigns the same rank to rows with equal values, but skips the next rank(s).
+SELECT rane, department, salary,
+RANKI) OVER (PARTITION BY department ORDER BY salary DESC) AS rank_nurts
+FROM ampkiyees;
++ If 2 employees have the same salary, both get rank 1, and the next gats rank 3.
+
+7. Write a query to fetch the top 3 performing products based
+on sales.
+
+Assume table sales_data has:
+
+product_kd, product_name, total_sales
+
+SELECT product_id, product_name, total_sales
+FROM sales_data
+
+ORDER BY total_sales DESC
+
+LIMIT 3;
+
+Alternate using RANK) (if ties matter):
+
+SELECT product_id, product_name, botal_sales
+
+FROM [
+SELECT *, RANK) OVER (ORDER BY total_sales DESC) AS rank_nun
+FROM salies_clata
+
+} ranked_sales
+
+WHERE rank_num <= 3;
+
+8. Explain the difference between UNION and UNION ALL.
+Feature UNION UNION ALL
+
+Cuplicates Removes duplicates Keeps all rows, including duplicates
+Performance Slower (because of sorting) Faster (no de-dupkcation)
+
+Use case = When you want distinct rows When duplicates are meaningful
+
+Example:
+
+SELECT oty FROM customers
+
+UNDON
+
+SELECT city FROM vendars;
+
+— Rebus a unique bst of cities.
+
+SELECT city FROM customers
+
+UNION ALL
+
+SELECT city PROM vendars;
+
+— Returns all cities, induding duplicates.
+
+9. How do you use a CASE statement in SQL? Provide an
+example.
+
+CASE lets you write conditional logic in SQL (similar to IF/ ELSE),
+SELECT name, salary,
+CASE
+WHEN salary >= LO0000 THEN High’
+WHEN salary >= S0000 THEN Medium’
+ELSE ‘Low’
+END AS solary_category
+FROM empkryees:
+Explanation:
++ Assigns a cabegory based on salary value.
+* Warks inside SELECT, WHERE, ORDER BY, etc.
+
+10. Write a query to calculate the cumulative sum of sales.
+Assuene table sales has:
+
+order_date, product_k, sales_amount
+
+SBLECT order_date, product_id, sales_amourtt,
+
+SUM(sales_amount} OVER (PARTITION 8Y product_id ORDER BY order_cabe) AS
+cumulative_sales
+FROM sales;
+
+i
+
+» SUM(...) OVER (...) calculates 2 running total per product based on order date.
+
+" PARTITION 8Y groups by product, and ORDER BY ensures the acounulation follows
+cChromaliogical order.
+
+11. What is a CTE (Common Table Expression), and how is it
+used?
+
+Definition:
+
+A CTE (Common Table Expression) 5 a temporary, named result set that you can
+reference within a SQG query.
+
+It improves readability and simplifies complex subqueries or recursive logic.
+
+Syntax:
+
+WITH che_narne AS [
+_ SELECT ..
+
+}
+SELECT * PROM cte_name;
+
+Example — Filter top-paid employees using CTE:
+
+WITH HighEarers AS {
+
+SELECT emp_id, name, salary
+
+FROM employers
+
+WHERE salary > 100000
+}
+SELECT * FROM HighEamers;
+Benefits:
+
++ Reusable and readable
+
+" Allows recursion (@.9., Hierarchical data)
+* Avoids repeating subqueries
+
+12. Write a query to identify customers who have made
+transactions above $5,000 multiple times.
+Agsuené transactions table has
+customer_id, (ransaction_annount
+SELECT customer_id, COUNT(*) AS high_walue_tons:
+PROM transactions
+WHERE transaction_amourt > 5000
+GROUP BY customer id
+HAVING COUNT(*} > 1;
+Explanation:
+« Filters high-value transactions (> $5000).
+* Groups them by customer.
++ Retunns customers who've dane this more than once.
+
+13. Explain the difference between DELETE and TRUNCATE
+commands.

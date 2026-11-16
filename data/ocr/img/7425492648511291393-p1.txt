@@ -1,0 +1,34 @@
+Databricks Data Engineer
+Associate Exam - Refined Notes
+
+iW INTRODUCTION
+
+= What is Databricks?
+
+Oatabricks ts a multi-cloud Lakehouse platform built on Apache Spark. |t
+provides a unified environment for:
+
+* Data Engineering
++« Dats Science & Machine Learning
++ Business Analytics
+
+Datebricks supports languages like Python, SQL, Scala, R, and Jawa, It abstracts
+the complexity of distributed computing by offering 4 collaborative, scalable, and
+managed workspace,
+
+_, Whatis a Lakehouse?
+
+A Lakehouse 6 a modern data architecture tat combines the scalability of data
+lakes wilh the performance and reliability of data warehouses.
+
+Date Lake Oeste Warehouse
+Shores raw, unestructured/sem-structured data Stores structured, curated cata
+Scalable and cost-etficient High performance and reliable
+
+Difficuk te antarce governance Supports sirong gowemance
+
+Lakehouse = Best of Both Worlds &
+
+& Components of the Lakehouse Platform
+« Workspace: UI for notebooies, jobs, repos, and collaboration.
++ Runtime Optimized Apache Spark engine with bult-in Delta Lake support.

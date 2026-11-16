@@ -1,0 +1,11 @@
+FROM user_logins
+GROUP BY DATE\lagin_datetime)
+ORDER BY login_date;
+
+For each user, return their 2nd highest transaction amount (not using LIMIT or TOP).
+OB Sample Tabte: transactions
+
+BE query:
+SELECT wver_id, transaction_amnount
+FROM |
+

@@ -1,0 +1,38 @@
+They tet your woubleshootme style — keep it strectured
+
+10 What they asked me
+
+Explain Partitioning in Speck and bow ine comes
+Wheat | aiid
+
+Pactmomng distributes cha scros: multiple files:
+Good for:
+« Filrenng
+
+© Paalkian
+« Fister reads
+
+Tips
+Prefer partition columns vith bow cardinality
+
+11 What they asked me
+
+How do pou load epe files fester m ADF?
+
+What | said
+taeble parallel copy
+Use binary copy for large blobs
+
+Split file mito waltiple partitions
+Load as Parquet instead of CSV
+
+Tips
+
+TechM loves ooet-periomiance Mg ALSWwers.
+
+12 What they asked me
+
+Wher & the difference between Inner join aed [eft anti poln”
+
+What I suid
+

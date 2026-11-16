@@ -1,0 +1,10 @@
+4. Find duplicates on multiple fields
+
+* SELECT coll, col2, COUNT(*)
+* FROM my_table
+
+* GROUP BY coll, col2
+
+* HAVING COUNT(*) > 1;
+
+° Helps detect data quality issues.

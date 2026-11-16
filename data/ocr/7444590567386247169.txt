@@ -1,0 +1,120 @@
+Top 20 SQL Interview Questions
+
+(GROUP Br, HAWING, ORDERBY JOM)
+
+Database Schema Used
+
+OnpiOyaes (onphoyta i, MMe, salary, Gopaneneel i ani)
+departments (depertment_ii. cipartresti_marce, location)
+
+G1. Wie # query to find the total number of employees in ewct department.
+
+G2. Wilte # query to fist departments having mare than 5 amplopwes.
+
+wtubor
+LECT depertebat id, CoomTce|
+femertest id MOINS CCOMTCT)
+
+O83. Write # query to display all employees sorted by salary da descending ardor.
+
+FEoM
+
+ary CESry
+
+G4, Write a query to retrieve the top 3 higheal paid employees.
+LEST * FROM stg lines
+
+Lak GY salary
+
+“we KIBET AOWE OMLEr
+
+G6, Write # query to claplay employee names afong wilh fhe department maaes,
+
+ci.ton
+LECT @. ane, da iegear liner asses Te
+employers @ JOIN Geparcnert
+
+=e, derperteert id © d.cdepaect mest i)
+
+without a
+Solubterr
+
+MLEOT &. kde, DiepArheent game
+
+OF, Write 4 query to ovaplay all employees and their departmants, neluding employees
+department.
+
+LEFT OOM aeparieents al
+i 1. Separ Leer. Fs
+
+O8, Write # query to cfaplay all depariments and their employees, including departments
+With ie aria pees
+Soletiert
+
+SELECT o,eeem, do ceporieert_sace
+BIGHT JOCS ceparteerts
+
+08. Write 2 query to fied departments that do mot have any employees.
+Solwior
+
+ELECT d.deperteart_naee
+
+Tam ikbpattawita o
+
+PT TH ane
+ee ~ @departeent la
+MARAE «employes ®
+
+O00. Write 2 query to calculate fhe average savary in each department.
+Solwion
+
+T dapactmast_id, A®Ginalary)
+
+O12. Write a query to sort employees by depariment_id and sally descending.
+Solution
+
+TRON sap Layee
+
+Solwbor
+
+TRO ea Layee
+
+O13. Write a query to find employees whose savary is grewier than average salary.
+Solwborr
+
+ee eT
+MERE slacy ELECT EVGimalacy! PROM emp loypensi :
+
+Q)4, Write 2 query to count number of employees for each rove.
+
+Solwborr
+
+Ta ployee | CRETE
+
+O05, Write a query to list departments where average salary > SOOO,
+
+O17. Write a query to olsplay employer names with department names.
+Saletan
+LECT @.2ane, dcepartrerc_sans
+
+SM oc .departeent ts 4. departeert ide
+
+G18. Write 2 query to count oistinct employee names.
+Solution
+
+Ligcy STIVLSTIMET same
+
+FROM cee Leyes
+
+O09. Write a query to calculate annua safary and sort descending.
+Solution
+
+CLECT m<. alacy*l2 AS aecvual alacy
+TAO empl eyees
+
+BDA Gt acreal salary DESC;
+
+O20. Write a query to count employees growped by department and role.
+Solver
+
+BY departmmenc id, cola:

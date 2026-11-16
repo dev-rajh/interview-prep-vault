@@ -1,0 +1,65 @@
+Snowflake
+Interview Cheatsheet
+
+Complete Visual Guide for Data Engineers
+
+Vishal Kaushal
+
+@CloudLearning’ ard
+
+Architecture « Caching = Virtual Warehouse
+Tables + Views + Streams + Tasks + Stages
+Ale Formats © Zero-Copy Gone + Time Travel
+
+Dynamic Masking » Roles = Performance Optimization
+
+youtube.coml@CloudLearnéng¥ ard
+od s& SNOWFLAKE °s °S
+
+© Date stored in cloud (S54, Azure Blob, GCS)
+format
+
+<> © 3s SNOWFLAKE =
+i i & CACHING = ane
+
+-__CHEAT SHEET
+
+“Leer Dae
+
+C5 CD a=> STORAGE + RESAT
+
+What is i?
+
+ Terporary storage to speed up quenes ; MR RESUT CACHE
+(D Avoids reprocessing data
+@ ieroves performance and reduces cout
+
+Hie. Meoult Cache: trad Sar vet La
+
+SNOWFLAKE VIRTUAL VIRTUAL WAREHOUSE
+
+Interview Cheat Sheet
+
+WHAT IS IT? c ed S/
+\* é
+
+i
+
+Bree queries «Me rtornge dnpasdency
+TYPES OF WAREHOUSES:
+
+(Lcent wearer
+(Len) rate cor KEY PROPERTIES:
+
+Seowpark Optinized|) | QL) Mito RESUME
+Dees | = oss
+| iaeractivg | Spe when idle Clusters: 1- $12
+
+MULTI-CLUSTER CONFIGURATION:
+
+Jb
+26 Snowflake
+
+Table Types Cheat Sheet
+s) | Table Ss Sheet =
+

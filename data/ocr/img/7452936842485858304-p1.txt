@@ -1,0 +1,23 @@
+NTT DATA
+
+SQL questions in a Data Engineering interview
+CTC > 28-35 LPA
+(Difficulty level = Intermediate)
+
+Dh Opec:
+Find how many divinet users logged in on each date (i.e. were active).
+
+© sample Table: user_logies
+ar came
+Dalai
+a
+
+aol 2024-06-01 18:20:00
+eae
+a eae
+
+i Gerry:
+StLecT
+DATELlogin_datetine) AS login_date,
+
+COUNTIOISTINCT uiver_itt) AS netive_user_eoune

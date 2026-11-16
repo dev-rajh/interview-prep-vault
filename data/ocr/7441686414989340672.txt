@@ -1,0 +1,127 @@
+50 SQL Interview Queries
+MOSaNns
+
+1. Find duplicate records in a table
+| eee
+
+SELECT columni1, column2, COUNT(*)
+
+FROM your_table
+
+GROUP BY columni1, column2
+
+HAVING COUNT(*) > 4;
+—-
+
+2. Retrieve the second highest salary
+from the Employee table
+
+SELECT MAX(salary) AS
+
+SecondHighestSalary i}
+FROM Employee .
+WHERE salary < (SELECT “A*(salary) i
+
+FROM Employee);
+r Macroson
+
+3. Find employees without
+
+department (Left Join usage)
+ene Uber
+SELECT e.*
+
+FROM Employee e
+
+LEFT JOIN Department d
+
+ON e.department_id =
+d.department_id
+
+WHERE d.department_id IS NULL;
+
+4. Calculate the total revenue per
+product
+
+SELECT product_id,
+
+SuM(quantity * price) AS
+total_revenue
+
+FROM Sales
+
+GROUP BY product_id; P PayPal
+
+3
+i}
+
+5. Get the top 3 highest-paid
+employees.
+
+SELECT TOP 3 *
+FROM Employee
+ORDER BY salary DESC;
+
+Google
+
+6. Customers who made purchases
+but never returned products.
+
+SELECT DISTINCT c.customer_id
+FROM Customers c
+
+JOIN Orders o OW c.customer_id =
+o.customer_id
+
+WHERE c.customer_id NOT IN (
+SELECT customer_id FROM Returns
+
+és Walmart >|<
+
+3s
+i}
+
+7. Show the count of orders per
+customer.
+
+SELECT customer_id,
+CouNT(*) AS order_count
+FROM Orders
+
+GROUP BY customer_id;
+™ - 00 Meta
+
+8. Retrieve all employees who joined
+in 2023.
+
+SELECT *
+FROM Employee
+WHERE YEAR(hire_date) = 2023;
+
+Comment "SQL" and get the complete
+in-depth PDF in your DMs.
+
+9. Calculate the average order value
+per customer.
+
+SELECT customer_id,
+AvG(total_amount) AS
+avg_order_value FROM
+Orders GROUP BY
+customer_id; 88 Microsoft
+
+10. Get the latest order placed by
+each customer.
+
+SELECT customer_id,
+
+uax(order_date) AS
+
+latest_order_date
+
+FROM Orders
+
+GROUP BY customer_id; Uber
+
+3
+ij

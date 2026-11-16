@@ -1,0 +1,140 @@
+Q1. Whatis SQL?
+
+Ans: SQL stands for Structured Query Language. Itis a
+programming language used for managing and
+manipulating relational databases.
+
+Q 2. What is a database?
+
+Ans: A database is an organized collection of data stored
+and accessed electronically. It provides a way to
+store, organize, and retrieve large amounts of data
+efficiently.
+
+Q 3. What is a primary key?
+Ans: A primary key is a column or combination of columns
+that uniquely identifies each row in a table. It
+
+enforces the entity integrity rule in a relational
+database.
+
+(asm 2emereew mernkh'T 6 c
+
+wee
+Cohan L eokiets Priory ary "
+F
+c
+
+f °° iS = (nr i Ss bin
+
+reed tee Tf me Cokes
+et Peep Rang
+
+Q 4. What is a foreign key?
+
+Ans: A foreign key is a column or combination of columns
+that establishes a link between data in two tables. It
+ensures referential integrity by enforcing
+relationships between tables.
+
+Ceper treet
+fevene—tewpeme epee | # Ferri ney
+to i Se | my
+' eee = 7 he
+vs aan )
+el Fhtetey
+F Engtoyee
+frerery dey .
+ve ir pare
+“tee | sates teat
+te | wertaingteusive | Mydenbad
+ o. * tacheaclorgnee =
+
+Q 5. What is the difference between a primary key
+and a unique key?
+
+Ans: A primary key is used to uniquely identify arow ina
+table and must have a unique value. On the other
+hand, a unique key ensures that a column or
+combination of columns has a unique value but does
+not necessarily identify the row.
+Q 6. What is normalization?
+
+Ans: Normalization is the process of organizing dataina
+database to minimize redundancy and dependency.
+It involves breaking down a table into smaller tables
+and establishing relationships between them.
+
+Q7. What are the different types of
+normalization?
+
+Ans: The different types of normalization are:
+« First Normal Form (1NF)
+* Second Normal Form (2NF)
+e Third Normal Form (3NF)
+* Boyce-Codd Normal Form (BCNF)
+* Fourth Normal Form (4NF)
+« Fifth Normal Form (SNF) or Project-Join Normal
+Form (PJNF)
+
+Q 8. What is a join in SQL?
+
+Ans: Ajoin is an operation used to combine rows from two
+or more tables based on related columns. It allows
+you to retrieve data from multiple tables
+
+simultaneously. von
+
+pa
+©
+
+Q 9. What is the difference between DELETE and
+TRUNCATE in SQL?
+
+Ans: The DELETE statement is used to remove specific
+rows from a table based on a condition. It can be
+rolled back and generates individual delete
+operations for each row.
+
+TRUNCATE, on the other hand, is used to remove all
+rows from a table. It cannot be rolled back, and it is
+faster than DELETE as it deallocates the data pages
+instead of Logging individual row deletions.
+
+Q 10. What is the difference between UNION
+and UNION ALL?
+
+Ans: UNION and UNION ALL are used to combine the
+result sets of two or more SELECT statements.
+
+UNION removes duplicate rows from the combined
+result set.
+
+whereas UNION ALL includes all rows, including
+duplicates.
+
+OA
+©
+
+Q 11. What is the difference between the HAVING
+clause and the WHERE clause?
+Ans: The WHERE clause is used to filter rows based ona
+condition before the data is grouped or aggregated.
+It operates on individual rows.
+
+The HAVING clause, on the other hand, is used to
+filter grouped rows based on a condition after the
+data is grouped or aggregated using the GROUP BY
+clause.
+
+Q 12. What is a transaction in SQL?
+
+Ans: Atransaction is a sequence of SQL statements that
+are executed as a single logical unit of work. It
+ensures data consistency and integrity by either
+committing all changes or rolling them back if an
+error occurs.
+
+=
+Om
+a? I

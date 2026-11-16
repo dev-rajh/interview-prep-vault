@@ -1,0 +1,18 @@
+*
+
+2. Retrieve the second highest salary
+from the Employee table
+
+SELECT AX(salary) AS
+SecondHighestSalary
+
+FROM Employee
+
+WHERE salary < (SELECT “Ax(salary)
+FROM Employee);
+
+B® Microsoft
+
+Ff) @Tajamulkhann »
+
+@Tajamul.datascientist

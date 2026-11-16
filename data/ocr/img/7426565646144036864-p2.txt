@@ -1,0 +1,41 @@
+- Transformations: Miter, setect, groupy, join
++ dictions: court, oofect, show, write
+
+« DANG (Directed Acyclic Graph) execution
+
+» Why lazy evaluation erables optimization
+
+9) What Interviewers Are Testing
+Do you undersiand Spark's aeecuton model, of jual mamorize syntax? Shows you know WHY
+Spark works this way.
+
+@ Question 2: Why would you use Delta Lake instead of regular
+Parquet files?
+
+ah The Weak Answer (Pass, but not imeressive}
+"Delta Lake & batter and has more features than Parquat."
+
+Why this is weak: Vague « doesnt explain specific benefits.
+
+(@ The Strang Answer (Stands Out}
+
+“Delis Lake acds ACID transactions on top of Parquet flea Three key bereft: 1)
+Fiokatilty - if & mite faite halfway, te lable ales Gonsislert (ho geartiol writes), 2)
+Tire travel - § can query previous warsiora of data of rollback mistakes, 3) MERGE
+support - | can do wpserts which plain Parquet can't do. Delta is si Parquet
+underneath, but the fansacton log (_delta_log) Tacks what fies ara wald, enabling
+these features.”
+
+Key concepts to mention:
+- ACID transactions (Atomicity, Consistaney, taolation, Durability)
+- Transaction log in _ deka leg fokder
+- Tima vavel via VERSION AS OF
+« MERGE tor upserts (update + insert)
+» ‘Schema enforcement and evolution
+
+Y What Interviewers Are Testing
+
+Do you understand wey Delta Lake exists, or just thal it's "the Dotabricks way"? Showa
+foundational knowledge.
+
+Detefegieerwki

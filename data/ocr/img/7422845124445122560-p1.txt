@@ -1,0 +1,25 @@
+Here's the list of Azure Data Factory
+(ADF) 50+ Interview Questions
+(Including some Scenario based )
+These Questions hold some
+significance in interviews.
+
+BASIC TO INTERMEDIATE :
+
+1. What are the main components of
+Azure Data Factory?
+
+2. What are Linked Services in ADF, and
+why are they important?
+
+3. What types of triggers are available in
+ADF for pipeline execution?
+
+4. What is the Copy Activity in ADF, and
+how can you optimize its performance?
+5. How does ADF handle running
+multiple pipeline tasks simultaneously ?
+6. What is the Lookup activity in ADF,
+and how is it used?
+
+7. How do you monitor and troubleshoot

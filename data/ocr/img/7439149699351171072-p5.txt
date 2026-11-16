@@ -1,0 +1,24 @@
+©
+
+Q 11. What is the difference between the HAVING
+clause and the WHERE clause?
+Ans: The WHERE clause is used to filter rows based ona
+condition before the data is grouped or aggregated.
+It operates on individual rows.
+
+The HAVING clause, on the other hand, is used to
+filter grouped rows based on a condition after the
+data is grouped or aggregated using the GROUP BY
+clause.
+
+Q 12. What is a transaction in SQL?
+
+Ans: Atransaction is a sequence of SQL statements that
+are executed as a single logical unit of work. It
+ensures data consistency and integrity by either
+committing all changes or rolling them back if an
+error occurs.
+
+=
+Om
+a? I

@@ -1,0 +1,29 @@
+16. What's the purpose of a Self-hosted
+Integration Runtime, and when would
+you use it?
+
+17. How do you integrate ADF with
+Databricks or Synapse Analytics?
+
+18. What are ARM templates, and how
+are they used in ADF?
+
+19. How do you handle incremental data
+loading?
+
+20. How would you implement SCD Type
+2 in ADF?
+
+21. What is the limit on the number of
+pipelines and entities in ADF?
+
+22. Describe the steps for deploying
+ADF pipelines using CI/CD.
+
+23. What new features does ADF v2
+have compared to ADF v1?
+
+24. How can you improve data
+movement speed in ADF?
+
+25. How does nested looping work in

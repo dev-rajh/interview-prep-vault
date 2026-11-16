@@ -1,0 +1,13 @@
+3) CONDITIONAL COUNTS
+(FUNNELS)
+
+When to use:
+« Count based on status or stage
+» Compare Completed vs Cancelled
+
++ Build funnel breakdowns
+
+Get number of Completed and Cancelled orders
+
+Tip: Conditional “SUM° is more flexible than “COUNT/IF{..}) ”
+

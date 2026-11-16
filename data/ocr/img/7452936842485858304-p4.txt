@@ -1,0 +1,28 @@
+step-by-step:
+1. Generate expected hourly time slots.
+2. Left join event_logs on those.
+3, Filter MULL (eeissing hours).
+
+BD Geery (for PostgresQt / Snowflake / Databricks SCL}:
+— Sep 1; Detiee time range
+WITH tirme_serries AS [
+SELECT gecerate_series{
+TIMESTAMP "2024-06-01 00-0000",
+TIMESTAMP "2024-06-01 5:00.00,
+INTERVAL "1 hour"
+) AS expected tiene
+h
+
+~ Sep 2: Rownd actual ewent times to the hour
+rounded events AS (
+
+SELECT date_trunc{hour’, ewent_time) AS event_howr
+FROM event_logs
+}
+
+Step 3; Find missing hour
+SILLECT ts.expected_time AS missing hour
+PROM time_series t:
+LEFT JOIN ranced_twents re
+ON tiexpectedl_tisee © re.ewent_hour
+

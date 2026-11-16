@@ -1,0 +1,26 @@
+Problem 4/26 { oare_ronsat |
+Monthly Growth
+
+Group and count total orders by Year-Month format.
+
+SAMPLE INPUT EXPECTED OUTPUT
+order_id date = total_orders
+184 2074-01-15 2024-01 2
+182 2026-81-20 2824-82 1
+103 2026-02-05
+
+SOLUTION
+
+su ee
+Convert date to 'YYYY-4W sf ring
+SELECT
+DATE_FORMAT(date, ‘%Y-%m') as mo,
+COUNT(*) as total_orders
+FROM orders
+GROUP BY 1;
+—n. Mext: Artist Metestion
+
+al i ——,
+| Anandnarayanan S S napcer |
+p/ The 2-Pattern SOL Cheat Sheet \ }
+

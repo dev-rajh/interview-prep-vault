@@ -1,0 +1,13 @@
+~
+
+Top 3 Highest-Paid Employees
+
+Get the three employees with highest salaries
+
+SQL QUERY MySOL/PastgresOt
+
+SELECT * FROM Employee
+ORDER BY salary DESC
+LIMIT 3;
+
+Anandnarayanan § - Essential SQL Queries | oe)

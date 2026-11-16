@@ -1,0 +1,26 @@
+50 SQL Interview Queries
+MOSaNns
+
+1. Find duplicate records in a table
+| eee
+
+SELECT columni1, column2, COUNT(*)
+
+FROM your_table
+
+GROUP BY columni1, column2
+
+HAVING COUNT(*) > 4;
+—-
+
+2. Retrieve the second highest salary
+from the Employee table
+
+SELECT MAX(salary) AS
+
+SecondHighestSalary i}
+FROM Employee .
+WHERE salary < (SELECT “A*(salary) i
+
+FROM Employee);
+r Macroson

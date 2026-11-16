@@ -1,0 +1,76 @@
+SELECT e.name AS Employee. e.salary, mname AS
+Manager, m.salary AS ManagerSalary
+
+FROM employees c¢
+
+IOUS employees m ON e.manager_ id mid
+WHERE c.salary > m.salary
+
+4, Count employees in each department having more
+than 5 employees
+
+SELECT department_id, COL 1(*) AS
+
+num employees
+
+FROM employees
+
+GROUP BY department id
+
+HAVING COUNT(*) = 5:
+
+5. Find employees who joined in the last 6 months.
+SELECT *
+
+FROM employees
+
+WHERE join_date == CURRENT DATE -
+INTERVAL ‘6 months’
+
+6, Get departments with no employees
+SELECT d.department_ name
+
+FROM departments d
+
+LEFT JOIN employees e ON d.department_ id
+e.department_ id
+
+WHERE e.id IS NULL;
+
+7, Write a query to find the median salary
+SELECT AVGj(salary) AS median_salary
+
+
+ORDER BY streak_length DESC
+
+10, Recursive query to find the full reporting chatn for
+each employee
+WITH RECURSIVE reporting chain AS |
+
+SELECT id, name, manager id, 1 AS level
+
+FROM employees
+
+WHERE manager _ id 1S NULI
+
+UNION ALI
+
+SELECT cid, e.name, ¢.manager_id, re.level + |
+FROM employees e
+JOUN reporting chain re ON e.manager_id = re.id
+
+SELECT * FROM reporting chain ORDER BY level.
+id:
+
+11. Write a query to find gaps in a sequence of numbers
+(missing IDs)
+SELECT (id + 1) AS missing_id
+FROM employees el
+WHERE NOT EXISTS |
+SELECT 1 FROM employees e2 WHERE c2.id
+el.id + |
+ORDER BY missing_id
+
+12, Calculate cumulative distribution (CDF) of salaries
+SELECT name, salary.
+

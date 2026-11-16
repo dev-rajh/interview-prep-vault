@@ -1,0 +1,56 @@
+oO
+
+—_
+
+LINKEDIN
+
+> How NULL
+Actually
+Works in SQL
+
+
+LINKEDIN a
+
+>» What NULL Really
+Means
+
+NULL = unknown
+Not zero
+
+Not empty
+
+Q AYUSH KUMAR
+
+LINKEDIN a
+
+—_
+
+» Common Mistake #1
+
+Using = NULL
+
+Correct > IS NULL
+
+Q AYUSH KUMAR i
+
+LINKEDIN a
+> NOTIN Trap
+
+If subquery returns NULL
+NOT IN may fail
+
+Use NOT EXISTS
+
+Q AYUSH KUMAR
+
+LINKEDIN a
+
+—_
+
+> Aggregates + NULL
+
+COUNT(column) ignores NULL
+
+COUNT(*) doesn’t
+
+Q AYUSH KUMAR

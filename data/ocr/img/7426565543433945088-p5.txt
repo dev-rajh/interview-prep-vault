@@ -1,0 +1,27 @@
+PYSPARK LEARNING HUB: DAY - 2
+
+Ads Performance
+
+Write an pyspark code to find the ctr of each Ad.Rownd ctr to 2
+decimal points, Order the resull table by ctr im descending order
+and by ad td in ascending order in case of a te,
+
+Crr=ClickedI(Clicked+Viewed)
+Difficult Level : EASY
+
+DataFrame:
+
+# Define the schema for the Ads table
+schema=StructTypel|
+StructField('AD ID jntegerfype(}. True)
+StructFieid( USER ID UntegerType(), Truc)
+Struct hieta ACTION StringTyped), True)
+
+# Define the data for the Ads table
+data = [
+(2, 1, Clicked),
+
+J
+
+WWW.LINKEDIN.COM/IN/AKASHMAHINDRAKAR
+

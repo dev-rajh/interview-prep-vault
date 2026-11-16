@@ -1,0 +1,42 @@
+PYSPARK LEARNING HUB
+
+# Creating Spark Session
+
+from pyspark.sql import SparkSession
+from pysparksgqltypes import StructType,StructField IntegerT ype
+
+creating spark season
+
+Spark = SparkSession. |
+
+budlder, \
+
+contig(‘spark. shuttle. useOtdFetchProtocol’, ‘true’). |
+config(‘spark_ui.port’,"O'). |
+
+config(“spark.sqlwarehouse.dir’, “/useriitvOOR042iwarehouse”"). |
+enableHiveSupport(}. |
+
+master{'yarn’). |
+
+getOrcreate(}
+
+schema = StructType(|
+StructField(" A ctorid™ IntegerTypel), True),
+StructField{" Directorid” IntegerType(), True),
+StructField{ "timestamp" IntegerTypef), True)
+i]
+
+data =|
+(1, 1, 0},
+(1, 1,1),
+{1, 1, 2),
+(1, 2. 3),
+(1, 2, 4),
+(2, 1, 8),
+(2, 1, 6)
+
+]
+
+WWW.LINKEDIN.COM/IN/AKASHMAHINDRAKAR
+

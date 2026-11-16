@@ -1,0 +1,22 @@
+Row and Column
+
+® Arowis a horizontal arrangement of data moving fram right to lett it is
+often referred to as a record of a tuple. It repeesents indivdual data
+entries.
+
+® Acolumnis a vertical arrangement of data mowing from top to bottom. fit
+is often referred to as an attribute or a field. It represents the
+characteristics ar properties of the data,
+
+Example 4 “Customers” table might have columns tke CustomerID, Name,
+Email, avd Phone with each row representing 4 different customer.
+
+© SOL stands for Structured Query Language was initially developed bry
+aM.
+
+© Wnitially it was called as SEQUEL (Structure English Query Language]
+
+© SOLis 4 prograenming language used to leteract with database,
+
+* SQL allows you to create, read, update, and delete (CRUD) deta ins
+relational database,

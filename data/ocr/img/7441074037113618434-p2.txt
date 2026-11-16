@@ -1,0 +1,12 @@
+RIGHT APPROACH WRONG APPROACH
+
+Aggregate Before Joining Joining Large Tables Without Filtering
+SELECT customer_id, SUM( amount) SELECT *
+FROM orders FROM orders o
+GROUP BY customer_id; JOIN customers
+
+ON o.customer_id = c.customer_id;
+
+RESULT — RESULT .
+
+Faster execution | Elficier processing Slow emecution | High resource usage

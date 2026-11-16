@@ -1,0 +1,57 @@
+
+1) FILTER RECORDS (NULL-SAFE)
+
+When to use:
+» Filter users by country
++ Filter by signup month
+
+» Exclude rows with missing phone
+
+Filter Indian users created in Jan-2025 and phone is not NULL
+
+SELECT *
+
+FROM users
+
+WHERE country = ‘India’
+AND created_at >= '2025-@1-01'
+AND created_at < ‘'2025-02-@1'
+AND phone IS NOT NULL;
+
+
+2) SUMMARIZE WITH TOTALS
+
+When to use:
+= Get order totals per category
+» Calculate number of orders per group
+
++ Filter out small categories
+
+Summarize each category and keep only those with 10+ orders
+
+SELECT category,
+IUNT(*) AS total_orders,
+SUM(amount) AS total_amount
+FROM orders
+
+GROUP BY category
+HAVING COUNT(*) >=
+
+SRO
+
+Tip: Use HAVING after GROUP BY to filter aggregates
+
+
+3) CONDITIONAL COUNTS
+(FUNNELS)
+
+When to use:
+« Count based on status or stage
+» Compare Completed vs Cancelled
+
++ Build funnel breakdowns
+
+Get number of Completed and Cancelled orders
+
+Tip: Conditional “SUM° is more flexible than “COUNT/IF{..}) ”
+

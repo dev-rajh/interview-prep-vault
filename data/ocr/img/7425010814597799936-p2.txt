@@ -1,0 +1,41 @@
+lexplraned MERGE Inge:
+
+MENCE TETO die _cestomer &
+
+CAIN wpeletas «©
+
+4 t. customer id = s.customer_id
+
+STN PATCHED AWD t.nesh <4) a.hesn TERY
+
+JPISTE SET 1.18 _Ourrem - false, t.¢nd_dace - currest_dateii
+EW “OT MATCHED THEN
+TRAFRT +
+
+« Always mento: hash compartees 0 detect chanpea
+* Delite MERGE = capected euwer
+
+3 Question: PySpark Optimization Scenario
+
+What they etked me
+“Your join is extremely slow. ‘W hea steps would you take to optamize tT”
+What | wid
+Iemed * optimizations:
+L. Broadcast emall Smeets table
+2. di. join (f Broadcast (dinj, "Ld")
+3. Repetition by join ney
+4) Cache reused DetsPrames
+
+5. Avead wide cansiometions: early
+6 Select only needed columms
+
+* Stun with broadcast join
+© Pere! LOVES Spark optineratice,
+
+4 Question: ADF Debug — Pipeline is
+failing randomly
+What they suked me
+
+“A papeline runs sormetamecs but fadke at other times. How will you debug?”
+
+Scanned by CamScanter

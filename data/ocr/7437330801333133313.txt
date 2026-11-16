@@ -1,0 +1,186 @@
+By - Krinhne Singh
+
+300 Real SQL Interview Questions
+
+Asked at PwC, Deloitte, EY, KPMG,
+
+Tredence, Persistent Systems and
+Accenture & More.
+
+Medium to Advanced SQL Questions (01-300)
+
+1. Find the second highest salary from the Employee
+table
+SELECT MAX(salary) AS SecondHighestSalary
+FROM employees
+WHERE salary = |
+
+SELECT MAX(salary
+
+FROM employees
+
+2, Find duplicate records in a table
+SELECT name, COUNT(*)
+FROM employees
+
+GROUP BY name
+
+HAVING COUNT(*) > 1:
+
+3, Retrieve employees who earn more than their
+Mana fer
+
+
+SELECT e.name AS Employee. e.salary, mname AS
+Manager, m.salary AS ManagerSalary
+
+FROM employees c¢
+
+IOUS employees m ON e.manager_ id mid
+WHERE c.salary > m.salary
+
+4, Count employees in each department having more
+than 5 employees
+
+SELECT department_id, COL 1(*) AS
+
+num employees
+
+FROM employees
+
+GROUP BY department id
+
+HAVING COUNT(*) = 5:
+
+5. Find employees who joined in the last 6 months.
+SELECT *
+
+FROM employees
+
+WHERE join_date == CURRENT DATE -
+INTERVAL ‘6 months’
+
+6, Get departments with no employees
+SELECT d.department_ name
+
+FROM departments d
+
+LEFT JOIN employees e ON d.department_ id
+e.department_ id
+
+WHERE e.id IS NULL;
+
+7, Write a query to find the median salary
+SELECT AVGj(salary) AS median_salary
+
+
+FROM |
+
+SELECT salary
+
+FROM employees
+
+ORDER BY salary
+
+LIMIT 2 - (SELECT COUNT(*) FROM employees)
+
+7?
+
+OFFSET (SELECT (COUNT(*)- 1) 2 FROM
+employees)
+|} AS median_subquery-
+
+§. Running total of salaries by department.
+SELECT name, department_id, salary,
+
+SUMj(salary) OVER (PARTITION BY
+department_id ORDER BY id) AS running total
+FROM employees:
+
+9. Find the longest consecutive streak of daily logins for
+¢ach user
+WITH login_ dates AS |
+
+SELECT user id, login_date,
+
+login_date - INTERVAL ROW NUMBER()
+
+OVER (PARTITION BY user id ORDER BY
+login date) DAY AS gmp
+
+FROM user_logins
+SELECT user_id, COLNT(") AS streak_length
+MINQogin date) AS start date, MAX(login date) AS
+end_date
+FROM login dates
+GROUP BY user_id, grp
+
+
+ORDER BY streak_length DESC
+
+10, Recursive query to find the full reporting chatn for
+each employee
+WITH RECURSIVE reporting chain AS |
+
+SELECT id, name, manager id, 1 AS level
+
+FROM employees
+
+WHERE manager _ id 1S NULI
+
+UNION ALI
+
+SELECT cid, e.name, ¢.manager_id, re.level + |
+FROM employees e
+JOUN reporting chain re ON e.manager_id = re.id
+
+SELECT * FROM reporting chain ORDER BY level.
+id:
+
+11. Write a query to find gaps in a sequence of numbers
+(missing IDs)
+SELECT (id + 1) AS missing_id
+FROM employees el
+WHERE NOT EXISTS |
+SELECT 1 FROM employees e2 WHERE c2.id
+el.id + |
+ORDER BY missing_id
+
+12, Calculate cumulative distribution (CDF) of salaries
+SELECT name, salary.
+
+
+CUME_DIST() OVER (ORDER BY salary) AS
+salary_cdf
+FROM employees:
+
+13, Compare two tables and find rows with differences
+in any column (all columns)
+SELECT *
+FROM table] t1
+FULL OUTER JOIN table2 t2 ON tl.id = t2.id
+WHERE tl.coll 1S DISTINCT FROM t2.coll
+
+OR tl.col2 [S DISTINCT FROM t2.col2
+
+OR tl.col3 (S DISTINCT FROM t2.col3
+
+14. Write a query to rank employees based on salary
+with ties handled properly
+SELECT name, salary.
+
+RANK() OVER (ORDER BY salary DESC) AS
+salary rank
+FROM employees;
+
+15. Find customers who have not made any purchase.
+SELECT ¢.customer_id, c.name
+FROM customers ¢
+
+EET JOUN sales s ON ¢.customer_id = s.customer_id
+WHERE s.sale_id IS NULL:
+
+16, Write a query to perform a conditional aggregation
+(count males and females in each department)
+SELECT department_id
+

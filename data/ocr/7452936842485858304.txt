@@ -1,0 +1,91 @@
+NTT DATA
+
+SQL questions in a Data Engineering interview
+CTC > 28-35 LPA
+(Difficulty level = Intermediate)
+
+Dh Opec:
+Find how many divinet users logged in on each date (i.e. were active).
+
+© sample Table: user_logies
+ar came
+Dalai
+a
+
+aol 2024-06-01 18:20:00
+eae
+a eae
+
+i Gerry:
+StLecT
+DATELlogin_datetine) AS login_date,
+
+COUNTIOISTINCT uiver_itt) AS netive_user_eoune
+FROM user_logins
+GROUP BY DATE\lagin_datetime)
+ORDER BY login_date;
+
+For each user, return their 2nd highest transaction amount (not using LIMIT or TOP).
+OB Sample Tabte: transactions
+
+BE query:
+SELECT wver_id, transaction_amnount
+FROM |
+
+SELECT *,
+DENSE_RANKD) OVER (PARTITION OY user_id ORDER BY traraction_amowe DESC)
+AS tan_rank
+PROM trassactions
+) Parked tone
+WHERE ten_rank © 2;
+
+Find hours where mo eveets occurred, assuring cominuous hourly logs are expected,
+
+2024-06-01 03:00)
+2024-06-01 04:00:00)
+step-by-step:
+1. Generate expected hourly time slots.
+2. Left join event_logs on those.
+3, Filter MULL (eeissing hours).
+
+BD Geery (for PostgresQt / Snowflake / Databricks SCL}:
+— Sep 1; Detiee time range
+WITH tirme_serries AS [
+SELECT gecerate_series{
+TIMESTAMP "2024-06-01 00-0000",
+TIMESTAMP "2024-06-01 5:00.00,
+INTERVAL "1 hour"
+) AS expected tiene
+h
+
+~ Sep 2: Rownd actual ewent times to the hour
+rounded events AS (
+
+SELECT date_trunc{hour’, ewent_time) AS event_howr
+FROM event_logs
+}
+
+Step 3; Find missing hour
+SILLECT ts.expected_time AS missing hour
+PROM time_series t:
+LEFT JOIN ranced_twents re
+ON tiexpectedl_tisee © re.ewent_hour
+
+WHORE re.ewent_hour tS MULL
+ORDER OF missing_hour;
+
+BB onpu:
+
+® Summary Table
+
+ae oo
+ae ps
+TR aladoned aaaslatlcl
+
+eee
+
+Objecthe:
+= Find each user's first parchase date.
+» Calculate days passed siece that purchase,
+
+(Bh Sample Table: purchases

@@ -1,0 +1,40 @@
+in| verhalaharahbandha . paberae Rader
+
+SQL
+
+Comprehensive Reference Guide
+
+in
+
+venkataharishbandha
+
+Database Fundamentals
+
+What is a Database?
+
+A database is a structured. organized set of data. in computing, & refer
+orange date — fink of ft like a file cabinel where dete & sored in diferent sections called Gables
+
+VioedP ress, for aman, uses MySOL ac ils database management systom
+
+DBMS — Database Management System
+
+* DBMS is software that allows users to interact wih a database. It manages data storage, retnewa
+uptistes. and pecunty
+
+Components of a DBMS
+
+: Dvla Storage Stores data it a airuciured forrnat
+
+* Data Scheme Defines tha structure (hiueprint) of the Gatabase
+> Query Processor — Inierprets and execuies SOL queries
+
+>: Teataaction Manager — Ensures AC (lian transactions
+
++ Securkty Manager— Contra access and penissions
+
+RDBMS — Relational Database Management System
+
+An BOGS © 2 DBMS designed spectically for reiatonal catstases — a subset of DBMS. It stores
+dale in cows and columes, and Gables can be related to each other, ft aupporte SOL quecess across
+multioion tabs sanullanousalhy

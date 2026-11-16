@@ -1,0 +1,22 @@
+5. EXISTS
+
+Employed when you want to check for the existence of
+records in a related table or subquery. Helps when
+you do your EDA.
+
+It returns a TRUE if the subquery returns at least one
+row,
+
+lt is more performant than using IN or JOIN.
+
+SELECT department_name
+FROM departments d
+WHERE EXISTS (
+
+SELECT 1
+
+FROM employees e
+
+WHERE e.department_id = d.department_id
+)5
+

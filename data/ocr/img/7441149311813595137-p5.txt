@@ -1,0 +1,50 @@
+in
+veriulahariahbandha - wiser comiavetantersdtiects 901 — Comprehensive Relererce Gels
+
+SELECT ia semet, Selary AE G)d salary, (6nlary + eolerp * 8,31 AS fete ondary
+FRM eaplopees
+
+(SELECT TOf 2 + FROM employes -~ First 2 cows
+
+SELECT * FROM esplovyee MEERE hiting_date BETWEEN ‘2871-01-81 RMP *2EFI-12-S1'r
+
+DCL — Data Control Language
+
+Ghat SRLRCT, UPOaTE Cn amployeea TO user rome;
+REVGER UPDATE C8 enployeas PROM omer name;
+
+TCL — Transaction Control Language
+
+BEGIN THAMSACTDOM:
+UPDATE emplopees EET salary = solery * L.1 WHERE departeent = "1T'r
+CAVEPGINT Byeels
+-- Df acmething qoee wrongs
+POLLAACK TO SAVEPOIST Saves:
+COMMDT:
+
+5. SQL Constraints
+
+Constraints are used to speci#y rules for data ins table, ensuing accuracy and rebatibty, Hs constraint
+ie Vicddled, Ihe action bt aborted. Constraints can be Colutn-leve! ar tabketewal
+
+NOT ALLL Ensures a ooluen cannot hae a MULL value
+
+UNIQUE Ensures all values in o column are diferent
+
+PRIMARY KEY Combination of MOT NULL and UNIQUE Liniquely identifies oach row
+FOREIGN KEY Prewents actons that would destroy links between tables
+
+CHECK Ensures values in a ooluTm saliefy 2 specific condition
+
+DEFAULT Sats a default value for a coturn Fino value Is apected
+
+Primary Key vs Foreign Key
+
+Primary Key Properties
++ Uniqueness — Each row must have a unique primary key value
++ Immutable — Onoe assigned, the value should not change
++ Simpichy — Koop primary heys as simple as possitie (best practoe)
+* Mon-lInteiigent = Should not contain meaningta business information
++ Indeed — Automatically indewed for fast searching
++ Relerertio integrity — Serves as a reference for foreign keys in other tntles
++ Bata Type — Frequently auto-incremented integers

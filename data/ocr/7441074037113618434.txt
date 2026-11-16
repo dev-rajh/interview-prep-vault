@@ -1,0 +1,35 @@
+RIGHT APPROACH WRONG APPROACH
+
+Filter Early Filtering After Aggregation
+SELECT customer_id, SUM( amount) SELECT customer_id, SUM( amount)
+FROM orders FROM orders
+WHERE order_date >= '2625-61-a1' GROUP BY customer_id
+GROUP BY custamer_id; HAVING MAX(order_date) >= '2628-61-61";
+
+RESULT —
+
+Faster execution | Efficient
+
+
+RIGHT APPROACH WRONG APPROACH
+
+Aggregate Before Joining Joining Large Tables Without Filtering
+SELECT customer_id, SUM( amount) SELECT *
+FROM orders FROM orders o
+GROUP BY customer_id; JOIN customers
+
+ON o.customer_id = c.customer_id;
+
+RESULT — RESULT .
+
+Faster execution | Elficier processing Slow emecution | High resource usage
+
+RIGHT APPROACH WRONG APPROACH
+
+Use Proper JOIN Keys Using Functions on Indexed Columns
+SELECT o.order_id, c.customer_name SELECT *
+FROM orders o FROM orders
+JOIN Customers ¢ WHERE YEAR(order_date) = 2025;
+On o.customer_id = c.customer_id;
+RESULT — RESULT —
+Faster execution | Elficier processing Slow emecution | High resource usage

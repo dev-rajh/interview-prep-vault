@@ -1,0 +1,11 @@
+3. FIND EMPLOYEES WITHOUT A
+DEPARTMENT (UBER)
+
+Write a query to list employees who are not linked to
+any department.
+
+4, CALCULATE TOTAL REVENUE PER
+PRODUCT (PAYPAL)
+Write a query to calculate the total revenue for each
+
+Ga www dataceps.com/sql-blueprint

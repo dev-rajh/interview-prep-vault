@@ -1,0 +1,99 @@
+Master SQL
+in 30 Days
+
+Intermediate to Advanced Journey
+(Part 2)
+
+
+Why Window Functions Matter
+
+Window functions perform calculations across a set of
+rows related to the current row — without collapsing
+the result into groups like GROUP BY does. They are the
+#1 topic in data analyst interviews and are used daily in
+product analytics, finance, and business intelligence.
+
+Syntax:
+
+Sample Database (Used Throughout Week 2)
+-- employees table
+
+emp_id name department salary
+Alice Engineering 95000.00
+Bob Engineering 8&5000.00
+Carol Engineering $5000.00
+Dave Marketing 70000.00
+
+
+Eve Marketing
+Frank Marketing
+Grace HR
+Hank HR
+
+- Product table
+
+product_id product_name category price
+iPhone 15 Electronics 999.00
+MacBook Pro Electronics 2499.00
+AirPods Pro Electronics 249.00
+iPad Air Electronics 599.00
+Nike AirMax Footwear 180.00
+Adidas Ultra Footwear 160.00
+Puma RS-X Footwear 140.00
+
+New Balance Footwear 160.00
+SQL Book Books 45.00
+Python Guide Books 55.00
+Data Science Books 65.00
+ML Handbook Books 55.00
+
+
+-- orders table
+
+order_id customer_id order_date amount
+101 2024-01-05 1200.00
+102 2024-01-12 850.00
+101 2024-02-03 1500.00
+103 2024-02-14 300.00
+102 2024-02-20 920.00 _
+104 2024-03-01 2100.00
+101 | 2024-03-15 1800.00
+105 2024-03-22 | 450.00
+
+103 | 2024-04-10 670.00
+J =a +
+106 2024-04-18 990.00
+
+-- funnel_events table
+event_id |user_id | stage | event_date
+1 201 = Visit. =| 2024-01-01
+2 (202 (Visit | 2024-01-01
+3 203 ~~ Visit. =| 2024-01-01
+4 204 Visit. «=| 2024-01-01
+
+5 205 ~=s Visit. =| 2024-01-01
+
+
+‘Signup | 2024-01-01
+Signup (2024-01-01
+Signup 2024-01-01
+
+‘Trial | 2024-01-02
+
+‘Trial =| 2024-01-02
+
+‘Purchase 2024-01-03
+
+DAY 8-9: RANKING FUNCTIONS
+
+ROW_NUMBER()}
+
+Assigns a unique sequential number to every row. Ties
+get different numbers — the order among ties is non-
+deterministic.
+
+When to use: When you need exactly N rows per group
+(e.g., top 3 per category).
+
+Practice 1 — Top 3 Products by Price per Category
+

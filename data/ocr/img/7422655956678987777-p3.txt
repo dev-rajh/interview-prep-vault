@@ -1,0 +1,20 @@
+Concurrency & sharing
+
+* Wetoractive Multiple users can attach motebooks; good for pair debugging and
+worksinaps.
+* Job: Tied to @ job run; 9 ad-hoc notebook sharing during asacutior.
+
+Raliahitiry
+
+© Interactive: More macuel control; easier to inapect live eemcutora‘drivers for dabugsing.
+© Job; Getter for Menpotent production pipetnes; clean cluster means bewer “dirty
+state" surprises,
+
+Best practioe
+
+* Develop on imeractive, promote to Job for scheduled! production runs.
+
+© Use Cluster Pools to shorten spin-up tine for job clusters.
+
+* Lock down with Cluster Policies, pin DBA versions, and treat job clusters aa imenutable
+infra.

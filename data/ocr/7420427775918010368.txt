@@ -1,0 +1,184 @@
+Databricks Interview Questions (Day 1 - Day 11)
+
+Prepared fy: Vineah | Data Engiteer
+
+Day 1 = Databricks Fundamentals
+
+7 DAFS acteal storage?
+
+@ When & compute vs iorage separation?
+
+G ‘When ba Databricts cheer?
+
+10 ‘ten happens whee a Spek job oe aevtesd in Oatabricke?
+
+Day 2 - Workspace & Notebooks
+
+L Will & Dalai Wotepace?
+
+2 Whal o & Oalabeicks Notetee?
+
+3 Wreck languages ie supperied nh fade?
+4 Wiel are fags Conrereeeti?
+
+S Can pou rem oullple languages in ee notebook?
+& Odbeeerce betwee daplap{) aed ao)?
+
+7 (Wiel ae Cudairicks nedgets?
+
+& Howe chy you perks perarebess to a notebook?
+ Odbeetee betwee notebeee ceed pol?
+
+1D Are notebooks used i production?
+
+Day 3 - Clusters
+
+When 62 Desabricks cheser?
+
+2 ‘Wher we Me components of a cluster?
+
+2 Diteence benwece deer and exeanc?
+
+4 ‘Wher 6an ntersctke chester?
+
+6 ‘Wher 6 ajob cheer?
+
+6 Why are fb chesters preferred for production?
+
+7 Wher 6 surecaling?
+
+: ‘When happens whee a cluster is enrinetedt?
+Hoe io you reduce chester com?
+
+ip Wren tsa ueppe-ande cesta?
+
+Day 4 = Databricks Runtime
+
+{) Wher & Deeb Rurere?
+
+2 Wow & Detebices Rurere diferent bom oper-srurce Spuatk?
+3 What & Photon?
+
+40 When we fhe yes of Dede Fue?
+
+S (Whee shoud you uss ML Runioe?
+
+9
+10 ‘Aten happens fan seecutor falls?
+
+Day 6 - Reading 4 Writing Data
+
+1 What fe femats are supported in Dadaiicicn?
+
+2 (OWheerce betes CSV. Pare, aed Dea?
+
+3 Why & scherne enforcerrand inpatient?
+
+4 Wiel & acherta eereree?
+
+S Oileerce betwee appertd and overerie?
+
+& Whal & partitioning wile wilting dal?
+
+7 Weal bh tee are Wes grote?
+
+Od hese: bette erated ane dered lade?
+‘Wiel he tawe eh Serva abe?
+
+‘LD Sheet practices fot reading aed wilting da?
+
+Day 7 - Delta Lake
+
+1 ‘Wher 6 Beto Lake?
+
+2) Why wes Det Late inwosuced?
+
+2 Hoe cioes Dette Lake provide AOD maneactions?
+
+4 Wher 6 he Get vansacton ing?
+
+§ ‘Wher & Tene Trawet?
+
+6 Oilteence benwess Dette and Parquet?
+
+7 Wher 6 scherea enforcemern ws sche evolution?
+
+: ‘When & WERGE in Deo Lake?
+‘When & OPTIMIZE?
+
+Bo wien VACUA?
+
+Day 4 = Performance Optimization
+
+{Wht m pettonng?
+2 ow ches pacddon prong work?
+3 ‘Wher the ore! fen prcthiem?
+
+4 ‘Whent ches OP TIME io?
+
+& ‘Where ZORDER?
+
+& Partioning v= ZORDER?
+
+F (Whee shoud yuu wrod TORDER?
+& How ches opericaton reduce com?
+
+Whar caimes Spark perfomance maues?
+‘LD Best practices tor perlownasce sein?
+
+Day 9 - Incremental Load & SCD
+
+fh Wher & an increrresttal eed?
+
+2 Dileence betes All and increta! need?
+3 When & Sioety Chargieg Dirension (SCD)?
+
+40 ‘Wher & SCD Type 17
+
+§ ‘Wher & SCD Type 27
+
+& Ditwence betwee SOD Type 1 and Tepe 27
+7 Wher cokenns are used in SCD Type 27
+
+& How cin you implement SCD Type 2 using Deka?
+G Wher & a cumogete bey?
+
+2D How do you hence deletes in SCD?
+
+Day 10 - Window Functions
+
+Lo Well are nando fonction in Spek?
+
+2 (Olkesence: betes vorebow butcten anal group by?
+3 Wiest & pertibory in ebtcien?
+
+4 Wiha & ortkerty in wiedoe?
+
+S ‘Weal & eow_nuriberi)7
+
+6G (Oilkesence betwee nach ated cerree_tek?
+
+7 Wheat are bag ceed ed furcticets?
+
+& Hoe are edie fenciorrs uend for deupbcaten?
+Q Wheil & sowaBetweun?
+
+10 Parkernatce consaberaborn of were funcioss?
+
+Day 11 - Spark SQL Optimization
+
+2 Wher & Tungsten ceccution engine?
+
+4 ‘Wher & predicae pustoiwe?
+
+§ ‘Whe 6 column prusing?
+
+G ‘Wher & paniion pring?
+
+7 Whe eacvetie?
+
+B Wher & 4 Groeddoam join?
+
+G Wher 6 Adaptive Query Eosouten (QE)?
+
+1D How do OPTIMIZE ang ZOADER help Spark SOL?

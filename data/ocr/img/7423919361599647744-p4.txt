@@ -1,0 +1,53 @@
+Asse er
+The Global Imerpecter Lock allows only one theead no execu Python bwreoode ar a time
+This makes multithweading ineffective for CPU bound sks
+
+Data pipelines overcome this by
+
+* Using multiprocessing
+¢ Ofiloading computation to Spark
+* Leveraging resive libraries written in C
+
+4, Hew de you make Pyihen ETI. pipelines Mempotent?
+
+Anse er
+Hemposeacy caseres repeated exooution produces the same recut. This is achieved by
+
+Using determinndic inuts
+
+Writing dita with overwrite of merge semantics
+Tracking procesand check points
+
+Aveoiding appeed-inly logic without deduplication
+
+(M4. Hew de you handle schema drift in Python-hased imgestion’?
+
+Amae er
+Schema drift is managed usmg
+
+« Schena valdation layers
+
+s Default value injection
+
+s Colunndevel versioning
+
+» Logaing eneapected felis for eeview
+
+Pipelines should not fail immediately but qearastine incenpethle recon
+
+5. Hew de you prefile and eptimize shew Python jobs?
+
+Aasuer:
+Tools include
+
+cProfale for fiusctiontewel analy sts
+Lane peofifers for bottlenecks
+Mcsiuory pridilers fie beaks
+
+Optimizations focus on reducing loops, using vectorived operations, and minimizing
+senalizamen overbead
+
+1. Hhew dees Spark handle fault telerance internally?
+
+Tech Interview Titans
+

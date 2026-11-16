@@ -1,0 +1,25 @@
+file in Azure Blob Storage and load it
+into an Azure SQL Database?
+
+8. How can you use parameters and
+variables in ADF pipelines to make them
+flexible and reusable?
+
+9. How would you make a pipeline run
+only after another pipeline finishes
+successfully?
+
+10. How would you set up a solution
+that can choose the source and
+destination based on input parameters?
+11. How do you change data in Azure
+Data Factory using data flow
+transformations?
+
+12. How would you implement slowly
+changing dimensions (SCD) in Azure
+Data Factory?
+
+13. How do you manage access and
+security in Azure Data Lake Storage
+(ADLS)?

@@ -1,0 +1,14 @@
+5. GET TOP 3 HIGHEST PAID EMPLOYEES
+(GOOGLE)
+
+Write a query to find the top three employees with the
+
+highest salaries,
+
+6. CUSTOMERS WHO PURCHASED BUT NEVER
+RETURNED PRODUCTS (WALMART)
+
+Write a query to find customers who made purchases
+but never returned any product
+
+Ga www dataceps.com/sql-blueprint

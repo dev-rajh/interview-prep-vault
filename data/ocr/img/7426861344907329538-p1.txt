@@ -1,0 +1,47 @@
+€ SNOWFLAKE
+
+Mock Interview: Questions & Answers
+
+Data Engiieering. Analytics & Adminstration
+Cowors. Come Coscepts | Pofornanoe | Security | Archtectro | Foal-Woed Soorice
+
+01. What ls Snowflake and how does it differ from traditional data warehouses?
+
+Arawer:
+Srowllake is a cloud-netes data pation bell on & unique malb-chster shared cats architecture,
+Unbke tractiional dat warehouses (2.9, Crack, Teradata) hal Sgnly couple compute and storage
+on feed hardware, Snowlake completoly soparaies storage from compute. Storage sits in cloud
+object storage (59, Azure Blob, G65) and compute 6 handled by ‘virtual Warehouses thal can
+scale independently, This means you can acike storage witioul Buying more cormpute, and vice
+versa. Traditional marchouses require capacty planning upfront, while Snowflake scales elastically.
+Snowflake also offers automatic query optieization, bull-in compression. zero-copy cloning, and
+true mult-cloud support.
+
+G2: Explain the three layors of Seowfiake's archiecturc.
+
+Auawer:
+Snowflakes architecture hea fren distinct! layers. (1) Storage Layer — Dale is stored in a
+compressed, columnar format in cloud object storage (SASCSizure Blob). Snowlake manages al
+aspects of storage including compression, metadata. and statistics, Dinta is stored in micro-
+partibors (typically 50-500 ME compressed) (2) Compute Layer (Query Procaesing) — Virtual
+Wiaeoinouses ara independant MPP [massively parallel processing) clusters thal execute queries.
+They access dota from storage Sut do not store data themectwes Multiple sarshouses can run
+
+simulsneousty on the same cain without contenbon, Ch) Clad Sereoes Layer — The brain of
+
+Snewfilake. Handles suiheicaton, medala management query Oplitizabon, query parsing,
+transaction management, and infaatuctuies management. hvala eprint a
+is always running.
+
+‘G2. What are micro-partitions in Smowllake? How do they help with query performance?
+
+Arcawer:
+Micro-partiions are he furdamental storage urel in Snowtais, Ab dete in Seorefiaie tatsbecs
+auiomatioally divided iio micro-partitions, which are contiguous units of storage ranging from 60
+MB to 500 M8. of uncompressed data (much smaller when comperssed). Each miceo-parttion
+stores dats in colummar format and contains metadata sbout the rows & holds — inducing the
+minnac values, full counts, and distinc! value counts for each coluen. This metadata anabhes
+Partition Pruning (also called Micro-Partiion Pruning): during query exaoution, the query optimizer
+reads the metadata and stips entre mcro-parttions that cannot contzen esfevani data based on the
+WHERE causes, This drarrestically reduces 91D and speeds up queries, sepecielly on large table
+With selective fillers.

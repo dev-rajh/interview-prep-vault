@@ -1,0 +1,27 @@
+WITH CTE AS
+
+SELECT Salary,
+DENSE _S4aa() OVER (ORDER BY Salary DESC) AS DEMSERAME
+FROM Employee
+i)
+SELECT Salary SecondHigoestSalary
+FROM CTE
+WHERE CENSERAME = 25
+
+77. Nth Highest Salary Medium = LeetCode
+
+Write 2 SOC query to get the nth highest sa ary from the Employee tab e.
+
+$---- Hoenn en-+
+
+{ td | Salary |
+
+0 enenaensiete
+pa | 196 |
+{2 | me |
+
+1 | Oo |
+ee neo
+
+For examp ¢, given the abowe Employes tab e, the nth highest salery where n = 2 is
+700, {ft there is no mh highest salary, then the query shou d retunn null,

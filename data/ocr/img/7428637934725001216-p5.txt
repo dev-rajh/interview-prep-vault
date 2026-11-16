@@ -1,0 +1,21 @@
+(eerux)
+Dept Counts
+
+List all departments and their employee counts (including zero).
+
+SOLUTION
+
+(_MYSoL / Sgt Stnren
+
+SELECT d.dept_name, COUNT(e.id)
+
+FROM departments d
+
+LEFT JOIN employees e ON d.id = e.dept_id
+GROUP BY d.dept_name;
+
+Heat: Gate Quality
+
+Anandnarayanan S
+The 20-Pattern SOL Cheat Sheet
+

@@ -1,0 +1,29 @@
+b
+ss Topic
+JADE Pipelines
+
+1 What they asked me
+
+Explain how you dewige o data pipeline fer daily lecretecetal lagesdon from On-Prem
+SL to ADLS
+
+What I said
+I described a wep iecremcital Now
+
+et watermark from contol tahle via Lookup actnaty
+ADP Capy Acttity with quer:
+SelLecyT * FROM Crderea
+S. WHERE Mooifiedete Sivacteblas( "Last LosdWatersark'| |
+Write to AIMLS @ Panqeet tonne (Brome)
+Preces udng PySpark in Detbncks — Clean. dedupe, join — Silver Zone.
+Update @atermark ater successtnl mun
+
+‘Tips
+
+TechM lowes “ETL — Delta — Parquet —~ Waterrerk” words
+MMcatiim Brena — Silver — Gold fones fir premium impression
+
+2 What they asked me
+
+foie PySperk job is show. Wil steps do pou take to oplimmre a?
+

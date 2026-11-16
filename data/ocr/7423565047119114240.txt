@@ -1,0 +1,144 @@
+INFOSYS
+
+Data Engineer Interview Questions
+
+CTC: 13-17LPA, YOE: 3+
+
+Owtabticks: Job cluster va Intermctive cluster Purpoae & veorktlow
+* bveractive chuiner: Long-livad cluaner you [and laammatea) attach metebooka to for
+
+explorbon, development, ad-hoc analysis, ond Gebugping.
++ Job cluster: Ephemeral cluster created only for a job/task run and tenminated when
+the run fieeahes ideal for production‘Cl workloads,
+
+Lifecycle & cost
+
++ itefactive: Stays up until you terminate it jor it hits auto-lenmination). You pay while
+t's runeing—even whan kbe [until auto-tanmninace kicks in).
+
+«Jobe Spina up for the run and shuts down automatically atterward + you only pay tor
+the run window.
+
+Configuration & governance:
+* iteractrye:
+® Created in the Clusters UI for via API) and reused.
+e You attech/upgrade lifeanes manually; good for iberathen chev,
+e Often governed Ey Ciuster Policea thet reatrict node typea, DGA versicerns,
+Ubearies, ete.
+* Job:
+
+© Cluster definition @ eenbedded im the fob (U1 or ON/API). Each run gets o closn
+envranmant
+
+o Libranes spected in the jotitesk (e.g, Maven! PyPUIAR) of win init scopes.
+o Easier to anforoe repeoducibiity and avoid “it works on ery Clucater™ ebvift.
+
+State & caching
+
+* Interactve: Caches jog. Delta cache, executor NM state] can persist across
+Notebook commandsfasher iteration.
+
+* fot: Fresh state eech nun; caches wanish stter termingtion—more predictable,
+
+Concurrency & sharing
+
+* Wetoractive Multiple users can attach motebooks; good for pair debugging and
+worksinaps.
+* Job: Tied to @ job run; 9 ad-hoc notebook sharing during asacutior.
+
+Raliahitiry
+
+© Interactive: More macuel control; easier to inapect live eemcutora‘drivers for dabugsing.
+© Job; Getter for Menpotent production pipetnes; clean cluster means bewer “dirty
+state" surprises,
+
+Best practioe
+
+* Develop on imeractive, promote to Job for scheduled! production runs.
+
+© Use Cluster Pools to shorten spin-up tine for job clusters.
+
+* Lock down with Cluster Policies, pin DBA versions, and treat job clusters aa imenutable
+infra.
+
+ADF Copy all tables from a source to 5 terget with a motadate-drven pipeline Below iss prown
+Gaaign that scales, is aay to govern, and aupperts both full and incrammrnal loada.
+
+4) Metadatsa model {in Azure SQL / Synapse SOL / dedicated contig DB}
+
+Create a control table that tests whet to copy and how
+
+CREATE TABLE etUTableCopyContig
+‘
+Contigid INT IDENTITY|1,1| PRIMARY KEY,
+SourcaLinkedSarvica NVARCHAR 100) MOT NLILL,
+SourceaDh NVARCHARII28) NOT NULL,
+SourceSchama NVARCHAR(I23) NOT MLAL,
+Sourcelablea = NVAACHAR|126) WOT NULL,
+SrkbLrkedService NWARCHARIIO0) NOT NULL,
+SrkDb AVARCOMAPRY 12) NOT MALL,
+SrkSchema NVAROMARLT2&) NOT MULL,
+SwkTable NVARCHAR 123) NOT MULL,
+LoadType YAACHAA|20) NOT NULL CHECK (LoadType IM |Full’, Incrementat’|},
+VirnonmarkColumn NWARCHAR(128) NULL, - e.g. ModifiedDote, LastUpdotedTs
+LastWatermarkVolue NVARCHAR 122) NULL, — store lastimax value joaced
+KeyColumns NVARCHARZ000) NULL, -- comma-separated keys tor upsert
+PreCopySerigt NVARCHARIMAX|NULL, = -- optional DDL/DML
+PoarlesyScript NVARCHARIMAX|NULL, = -- optional DOL/DML
+faActive BIT NOT NULL DEF AMAT (1),
+Notes NVARCHAR 4000) NULL
+ih
+
+Options: add Additional Properties (JSON) for column mappings, fle fornets, partition Penge,
+ote,
+
+B) Pormeterined datasats
+1. Source dataset (Azure SO8 example)
+* Purameters; pSchera, pTatle. pOb, pLS
+
+* Tabla: Bihorrae 10} 41}. pipelined) parameters oSchema,
+fipelned.parmeters.oTablel}
+
+* Unked senice name is Gynamic via o global parameter of switch jor use seperate
+dotesets per LS if you prefer ermpbcity),
+
+2. Sink dataset jArure SQL / Synapse SADLS)
+* Parameters mirror source (pSchama, pTabla, oDb, pL5) of for lake targets: pComnaine,
+oFoider, oFileNanmne.
+
+C} Pipstine outline
+
+Parameters (at pipeling bevel): mone required, but you can add runlevel filters (eg.,
+pOrlySchens, pOntyTabte)
+
+Activities
+
+1. Lookup (name: GaoCantige
+Query acteye rows
+
+2. SELECT * FROM et TableCopyContg WHERE Isfctive = 1
+Set First row only © false.
+4. Forach ower Gactivity|"GeiConfig}canputvolue Sat batchCount ja.g., 5-10) 1a comerol
+porallolisn
+* Inaide ForEach:
+olf Ram|}.LoadType == Full’
+© Optional Stared Procedures / Serigt ectivity (nama: PreFull| ta run
+inervy).PreCopyScript or a ganarabed
+© TRUNCATE TASLE [ochema]jtable} om the sink. Copy Data activity
+(name: Copy Fut)
+© Source: tale or SELECT * FROM [SourceScherma] (SourceT able]
+© Sink: aink tlablaMtile; enable Auto maging when achenas are idantecal.
+
+* Turing: paralietCopies, sgiWriterUseTabteLock = tre, bulk
+inseet/batching settings.
+
+2 Else (Incremental)
+Sat Vareite jor directly in source query) to build predicate:
+
+* ®oonom|SELECT * FROM |', Remi) SourceSchema, ‘11°,
+iten).SourceTable, '] °. WHERE *, tami.vatermarkColumn, * > *,
+case bhumerio|nem|)LastWatermark ali),
+iten().LastWatennarkValue, concer”,
+item). LastWotenmorkValue, '"")} 1
+
+® Copy Dats activity name: Copyincr] with above Source query.

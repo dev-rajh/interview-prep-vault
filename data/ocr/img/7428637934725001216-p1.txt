@@ -1,0 +1,18 @@
+No Sales
+
+Find employees who have never made a sale.
+
+\ YSOL / SQL StevER
+
+SELECT e.id, e.name
+
+FROM employees e
+
+LEFT JOIN sales s ON e.id = s.emp_id
+WHERE s.sale_id IS NULL;
+
+Next: Oote Rath
+
+Anandnarayanan S fm save |
+The 20-Pattern SOL Cheat Sheet
+

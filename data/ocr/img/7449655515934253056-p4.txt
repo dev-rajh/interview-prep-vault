@@ -1,0 +1,34 @@
+FUTURE
+TS) minions
+
+AVG() OVER
+
+Computes movingaverages or group averages; great for smoothing
+trends and monitoring performance.
+AVG(sales) OVER (PARTITION BY store ORDER BY day)
+
+COUNT() OVER
+
+Countsrowspergroup while keeping row-level detail; useful for
+frequency analysis and totals,
+COUNT(*} OVER (PARTITION BY category)
+
+MIN() OVER
+
+Returns minimumvalue inside a grovp/window, used for first date,
+lowest cost, earliest activity.
+
+MIN(price) OVER (PARTITION BY product)
+
+MAX() OVER
+
+Returns maximum value inside a group/window, used for latest date,
+highest score, peak revenue.
+MAX(score) OVER (PARTITION BY team)
+
+Measures populationstandarddeviation in a group to understand
+vorliability and stability,
+
+STDDEV_POP(sales) OVER (PARTITION BY store)
+
+F swipe

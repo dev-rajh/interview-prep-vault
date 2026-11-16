@@ -1,0 +1,36 @@
+G. Sple a dinghe cobs with Covens teparaled calves late Wasps Coke
+
+Seema: Your DataFrame contain acntune aah cenwea-seperated yalees You want se spltoms iain muie
+column.
+
+form pyipartaglfenctions import spit
+
+dit_ spit « dlwahCekwnn( nee _sokene)", epltid ogkere"| ""\getinewi0(i |
+wihColenn[ new_colunn2" split color"), ","L genteel |i
+dt spl, ome)
+
+4. Group data by a specific cofurin and calculate Une sem of asother coburn.
+Stemarice Group sabes data by “ product” and calcelate the total sali.
+
+ai groeptty!* product” | wun] “sakes lho)
+
+7. Join tee OatePramnes on a apecific condition.
+
+Scmmarice You Sawe bwo Datel rarren: one for pewtorrer Gata and one for orders Ini these Duta rameson the
+cuitomner iD.
+
+d1_joived « 2f_custorers joinjet_orders, éf_custoeners custoer_M == df_orders.cusnomer_id, ier")
+
+@il_jorreed show)
+
+a. Create a new column based on conditions from eodeting colurnna.
+
+Scemarice Add 3 new column “category” that asdges “high”, “medium”, or “cw” based on the walue of the “colec™
+coun
+
+fom pypartsgl fenctions inport when
+t= df.weth Colored category”, vher(cfasles > 500, “high"|
+nerd! cakes 2° S007) & [of eades > 200}, “retiun*}
+
+thera” kw")
+

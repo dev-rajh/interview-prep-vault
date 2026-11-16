@@ -1,0 +1,29 @@
+Swipe ——
+
+Year-over-Year Comparison
+
+Compare this months numbers to the same month Last year.
+
+SELECT
+
+curr.month,
+
+curr.revenue AS this_year,
+
+prev.revenue AS Last_year,
+
+curr.revenue - prev.revenue AS difference
+FROM monthly_revenue curr
+LEFT JOIN monthly_revenue prev
+
+ON curr.month = prev.month
+
+AND curr.year = prev.year + 1;
+
+Self-join oe LEFT JOIN so you Interviewers Love
+
+the same don +t Lose months this for product
+
+table with no prior data and even
+questions
+

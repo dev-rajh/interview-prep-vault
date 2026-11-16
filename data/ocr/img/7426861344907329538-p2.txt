@@ -1,0 +1,40 @@
+© What is Clustering im Snowfiske and when should you use it?
+answer
+
+(Clustering ofers to how data is co4ocated wthin mcro-partifions. By datault, Snowflake dustors
+dats based on nserton onder, Wher inttes grow very large and queries frequently filter on speciic
+calurins, the defied chistarings mary ceaull in queries scanning many micro-partlions, Exolici
+Clustering Keys can be defined so that Snowflake auiomatoaly re-chusters data, grouping rows
+wih similar values together in the same micro-partitions. Ths improves pruning effectiveness. You
+should use custenng when: (a) 2 isdle is very lange (hundreds of GH o> TB), (b} query filers
+frequently target specific colutins, (c| tie table is frequanty queried Bul not bequanty updated.
+Clustering Mas a cost (Aunomatic Clustering service credits), so f should not be appbed to small or
+frequently loaded tables.
+
+‘OS. What is the ditterenoe between a Virtual Warchouse and a Cloud Servioes layer?
+
+Arawer:
+4 Vielual Warehouse (WH) i & comput cater thal executes SOL queries. it i uaer-provisiored,
+can be slared/suspended¥asized on demand, and con@umes Smowsfake credits based on runtime.
+Virwal Warehouses handle DML, DOL, and cate Inading operations. The Gioud Services Layer, on
+the other hand, is always cunning and is tally managed by Snowflake. Il handing metadata
+Managarant, query compilation and optimization, authentication and authorization, fansacton
+coordination, and infrastructure management. Cloud Services does not execute query data
+processing — that is the warehouse's job. Cloud Servoes charges apply only if they exceed 10% of
+daly warehouse compute credits: ohenwise they are induced at no esdra change
+
+‘Of What Is the Result Cache and how oan it improwe performance?
+Answer:
+
+Snowilake mainiains a Resull Cache (also called Query Fiesull Cache) in the Cloud Saréoes Layer.
+When a query is executed, Snowfake stores the result for 24 hours. H the esact same query is
+executed again — by any user on the same scoount — ond the underteng data has not changed,
+Snewilake retums the cached maul Patenthy withoul apinning up a Virtual Warehouse, This means
+20r0 COMpUTS credit usage for repeated identical queries. The cache is invalidated whan: (aj tha
+
+table data changes, (b) 24 hours have passed, [c| fhe query uses mon-detenmiedstic
+functions like CURRENT _TIMESTAME)) or RANDOM). Bees! practos: deegn dashboards and fl
+nok io ube parameterized Queries Lo Lake advantage of reall caching
+
+O° What ie the diHeconce between T-shirt sires for Virtual Warehooses (XS, 5, iM, L, etc J?
+answer:

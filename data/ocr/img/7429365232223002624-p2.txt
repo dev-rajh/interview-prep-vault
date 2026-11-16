@@ -1,0 +1,31 @@
+3 GOOGLE
+
+order_id order _date
+
+doy count
+| 1 2024-01-04 | 2024-01-02 8
+
+— |
+
+2 2824-81-83
+
+Solution
+
+Generate missing dates wsing Recursive CTE
+WITH RECURSIVE Dates AS (
+SELECT MIN(order_date) AS day FROM orders
+UNION ALL
+SELECT day + INTERVAL 1 DAY FROM Dates
+
+WHERE day < (SELECT MAX(order_date) FROM orders)
+)
+SELECT d.day, COUNT(o.order_id)
+FROM Dates d
+LEFT JOIN orders o ON d.day = o.order_date
+GROUP BY 1;
+
+Mext: Largest Dept +
+
+ANAADNARAYANAN S
+Fe
+

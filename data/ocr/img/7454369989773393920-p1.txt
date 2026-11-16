@@ -1,0 +1,32 @@
+Q1. Whatis SQL?
+
+Ans: SQL stands for Structured Query Language. Itis a
+programming language used for managing and
+manipulating relational databases.
+
+Q 2. What is a database?
+
+Ans: A database is an organized collection of data stored
+and accessed electronically. It provides a way to
+store, organize, and retrieve large amounts of data
+efficiently.
+
+Q 3. What is a primary key?
+Ans: A primary key is a column or combination of columns
+that uniquely identifies each row in a table. It
+
+enforces the entity integrity rule in a relational
+database.
+
+(asm 2emereew mernkh'T 6 c
+
+wee
+Cohan L eokiets Priory ary "
+F
+c
+
+f °° iS = (nr i Ss bin
+
+reed tee Tf me Cokes
+et Peep Rang
+

@@ -1,0 +1,36 @@
+@ Question 3: Explain the medallion architecture (Bronze, Silver,
+Gold). Why is it used?
+
+A The Weak Answer (Pass, but not impressive)
+“Bronze is cow date. Sewers cleaned, Gold 6 aggregated”
+
+Why this is weak; Correct ful dosael explain the rasoring of benefita
+
+(i The Strong Answer (Stands Out)
+“The medafion architecture separates dota by quality level. Bronze is the rer landing
+Zone - ingest everything, preserve the onginal data for mepeocessing f needed. Siver
+applies clhearnng: deduphralion, cats type fiers, ffering bad records, Gold is
+business-reachs: aggregations, joins, cptienized for specifi: weep canes, They kay besrenlit
+is datuggability - if something iooks wrong in Gold, | can trace hack Mrough Silver to
+Bronze te find where things went weong. Ht also lats diforant iaams work at diferent
+layers.”
+
+Key concepts to mention:
+-  Beorwer raw, append-onty, squrce of truth
+- Gole aggregated, husines logic applied, query-cpimed
+- Reprocessing capability from Bronce
+- Clear data Eneage through larpors
+
+> What Interviewers Are Testing
+Oo you understand cats pipeline design principles? Shows you can fink soul Gata quality
+Syalarrealically
+
+@ Question 4: What's the difference between a cluster and a job
+in Databricks?
+
+ih The Weak Answer (Pass, but not impressive}
+“A Guster i the compute, a job cure cock.”
+
+Wi this ia weak: Too brn! - misses inperam operational data.
+
+Detefegieerwki

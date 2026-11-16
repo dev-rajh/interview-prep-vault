@@ -1,0 +1,22 @@
+2. QUALIFY
+
+lt can be used to filter the results of a query based on
+the result of a window function.
+
+You don’t need nested queries making the code a lot
+easier to read.
+
+It is similar to the HAVING, but instead of filtering
+after an aggregation, QUALIFY filters after the
+application of window functions.
+
+SELECT
+id,
+salesperson,
+amount ,
+
+ROW NUMBER() OVER (PARTITION BY salesperson ORDER BY amount
+DESC) AS rank
+FROM sales
+QUALIFY rank = 1;
+

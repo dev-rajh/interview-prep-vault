@@ -1,0 +1,41 @@
+& Customer Who Made Purchases but Mever Reserred Progucts (Wiaimart)
+
+SELECT GISTINCT c. customer_id
+
+FROM Customers ¢
+
+JOIN Orders o OW ¢.custamer_id « o. customer id
+
+WHERE c.custamer_id WOT IM (SELECT custamer_id Fa0M Returns);
+
+7, Show the Count of Gedlers Per Customer (Metal
+
+SELECT customer_id, COUNT(*) 45 erder_coent
+FROM Orders
+GRP Ay costemer_id;
+
+2. Setriewe All Emeloyees Wha Joined in 2023 Amazon)
+
+SELECT © FaOH
+WHERE EXTRACT(YEAR FROM hire date} © 282);
+
+9. Calcutate Average Order Value Per Coster ([Microseft)
+
+SELECT ¢ubtewer_id, Awo(total_ampeut) AS avg_order_walue
+FROM Orders
+Shou Br cesteser_id;
+
+SELECT customer_id, Max(erder_date) AS Latest_orger_date
+FROM Orders
+GROUP Gf cetomer_id;
+
+12. Pind Products That Were Mever Sold
+
+SELECT p.prodect id
+
+FROM Praducte p
+
+LEFT 300M Sales s OM p.product_id = a_preduct_id
+WHERE 3. preeduct_id 1S MULL;
+
+Page 2 of 9

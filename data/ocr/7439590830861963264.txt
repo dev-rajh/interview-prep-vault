@@ -1,0 +1,61 @@
+Scenario- Based
+
+INTERVIEW
+QUESTIONS
+
+DATACEPS
+
+1. FIND DUPLICATE RECORDS IN A TABLE
+(AMAZON)
+
+Write a query to find rows that appear more than once
+in a table.
+
+2. GET THE SECOND HIGHEST SALARY
+(EMPLOYEE TABLE)
+
+Write a query to find the second highest salary from the
+Employee table
+
+o1
+Grew dtaceps.com/sd-biusprint
+
+3. FIND EMPLOYEES WITHOUT A
+DEPARTMENT (UBER)
+
+Write a query to list employees who are not linked to
+any department.
+
+4, CALCULATE TOTAL REVENUE PER
+PRODUCT (PAYPAL)
+Write a query to calculate the total revenue for each
+
+Ga www dataceps.com/sql-blueprint
+
+5. GET TOP 3 HIGHEST PAID EMPLOYEES
+(GOOGLE)
+
+Write a query to find the top three employees with the
+
+highest salaries,
+
+6. CUSTOMERS WHO PURCHASED BUT NEVER
+RETURNED PRODUCTS (WALMART)
+
+Write a query to find customers who made purchases
+but never returned any product
+
+Ga www dataceps.com/sql-blueprint
+
+7. COUNT ORDERS PER CUSTOMER (META)
+
+Write a query to show how many orders each customer
+has placed.
+
+8. FIND EMPLOYEES WHO JOINED IN 2023
+(AMAZON)
+
+Write a query to list ernployees who joined in the year
+2023
+
+Ga www dataceps.com/sql-blueprint

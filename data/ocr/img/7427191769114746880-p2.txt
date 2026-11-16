@@ -1,0 +1,29 @@
+=—
+"Problem 2/20 [ oaTeorFF ae
+
+SLA Breach
+
+Find orders where delivery took more than 7 days from the order date.
+
+SAMPLE INPUT EXPECTED OUTPUT
+order_id ordered delivered order_id days_taken
+285 2826-01-01 2026-01-18 205 %
+706 2026-01-05 2026-81-06
+
+SOL Server @ ©
+
+Calculate difference in days
+SELECT
+
+order_id,
+
+DATEDIFF(day, ordered, delivered) as days_taken
+FROM orders
+WHERE DATEDIFF(day, ordered, delivered) > 7;
+
+Y Neat: Ingtant Conversion .«
+
+\
+a?
+| Anandnarayanan 8 (“co narcer |
+\q p/ The &)-Pattern fl Cheat theat \ a

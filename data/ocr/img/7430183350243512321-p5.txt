@@ -1,0 +1,18 @@
+*
+
+4. Calculate the total revenue per
+product
+
+SELECT product_id,
+SUM(quantity * price) AS
+total_revenue
+
+FROM Sales
+
+GROUP BY product_id;
+
+P PayPal
+
+ff) @Tajamulkhann »
+
+@Tajamul.datascientist

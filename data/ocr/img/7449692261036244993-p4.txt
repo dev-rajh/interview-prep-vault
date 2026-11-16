@@ -1,0 +1,21 @@
+SNOWFLAKE VIRTUAL VIRTUAL WAREHOUSE
+
+Interview Cheat Sheet
+
+WHAT IS IT? c ed S/
+\* é
+
+i
+
+Bree queries «Me rtornge dnpasdency
+TYPES OF WAREHOUSES:
+
+(Lcent wearer
+(Len) rate cor KEY PROPERTIES:
+
+Seowpark Optinized|) | QL) Mito RESUME
+Dees | = oss
+| iaeractivg | Spe when idle Clusters: 1- $12
+
+MULTI-CLUSTER CONFIGURATION:
+

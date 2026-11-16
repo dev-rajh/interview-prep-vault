@@ -1,0 +1,32 @@
+Sca@latie Metadata Works with petabytes of data
+
+Transaction Log Internals
+* Stored in JSON files im sen ey
+« Captures all operations: INSERT, DELETE, UPDATE
+
+* Each new transaction = new log file
+
+© Delta Table Types
+Managed Table
+
+® SQOred WSide chia fee tevelnwert oun
+« Dropping the table deletes both Gata and metadata
+
+External Table
+« Uses Locerow keyword to store data outside default path
++ Dropping only deletes metadata, data remains
+
+o” Delta Features with Detailed Use Cases
+
+© Time Travel
+
+Time Travel enables you to query older snapshots of a Delta table. This ts useful
+for debugging, audits, recovering from accidental deletes of updates
+
+Syntax:
+SELECT * FROM my_table VERSION AS OF 3;
+SELECT * FROM my_table TIMESTAMP AS OF '2024-01-41';
+DESCRIBE HISTORY mry_table;
+Use Cases:
+« Rollback to a previous version
++ Compare historical va cunent date

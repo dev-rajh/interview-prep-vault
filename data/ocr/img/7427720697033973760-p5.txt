@@ -1,0 +1,29 @@
+CREATE FUMCTION getitaliighestialery(M IMT} RETURNS INT
+arcth
+SET W = Wetj
+ET uAN
+SELECT O©STENCT Salary FROM Employee OADER BY Salary OfSC
+LIMIT 1 OFFSET Wi
+
+EMD
+
+178, Rank Scores Medium | LeetCocde
+
+Write a SQ@ query torank scores. f there is a tie between two scores, both shoud
+have the same ranking. Note that after a tie, the neat ranking number shoukl be the
+POR) CONSECULNS Invleger Value. In other words, there should be no “hows” betweer
+ranks,
+
+ad
+
+Id | Score |
+ale tele D
+2 | a |
+{2 [3.6 |
+13 | 48 |
+4 [3.6 |
+fs | «om |
+6 | ses |
+
+For examp e, given the abowe scores table, your query should generate the
+follwing raport (order by highest scare);

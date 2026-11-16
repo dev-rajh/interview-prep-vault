@@ -1,0 +1,69 @@
+= gg
+
+treet DATA wits Brow
+=
+
+SQL DATA WARHOUESE
+
+Project
+
+Baraa Khatib Salkini
+YouTube | DATA WITH BARAA
+SQL Course | Data Warehouse Project
+
+Y
+
+Dela epeany ES _ Advanced
+: Data Analy =
+Warehousing ro ey Data Analytics
+‘Crganize, Swucture , Prepare, “Understand Data, Baswer Business Questions.
+ETL/ELT Processing Basic Queries Complex Queries
+Data Architecture Data Picking Window Functions
+Data Integration Sieple Aggeegatons CTE
+Deda Cleansing Svbquery Subqueres
+Data Load Reports
+Data Modeling.
+ade
+
+SQL Course | SQL Data Warehouse Project | ETL DATA wi Baza
+
+> Bink 2
+
+Daa ws Bar
+
+oG-ee
+a reee8
+
+fe Be |
+
+SQL Course | SQL Data Warehouse Project | Data Architectures
+
+ade
+To SI renee |
+~
+
+Raw, unprocessed data Clean & standardized data Business-Ready data
+as-is from sources
+
+(Intermediate Layer) Provide data to be consumed
+Traceability & Debugging Prepare Data for Analysis tor reporting & Analytics
+
+Tables Tables Views
+Full Load Full Load
+(Truncate & Insert) (Truncate & Insert) None
+
+- Data Cleaning
+
+D - Date Standardization + Data Integration
+(ae ti None (as-is) + Data Normalization - Data Aggregation
+- Derived Columns « Business Logic & Rules
+
+- Date Enrichment
+
+- Start Schema
+Data Modeling None (as-is) None (as-is) - Aggregated Objects
+- Flat Tables
+- Data Analysts - Data Analysts
+~ Data Engineers - Data Engineers - Business Users
+
+SQL Course | SQL Data Warehouse Project | Why we need i

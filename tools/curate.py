@@ -8,8 +8,10 @@ Outputs:
 import json
 import os
 import re
+import sys
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # tools/ — for extract_questions import
 
 # ---------- company detection (ordered by specificity) ----------
 COMPANIES = [
@@ -172,13 +174,39 @@ def detect_topics(text: str) -> list:
     return hits[:8]
 
 
-def is_interview(text: str) -> bool:
+# Learning posts: concepts explained, how-to-answer guides, cheat sheets, roadmaps.
+LEARN = re.compile(
+    r"cheat ?sheet|road ?map|mind ?map|how (?:it|they|spark|sql|this|delta|kafka) works?|"
+    r"how to (?:answer|explain|approach|structure|crack)|explain(?:s|ed)? (?:the|how|what|in simple|why)|"
+    r"breakdown|step.by.step|terminolog|know the difference|understand(?:ing|ed)? (?:the|how|what|why)|"
+    r"visual guide|one.pager|deep dive|mistakes? (?:to avoid|candidates|people|that (?:most|cost))|"
+    r"pro tips?|patterns? (?:that|every|to)|day \d+\s*/\s*\d+|execution order|"
+    r"architecture (?:explained|of|design)|in simple (?:terms|words)|"
+    r"\d+\s*(?:advanced|real|interview|frequently asked)\s*(?:sql|pyspark|python|spark|data)?\s*questions|"
+    r"must (?:know|try)|every (?:developer|engineer|analyst|data) (?:should|must)|"
+    r"essential \S+ commands|learning (?:journey|path)|things (?:every|to know)|"
+    r"how (?:i|you) (?:would )?(?:cracked?|approach|prepare|answer)|roadmap i|"
+    r"concepts? (?:explained|you must)|translate business logic|think(?:ing)? (?:like an? )?(?:engineer|analyst|data)",
+    re.I,
+)
+
+
+def classify(text: str) -> str:
+    """three-way: interview (question source) | learnings | other"""
+    from extract_questions import split_questions
     t = (text or "").strip()
     if not t:
-        return False
-    if JOB_SIGNALS.search(t) and not INTERVIEW_SIGNALS.search(t):
-        return False
-    return bool(INTERVIEW_SIGNALS.search(t))
+        return "media"
+    qs = split_questions(t)
+    qn = len(qs)
+    has_schema = "create table" in t.lower()
+    if qn >= 2 or (qn >= 1 and has_schema):
+        return "interview"
+    if LEARN.search(t) and len(t) > 150:
+        return "learnings"
+    if qn >= 1:
+        return "interview"
+    return "other"
 
 
 def main():
@@ -186,6 +214,7 @@ def main():
         posts = json.load(fh)
 
     curated = []
+    learnings = []
     others = []
     for p in posts:
         urn = p.get("urn", "")
@@ -198,28 +227,32 @@ def main():
             "time": p.get("time") or "",
             "text": (p.get("text") or "").strip(),
         }
-        if entry["text"]:
-            entry["company"] = detect_company(entry["text"], p.get("headline") or "")
-            entry["field"] = detect_field(entry["text"], p.get("headline") or "")
-            entry["topics"] = detect_topics(entry["text"])
-            if is_interview(entry["text"]):
-                curated.append(entry)
-            else:
-                others.append(entry)
+        entry["company"] = detect_company(entry["text"], p.get("headline") or "")
+        entry["field"] = detect_field(entry["text"], p.get("headline") or "")
+        entry["topics"] = detect_topics(entry["text"])
+        bucket = classify(entry["text"])
+        if bucket == "interview":
+            curated.append(entry)
+        elif bucket == "learnings":
+            learnings.append(entry)
         else:
-            others.append({**entry, "note": "media-only post (image/carousel/document)"})
+            note = "media-only post (image/carousel/document)" if not entry["text"] else ""
+            others.append({**entry, "note": note})
 
     curated.sort(key=lambda x: x["id"], reverse=True)
+    learnings.sort(key=lambda x: x["id"], reverse=True)
     with open(os.path.join(BASE, "data", "posts.json"), "w", encoding="utf-8") as fh:
         json.dump(curated, fh, ensure_ascii=False, indent=1)
+    with open(os.path.join(BASE, "data", "learnings.json"), "w", encoding="utf-8") as fh:
+        json.dump(learnings, fh, ensure_ascii=False, indent=1)
 
     # non-interview summary (local only, gitignored)
     os.makedirs(os.path.join(BASE, "local"), exist_ok=True)
     lines = [
         "# Non-interview saved posts (local summary)",
         "",
-        f"Extracted {len(posts)} saved posts total. {len(curated)} are interview-prep "
-        f"(published to the site). The remaining {len(others)} are summarized below.",
+        f"Extracted {len(posts)} saved posts total. {len(curated)} question posts and "
+        f"{len(learnings)} learning posts are published. The remaining {len(others)} are summarized below.",
         "",
     ]
     for e in others:
@@ -235,14 +268,16 @@ def main():
     with open(os.path.join(BASE, "local", "other-posts.md"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(lines))
 
-    print(f"curated interview posts: {len(curated)}")
-    print(f"non-interview / media-only posts: {len(others)}")
+    print(f"question posts: {len(curated)}")
+    print(f"learning posts: {len(learnings)}")
+    print(f"other / media-only posts: {len(others)}")
     print(f"total: {len(posts)}")
 
     # quick field/company distribution
     from collections import Counter
-    print("\nfields:", Counter(e["field"] for e in curated).most_common(12))
-    print("\ncompanies:", Counter(e["company"] for e in curated).most_common(12))
+    print("\nquestion fields:", Counter(e["field"] for e in curated).most_common(10))
+    print("\nlearning fields:", Counter(e["field"] for e in learnings).most_common(10))
+    print("\nlearning topics:", Counter(t for e in learnings for t in e["topics"]).most_common(12))
 
 
 if __name__ == "__main__":

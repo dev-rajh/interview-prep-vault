@@ -1,0 +1,23 @@
+Problem 4/20 (tem /ser100 ) | @META
+Missina EMPLOYEE IDS
+
+Find gaps in employes IDs.
+— a
+id name missing_id
+1 Alice 2
+
+| 5 Bob |
+
+SELECT id + 1 AS missing_id
+FROM employees e
+WHERE NOT EXISTS (
+SELECT 1 FROM employees WHERE id = e.id + 1
+
+)
+ORDER BY id;
+
+MWext: Seniority Anomaly *
+
+$ 5 Qe°0sT 0) SAVE
+Fy G2 GE
+

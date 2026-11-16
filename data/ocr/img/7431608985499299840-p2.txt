@@ -1,0 +1,21 @@
+The Solution:
+WITH ranked_employees AS (
+SELECT
+department,
+employee_name,
+ROW_NUMBER() OVER
+(PARTITION BY department
+ORDER BY salary DESC) as rank
+FROM employees
+)
+SELECT
+department,
+employee_name,
+
+salary
+FROM ranked_employees
+WHERE rank <= 3;
+
+Key phrase: "PARTITION BY resets the ranking for each group”
+Follow-up they'll ask: "What if you want bottom 32"
+Your answer: Change ORDER BY salary DESC to ASC

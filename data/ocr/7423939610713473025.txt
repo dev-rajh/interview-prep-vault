@@ -1,0 +1,177 @@
+DATABRICKS
+DATA
+ENGINEERING
+
+DATABRICKS
+DATA ENGINEERING ASSOCIATE
+PRACTICE QUESTIONS
+
+Created By - Souray Banerjee
+
+Questions
+
+1 Delbricks techiieotere & Seneces:
+
+La Wher ae fs ree main copes of the Deasbecis dechaecuae?
+
+1.2. What am fe these ieterent Dedabecks eervices?
+
+L3. Wied te a chaader?
+
+14. We ae Be Rad Cheb Typ?
+
+L4. How long does Daaabecies ames cles conkgeeaion brorreakor?
+
+L& What oe ty those cheater megs?
+
+17. Cher ope and sucecaing
+
+LE Wied tf booed Gk erecrypbor?
+
+19 ATeE ae Pet Chk Seoety meee?
+
+Li. Where aPot ;
+
+L0), hes ragpess when you nermenage | reeuwt / deiets a chemer?
+2 Mask Operstions for Databricks Notebooks
+
+2.1 Wied nage conenared do you une Oo tae @ fetebook from aeither notebook?
+
+(22 whats Danmecie altos and hew can you use inte fat owt directories of files from Python oaite?
+
+2:3, hes funeiee should yauuse when poe have sobuiar dans saad ty 6 Python cett?
+a Gb Verioning with Gatasriche Repos
+
+2.3. What ix Dntateicks Reson?
+
+a2. ‘Wid rw fre reeseersernbid CCD best peace be Polka fsa shevetping wah Mapes?
+4 Delta Lake andl Ife Lakobvearse
+
+2.) ‘Wher is he cefintion of a Diets Lake?
+
+ee How does Deda (ake ackirees the den Ine pain points in ermure retinhie, recety to-go chara?
+
+4.1, Descries tees Dette Lator brings ACID traraectiots i object wiotage
+
+2.4, be Delia Like Te Cotanl for all Latkes crowded oh Databrcks?
+
+2.5. What dasa etjects are io the Gamebrcks Lakehouse?
+
+2& Wher is arretasnoe?
+
+47) Whos is a catalog?
+
+4.8. Whats a Dates Lake table?
+
+4.0. How do rokatornad best emu tm Cotta Live Tabkew?
+5. Managing Dei Tacs
+
+6.) Whe is the epee mo reeme 3 Desty Tobie?
+
+S.2. What bs the epic tn insert deta?
+
+5.3, few concunseent sands on Deke Lados tation pemaibbe?
+
+4 Wiha be five ogee to eapetinde partic der recur cot a bebe?
+
+5:5. eTOCs thet yeni no delete particu secorcks at a mater?
+
+6% Wher is he Syrian for ney and Waat are the benetts of exing merge?
+
+S.7. Whos is the apres tn delete o tsi?
+
+G Advanced Delta Lake Feanures
+6.1. Whee Hie?
+6.2 Wiel aw Pre te cortanaetdts bo saber iratids about a Labo?
+6S What is ie sya to displery the Drea Lake tes?
+Gd Denes the Chvitn Lake fies, their torrad are Gireciory eres
+6.5. What doas fhe ruery engine do using the baraaction lagu whan son yuaory a Deda Lavoe table?
+000. What commands Gp yoru tn to compact areal Ses ered reer tobe?
+67, Howe ds you savin a Rstory of Mae Dafometiorns?
+Be How de you qmery andl tod Beck 1 previous nable version?
+| BR. het coremaad do poe us: to clean ap stale damn Wes aad whet ane fhe consequences of wsing thie
+cortuwnt? 7
+0.20. Ung Delta Cocte
+7. Cuabeses ancl Tatrhes oo Cutebricies
+: 7.1. wharis the syeuncm create 2 database wir detail focanion |e kocamion specwedy?
+7.2. ‘Whoa is the ayrenc in cate a dhvtabeew win apeciies ocean?
+1. Howe ds you get terzeiate onfornanen of a coche? Where we the darabeees. coced jditerence
+tetwwen datauie re cantor kecdtieny) :
+Ta WnO0S the Det pracioe teteint Conateg danabenes?
+7S. Where te Syren for creating # inbie in a dimabase wim cleft Keoanion and ineenieeg chen? Whe is Pe
+prance Fo tae ir dncabee with camore bacarion?
+70 Where are rranmged tities incated ina iatabase and bese cas you fied ther iscatoa?
+17. ‘toi is ir sree fy crelan ah acid nie?
+TA. ‘Whar hoggens when pow Wop lites (tleseace between a raregsd and ae Urvranged table}?
+Te eho is the command to drop the eieabase cond its urndertying tnbles and views?
+6. Views and CTs on Cecnbricke
+aa. Wowy com you ahem wet of tates red views?
+‘BR. = Witeal ch Bee i eteod Leteveen Whee, Tere Vernd 6 hota Teng Vari
+6.4, hewn he cena tor ener?
+6.4, Do wews ganas pnaierhing Bes?
+BUG. Whern are gical ierap views momeed?
+ILE. What is the npmece to select from gicbel erp seve?
+67. Winal aee CTE a7 Whe ob lhe ytd?
+BE Whee is ie Satan OD areas reatiane Coherwy abaces ang a CTE?
+BR What is the yma tor deteeng.a CTE ina CTE?
+89D. Wow is thes eyntec tor detining a CTE nasteery?
+0031. Wher on fhe spre for deter @ CTE ine tgquery eee
+02. Wiest on fee aprtactor deherga CTE ina pecs occ) eeereerd?
+9. Bewortny Guna Dieecnty trom Files
+6.5, How de 0a) query cea fee 9 single te?
+* BU. How do you cremte references to flex?
+9.4. How de you atta! bee Vike ad rin adores?
+a5, Hite de you cannot te ew irae ond Portada at fhe Whar a typo une come Aor ts?
+$4, Prowtging Options for Gxtemwd Sources
+111, Rapdain wiry eeecatag a cect query agpenm CSW Wan rarely conurre the dansed rest,
+102. Dwncciee the myntar required to ecdract dats frome reat formats agpared coder! wou
+‘ 10.3. Win haggena be the dada, rretadada ral opbore chstrey lable ectarabas fee theoe ecdernal soars?
+10.4. Does ihe cohene onder mater 4 acicirionad cow cata hes are ackded tb ire souecm anOCROey al a lane
+
+age?
+
+2005. Whew inthe ppeece tn show ab of the cretartgs aman need wenh te die deers?
+104, What are fe bens of tabbee woth exter dete eee?
+10.7. Hite Gilrt pour freraadly ritrcray tiee cache of pour deta?
+108. Wie 6 the Speen op eer ena teen OO Dewan?
+10:4, Explairethe meen basic approsches ti Spark apes 10 interac wa cones SOK, thasheses anal fees
+bras
+LL Creating Daten Tabien
+11 Wiel a CPS aide wed mohair Syrian?
+“1.2 De CTAS saypen manus! scheren decanaton?
+LL, Whee isthe spear io aemcorne she frescos when eying 9 ingest dan trom CBY files?
+1.5, What ina gusseted coluren ad ho go you decker scterren enh gutetated coker?
+118. Wheat are fer hea types of Labo cortabiains and few de you dining tnere?
+in?. \Whech bedi Spark SOL cormmuands ave usefd tor Se ingestion (hor Pee select clea?
+114. What ang he these options when creating sabes?
+114, Ane best precios, shawl! you defead i> ptoned tables for moet use cane when working wi Deke
+Lake?
+TL30. Whe ane tet bwe options 00 Gagy Deke Laee tables deed eft ano Phe ure Cais?
+12 Waring to Getta Tamhes:
+123. Wha are fie rutile heres a! opening isin omired al destng ane oncreeding inties?
+12.2. Whee are the fac eeny methods i> accom pinch conpiete cerentes?
+12.3. Wied wee ee i eras tem he tv
+1240/1 be hee Spee Oo Moray appeal new coer to Gn) amin Dein Gaba? 1a Wha Coreen
+125, Whee ste sem for te me SOL apeemio and fe berets of using meenge?
+12.6, Hoey can pou uae meeage for cheapest? :
+12.7. Whi to thee atari hee an dernpotert ophen oo merenerindy ype date fore edema yee?
+2}, Be COUNT and C85 TINCT quesies ship or count rails?
+13.0. Whed inte opt to coon ral va? a
+©1000 What tn the spt to cyan for etect vale fr w table fot a speci oalume7
+134 aha 6 the SR CO Oe o CHUN A MESO?
+12.5. whet is te pave For regen?
+L4 Agwanced S91 Trwistarmaions
+4.0 Whaat te the mpevene to deal wit binary encoded J508 vaduen ona hurman seadabte forrnat?
+14.2. had bethe Spark SOU tunctonmdey tp deecty inkewo wth 50M date steed one ating?
+1245. Wher are sour types? Wher fs tee Sprite bo parse JOON atpects imo sruct pes wih Spark SL?
+144. Onoe 3 J50R steng is unpscked 90 a simacr type, whet is fee Sper tn amen the Aiskds inep Coben?
+Wha i fe mynitanc Oo indent th ee nubiles nn eu type?
+14.5, What re thee npc to deal its rented siruct tpn?
+144. ‘Wha ts the spent for anmphodingy amarya sf sects?
+14). WT ts Tet Speman NO COMME eats?
+“8. Whee he Speman fora
+149. What bn the epee for ars cater join?
+24.50. Whaat bn thea apm for a bet right jor?
+2821 tna te fe spike fe at ase
+14,12 ie is Pe Sys fe a CSS pO?
+14.53, Wrest is he epree for 3 cee?

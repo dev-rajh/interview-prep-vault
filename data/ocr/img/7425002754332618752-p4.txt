@@ -1,0 +1,35 @@
+How do you perform SCD Type? mn Delta Lake
+
+Mention “hash compansom + merge” — real enterprise logic.
+
+8 What they asked me
+
+Wher ane che acheartages of Parquet over CSV
+
+What I iid
+
+Colummar
+
+Compocsed
+
+Foster scanning
+
+Supports predicate pishdown
+Good for amalynoal werkloods
+
+Tips
+Use the keyword: predicate pushdewn fir bons points
+
+9 What they asked me
+
+Your ADF pipeline sucecedts, but date is misting in target. What do you check?
+
+What | sak
+
+Volhdate (ber conelitivms.
+
+Check mapping nade Copy Activity
+
+Validate Join conditions im Dieta Flow | PySpark
+Compre source vs target counts m control whte
+

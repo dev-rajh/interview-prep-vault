@@ -1,0 +1,9 @@
+For analysis, they would like
+to collect and store all this
+data at one place.
+
+a's
+ate = ate
+
+These are known as 'Destinations'
+

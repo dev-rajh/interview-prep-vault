@@ -1,0 +1,17 @@
+SCD TYPE 6
+
+Fixed Attribute
+
+Hire_Date
+
+John 2828-81-01 John 2828-81-81
+
+eo Ignore_Update.sql
+
+UPDATE Employees
+SET Hire_Date = '2025-61-81"
+WHERE ID = 161;
+
+Immutable. Use Type 0 for data that should NEVER change, Like Original Hire
+Date or Date of Birth,
+

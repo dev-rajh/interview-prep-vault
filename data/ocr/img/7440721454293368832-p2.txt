@@ -1,0 +1,68 @@
+Returns all records from both tables, matching where possible.
+
+Difference:
+« INNER JOIN = tersection (matched Gata onby)
+* OUTER JOIN = union + NULLs (matched + unmatched data)
+
+3. Write a query to fetch the second-highest salary from an
+
+employee table.
+
+Option 1: Using DISTINCT, ORDER BY, and LIMIT (MySQL/PostgresSQL)
+SELECT DISTINCT salary
+
+PROM employees
+
+ORDER BY salary DESC
+
+LIMIT 1 OFFSET 1;
+
+Option 2: Using subquery (Generic SQL)
+
+SELECT MAX/salary)
+
+FROM employees
+
+WHERE salary < (SELECT MAX(salary) PROM employees);
+Explanation:
+
+» The subquery fetches the highest salary,
++ The outer query finds the maximum salary less than the highest — giving the secomd-
+highest.
+
+4. How do you use GROUP BY and HAVING together? Provide
+
+an example,
+
+Use GROUP BY to group data and HAVING to filter aggregated results (unlike WHERE,
+which fillers raw rows),
+
+SELECT depanment_ic, COUNT(*) AS emp_count
+
+FROM em
+
+GROUP BY department_id
+
+RAVING COUNT(") > 5;
+
+Explanation:
+
+» Groups employees by Gepamtment.
++ Fillers groups where the court of empkryees is more than 5.
+
+5. Write a query to find employees earning more than their
+
+managers.
+
+fasumne the table employees has:
+
+emo_id, name, salary, manager_id
+
+SELECT e.name AS employee_name, esalary, m.name AS manager_name, m.salary AS
+menager_salary
+
+FROM emphryees @
+
+JOIN employees m ON e.manager id = mueng_id
+WHERE e.salary > msalary;
+Explanation:

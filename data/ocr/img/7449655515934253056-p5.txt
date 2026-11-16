@@ -1,0 +1,39 @@
+FUTURE
+TS) minions
+
+16 STDDEV_SAMP() OVER
+
+Measures samplestandard deviationcommonty used in analutics
+when data is a subset of full population.
+
+STDODEV_SAMP(sales) OVER (PARTITION BY store)
+
+Population variance,usefulto track volatility and detect abnormal
+fluctuations in a metric.
+
+bod VAR_POP() OVER
+
+VAR_POP(sales) OVER (PARTITION BY store}
+
+18 VAR_SAMP() OVER
+
+Sampleveariance, usedwhenanalyzing variability from sampled data
+or incomplete datasets.
+
+VAR_SANP(sales) OVER (PARTITION BY store)
+
+CUME_DIST()
+Shows howfararow is in distribution; returns percentile position
+
+bosed on cumulative ranking.
+
+CUME_DIST() OVER (ORDER BY salary)
+
+20 PERCENT_RANK()
+
+Showsrelative rankbetween 0 and 1, helpful to identify top
+performers by percentile ranking.
+
+PERCENT_RANK() OVER (ORDER BY score)
+
+F swipe

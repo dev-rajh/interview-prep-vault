@@ -1,0 +1,19 @@
+What is Time Series
+Forecasting?
+
+Definition
+
+Time Series is a regression model designed to predict future values
+using patterns observed in past data over time. It focuses on data
+with a time dimension - every observation depends on when it
+
+occurred.
+
+The key model for:
+1.Supply chain: short-term demand forecasting, inventory.
+2.Website traffic: predicting daily visitors.
+
+3.Energy usage: forecasting electricity demand.
+
+Cz
+

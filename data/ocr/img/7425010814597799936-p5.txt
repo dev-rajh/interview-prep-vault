@@ -1,0 +1,36 @@
+8 Question: ADF — How do you implement
+Incremental Copy?
+
+What they asked tree
+"You oeed to move coly changed records nto ADL. How do you design ios im ADF?"
+What I said
+- Maiiain tasr_setarmare it metedam tbe
+Parametorize Copy Activity
+Lise dynamic query:
+- SPLEST * FROF raoie AMPA last_cedated > #matarzart
+
+. Opelate watermark after siictoe
+Process mm Dunabmricks wih MERGE
+
+Bon't sey “Poll load daily” — they reject imonediintety
+
+9 Question: Handle Small File Problem in
+ADLS
+
+Whal they asked me
+“Tlow der yuu solve the ainall file peotslere?”
+Whail I said
+
+Suliteoms
+
+® di.reparticionii]0) & .coslesce|:u)
+
+© Eeable Agte Optheire + Ato Compaction
+
+« Dse Dele OPTIMIZE ZORDER
+OPTIMIZES sieves voters SAE BS Cordes dale?
+Tips
+
+«© SUBDOK ts 5 Persistent Gvorte keyword.
+
+Scanned by CamScanter

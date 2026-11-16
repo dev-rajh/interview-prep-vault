@@ -1,0 +1,35 @@
++ Cloud Services: APIs, job scheduler, authentication, data access control,
+
+__ Lakehouse Architecture
+
++ Control Plane (managed by Databricks): Handles Ul, cluster configuration, job
+orchestration.
+
++ Data Plane (resides in your cloud): Where data & stared and computation
+happens. Data never leaves your cloud account.
+
+ Databricks File System (DBFS)
++ An abstraction over cloud object storage le.g., ADLS, 53}
+* Afows users to treat cloud storage like a POSIX file system.
+« Path formats:
+© gbtcinnting mount’ (recommended)
+
+* ietorweiey moe [Sor local reference]
+
+A Clusters in Databricks
+Cluster Types:
+
+* Single Node: All operations cun on a single machine (driver omty).
+
+* Multi-Node: One driver and multiple workers for déstributed processing.
+Cluster Components:
+
+« Driver Node: Coordinates execution, manages metadata.
+* Worker Nodes: Execute tasks in parallel
+
+DBUs;
++ Databricks Unit (DBU): A pricing unm based on cluster usage per hour.
+
+Logs:
+
++ Driver Logs: Outputs from the main Spark application.

@@ -1,0 +1,22 @@
+SQL NOTES
+
+BY: NIDHE RUSHWAHA
+
+© Date 6 a collection of facts, such a3 murmibers, words, measurements,
+observations or descriptions of things.
+
+Examples-
+oO Numbers |e.g., 42,3.14}
+o Words [eg. “Hello”, “SOL")
+
+o Measurements (@.6., height . weight)
+© Observations [e@.. “It is raining”)
+
+® A database is an organized collection of data, generally stored and
+accessed electronically from a computer system.
+® fallow for efficient storage, retriewal, and management of data.
+
+Examples af Databases:
+
+o E-commerce platéorms (e.g., Amazon}
+o Social media platforms fe.g., Facebook]

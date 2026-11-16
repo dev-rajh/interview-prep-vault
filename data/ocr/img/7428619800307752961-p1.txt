@@ -1,0 +1,10 @@
+SELECT
+order_date,
+sales_amount,
+
+(sales_amount) OVER (
+ORDER BY order_date
+ROWS BETWEEN PRECEDING AND CURRENT ROW
+) AS rolling_avg
+FROM sales;
+

@@ -1,0 +1,136 @@
+Problem 1/20 BATE FILTER |
+Friday Filter
+
+Identify all order records that occurred specifically on a Friday.
+
+SAMPLE INPUT EXPECTED OUTPUT
+order_id order_date order_id day
+181 2026-02-13 (Frid 1a Friday
+182 2026-02-14 (Sat) iad Friday
+103 2826-02-28 (Fri)
+
+mySaL @ ©
+Extract day name string from date
+SELECT
+order_id,
+DAYNAME(order_date) as day
+FROM orders
+WHERE DAYNAME(order_date) = 'Friday';
+—_ eat; SLA Breach
+\
+{ | Anandnarayanan S a save (a
+\« P/ the 20-Pattern S91. Ghent Shoat : the i
+
+=—
+"Problem 2/20 [ oaTeorFF ae
+
+SLA Breach
+
+Find orders where delivery took more than 7 days from the order date.
+
+SAMPLE INPUT EXPECTED OUTPUT
+order_id ordered delivered order_id days_taken
+285 2826-01-01 2026-01-18 205 %
+706 2026-01-05 2026-81-06
+
+SOL Server @ ©
+
+Calculate difference in days
+SELECT
+
+order_id,
+
+DATEDIFF(day, ordered, delivered) as days_taken
+FROM orders
+WHERE DATEDIFF(day, ordered, delivered) > 7;
+
+Y Neat: Ingtant Conversion .«
+
+\
+a?
+| Anandnarayanan 8 (“co narcer |
+\q p/ The &)-Pattern fl Cheat theat \ a
+
+Instant Conversion
+
+Find users who placed an order on the exact same day they siqned up.
+
+SAMPLE INPUT EXPECTED OUTPUT
+w_id signup order_dt uid signup order_dt
+sa 2024-01-01 2024-01-01 5e 2024-01-01 2024-01-01
+51 2024-01-82 2024-81-05
+
+myS0L / SOL Server OO
+
+Join on matching user AND date
+SELECT
+
+u.user_id, u.Signup, o.order_dt
+FROM users u
+
+JOIN orders o ON u.user_id = o.user_id
+WHERE u.signup = o.order_dt;
+
+-——~ Meat: Monthly Growth .«
+
+i ‘
+. ee meres
+\ | Anandnarayanan 8 { S rerost |
+
+
+Problem 4/26 { oare_ronsat |
+Monthly Growth
+
+Group and count total orders by Year-Month format.
+
+SAMPLE INPUT EXPECTED OUTPUT
+order_id date = total_orders
+184 2074-01-15 2024-01 2
+182 2026-81-20 2824-82 1
+103 2026-02-05
+
+SOLUTION
+
+su ee
+Convert date to 'YYYY-4W sf ring
+SELECT
+DATE_FORMAT(date, ‘%Y-%m') as mo,
+COUNT(*) as total_orders
+FROM orders
+GROUP BY 1;
+—n. Mext: Artist Metestion
+
+al i ——,
+| Anandnarayanan S S napcer |
+p/ The 2-Pattern SOL Cheat Sheet \ }
+
+
+Artist Retention
+
+Find artists who released albums in both 2023 AND 2024.
+
+SAMPLE INPUT EXPECTED OUTPUT
+artist albue_yr name
+Orake 2823 Orake
+Orake POIs
+Adele 2023
+
+MySQL / SOL Server @@
+
+Check existence in both years efficiently
+SELECT name FROM artists a
+WHERE EXISTS (
+
+SELECT 1 FROM albums WHERE id=a.id AND yr=2024
+
+)
+AND EXISTS (
+SELECT 1 FROM albums WHERE id=a.id AND yr=2023
+);
+jan a Sent: Peak Revenue .-
+
+i ‘,
+fi \
+‘d —_—$__—,
+\ | Anandnarayanan $ (career |
+s P/ The 2)-Pattern AOL Cheat heat \ J

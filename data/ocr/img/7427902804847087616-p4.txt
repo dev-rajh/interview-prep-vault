@@ -1,0 +1,29 @@
+Data, Database and Management
+Systems —
+
+Data: It is a collection of raw, unorganised facts like text, numbers etc.
+
+information:
+* itis processed, organised and structured data.
+
+* it provides context of data and enable design making
+» Information is extracted from data by analysing and extracting
+
+Database: 4 database is a structured collection of data that is organized and stored
+in such a way that it enables efficient retrieval, manipulation and management of
+Data.
+
+DBMS (Database Management System): !t is a software designed to manage and
+organize data in a structured manner.
+
+« Allows users to create, modify and query databases.
+« Handles data storage and retrieval
+
+* Supports data sharing among multiple users
+
+* Manages concurrent access (concurrency control)
+
+« Ensures data integrity and security
+
+BOSSCODER
+ACAGEMY

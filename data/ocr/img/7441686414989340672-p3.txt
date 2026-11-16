@@ -1,0 +1,25 @@
+5. Get the top 3 highest-paid
+employees.
+
+SELECT TOP 3 *
+FROM Employee
+ORDER BY salary DESC;
+
+Google
+
+6. Customers who made purchases
+but never returned products.
+
+SELECT DISTINCT c.customer_id
+FROM Customers c
+
+JOIN Orders o OW c.customer_id =
+o.customer_id
+
+WHERE c.customer_id NOT IN (
+SELECT customer_id FROM Returns
+
+és Walmart >|<
+
+3s
+i}

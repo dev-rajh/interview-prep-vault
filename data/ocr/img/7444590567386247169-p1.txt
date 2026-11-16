@@ -1,0 +1,37 @@
+Top 20 SQL Interview Questions
+
+(GROUP Br, HAWING, ORDERBY JOM)
+
+Database Schema Used
+
+OnpiOyaes (onphoyta i, MMe, salary, Gopaneneel i ani)
+departments (depertment_ii. cipartresti_marce, location)
+
+G1. Wie # query to find the total number of employees in ewct department.
+
+G2. Wilte # query to fist departments having mare than 5 amplopwes.
+
+wtubor
+LECT depertebat id, CoomTce|
+femertest id MOINS CCOMTCT)
+
+O83. Write # query to display all employees sorted by salary da descending ardor.
+
+FEoM
+
+ary CESry
+
+G4, Write a query to retrieve the top 3 higheal paid employees.
+LEST * FROM stg lines
+
+Lak GY salary
+
+“we KIBET AOWE OMLEr
+
+G6, Write # query to claplay employee names afong wilh fhe department maaes,
+
+ci.ton
+LECT @. ane, da iegear liner asses Te
+employers @ JOIN Geparcnert
+
+=e, derperteert id © d.cdepaect mest i)

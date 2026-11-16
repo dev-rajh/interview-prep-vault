@@ -1,0 +1,92 @@
+=o
+b Bae 28 we
+| Yau WEED TO
+| | MASTER |
+
+i Master the most asked patterns by:
+
+GOLDMAW SACHS AMAZON
+
+| BEcAvse LEETCODE Isw'T ENOUGH.
+
+ee *_/
+
+(seme ) LORE
+DAILY ACTIVE Users
+
+| 2024-01-01 101 2024-01-04 2
+
+| 2824-01-81 192 2024-81-62 1
+
+| 2n24-@1-02 101
+
+Sg Sg NOTE ee eee
+
+cunt @sfinet users per day
+SELECT login_date,
+COUNT(DISTINCT user_id) AS dau
+
+FROM user_Logins
+GROUP BY Login_date
+ORDER BY Login_date;
+
+Next: Cust Lifetime +
+
+J 5 Qe°0sT 0) SAVE
+Fy G2 GE
+
+
+CUSTOMER LIFETIME
+
+cust_id order _ date oust_id first last
+A 2023-01-01 A 2023-01-04 2023-04-01
+| A 2025-86-01
+
+SELECT customer_id,
+
+MINCorder_date) AS first_order,
+MAXCorder_date) AS last_order
+FROM orders
+GROUP BY customer_id;
+
+Next: Running Total
+
+J 5 Qe°0sT 0) SAVE
+Fy G2 GE
+
+
+CUMULATIVE HEADCOUNT
+
+year hires year cumulative
+2022 18 2822 18
+| 2823 28 2823 38
+
+Sun over ordered window
+
+SELECT hire_year,
+
+SUM(hires) OVER (
+ORDER BY hire_year
+) AS cumulative
+FROM employee_stats;
+
+Next: Pet of Total +
+
+J 5 Qe°0sT 0) SAVE
+Fy G2 GE
+
+
+Problem 4/20 (_smoow enna) @PAYPAL
+REVENVE SHARE
+
+Ratio: individual / Global Sur
+
+SELECT product_id,
+sales * 100.0 / SUM(sales) OVER () AS pct
+FROM product_sales;
+
+Next: Attribution +
+
+J 5 Qe°0sT 0) SAVE
+Fy G2 GE
+

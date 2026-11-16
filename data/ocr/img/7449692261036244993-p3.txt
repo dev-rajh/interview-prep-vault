@@ -1,0 +1,17 @@
+<> © 3s SNOWFLAKE =
+i i & CACHING = ane
+
+-__CHEAT SHEET
+
+“Leer Dae
+
+C5 CD a=> STORAGE + RESAT
+
+What is i?
+
+ Terporary storage to speed up quenes ; MR RESUT CACHE
+(D Avoids reprocessing data
+@ ieroves performance and reduces cout
+
+Hie. Meoult Cache: trad Sar vet La
+

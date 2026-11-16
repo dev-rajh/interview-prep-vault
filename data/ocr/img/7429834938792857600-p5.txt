@@ -1,0 +1,19 @@
+CHAPTER 1
+
+Rows and Columns: The Building
+Blocks of Data Cleaning
+
+Understanding how to structure your data into rows and columns is a crucial
+first step in cleaning any data set, especially in survey data cleaning. Al
+manipulation and analysis that you perforrn on the data depends on the
+framework of rows and columns. Learn about rows and columns and how
+
+they set the stage for data cleaning and analysis.
+
+Organize survey questions into rows and columns
+
+Build a unique ID into your survey
+
+Ho
+
+to identify a unique ID in your data

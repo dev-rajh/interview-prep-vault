@@ -1,0 +1,87 @@
+© Tajamul Khan
+Aw
+
+50 SOL
+Interview
+Queries
+OSaANnNG
+
+(1D etajamulkhann »
+
+*
+
+1. Find duplicate records in a table
+
+SELECT columni, column2, COUNT(*)
+FROM your_table
+
+GROUP BY columni, column2
+
+HAVING COUNT(*) > 1;
+
+amazon
+———)
+
+Ff) @Tajamulkhann »
+
+@Tajamul.datascientist
+
+*
+
+2. Retrieve the second highest salary
+from the Employee table
+
+SELECT AX(salary) AS
+SecondHighestSalary
+
+FROM Employee
+
+WHERE salary < (SELECT “Ax(salary)
+FROM Employee);
+
+B® Microsoft
+
+Ff) @Tajamulkhann »
+
+@Tajamul.datascientist
+
+*
+
+3. Find employees without
+department (Left Join usage)
+
+SELECT e.*
+
+FROM Employee e
+
+LEFT JOIN Department d
+
+ON e.department_id =
+d.department_id
+
+WHERE d.department_id IS NULL;
+
+Uber
+
+ff) @Tajamulkhann »
+
+@Tajamul.datascientist
+
+*
+
+4. Calculate the total revenue per
+product
+
+SELECT product_id,
+SUM(quantity * price) AS
+total_revenue
+
+FROM Sales
+
+GROUP BY product_id;
+
+P PayPal
+
+ff) @Tajamulkhann »
+
+@Tajamul.datascientist

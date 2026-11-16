@@ -1,0 +1,133 @@
+LeetCode SOL Problem Solving
+Questions With Solutions
+
+LeetCode
+
+SQL Solutions
+
+175. Combine Two Tables | Fasy | LectCock
+
+Tab @: Persar
+
+) Column Maw | Type |
+
+ie Serene
+| AdiressId =| int |
+| Persona =| Let |
+| city | varchar |
+| State | varchar |
+Sacer esaaeduas Sraeenees +
+
+AdiressiId is the prisary wey column for this table,
+
+Write a SQL query for a report that provides the following ifcemation ter each
+person in the Person tab, ragardiess if there is an address for each of those
+
+pecpk:
+
+=
+
+Firsttyee, LastMome, City, State
+
+Solution
+
+SELECT p. Firsthame, p.LastMaee, a. City, a.5tete
+FROM Person p
+
+LEFT DIR Andress a
+
+ON p.Personid = a.Persondd;
+
+176. Second Highest Salary | Fasy | LeetCode
+
+Witte a SOL query to get the second highest salary from the Eeployee TabR.
+
+=
+
+| telah ialeeteteteteteh 2
+| Id | Salary |
+rece gereeeere +
+[2 | 1. 8 86|
+[a |m |
+(3 | 36 |
+
+Perret tTh terry +
+
+For camp 8, given The abowe Empiyee taba, the query shourd return Jee as the
+second highest salary, f there ig no second highest salary, then the query shoud
+return null.
+
+SELECT Max (Salary) SecondeighestSalary
+FROM Eeployes WHESE Salary ¢ (SELECT MAX(Salary) FROM Eaployee}
+
+WITH CTE AS (SELECT DESTINCT Selery
+FROM Eeployes
+
+ORDER BY Salary DESC
+
+LIMIT 2)
+
+SELECT Salary a8 Secondtigheat Salary
+FROM CTE
+
+ORDER BY Salary Asc
+
+LIFUT t;
+
+WITH CTE AS
+
+SELECT Salary,
+DENSE _S4aa() OVER (ORDER BY Salary DESC) AS DEMSERAME
+FROM Employee
+i)
+SELECT Salary SecondHigoestSalary
+FROM CTE
+WHERE CENSERAME = 25
+
+77. Nth Highest Salary Medium = LeetCode
+
+Write 2 SOC query to get the nth highest sa ary from the Employee tab e.
+
+$---- Hoenn en-+
+
+{ td | Salary |
+
+0 enenaensiete
+pa | 196 |
+{2 | me |
+
+1 | Oo |
+ee neo
+
+For examp ¢, given the abowe Employes tab e, the nth highest salery where n = 2 is
+700, {ft there is no mh highest salary, then the query shou d retunn null,
+
+CREATE FUMCTION getitaliighestialery(M IMT} RETURNS INT
+arcth
+SET W = Wetj
+ET uAN
+SELECT O©STENCT Salary FROM Employee OADER BY Salary OfSC
+LIMIT 1 OFFSET Wi
+
+EMD
+
+178, Rank Scores Medium | LeetCocde
+
+Write a SQ@ query torank scores. f there is a tie between two scores, both shoud
+have the same ranking. Note that after a tie, the neat ranking number shoukl be the
+POR) CONSECULNS Invleger Value. In other words, there should be no “hows” betweer
+ranks,
+
+ad
+
+Id | Score |
+ale tele D
+2 | a |
+{2 [3.6 |
+13 | 48 |
+4 [3.6 |
+fs | «om |
+6 | ses |
+
+For examp e, given the abowe scores table, your query should generate the
+follwing raport (order by highest scare);

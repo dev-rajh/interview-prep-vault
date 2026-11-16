@@ -1,0 +1,88 @@
+25 SQL Reusable Patterns
+
+By Chandra venkat
+
+]) Filter records (NULL-safe)
+
+When to use:
+« Filter users by country
+e Filter by signup month
+
+¢ Exclude rows with missing phone
+Filter Indian users created in Jan-2025 and phone is not NULL
+
+SELECT *
+FROM users
+
+WHERE country = ‘India
+AND created_at >= '2025-01-01' AND created_at < '2025-02-01'
+AND phone IS NOT NULL;
+
+2) Summarize with totals
+
+When to use:
+* Get order totals per category
+* Calculate number of orders per group
+
+* Filter out small categories
+
+Summarize each category and keep only those with 10+ orders
+
+SELECT category,
+COUNT|(*) AS total_orders,
+SUM[amount) AS total_armount
+FROM orders
+GROUP BY category
+HAVING COUNT(*) == 10;
+
+Tip: Use HAVING after GROUP By to filter aggregates
+3) Conditional counts (funnels)
+
+When to use:
+* Count based on status or stage
+« Compare Completed vs Cancelled
+
+« Build funnel breakdowns
+
+Get number of Completed and Cancelled orders
+
+SELECT
+SUM(CASE WHEN status = 'Completed’ THEN 1 ELSE 0 END) AS completec_orders,
+SUM/[CASE WHEN status = 'Cancelled’ THEN 1 ELSE 0 END) AS cancelled_orders
+FROM orders;
+
+Tip: Conditional “SUM is more flexible than “COUNT|IF{...))"
+4) Matches or misses (anti-join)
+
+When to use:
+* Find users with no orders
+« Spot unmatched records
+
+* Common audit/debug pattern
+
+Get users who don't have any matching orders
+
+SELECT u*
+FROM users u
+WHERE NOT EXISTS [
+
+SELECT]
+FROM orders o
+WHERE o.user_id = u.user_id
+;
+
+5) Combine datasets
+
+When to use:
+* Combine buyer and seller records
+* Append same-schema tables
+
+« Stack archived vs current
+
+Merge buyers and sellers into one user list
+
+SELECT user_id FROM buyers
+UNION ALL
+SELECT user_id FROM sellers;
+
+Tip: Use “UNION ALL* if you don't need duplicate removal

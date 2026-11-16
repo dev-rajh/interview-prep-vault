@@ -1,0 +1,14 @@
+1. FIND DUPLICATE RECORDS IN A TABLE
+(AMAZON)
+
+Write a query to find rows that appear more than once
+in a table.
+
+2. GET THE SECOND HIGHEST SALARY
+(EMPLOYEE TABLE)
+
+Write a query to find the second highest salary from the
+Employee table
+
+o1
+Grew dtaceps.com/sd-biusprint

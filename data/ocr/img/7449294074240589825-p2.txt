@@ -1,0 +1,34 @@
+Gin Swipe —
+
+Ranking Within Groups
+
+Find the top N items per category.
+
+SELECT *
+FROM (
+SELECT *,
+ROW_NUMBER( ) OVER (
+PARTITION BY department
+
+ORDER BY salary DESC
+) AS rn
+FROM employees
+) ranked
+WHERE rn <= 3;
+
+This is the most
+common window
+function
+
+question
+
+ROW_NUMBER vs
+RANK vs
+DENSE_RANK — know
+the difference
+
+Top 3 earners
+per
+
+department
+

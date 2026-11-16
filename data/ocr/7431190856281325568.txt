@@ -1,0 +1,113 @@
+PwC
+
+Data Analyst Interview Experience
+® CTC: %18LPA
+
+Table Creation
+We'll create a table named Sales to shore bansacton detaits.
+CREATE TABLE sites (
+
+sole_id INT AUTO_INCREMENT PRIMARY KEY,
+
+peoduct_id INT,
+
+peoduct_name VARCHAA/TOO),
+
+category VAACHAA|SO),
+
+sole_daote DATE,
+
+Quarvity INT,
+
+® Insert Sample Data
+
+INSERT INTO agile (product id, peoduct_name, catagory, dale date, queenity, revenue)
+VALUES
+
+(1, ‘Laptop A, ‘Electronics, 2024-01-15; 10, 80000).
+(1, ‘Lapeop Ay, ‘Elactromies’, 2024-02-15", 12, 60000),
+(1, ‘Laptop Ay ‘Electronics’, 2024-00-10", 8, 20000),
+(2, ‘Motels 8: ‘Blectronice’, ‘2024-01-20, 1%, 300001.
+(2, "Mobile 8, "Electronios’, "2024-02-22", 20, 40000),
+(2, ‘Motila 8) ‘Electronics’, ‘2024-03-25, 5, 10000),
+&, Shiet C) Ciething, 2024-01-12", 25, G60),
+
+(3, Sheet GC ‘Clothing, 2024-02-18, 30, J0900),
+
+(3, ‘Shit C; ‘Clothing, 2024-0221, 15, 15000},
+
+(4, ‘Shoes Dy Footwear’, 2024-09-11) 5, 10000),
+
+(4, Shows D, Footwnnr’, 2024-02-15) 7, 14000),
+
+08. Watch E. Accessories), 2024-00-08), 10. 20000);
+
+~) Q@): Find the cumulative revenue by month for each product
+category
+© Solution:
+SELECT
+category,
+DATE_FORMAT/anie_data, “WY-Sem'} AS aala_menth,
+SUM (revenue! AS monthly rewenue,
+
+
+SUM(SUMirevenuel| OVER (PARTITION BY category ORDER BY DATE_FORMAT(sale_date,
+“SeY-Sermy'}) AS cumulatiwe revenue
+
+FROM sates
+GROUP BY category, sale_month
+ORDER SY category, agke_manth,
+|) Explanation;
+DATE_FORMAT(sole_date, “4 Y-S6er7} extracts the morth and year.
+Tha first SUM/revanue) gives monthly rowan.
+
+The window tumction SM (SUM (reveruel| OVER |...) competi cucnuletien revere
+over time for each category.
+
+~ QE): Retrieve the top 5 products by sales volume, excluding
+products with zero sales in the past 3 months
+
+© Solution:
+SELECT
+peoduct_name,
+SUM (querdtity) AS tocal_salag
+FROM soles
+WHERE sole_date >" DATE SUB(CURDATED. INTERWAL 3 MONTH)
+GROUP BY product name
+HAVING total sales >
+ORDER Bf totel_sales DESC
+UMIT 5;
+) Explanation:
++ DATE SU8/CURDATE!), INTERVAL 3 MONTH] filters the best 3 marth’ deta,
+«© SUM(quantity) computes total sales volume.
+
+
+« HAVING total_sales > 0 removes products with zero recent sales.
+
++ ORDER Gy totel_salas DESC LIMIT 5 packs the top § products.
+
+© QB using Window Functions
+
+4 Table Romindar
+We're using the some soles table and dota as beforn &
+CREATE TABLE antec (
+sote_id INT AUTO_INCREMENT PRIMARY KEY,
+peoduct_id INT,
+peoduct_name WARCHAA/1OO),
+cutegary VARCHAR|SO),
+sole_dote DATE,
+quarnity INT,
+fevenue DECIMAL/10,2}
+
+© Solution Using Window Functions
+WITH recent sales AS [
+SELECT
+Peoduct name.
+SUM quantity) AS total_salas
+FROM sues
+WHERE sole_dote >= DATE_SUB/CURDATED. INTERWAL 3 MONTH)
+GROUP BY product_nome
+
+
+@ Alternative Using SUM[} OVERD Diractty (Single Query}
+

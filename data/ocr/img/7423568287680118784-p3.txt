@@ -1,0 +1,48 @@
+9. What file formats have you worked with?
+
+Asser
+
+Penquet, Dela, PON CSV
+
+Mestly we use Parquet e¢ Delta for performance and schema evolution.
+10. What is Delta Lake and its advantages?
+
+Asie or
+
+Dein Lote adds ACID transactions, tee travel, and schema enforcement on dem lakes
+Ke helps in reliable pipelines and caster rollback
+
+11, What is caching vs persistence is Spark?
+Ams ere
+
+Caching soees data i memory for reuse.
+
+Pertisience allows doting data in memory or disk
+
+Juse it whee the same DetaFrame is rewend multiple times.
+12, How do you optimize Spark jobs?
+
+Answer:
+I check:
+
+Dera shew
+
+Z-Ordering and OPTIMIZE for Delta ables
+
+13. What is Medallion Architecture?
+
+Silver — Cleaned & suandardized dam
+Gold — Busiacss-ready aggregated dam
+hh improves data qualiey and scalability.
+
+14, How do you handle pipeline failures?
+Amow er:
+
+Using retries, alerts, logging, and re-run from Eailere point.
+See esakeLuainians thine Deskadhs nao oe tig eiinetineions
+
+15, SOL, vs PySpark — which do you prefer and why?
+
+Aauw er:
+For senple querses, SL. is coder
+

@@ -1,0 +1,19 @@
+7. Show the count of orders per
+customer.
+
+SELECT customer_id,
+CouNT(*) AS order_count
+FROM Orders
+
+GROUP BY customer_id;
+™ - 00 Meta
+
+8. Retrieve all employees who joined
+in 2023.
+
+SELECT *
+FROM Employee
+WHERE YEAR(hire_date) = 2023;
+
+Comment "SQL" and get the complete
+in-depth PDF in your DMs.

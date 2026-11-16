@@ -1,0 +1,183 @@
+accenture c;J
+
+Data Engineer Interview Questions
+Round-1
+Experience: 2-5 Year
+
+1. Tell me about yourself and your current project
+
+Amswer
+
+I'm a Data Engineer with around 5—4 years of experience. Ie my cenrent propect, | work on
+building end-to-eed data pipelines ming Azure Dada Factory, Dusabricks, and Azare [hata
+Lake
+
+My role involves ingesting data from multiple sources Whe detabases and APIs. transfonning
+it ing PySpark, aed shorieg i in curated layers following medaliion architeeture | also
+focus on performance runing, handling fiilures. and sepporting analytics teams.
+
+Whal Accenture checks:
+Clarity, architecture uidertaadtg, and heen concep
+
+2. Explain your end-to-cad data pipeline
+
+Amaw er:
+
+We ingest data frome source sypsterns wing ADF pipelines
+
+Raw chets lands ie Brome layer in ATMS
+
+Demabricks procewers this data wing PySpark oo clean, deduplicate, aed apply business rales,
+then merves it to Silver and Caldd
+
+Finally, the curated dats es ward by Power Bil or downstream applications
+
+Tip
+Alweys explan esing layers + tools, mon theory
+
+3. What is Azure Data Factory and why did you ase it?
+
+Aaseer
+ADF is an onchesirtion tool. | used itso schedule pipelines, manage dependencies. und
+
+
+move dam hereecen systems.
+AIDE is not for heawy cunsfonmanon, we use Danabeleks for that
+
+Accenture likes this line:
+ADF for oechewratien, Databricks for traformation.
+
+4. How do you handle incremental data load?
+
+Ase er:
+
+Vf fetestamps ae available, we use watermark columos
+
+Wot, we wee hash comparison or maietain a snapshot Gable to identify changes
+lacremental logic reduces data processmy time aad cost
+
+Hed Flag:
+
+Saying ~ we load full data every ame
+
+5. What is Databricks and why is it needed?
+
+Aaseer
+
+Denabricks is. a big data processig platform builton Apache Spark.
+
+We use nt for large-stale oransformations, joias, aggregations. and performance
+optimization which ADF cansot handle effichealy
+
+6. Explain Spark architecture in simple terms
+
+Asse er
+
+Spark has a Driver thet comrels execuben and Exeewters thar process dom in parallel
+The driver ceeates poba, stages, and masks, aed executors cuccete those mks on partitions
+
+Tip:
+Keep it dimple, no need 60 go very deep unless asked
+
+7, What is data skewness and how did vou handle it?
+
+Aaue er:
+Ihandled it by salting keys, using broadcast jeins, of m@cresing partitions
+
+Accemture expects:
+
+Real issue + real fis.
+
+8. Difference between Partition and Backeting
+Ameer
+
+Parteioning divides data into folders based on column values.
+
+Bucketing Gvides dom inte fined number of files using hast
+Partition helps ia filtering. buchetiag helps in fener jams.
+
+
+9. What file formats have you worked with?
+
+Asser
+
+Penquet, Dela, PON CSV
+
+Mestly we use Parquet e¢ Delta for performance and schema evolution.
+10. What is Delta Lake and its advantages?
+
+Asie or
+
+Dein Lote adds ACID transactions, tee travel, and schema enforcement on dem lakes
+Ke helps in reliable pipelines and caster rollback
+
+11, What is caching vs persistence is Spark?
+Ams ere
+
+Caching soees data i memory for reuse.
+
+Pertisience allows doting data in memory or disk
+
+Juse it whee the same DetaFrame is rewend multiple times.
+12, How do you optimize Spark jobs?
+
+Answer:
+I check:
+
+Dera shew
+
+Z-Ordering and OPTIMIZE for Delta ables
+
+13. What is Medallion Architecture?
+
+Silver — Cleaned & suandardized dam
+Gold — Busiacss-ready aggregated dam
+hh improves data qualiey and scalability.
+
+14, How do you handle pipeline failures?
+Amow er:
+
+Using retries, alerts, logging, and re-run from Eailere point.
+See esakeLuainians thine Deskadhs nao oe tig eiinetineions
+
+15, SOL, vs PySpark — which do you prefer and why?
+
+Aauw er:
+For senple querses, SL. is coder
+
+
+For comples wansformations and large dana, PySpark is bemer
+J use both based on use cane,
+
+16. What challenges did you face in your project?
+
+Aaae er
+
+Handling late-ariveag data, performance sues duc Ww skew, and schema changes.
+Solved using watertiack logic, opeimization, and schema evelution in Dela
+
+17. Have you worked with CUCD?
+
+Amaw er:
+
+Yeu we use Cit for version contadl and deploy ADF pipelines usiag ARM tereelaics.
+18, Why Accenture?
+
+Aawweer:
+
+Accenture works on large-scale, complex chs platforms and gives exposure to alobal clients
+and modem coed secknologies.
+
+i's 3 good place oo grow technically
+
+19, What is your role in production support?
+
+Answer:
+Monmoring pipelines, fixing Relunes, opamizing performance, and handling data isuses raised
+by business seams.
+
+20. Any questions for us?
+
+Geod Question to Agke
+“When kind of data platforms and cloud techaologses does the team curently work on”
+

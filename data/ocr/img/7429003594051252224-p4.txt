@@ -1,0 +1,17 @@
+SCD TYPE )
+
+Overwrite
+
+AFTER (HisToey Lost):
+
+BEFORE:
+[ro [Product [rice | [10 rrowuct | rice
+Mouse 508 House $45
+
+UPDATE Products
+SET Price = 45
+WHERE ID = 560;
+
+»  Overwrite. No history is kept. If you run a report for “Last Year's Revenue’, it
+F wi incorrectly use the NEW price ($45),
+

@@ -1,0 +1,17 @@
+—-
+
+Find Duplicate Records
+
+Find duplicate records in a table based on specific
+columns
+
+SQL QUERY Unéversal SOL
+
+SELECT columni, column2, COUNT(+*)
+FROM your_table
+
+GROUP BY columnl, column2
+
+HAVING COUNT(*) > 1;
+
+Eee fl

@@ -1,0 +1,13 @@
+2. Department-wise avg salary
+(with >5 employees)
+
+SELECT department_id, AVG(salary) AS
+avg_salary
+
+FROM employees
+
+GROUP BY department_id
+
+HAVING COUNT(*) > 5;
+
+‘HAVING’ filters aggregated groups.

@@ -1,0 +1,71 @@
+Questions
+
+1 Delbricks techiieotere & Seneces:
+
+La Wher ae fs ree main copes of the Deasbecis dechaecuae?
+
+1.2. What am fe these ieterent Dedabecks eervices?
+
+L3. Wied te a chaader?
+
+14. We ae Be Rad Cheb Typ?
+
+L4. How long does Daaabecies ames cles conkgeeaion brorreakor?
+
+L& What oe ty those cheater megs?
+
+17. Cher ope and sucecaing
+
+LE Wied tf booed Gk erecrypbor?
+
+19 ATeE ae Pet Chk Seoety meee?
+
+Li. Where aPot ;
+
+L0), hes ragpess when you nermenage | reeuwt / deiets a chemer?
+2 Mask Operstions for Databricks Notebooks
+
+2.1 Wied nage conenared do you une Oo tae @ fetebook from aeither notebook?
+
+(22 whats Danmecie altos and hew can you use inte fat owt directories of files from Python oaite?
+
+2:3, hes funeiee should yauuse when poe have sobuiar dans saad ty 6 Python cett?
+a Gb Verioning with Gatasriche Repos
+
+2.3. What ix Dntateicks Reson?
+
+a2. ‘Wid rw fre reeseersernbid CCD best peace be Polka fsa shevetping wah Mapes?
+4 Delta Lake andl Ife Lakobvearse
+
+2.) ‘Wher is he cefintion of a Diets Lake?
+
+ee How does Deda (ake ackirees the den Ine pain points in ermure retinhie, recety to-go chara?
+
+4.1, Descries tees Dette Lator brings ACID traraectiots i object wiotage
+
+2.4, be Delia Like Te Cotanl for all Latkes crowded oh Databrcks?
+
+2.5. What dasa etjects are io the Gamebrcks Lakehouse?
+
+2& Wher is arretasnoe?
+
+47) Whos is a catalog?
+
+4.8. Whats a Dates Lake table?
+
+4.0. How do rokatornad best emu tm Cotta Live Tabkew?
+5. Managing Dei Tacs
+
+6.) Whe is the epee mo reeme 3 Desty Tobie?
+
+S.2. What bs the epic tn insert deta?
+
+5.3, few concunseent sands on Deke Lados tation pemaibbe?
+
+4 Wiha be five ogee to eapetinde partic der recur cot a bebe?
+
+5:5. eTOCs thet yeni no delete particu secorcks at a mater?
+
+6% Wher is he Syrian for ney and Waat are the benetts of exing merge?
+
+S.7. Whos is the apres tn delete o tsi?

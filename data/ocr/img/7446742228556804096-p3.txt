@@ -1,0 +1,22 @@
+2) SUMMARIZE WITH TOTALS
+
+When to use:
+= Get order totals per category
+» Calculate number of orders per group
+
++ Filter out small categories
+
+Summarize each category and keep only those with 10+ orders
+
+SELECT category,
+IUNT(*) AS total_orders,
+SUM(amount) AS total_amount
+FROM orders
+
+GROUP BY category
+HAVING COUNT(*) >=
+
+SRO
+
+Tip: Use HAVING after GROUP BY to filter aggregates
+

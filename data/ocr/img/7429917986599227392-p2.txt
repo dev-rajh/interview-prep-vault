@@ -1,0 +1,19 @@
+Why Window Functions Matter
+
+Window functions perform calculations across a set of
+rows related to the current row — without collapsing
+the result into groups like GROUP BY does. They are the
+#1 topic in data analyst interviews and are used daily in
+product analytics, finance, and business intelligence.
+
+Syntax:
+
+Sample Database (Used Throughout Week 2)
+-- employees table
+
+emp_id name department salary
+Alice Engineering 95000.00
+Bob Engineering 8&5000.00
+Carol Engineering $5000.00
+Dave Marketing 70000.00
+

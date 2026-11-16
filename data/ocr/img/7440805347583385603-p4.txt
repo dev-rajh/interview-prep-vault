@@ -1,0 +1,18 @@
+Time Series vs Factor-Based
+Regression
+
+Time dependency matters
+* In time series, order is critical (“yesterday affects today"),
+* In purely factor-based regression, order doesn't matter.
+
+Autocorrelation
+* Time series assumes past values influence future values
+* Factor-based regression uses independent variables (a must!)
+
+Special components
+* Time series has trends, seasonality, and random noise.
+* Factor-based regression doesn't directly account for sequences.
+
+Time-Series Ariahysts.
+woe i et Tats
+

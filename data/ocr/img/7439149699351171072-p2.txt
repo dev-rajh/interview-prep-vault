@@ -1,0 +1,28 @@
+Q 4. What is a foreign key?
+
+Ans: A foreign key is a column or combination of columns
+that establishes a link between data in two tables. It
+ensures referential integrity by enforcing
+relationships between tables.
+
+Ceper treet
+fevene—tewpeme epee | # Ferri ney
+to i Se | my
+' eee = 7 he
+vs aan )
+el Fhtetey
+F Engtoyee
+frerery dey .
+ve ir pare
+“tee | sates teat
+te | wertaingteusive | Mydenbad
+ o. * tacheaclorgnee =
+
+Q 5. What is the difference between a primary key
+and a unique key?
+
+Ans: A primary key is used to uniquely identify arow ina
+table and must have a unique value. On the other
+hand, a unique key ensures that a column or
+combination of columns has a unique value but does
+not necessarily identify the row.

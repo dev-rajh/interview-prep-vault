@@ -1,0 +1,18 @@
+2) Summarize with totals
+
+When to use:
+* Get order totals per category
+* Calculate number of orders per group
+
+* Filter out small categories
+
+Summarize each category and keep only those with 10+ orders
+
+SELECT category,
+COUNT|(*) AS total_orders,
+SUM[amount) AS total_armount
+FROM orders
+GROUP BY category
+HAVING COUNT(*) == 10;
+
+Tip: Use HAVING after GROUP By to filter aggregates

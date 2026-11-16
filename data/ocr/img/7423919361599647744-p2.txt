@@ -1,0 +1,55 @@
+1, thew de vow identify aed fix a slow-runming SOL query in prodection?
+
+Agow er:
+The first step is to analyee the execation plan using ixPcain or eartain Amaeoe, This
+helps identify
+
+Full table scams
+
+imi penper join araeges
+Minging of utueed inde
+High-codt operations
+
+Stepa to fix
+
+Redece ches canned using slective wine claims
+
+Replace comelated subquenes with jouns
+
+Add composite indexes based on flinenag and joming colunens
+Avoid SELECT *
+
+Partaion lange ubles on frequently filnered cobunes like dane
+
+be peedection, changes are validated mm seging with real data volun before deployment
+2. Hew de window functions differ from aggregate fanctions internally?
+
+Aaswers
+Aggregate flinchons collapse rows into a single ourpul per group, while window functions
+operate on a logical window without reducing rows.
+
+latemually, window funchens require
+
+* Sorting data heed on kReTOTCoW ay and cane we
+¢ Sigintaining an in-memory frame for calculations
+
+This makes window fonctions more expensive. They sould be used carefully on large
+datasets and offen combmed with parison pruning.
+
+OJ. thew would vou remeve duplicates while keeping the betest recerd?
+
+Asoe er:
+
+DELETE FROM orders
+MMEFR onder ica In |
+SELECT orcec_id
+reom |
+SRLEcT onder sd,
+ROW_MOSIEN |! OFER IPANTITION 82 order_key ONDER BY updated_at
+Seici cr
+TROM oncecs
+it
+WHRPR rn > 1
+
+Tech Interview Titans
+

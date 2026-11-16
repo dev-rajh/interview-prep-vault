@@ -1,0 +1,34 @@
+in] vemiulahariahbandha - tiecrcomiavetanterstercts $01 — Comprehensive Retererce Geis
+
+NWAACHARIN} Stores up ten Linieode chars 2ndaetuad) + 2 Bytes
+NWARICHARIMAX) Up to (2-1/4? characters 2ndactual) + 2 bytes
+Date Data Types
+Duala Type Description
+DATE Date only. Foemat: WW d-DO. Range: 1000-04-04 oo 996d12-341
+DATETIME|tan} ones tine. Format: YY 4V-OD hhonenss Raage: 100-0601 to 9956-
+TIMESTAMP) Stored os seconds since Unie epoch Range: 1970404404 to 2096.01.08
+TMEtsp) Tine onfy. Format: hhomercss. Rage: 238-6259 to BIE 5o55
+YEAR Four-chgt year. Values: 1909-2155 and 0000
+Numeric Data Types
+BiTisizw) Bilvalue tee. San t-64, Defautt: 1
+TINYINT|sce) Wery smal integer. Signed: 126 to 127. Uneignest O-255
+BOL! BOOLEAN Zoro is tales: norenero fe tree
+SMALLINT|siza} Signect 22768 to 32767. Unsigned 0-65535
+MEDOUMPNTisize) Signect -AQSBG08 to BIBBSOT, Unsigned: 0-077 72165
+INT I size} Signect -Z1474E048 to 2147UB AT, Unsigned 0287285
+BIGINT( size) Signet 422307 20ST ERO bo P2AITDOME TT SBT
+FLOATIsine. of Floating point Size = totel digits. d= decimal dintts
+DOUBLET sine, d} Mormesieine Soating point number
+DECIMAL sine. dh Ehesct Phosc-ooint rurmber, Maw sizer @5. mace o> 0, deteul dO
+
+. SQL Command Categories
+
+Category Full Marre | Corenandes
+
+Language TRUNCATE, RENAME srucure
+
+DML Data Manipulation INSERT, UPDATE. DELETE. Maripulate data in tables
+Language SELECT
+
+DOL Date Query SELECT Aotrieee cata
+Language

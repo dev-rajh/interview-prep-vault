@@ -1,0 +1,31 @@
+=
+
+| telah ialeeteteteteteh 2
+| Id | Salary |
+rece gereeeere +
+[2 | 1. 8 86|
+[a |m |
+(3 | 36 |
+
+Perret tTh terry +
+
+For camp 8, given The abowe Empiyee taba, the query shourd return Jee as the
+second highest salary, f there ig no second highest salary, then the query shoud
+return null.
+
+SELECT Max (Salary) SecondeighestSalary
+FROM Eeployes WHESE Salary ¢ (SELECT MAX(Salary) FROM Eaployee}
+
+WITH CTE AS (SELECT DESTINCT Selery
+FROM Eeployes
+
+ORDER BY Salary DESC
+
+LIMIT 2)
+
+SELECT Salary a8 Secondtigheat Salary
+FROM CTE
+
+ORDER BY Salary Asc
+
+LIFUT t;

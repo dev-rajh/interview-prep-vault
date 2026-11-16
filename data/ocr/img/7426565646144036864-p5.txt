@@ -1,0 +1,39 @@
+- Explien schema definition for productan
+
+- Write modes: overwilo, append, mange
+
+« SveusTable vs sawe (metastore registration)
+* Partition By tor query performance
+
+9) What Interviewers Are Testing
+Can yeas da basic ETL tasks coractly? Shows practcal haneia-on skills,
+
+@ Question 6: What happens if you call collect(} on a DataFrame
+with 1 billion rows?
+
+ad The Weak Answer (Pass, but not imeressive}
+“Nh would be slow"
+
+Wihry this is weak: Misses fhe critical issue - it's not just show, it broaks.
+
+(@ The Strang Answer (Stands Qut}
+“enllect() pulls ALL ciate hom the workers So the diner node se Pythons Sicotes lbet,
+With 1 bilben rows, the driver would cus out of memory and crash (OOM error), Thies
+is why coled() ahould only be ured on aenall msuks - aller aggregators or heawy
+firing. For lange datasets, use write) 10 save reaulls to storage instead. If | med a
+sample for debuaging, fd use take(?D0) of limit 100}-colect{) to get a small subsat
+satel”
+
+Key concepts to mention:
+- Date meres bom divtibuted workers to singhe driver
+- Drier memory ta lienited (lypically a tew GE}
+- OOM (Out of Memory) ceror
+- Alomatiwas: wrhad}, taka(), limit)
+= ooflect() only sale afer significant reduction
+
+Y What Interviewers Are Testing
+
+Do you understand dietributed computing basica? Shoes you won't make expensive mistakes i
+production
+
+Cetelegieeerwki

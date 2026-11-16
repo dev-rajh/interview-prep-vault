@@ -1,0 +1,63 @@
+1. Second highest salary
+
+SELECT MAX(salary)
+FROM employees
+
+WHERE salary < (SELECT MAX(salary) FROM
+employees);
+
+Uses subquery to exclude the top salary.
+
+2. Department-wise avg salary
+(with >5 employees)
+
+SELECT department_id, AVG(salary) AS
+avg_salary
+
+FROM employees
+
+GROUP BY department_id
+
+HAVING COUNT(*) > 5;
+
+‘HAVING’ filters aggregated groups.
+
+3. Customers with >3 orders in last
+30 days
+SELECT customer_id
+FROM orders
+
+WHERE order_date >= CURRENT_DATE -
+INTERVAL '30 days'
+
+GROUP BY customer_id
+HAVING COUNT(*) > 3;
+
+Aggregation + date filter.
+
+4. Find duplicates on multiple fields
+
+* SELECT coll, col2, COUNT(*)
+* FROM my_table
+
+* GROUP BY coll, col2
+
+* HAVING COUNT(*) > 1;
+
+° Helps detect data quality issues.
+
+5. Transpose rows into columns
+using CASE
+
+¢ SELECT
+
+* user_id,
+
+* MAX(CASE WHEN month = ‘Jan' THEN spend
+END) AS Jan,
+
+* MAX(CASE WHEN month = 'Feb' THEN spend
+END) AS Feb
+
+* FROM user_spend
+* GROUP BY user_id;

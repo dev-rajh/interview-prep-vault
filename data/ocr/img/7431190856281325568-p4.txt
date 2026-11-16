@@ -1,0 +1,26 @@
+« HAVING total_sales > 0 removes products with zero recent sales.
+
++ ORDER Gy totel_salas DESC LIMIT 5 packs the top § products.
+
+© QB using Window Functions
+
+4 Table Romindar
+We're using the some soles table and dota as beforn &
+CREATE TABLE antec (
+sote_id INT AUTO_INCREMENT PRIMARY KEY,
+peoduct_id INT,
+peoduct_name WARCHAA/1OO),
+cutegary VARCHAR|SO),
+sole_dote DATE,
+quarnity INT,
+fevenue DECIMAL/10,2}
+
+© Solution Using Window Functions
+WITH recent sales AS [
+SELECT
+Peoduct name.
+SUM quantity) AS total_salas
+FROM sues
+WHERE sole_dote >= DATE_SUB/CURDATED. INTERWAL 3 MONTH)
+GROUP BY product_nome
+

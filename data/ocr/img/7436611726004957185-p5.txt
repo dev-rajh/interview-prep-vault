@@ -1,0 +1,14 @@
+Problem 4/20 (_smoow enna) @PAYPAL
+REVENVE SHARE
+
+Ratio: individual / Global Sur
+
+SELECT product_id,
+sales * 100.0 / SUM(sales) OVER () AS pct
+FROM product_sales;
+
+Next: Attribution +
+
+J 5 Qe°0sT 0) SAVE
+Fy G2 GE
+

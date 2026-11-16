@@ -1,0 +1,29 @@
+Round 2
+PySpark and SQL
+
+PySpark Coding Tasks
+1. Write a PySpark job to compute word frequency from
+
+a text file.
+
+* Approach: Use flatMap —~ map — reduceByKey.
+
+2. Given Spark code snippets, identify:
+
+* Narrow vs. wide transformations.
+
+* Number of stages created,
+
+3. Compute the yearly salary for each employee along
+with department name using PySpark.
+
+Spark Internals
+4. Explain the Spark architecture: jobs, stages, and
+tasks.
+
+SQL Tasks
+
+5. Write a query using LEFT ANTI JOIN to find the number
+of records present in tablel but not in table2.
+
+Ankita Gulati Shubh Goyal

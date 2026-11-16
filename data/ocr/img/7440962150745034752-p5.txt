@@ -1,0 +1,34 @@
+CUME_DIST() OVER (ORDER BY salary) AS
+salary_cdf
+FROM employees:
+
+13, Compare two tables and find rows with differences
+in any column (all columns)
+SELECT *
+FROM table] t1
+FULL OUTER JOIN table2 t2 ON tl.id = t2.id
+WHERE tl.coll 1S DISTINCT FROM t2.coll
+
+OR tl.col2 [S DISTINCT FROM t2.col2
+
+OR tl.col3 (S DISTINCT FROM t2.col3
+
+14. Write a query to rank employees based on salary
+with ties handled properly
+SELECT name, salary.
+
+RANK() OVER (ORDER BY salary DESC) AS
+salary rank
+FROM employees;
+
+15. Find customers who have not made any purchase.
+SELECT ¢.customer_id, c.name
+FROM customers ¢
+
+EET JOUN sales s ON ¢.customer_id = s.customer_id
+WHERE s.sale_id IS NULL:
+
+16, Write a query to perform a conditional aggregation
+(count males and females in each department)
+SELECT department_id
+

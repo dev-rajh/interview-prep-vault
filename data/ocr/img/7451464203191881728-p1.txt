@@ -1,0 +1,48 @@
+Real SQL Interview Questions with
+10-20 LPA Package
+
+SQL Questions
+
+1. Write a query to find employees with the second highest salary
+in a table.
+
+Ta solve this, use a subquery to first find the maximum salary, then filter out that value bo get the
+
+second highest
+
+Example:
+
+SELECT MAX{salary) AS second_highest_salary
+
+FROM em
+
+WHERE salary < (SELECT MAX{salary) FROM employees);
+
+Explanation:
+
++ Inner query (SELECT MAX salary) FROM employees) finds the highest salary.
+* ‘The outer query then finds the maximum salary less than that, which is the second
+highest.
+
+Tip: To handle tes or retrieve mukiple employees with the same second-highest salary,
+you can also use DENSE RANKL) with a CTE
+
+2. Explain the difference between INNER JOIN and OUTER
+
+JOIN with examples.
+INMER JOIN:
+Returns only matching records from both tables.
+SELECT e.name, d.depariment_name
+FROM emphryers &
+INNER JOIN departments d ON e.department_id = d.department_id;
+« Output: Onhy employees who belong to 4 department.
+LEFT OUTER DOIN:
+Retuns all records from the left table, and matching records from the right table, If mo
+mistch, NULL is returned.
+SELECT é.name, d.department_naene
+FROM amployees @
+LEFT JOON departments d OM e.depertment_id = d.department_id;
+» Quiput: All enployees, with department info where available,
+RIGHT OUTER )OIN:
+Returns all records from the right table, amd matching records from the left.
+FULL OUTER JOIN:

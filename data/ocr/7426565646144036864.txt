@@ -1,0 +1,204 @@
+10 Interview Questions for Junior Databricks Data
+Engineer Roles ($80-100k)
+
+The Fundamentals That Get You Hired
+
+Benaking imo Datebicks Data Engineering? Junior interiies last whether you uncersierad ee
+fundamentals - hot obecura adpe casi.
+
+Companies hiring al $20-?00k want to see: you understand core concepts, you oan leam quickly,
+and you have the right mental models to grow.
+
+What's insade:
+
+- Al 10 questions with cataled aearwers
+- Weak va Strong answar comparison
+- Ker concepts to mention
+
+- Whal nionviqwars are realy testing
+
+(® Question 1; What's the difference between a transformation
+and an action in Spark?
+
+A The Weak Answer (Pass, but not imeressive}
+"Traratormations charge data, actors ratumn reqults.”
+
+Why thts Is weak: Technically correct but doesn’t show understanding of WHY tvs matters.
+
+(2 The Strang Answer (Stands Out)
+“Traralorealions are lazy - they bulk’ up a logical plan Bul don) aaecule until an
+acton riggers them Exarnples: filler(), saect|) groupGy(). Actions trigger actual
+computation and ratuen reaults to the driver or write to storage. Examples: court},
+collect}, show(), write|). This matiers because Spark cam optimize the entire chain of
+fTansformajors before exeouting. Hf! call df-fhen().select). then), Spark combines
+these into one optimized pass through the dota.”
+
+Key concepls to mention:
+- Lay evaluation and query optimization
+
+‘See more Oetetricks fee on Datel regress vi
+
+- Transformations: Miter, setect, groupy, join
++ dictions: court, oofect, show, write
+
+« DANG (Directed Acyclic Graph) execution
+
+» Why lazy evaluation erables optimization
+
+9) What Interviewers Are Testing
+Do you undersiand Spark's aeecuton model, of jual mamorize syntax? Shows you know WHY
+Spark works this way.
+
+@ Question 2: Why would you use Delta Lake instead of regular
+Parquet files?
+
+ah The Weak Answer (Pass, but not imeressive}
+"Delta Lake & batter and has more features than Parquat."
+
+Why this is weak: Vague « doesnt explain specific benefits.
+
+(@ The Strang Answer (Stands Out}
+
+“Delis Lake acds ACID transactions on top of Parquet flea Three key bereft: 1)
+Fiokatilty - if & mite faite halfway, te lable ales Gonsislert (ho geartiol writes), 2)
+Tire travel - § can query previous warsiora of data of rollback mistakes, 3) MERGE
+support - | can do wpserts which plain Parquet can't do. Delta is si Parquet
+underneath, but the fansacton log (_delta_log) Tacks what fies ara wald, enabling
+these features.”
+
+Key concepts to mention:
+- ACID transactions (Atomicity, Consistaney, taolation, Durability)
+- Transaction log in _ deka leg fokder
+- Tima vavel via VERSION AS OF
+« MERGE tor upserts (update + insert)
+» ‘Schema enforcement and evolution
+
+Y What Interviewers Are Testing
+
+Do you understand wey Delta Lake exists, or just thal it's "the Dotabricks way"? Showa
+foundational knowledge.
+
+Detefegieerwki
+
+@ Question 3: Explain the medallion architecture (Bronze, Silver,
+Gold). Why is it used?
+
+A The Weak Answer (Pass, but not impressive)
+“Bronze is cow date. Sewers cleaned, Gold 6 aggregated”
+
+Why this is weak; Correct ful dosael explain the rasoring of benefita
+
+(i The Strong Answer (Stands Out)
+“The medafion architecture separates dota by quality level. Bronze is the rer landing
+Zone - ingest everything, preserve the onginal data for mepeocessing f needed. Siver
+applies clhearnng: deduphralion, cats type fiers, ffering bad records, Gold is
+business-reachs: aggregations, joins, cptienized for specifi: weep canes, They kay besrenlit
+is datuggability - if something iooks wrong in Gold, | can trace hack Mrough Silver to
+Bronze te find where things went weong. Ht also lats diforant iaams work at diferent
+layers.”
+
+Key concepts to mention:
+-  Beorwer raw, append-onty, squrce of truth
+- Gole aggregated, husines logic applied, query-cpimed
+- Reprocessing capability from Bronce
+- Clear data Eneage through larpors
+
+> What Interviewers Are Testing
+Oo you understand cats pipeline design principles? Shows you can fink soul Gata quality
+Syalarrealically
+
+@ Question 4: What's the difference between a cluster and a job
+in Databricks?
+
+ih The Weak Answer (Pass, but not impressive}
+“A Guster i the compute, a job cure cock.”
+
+Wi this ia weak: Too brn! - misses inperam operational data.
+
+Detefegieerwki
+
+(@ The Strong Answer (Stands Out)
+
+“A, Guster is the compute infastructure - a group of VMs running Spark. & has a
+dnver node [coordinates work) and worker nodes (esecute tasks). Clusters can be
+interactve (for development) or job dusters (spin wp for one yob. terminate alter}. A
+job is a schedvied execution of notebooks or soupts - it defines WHAT runs, WHEN it
+puns. and on WHAT chater, Jobe can create their oan job Gusiers (more moleted,
+Ccil-eHicent) or wie écaing interactive cheaters,”
+
+Key concapts to mention:
+» Orwer node ws worker nodes
+> Interactve dusters vs job clusters
+-  dobe deine: what when, whech duster
+-  Aeboereling for vere workloads
+- Coal implicatons of duster chains
+
+Y What Interviewers Are Testing
+
+Do you understand Databricks infrastructure basics? Shoes you can work in a production
+ervironment.
+
+(®@ Question 5: How do you read a CSV file and write it as a Delta
+table?
+
+A The Weak Answer (Pass, but not impressive}
+“spark read.cev] path’) write sormartf deity ) save path ye
+
+Why this is weak; Minima! code wifhtoul mentoring important optore,
+
+(i The Strong Answer (Stands Out)
+
+"Td wee spark eoad option (header, ‘true’ option(inlerSchama’,
+
+‘hue’ |.cev['source_paiy’) fo read wih headers and aulomatic type inference. For
+production, fd detine the scheme eaptcfy instead of infemng - it's faster and catches
+dats issues earthy Then write with
+
+merits foerreat| Gea’) mocdeC overwrite’) seventies Tadhet ry table’), Using saveAs Tate
+regiilers fin the mertioee ao others can dnd it, I'd alka Consider partigandly for lange
+tables thet are commonly filtered by a cohumn like date”
+
+Key concepts to mention:
+- Nesder and schema inference options
+
+Cetelegieeerwki
+
+- Explien schema definition for productan
+
+- Write modes: overwilo, append, mange
+
+« SveusTable vs sawe (metastore registration)
+* Partition By tor query performance
+
+9) What Interviewers Are Testing
+Can yeas da basic ETL tasks coractly? Shows practcal haneia-on skills,
+
+@ Question 6: What happens if you call collect(} on a DataFrame
+with 1 billion rows?
+
+ad The Weak Answer (Pass, but not imeressive}
+“Nh would be slow"
+
+Wihry this is weak: Misses fhe critical issue - it's not just show, it broaks.
+
+(@ The Strang Answer (Stands Qut}
+“enllect() pulls ALL ciate hom the workers So the diner node se Pythons Sicotes lbet,
+With 1 bilben rows, the driver would cus out of memory and crash (OOM error), Thies
+is why coled() ahould only be ured on aenall msuks - aller aggregators or heawy
+firing. For lange datasets, use write) 10 save reaulls to storage instead. If | med a
+sample for debuaging, fd use take(?D0) of limit 100}-colect{) to get a small subsat
+satel”
+
+Key concepts to mention:
+- Date meres bom divtibuted workers to singhe driver
+- Drier memory ta lienited (lypically a tew GE}
+- OOM (Out of Memory) ceror
+- Alomatiwas: wrhad}, taka(), limit)
+= ooflect() only sale afer significant reduction
+
+Y What Interviewers Are Testing
+
+Do you understand dietributed computing basica? Shoes you won't make expensive mistakes i
+production
+
+Cetelegieeerwki

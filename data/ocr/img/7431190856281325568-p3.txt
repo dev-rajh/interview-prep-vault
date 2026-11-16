@@ -1,0 +1,30 @@
+SUM(SUMirevenuel| OVER (PARTITION BY category ORDER BY DATE_FORMAT(sale_date,
+“SeY-Sermy'}) AS cumulatiwe revenue
+
+FROM sates
+GROUP BY category, sale_month
+ORDER SY category, agke_manth,
+|) Explanation;
+DATE_FORMAT(sole_date, “4 Y-S6er7} extracts the morth and year.
+Tha first SUM/revanue) gives monthly rowan.
+
+The window tumction SM (SUM (reveruel| OVER |...) competi cucnuletien revere
+over time for each category.
+
+~ QE): Retrieve the top 5 products by sales volume, excluding
+products with zero sales in the past 3 months
+
+© Solution:
+SELECT
+peoduct_name,
+SUM (querdtity) AS tocal_salag
+FROM soles
+WHERE sole_date >" DATE SUB(CURDATED. INTERWAL 3 MONTH)
+GROUP BY product name
+HAVING total sales >
+ORDER Bf totel_sales DESC
+UMIT 5;
+) Explanation:
++ DATE SU8/CURDATE!), INTERVAL 3 MONTH] filters the best 3 marth’ deta,
+«© SUM(quantity) computes total sales volume.
+

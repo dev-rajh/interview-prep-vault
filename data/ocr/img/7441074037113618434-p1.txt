@@ -1,0 +1,12 @@
+RIGHT APPROACH WRONG APPROACH
+
+Filter Early Filtering After Aggregation
+SELECT customer_id, SUM( amount) SELECT customer_id, SUM( amount)
+FROM orders FROM orders
+WHERE order_date >= '2625-61-a1' GROUP BY customer_id
+GROUP BY custamer_id; HAVING MAX(order_date) >= '2628-61-61";
+
+RESULT —
+
+Faster execution | Efficient
+

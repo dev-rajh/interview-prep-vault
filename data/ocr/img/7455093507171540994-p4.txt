@@ -1,0 +1,13 @@
+Resilient Distributed Datasets (RDDs)
+
+ionecaecten of tetera sate nant
+
+Features Of RDDs
+ond ns pn ay
+Creating RDDs
+
+eels cute en ealctn ed be arb 185
+
+Creating RDDs
+
+etn statin ae sty a oe

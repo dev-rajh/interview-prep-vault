@@ -1,0 +1,42 @@
+What I wid
+J explimed 5 optimization tactics
+Check Spark U1 for diufiled sages
+Broadcast small lookup:
+» af = big. jain ibroadcast (lookupi, "id")
+Repartitien by key to avoed sheer
+
+Cache frequently reused DeteFrames.
+Use Parquet Delta for better bO
+
+‘Tips
+
+They Wael Speck perfiriemce inmights.
+Sebeaticn whale", “partitions”, “tata skew"
+
+3 What they asked me
+
+Witte SOL to fetch Ord highest salary wehou! wing LIMIT of TOP
+
+WHERE salary > «.salery
+le
+
+Tips
+
+De NOT we LIMIT) TOP — they’ se sesing ranlong logic.
+Micatios aliemate soletioe: DENSE RANK).
+
+4 What they asked me
+
+How do you handle schema drift while mgestng JSON files @ ADLS?
+
+What I said
+
+Beabled awte schema inference in PySperk
+
+Use! Delta with mergeSchema=T rue
+
+df. write. format ("delta") option (“sergeidciers",
+"Erie" | .eodec"append”) , save ipethi
+
+Added a schema validation layer to log memeiches.
+

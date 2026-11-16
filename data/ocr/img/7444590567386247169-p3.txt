@@ -1,0 +1,31 @@
+Solwborr
+
+Ta ployee | CRETE
+
+O05, Write a query to list departments where average salary > SOOO,
+
+O17. Write a query to olsplay employer names with department names.
+Saletan
+LECT @.2ane, dcepartrerc_sans
+
+SM oc .departeent ts 4. departeert ide
+
+G18. Write 2 query to count oistinct employee names.
+Solution
+
+Ligcy STIVLSTIMET same
+
+FROM cee Leyes
+
+O09. Write a query to calculate annua safary and sort descending.
+Solution
+
+CLECT m<. alacy*l2 AS aecvual alacy
+TAO empl eyees
+
+BDA Gt acreal salary DESC;
+
+O20. Write a query to count employees growped by department and role.
+Solver
+
+BY departmmenc id, cola:

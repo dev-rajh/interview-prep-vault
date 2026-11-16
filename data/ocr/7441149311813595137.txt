@@ -1,0 +1,236 @@
+in| verhalaharahbandha . paberae Rader
+
+SQL
+
+Comprehensive Reference Guide
+
+in
+
+venkataharishbandha
+
+Database Fundamentals
+
+What is a Database?
+
+A database is a structured. organized set of data. in computing, & refer
+orange date — fink of ft like a file cabinel where dete & sored in diferent sections called Gables
+
+VioedP ress, for aman, uses MySOL ac ils database management systom
+
+DBMS — Database Management System
+
+* DBMS is software that allows users to interact wih a database. It manages data storage, retnewa
+uptistes. and pecunty
+
+Components of a DBMS
+
+: Dvla Storage Stores data it a airuciured forrnat
+
+* Data Scheme Defines tha structure (hiueprint) of the Gatabase
+> Query Processor — Inierprets and execuies SOL queries
+
+>: Teataaction Manager — Ensures AC (lian transactions
+
++ Securkty Manager— Contra access and penissions
+
+RDBMS — Relational Database Management System
+
+An BOGS © 2 DBMS designed spectically for reiatonal catstases — a subset of DBMS. It stores
+dale in cows and columes, and Gables can be related to each other, ft aupporte SOL quecess across
+multioion tabs sanullanousalhy
+
+nm
+veriulaharahbandha - wiser comiavetantendiwcts 901 — Comprehensive Radererce Gece
+
+Examples: MySOL, PostgmSOL Oracka, Microsoft SOL Sarwar.
+
+Types of Databases
+
+Retrional! SOL MySQL. Oracks, PosigreSOL. SOL Structured tw, SOL support ACID.
+Serer relationships, indexing
+
+Tire Series. InfeDG, Timescaiet8, Graphite, High-wrte query performance. fire:
+Prometherus based retention, scalabeity
+
+NoSOL MorgoDe. Cassandm, Andis, Document, Column, Key-vgles,
+Couch Base Graph, Detribeted aechtectuer
+
+2. ACID Properties
+
+ACID stands for Alomicity, Consistency, Isolation, and Durability — four key principles ensuring reliable
+transaction processing. Example scenano: fansteming £1,000 trom Account A to Account B.
+Atomicity
+
+The ending raneecton mus! ether complete fully of not hapgen at al, © the system crashes afer
+deducting from A but batore adding to B, the database rolls back so both accounts remain unchanged.
+Ad of mothing.
+
+Consistency
+
+The transection must keap the catshase ina vabd siete before and after it runs. Bertone A + Be
+70,000, Aller, A+ & rant aff = 910,000, No money should dapper or be crated cul af this air,
+isolation
+
+Tramaactons should mot interfere with each other. Two concurrent tanaters behawe as f ach is the
+only one runeing. Partial results from ome transaction are not viele to others until R completes.
+Prevents dirty reads and conflicts
+
+Durability
+
+Once 2 ianection if commited rasults slay — ever if there is a syalertt craah of power faluee.
+Changes are kept in WAL (Write-Amead Log) unt comenited or rolled back, stored in volai#e mamary,
+aiding recovery on crash. Changes are permanent.
+
+3. Data Types in MySQL
+
+String Data Types
+
+Duta Type
+
+CHAIN] Storms n characters [teecd| nm Sytes |1—8,0005
+NCHARIn) Stora n Unicode characters 2n bytes
+VARCHAS|n) Stores up ton checacters [varuntsis| Actual ergy © 2 bytes
+
+VAPSC HAM MOC) Storms up to 2°-1 chewarters Aectual lerayth © 2 bytes
+
+in] vemiulahariahbandha - tiecrcomiavetanterstercts $01 — Comprehensive Retererce Geis
+
+NWAACHARIN} Stores up ten Linieode chars 2ndaetuad) + 2 Bytes
+NWARICHARIMAX) Up to (2-1/4? characters 2ndactual) + 2 bytes
+Date Data Types
+Duala Type Description
+DATE Date only. Foemat: WW d-DO. Range: 1000-04-04 oo 996d12-341
+DATETIME|tan} ones tine. Format: YY 4V-OD hhonenss Raage: 100-0601 to 9956-
+TIMESTAMP) Stored os seconds since Unie epoch Range: 1970404404 to 2096.01.08
+TMEtsp) Tine onfy. Format: hhomercss. Rage: 238-6259 to BIE 5o55
+YEAR Four-chgt year. Values: 1909-2155 and 0000
+Numeric Data Types
+BiTisizw) Bilvalue tee. San t-64, Defautt: 1
+TINYINT|sce) Wery smal integer. Signed: 126 to 127. Uneignest O-255
+BOL! BOOLEAN Zoro is tales: norenero fe tree
+SMALLINT|siza} Signect 22768 to 32767. Unsigned 0-65535
+MEDOUMPNTisize) Signect -AQSBG08 to BIBBSOT, Unsigned: 0-077 72165
+INT I size} Signect -Z1474E048 to 2147UB AT, Unsigned 0287285
+BIGINT( size) Signet 422307 20ST ERO bo P2AITDOME TT SBT
+FLOATIsine. of Floating point Size = totel digits. d= decimal dintts
+DOUBLET sine, d} Mormesieine Soating point number
+DECIMAL sine. dh Ehesct Phosc-ooint rurmber, Maw sizer @5. mace o> 0, deteul dO
+
+. SQL Command Categories
+
+Category Full Marre | Corenandes
+
+Language TRUNCATE, RENAME srucure
+
+DML Data Manipulation INSERT, UPDATE. DELETE. Maripulate data in tables
+Language SELECT
+
+DOL Date Query SELECT Aotrieee cata
+Language
+
+in| veriulahariahbandha - wiser comiavetantersditiects SOL — Comprehensive Releerce Goite
+
+ToL Trafaaeton Cenol = COMMIT, ROLLBACS, Manage transactions
+‘Latguage SAVEPOINT
+
+DDL — Data Definition Language
+
+CREATE Table
+
+[CREATE TABLE exployeus ¢
+eeplopes_id CMT IDESTITICL. 1) PROT KEY.
+Tiren_eame WRRCERA ($0) MOT Woe,
+lastname = URACEAN SO),
+hire dace DATE,
+Ceparinent WARCEAR (50!
+
+ir
+
+ALTER Table
+(ALTES TABLE eeplepees ROP DOB GATE: ~~ Add colleen
+ALTER TARLE COLO pees RLTEM CORTMN fee VIA OE) 4 o> modify ecole
+ALTER TABLE eaployees ORCH COLURH ciryy ~~ belate colven
+EXEC ap _coname ‘omployse.rams', ‘full same', “COLUMS': ~~ Benese colaan
+ALTER TABLA employees ADD CORSTEAINT ug id ONTQUE ¢ic; -~ Add conetreint
+}ALTER TABLE epplopees DOF COMSTRACYT en_ids c= Drop casrtraint
+
+DROP vs TRUNCATE ws DELETE
+
+Purpoce Rena eniee table =| Retcved all row Fecrcwies apectic of all
+arcs Slrudiure war otek, aitudiure wore
+
+Temrraaction Contrct Cannot be roithed back Cannel be rofied Beck ‘Can Be rothed buck
+Space Reckernang Rekmers object and it = Frew the space clita = Laawes eenety specu for
+
+aL babe future unee
+
+Speed Fractal [rarrecric Fiche tian DELETE = Serva flexes irecivicnal
+everything! [ne new lepepreg | al]
+
+Foakarwrrial Integrity = Net checked Checkes (Chrachid
+
+WHERE Ciruse Mot appiicabe Met meppalacaat ha Agptncabhs:
+
+Command Type ODL DOL DML
+
+DML — Data Manipulation Language
+
+[TRTEET TETO ceplopees tid, mame, age, Polaryl vateme Cle ‘sohe', 35, ROOLy
+
+UPOATE aaploywes ART salary ~ aslacy * 1.3, age = 244 ~~ Update abl coms
+OPDATE anplcoyess JET age * 20 WEERE id = Lz @- Update with cosdition
+|DELETE FROM employees MIERE id = 1; -- Delete apectfic raw
+CRLETE FROM caployees; -- & Geletes ALL rowe!
+
+SELECT Queries
+
+in
+veriulahariahbandha - wiser comiavetantersdtiects 901 — Comprehensive Relererce Gels
+
+SELECT ia semet, Selary AE G)d salary, (6nlary + eolerp * 8,31 AS fete ondary
+FRM eaplopees
+
+(SELECT TOf 2 + FROM employes -~ First 2 cows
+
+SELECT * FROM esplovyee MEERE hiting_date BETWEEN ‘2871-01-81 RMP *2EFI-12-S1'r
+
+DCL — Data Control Language
+
+Ghat SRLRCT, UPOaTE Cn amployeea TO user rome;
+REVGER UPDATE C8 enployeas PROM omer name;
+
+TCL — Transaction Control Language
+
+BEGIN THAMSACTDOM:
+UPDATE emplopees EET salary = solery * L.1 WHERE departeent = "1T'r
+CAVEPGINT Byeels
+-- Df acmething qoee wrongs
+POLLAACK TO SAVEPOIST Saves:
+COMMDT:
+
+5. SQL Constraints
+
+Constraints are used to speci#y rules for data ins table, ensuing accuracy and rebatibty, Hs constraint
+ie Vicddled, Ihe action bt aborted. Constraints can be Colutn-leve! ar tabketewal
+
+NOT ALLL Ensures a ooluen cannot hae a MULL value
+
+UNIQUE Ensures all values in o column are diferent
+
+PRIMARY KEY Combination of MOT NULL and UNIQUE Liniquely identifies oach row
+FOREIGN KEY Prewents actons that would destroy links between tables
+
+CHECK Ensures values in a ooluTm saliefy 2 specific condition
+
+DEFAULT Sats a default value for a coturn Fino value Is apected
+
+Primary Key vs Foreign Key
+
+Primary Key Properties
++ Uniqueness — Each row must have a unique primary key value
++ Immutable — Onoe assigned, the value should not change
++ Simpichy — Koop primary heys as simple as possitie (best practoe)
+* Mon-lInteiigent = Should not contain meaningta business information
++ Indeed — Automatically indewed for fast searching
++ Relerertio integrity — Serves as a reference for foreign keys in other tntles
++ Bata Type — Frequently auto-incremented integers

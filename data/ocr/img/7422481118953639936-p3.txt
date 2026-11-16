@@ -1,0 +1,33 @@
+Round 1
+Technical
+
+Introduction & Experience
+
+1. Walk me through your previous tech stack and
+experiences.
+
+2. What data volumes have you worked with?
+
+3. Describe the type of work you've done and its
+business impact,
+
+SQL Questions
+
+4. Write a query to identify continuous date ranges
+having the same status.
+
+* Approach: Use ROW_NUMBER() with grouping to find
+gaps and identify ranges.
+
+5. Given 2 tables with NULL values, determine the row
+count outputs for different joins:
+
+* INNER JOIN
+
+* LEFT JOIN
+
+* RIGHT JOIN
+
+* FULL OUTER JOIN
+
+Ankita Gulati Shubh Goyal

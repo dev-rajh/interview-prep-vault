@@ -1,0 +1,12 @@
+Second Highest Salary
+
+Retrieve the second highest salary from Employee
+table
+
+SQL QUERY MySOL/PostgreS OL
+
+SELECT salary FROM Employee
+ORDER BY salary DESC
+LIMIT 1 OFFSET 1;
+
+Anandnarayanan § - Essential SQL Queries See shane

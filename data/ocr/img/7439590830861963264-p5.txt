@@ -1,0 +1,12 @@
+7. COUNT ORDERS PER CUSTOMER (META)
+
+Write a query to show how many orders each customer
+has placed.
+
+8. FIND EMPLOYEES WHO JOINED IN 2023
+(AMAZON)
+
+Write a query to list ernployees who joined in the year
+2023
+
+Ga www dataceps.com/sql-blueprint

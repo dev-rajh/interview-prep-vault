@@ -1,0 +1,33 @@
+ORDER BY streak_length DESC
+
+10, Recursive query to find the full reporting chatn for
+each employee
+WITH RECURSIVE reporting chain AS |
+
+SELECT id, name, manager id, 1 AS level
+
+FROM employees
+
+WHERE manager _ id 1S NULI
+
+UNION ALI
+
+SELECT cid, e.name, ¢.manager_id, re.level + |
+FROM employees e
+JOUN reporting chain re ON e.manager_id = re.id
+
+SELECT * FROM reporting chain ORDER BY level.
+id:
+
+11. Write a query to find gaps in a sequence of numbers
+(missing IDs)
+SELECT (id + 1) AS missing_id
+FROM employees el
+WHERE NOT EXISTS |
+SELECT 1 FROM employees e2 WHERE c2.id
+el.id + |
+ORDER BY missing_id
+
+12, Calculate cumulative distribution (CDF) of salaries
+SELECT name, salary.
+

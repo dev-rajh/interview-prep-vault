@@ -1,0 +1,15 @@
+Time Series
+
+ARIMA, SARIMA, Exponential Smoothing
+Business applications
+Math behind
+
+Step-by-step process:
+preparation
+
+evaluation
+fine-tuning
+
+o
+
+(fi Julia Lenc

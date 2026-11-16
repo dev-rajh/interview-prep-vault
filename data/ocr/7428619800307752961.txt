@@ -1,0 +1,22 @@
+SELECT
+order_date,
+sales_amount,
+
+(sales_amount) OVER (
+ORDER BY order_date
+ROWS BETWEEN PRECEDING AND CURRENT ROW
+) AS rolling_avg
+FROM sales;
+
+
+product_id,
+(revenue) AS total_revenve
+
+FROM sales
+
+WHERE order_date SETWEEN (QUART
+GROUP BY product_id
+DRADER BY total_revenue OE!
+
+INIT
+

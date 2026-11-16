@@ -1,0 +1,31 @@
+® Insert Sample Data
+
+INSERT INTO agile (product id, peoduct_name, catagory, dale date, queenity, revenue)
+VALUES
+
+(1, ‘Laptop A, ‘Electronics, 2024-01-15; 10, 80000).
+(1, ‘Lapeop Ay, ‘Elactromies’, 2024-02-15", 12, 60000),
+(1, ‘Laptop Ay ‘Electronics’, 2024-00-10", 8, 20000),
+(2, ‘Motels 8: ‘Blectronice’, ‘2024-01-20, 1%, 300001.
+(2, "Mobile 8, "Electronios’, "2024-02-22", 20, 40000),
+(2, ‘Motila 8) ‘Electronics’, ‘2024-03-25, 5, 10000),
+&, Shiet C) Ciething, 2024-01-12", 25, G60),
+
+(3, Sheet GC ‘Clothing, 2024-02-18, 30, J0900),
+
+(3, ‘Shit C; ‘Clothing, 2024-0221, 15, 15000},
+
+(4, ‘Shoes Dy Footwear’, 2024-09-11) 5, 10000),
+
+(4, Shows D, Footwnnr’, 2024-02-15) 7, 14000),
+
+08. Watch E. Accessories), 2024-00-08), 10. 20000);
+
+~) Q@): Find the cumulative revenue by month for each product
+category
+© Solution:
+SELECT
+category,
+DATE_FORMAT/anie_data, “WY-Sem'} AS aala_menth,
+SUM (revenue! AS monthly rewenue,
+

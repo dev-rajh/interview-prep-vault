@@ -1,0 +1,24 @@
+9. Calculate the average order value
+per customer.
+
+SELECT customer_id,
+AvG(total_amount) AS
+avg_order_value FROM
+Orders GROUP BY
+customer_id; 88 Microsoft
+
+10. Get the latest order placed by
+each customer.
+
+SELECT customer_id,
+
+uax(order_date) AS
+
+latest_order_date
+
+FROM Orders
+
+GROUP BY customer_id; Uber
+
+3
+ij

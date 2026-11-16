@@ -1,0 +1,28 @@
+©
+
+Q 9. What is the difference between DELETE and
+TRUNCATE in SQL?
+
+Ans: The DELETE statement is used to remove specific
+rows from a table based on a condition. It can be
+rolled back and generates individual delete
+operations for each row.
+
+TRUNCATE, on the other hand, is used to remove all
+rows from a table. It cannot be rolled back, and it is
+faster than DELETE as it deallocates the data pages
+instead of Logging individual row deletions.
+
+Q 10. What is the difference between UNION
+and UNION ALL?
+
+Ans: UNION and UNION ALL are used to combine the
+result sets of two or more SELECT statements.
+
+UNION removes duplicate rows from the combined
+result set.
+
+whereas UNION ALL includes all rows, including
+duplicates.
+
+OA

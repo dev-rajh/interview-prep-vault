@@ -1,0 +1,48 @@
+* The scalabilty and performance of Apache Spark's distributed computing engine.
+
+Thus, PySpark is a critical tool for data engineses and scieraints eho want §o process hig data at scale using
+Python
+
+3. Explain the role of Py4J in PySpark.
+
+Ppa! ib a Python-Java beidge library that enables seamless interaction between Python applications and
+Java-based systems. Since Apache Spark & built on Scala [running om the JM], Ppa! is the key enabler that
+alkres Python users 1a work with Spark via PySpark
+
+Here's how it works in PySpark
+1. Python process: [he user writes commands in Python,
+2. Pyad bridge: PySpark sends these commands to the JVM through Pyal.
+3. JVM (Spark emgine) The JViM executes the tasks on the Spark chister.
+4, Results returned: Py! comets back the rasults fram JW!M to Python.
+
+For exaengile, if you create « DateFrame and run show), Py trardates the Python method call into # I'M
+aperation that executes in Spark's distributed environment,
+
+Without yd), ySpark would not be able to use Sperk's WM-besed APs Mowrver, Oya) does add some
+owerhead due to seraliratioeydeserialization between Python and Jawa objects. To address performance
+concems, Spark introduced Pandas UDFs (Vectorized UDFs), which minimize this overhead by using Apache
+Arrow for efficient data transfer.
+
+in summary, Pyal is the communication backbors that makes PySpark possible, enabling Python developers
+10 levewage Spark's JVM powered execution
+
+Perfect — let's begin with Q1-Q10, each aemwer -200 wards (clear, inteniew-triendiy, and theory-tich},
+
+4, What is an RDD? Name three of its key features,
+
+An RDD (Resilient Distributed Dataset) & Spark's core abstraction tor distnbuted data. It represents an
+immutable, partitioned collection of objects that can be processed in parallel across a Custer ROOs ware
+the original APY of Spark, providing kre-lewal control ower data ane transformations.
+
+Three key features of RDDs
+1. Resilient (Fault-tolerant):
+
+o part of an ROD is lost due to node failure, it can be recomputed using lineage information
+{a record of transformations applied)
+
+2. Distributed:
+
+RODS are spit ete partitions, and each partion is processed in parallel across Spark ececutors,
+erauring scalability on big datasets,
+
+3. Imenutable:

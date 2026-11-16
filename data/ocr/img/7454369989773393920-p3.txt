@@ -1,0 +1,28 @@
+Q 6. What is normalization?
+
+Ans: Normalization is the process of organizing dataina
+database to minimize redundancy and dependency.
+It involves breaking down a table into smaller tables
+and establishing relationships between them.
+
+Q7. What are the different types of
+normalization?
+
+Ans: The different types of normalization are:
+« First Normal Form (1NF)
+* Second Normal Form (2NF)
+e Third Normal Form (3NF)
+* Boyce-Codd Normal Form (BCNF)
+* Fourth Normal Form (4NF)
+« Fifth Normal Form (SNF) or Project-Join Normal
+Form (PJNF)
+
+Q 8. What is a join in SQL?
+
+Ans: Ajoin is an operation used to combine rows from two
+or more tables based on related columns. It allows
+you to retrieve data from multiple tables
+
+simultaneously. von
+
+pa

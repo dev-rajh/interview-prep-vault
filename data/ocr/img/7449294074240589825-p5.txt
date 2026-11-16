@@ -1,0 +1,29 @@
+Swipe —
+
+Finding Duplicates
+
+Identify records that appear more than once.
+
+SELECT
+
+email,
+
+COUNT(*) AS cnt
+FROM users
+GROUP BY email
+HAVING COUNT(*) > 1;
+
+Follow-up is
+usually “now
+delete the
+duplicates”
+
+GROUP BY
+the column
+youre
+checki ng
+
+HAVING filters after
+aggregation (WHERE
+can t do this)
+

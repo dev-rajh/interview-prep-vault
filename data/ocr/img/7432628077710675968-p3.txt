@@ -1,0 +1,11 @@
+LINKEDIN a
+
+—_
+
+» Common Mistake #1
+
+Using = NULL
+
+Correct > IS NULL
+
+Q AYUSH KUMAR i

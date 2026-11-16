@@ -1,0 +1,26 @@
+Instant Conversion
+
+Find users who placed an order on the exact same day they siqned up.
+
+SAMPLE INPUT EXPECTED OUTPUT
+w_id signup order_dt uid signup order_dt
+sa 2024-01-01 2024-01-01 5e 2024-01-01 2024-01-01
+51 2024-01-82 2024-81-05
+
+myS0L / SOL Server OO
+
+Join on matching user AND date
+SELECT
+
+u.user_id, u.Signup, o.order_dt
+FROM users u
+
+JOIN orders o ON u.user_id = o.user_id
+WHERE u.signup = o.order_dt;
+
+-——~ Meat: Monthly Growth .«
+
+i ‘
+. ee meres
+\ | Anandnarayanan 8 { S rerost |
+

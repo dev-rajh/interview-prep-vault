@@ -1,0 +1,41 @@
+FROM |
+
+SELECT salary
+
+FROM employees
+
+ORDER BY salary
+
+LIMIT 2 - (SELECT COUNT(*) FROM employees)
+
+7?
+
+OFFSET (SELECT (COUNT(*)- 1) 2 FROM
+employees)
+|} AS median_subquery-
+
+§. Running total of salaries by department.
+SELECT name, department_id, salary,
+
+SUMj(salary) OVER (PARTITION BY
+department_id ORDER BY id) AS running total
+FROM employees:
+
+9. Find the longest consecutive streak of daily logins for
+¢ach user
+WITH login_ dates AS |
+
+SELECT user id, login_date,
+
+login_date - INTERVAL ROW NUMBER()
+
+OVER (PARTITION BY user id ORDER BY
+login date) DAY AS gmp
+
+FROM user_logins
+SELECT user_id, COLNT(") AS streak_length
+MINQogin date) AS start date, MAX(login date) AS
+end_date
+FROM login dates
+GROUP BY user_id, grp
+

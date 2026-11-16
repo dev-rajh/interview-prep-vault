@@ -1,0 +1,42 @@
+SELECT e.name AS Employee. e.salary, mname AS
+Manager, m.salary AS ManagerSalary
+
+FROM employees c¢
+
+IOUS employees m ON e.manager_ id mid
+WHERE c.salary > m.salary
+
+4, Count employees in each department having more
+than 5 employees
+
+SELECT department_id, COL 1(*) AS
+
+num employees
+
+FROM employees
+
+GROUP BY department id
+
+HAVING COUNT(*) = 5:
+
+5. Find employees who joined in the last 6 months.
+SELECT *
+
+FROM employees
+
+WHERE join_date == CURRENT DATE -
+INTERVAL ‘6 months’
+
+6, Get departments with no employees
+SELECT d.department_ name
+
+FROM departments d
+
+LEFT JOIN employees e ON d.department_ id
+e.department_ id
+
+WHERE e.id IS NULL;
+
+7, Write a query to find the median salary
+SELECT AVGj(salary) AS median_salary
+

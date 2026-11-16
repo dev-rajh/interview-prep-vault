@@ -1,0 +1,60 @@
+‘laboutoota nginatng
+
+PYSPARK
+POWER GUIDE
+
+> 9
+What is PySpark ?
+
+ate Sa ih om tn ko in
+
+More on PySpark
+
+* Spottt no wo
+
+Pydd
+
+1 Ghteomemefn bonnd x saints
+
+* Gmepter nine lection nies oro
+
+More on Py4J
+
+Ue Dem
+
+Installing and Configuring PySpark
+
++ Deering war
++ Bafa cs eles syn npn
+iso dng Pred and hey ae stony ert
+
+Getting Started
+
+Neonates pte none bythe Bren commie
+
+Resilient Distributed Datasets (RDDs)
+
+ionecaecten of tetera sate nant
+
+Features Of RDDs
+ond ns pn ay
+Creating RDDs
+
+eels cute en ealctn ed be arb 185
+
+Creating RDDs
+
+etn statin ae sty a oe
+RDD Operations
+
+fermi ston oi
+
+More On RDD Operations
+
+sete ahs
+
+Transformations
+
+Examples Of Transformations
+
++ Seer ew ts OD he rte ig

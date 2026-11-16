@@ -1,0 +1,9 @@
+LINKEDIN a
+> NOTIN Trap
+
+If subquery returns NULL
+NOT IN may fail
+
+Use NOT EXISTS
+
+Q AYUSH KUMAR

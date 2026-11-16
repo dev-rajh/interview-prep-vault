@@ -1,0 +1,55 @@
+in| veriulahariahbandha - wiser comiavetantersditiects SOL — Comprehensive Releerce Goite
+
+ToL Trafaaeton Cenol = COMMIT, ROLLBACS, Manage transactions
+‘Latguage SAVEPOINT
+
+DDL — Data Definition Language
+
+CREATE Table
+
+[CREATE TABLE exployeus ¢
+eeplopes_id CMT IDESTITICL. 1) PROT KEY.
+Tiren_eame WRRCERA ($0) MOT Woe,
+lastname = URACEAN SO),
+hire dace DATE,
+Ceparinent WARCEAR (50!
+
+ir
+
+ALTER Table
+(ALTES TABLE eeplepees ROP DOB GATE: ~~ Add colleen
+ALTER TARLE COLO pees RLTEM CORTMN fee VIA OE) 4 o> modify ecole
+ALTER TABLE eaployees ORCH COLURH ciryy ~~ belate colven
+EXEC ap _coname ‘omployse.rams', ‘full same', “COLUMS': ~~ Benese colaan
+ALTER TABLA employees ADD CORSTEAINT ug id ONTQUE ¢ic; -~ Add conetreint
+}ALTER TABLE epplopees DOF COMSTRACYT en_ids c= Drop casrtraint
+
+DROP vs TRUNCATE ws DELETE
+
+Purpoce Rena eniee table =| Retcved all row Fecrcwies apectic of all
+arcs Slrudiure war otek, aitudiure wore
+
+Temrraaction Contrct Cannot be roithed back Cannel be rofied Beck ‘Can Be rothed buck
+Space Reckernang Rekmers object and it = Frew the space clita = Laawes eenety specu for
+
+aL babe future unee
+
+Speed Fractal [rarrecric Fiche tian DELETE = Serva flexes irecivicnal
+everything! [ne new lepepreg | al]
+
+Foakarwrrial Integrity = Net checked Checkes (Chrachid
+
+WHERE Ciruse Mot appiicabe Met meppalacaat ha Agptncabhs:
+
+Command Type ODL DOL DML
+
+DML — Data Manipulation Language
+
+[TRTEET TETO ceplopees tid, mame, age, Polaryl vateme Cle ‘sohe', 35, ROOLy
+
+UPOATE aaploywes ART salary ~ aslacy * 1.3, age = 244 ~~ Update abl coms
+OPDATE anplcoyess JET age * 20 WEERE id = Lz @- Update with cosdition
+|DELETE FROM employees MIERE id = 1; -- Delete apectfic raw
+CRLETE FROM caployees; -- & Geletes ALL rowe!
+
+SELECT Queries

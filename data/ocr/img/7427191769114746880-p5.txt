@@ -1,0 +1,29 @@
+Artist Retention
+
+Find artists who released albums in both 2023 AND 2024.
+
+SAMPLE INPUT EXPECTED OUTPUT
+artist albue_yr name
+Orake 2823 Orake
+Orake POIs
+Adele 2023
+
+MySQL / SOL Server @@
+
+Check existence in both years efficiently
+SELECT name FROM artists a
+WHERE EXISTS (
+
+SELECT 1 FROM albums WHERE id=a.id AND yr=2024
+
+)
+AND EXISTS (
+SELECT 1 FROM albums WHERE id=a.id AND yr=2023
+);
+jan a Sent: Peak Revenue .-
+
+i ‘,
+fi \
+‘d —_—$__—,
+\ | Anandnarayanan $ (career |
+s P/ The 2)-Pattern AOL Cheat heat \ J

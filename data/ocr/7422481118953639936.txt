@@ -1,0 +1,126 @@
+Data Engineering
+Interview
+Questions
+
+(Qo
+
+4)
+
+Ankita Gulati Shubh Goyal
+
+—)
+
+Job Details
+
+¢ Position: Data Engineer III
+¢ Experience: 2.5 years
+
+¢ Location: Bangalore
+
+e Work mode: Office
+
+« Compensation: 225+ LPA
+¢ Total Rounds: 4
+
+* Top Required Skills:
+
+1. SQL
+
+2. PySpark / Python
+
+3. Cloud Data Engineering
+4. ETL / Data Modeling
+
+9. Big Data & Streaming
+6.System Design
+
+Ankita Gulati Shubh Goyal
+
+Round 1
+Technical
+
+Introduction & Experience
+
+1. Walk me through your previous tech stack and
+experiences.
+
+2. What data volumes have you worked with?
+
+3. Describe the type of work you've done and its
+business impact,
+
+SQL Questions
+
+4. Write a query to identify continuous date ranges
+having the same status.
+
+* Approach: Use ROW_NUMBER() with grouping to find
+gaps and identify ranges.
+
+5. Given 2 tables with NULL values, determine the row
+count outputs for different joins:
+
+* INNER JOIN
+
+* LEFT JOIN
+
+* RIGHT JOIN
+
+* FULL OUTER JOIN
+
+Ankita Gulati Shubh Goyal
+
+DSA Question
+
+6. Solve the Group Anagrams problem:
+
++ Input: ["eat’, “tea”, "tan", “ate”, "nat", "bat"]
+
+* Output: [["bat"], ["tan’,"nat’], ["eat","tea’,"ate")]
+
+* Approach: Use a dictionary with sorted strings as
+
+keys to group anagrams.
+
+PySpark
+
+7. Write a PySpark script to union two datasets with
+different schemas.
+
+* Handle different row counts, column names, and
+schema mismatches.
+
+* Approach: Use column alignment and
+unionByName(allowMissingColumns=True).
+
+Ankita Gulati Shubh Goyal
+
+Round 2
+PySpark and SQL
+
+PySpark Coding Tasks
+1. Write a PySpark job to compute word frequency from
+
+a text file.
+
+* Approach: Use flatMap —~ map — reduceByKey.
+
+2. Given Spark code snippets, identify:
+
+* Narrow vs. wide transformations.
+
+* Number of stages created,
+
+3. Compute the yearly salary for each employee along
+with department name using PySpark.
+
+Spark Internals
+4. Explain the Spark architecture: jobs, stages, and
+tasks.
+
+SQL Tasks
+
+5. Write a query using LEFT ANTI JOIN to find the number
+of records present in tablel but not in table2.
+
+Ankita Gulati Shubh Goyal

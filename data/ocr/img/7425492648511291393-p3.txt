@@ -1,0 +1,35 @@
++ Ewent Logs: Track job/cluster itacycle events.
+
+|) Notebooks & Magic Commands
+Supparts multiple languages in the same notebook using magic commands:
+° Kontos, tee, Hecem, Hr, Hee, Bh, en, fan
+
+Examples:
+
+sol SELECT * FROM customers;
+amd @ This is a markdown header
+
+Databricks Repos
++ GiLimegrnion within Databeicks
+« Supports branching, version cormtral, pull requests
+« Recommended for production code workflows
+
+@ DATABRICKS LAKEHOUSE PLATFORM
+
+(J What is Delta Lake?
+
+Delta Lake is an open-source storage layer that brings ACID transactions,
+schema enforcement, and time travel to data kes.
+
+Built on top of Apache Parquet, Delta Lake enables Lakehouse architecture by
+comining reliability, gowernance, and perfoemance.
+
+» Key Features of Delta Lake
+
+Feature Description
+
+ACID Transactions Guarantees consistency, isolation
+Schema Evolution = Modify schema on writeread
+
+Time Trowel Access date from previous versions
+Transaction Log Sete lop directory with all changes

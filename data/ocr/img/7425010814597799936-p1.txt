@@ -1,0 +1,38 @@
+Data Engineer Interview (Round 2)
+
+Real Scenario-Based Questions
+
+1 Question: PySpark Coding — Remove
+Duplicates While Keeping Latest Record
+
+What they asked me
+
+“You have customer reseed: with mulnple entries. Deduplicote and keep the latest by
+limesiasty.”
+
+What I said
+Tuned Window + rea _narmber:
+
+trom ppapart.egl fapart Window
+inport prapark.agl.furctions os F
+
+« — Window. partitioshyt*custeser_td") -crderip iF, deed (*opdaced_ar*} i
+af fimel - df. vitboelumnt*rn*., £. few sumber().cveriwe) 4
+
+sCLivert*rn — 1°) 4
+trop *en*)
+
+Tips
+
+« Perurfes! expects Window functlons, not peouply + jom (dow),
+« Menten “Dienributed + scalable acletion"
+
+2 Question: Implement SCD Type-2 in
+Delta Lake
+Wheat they ashed me
+
+“How wall yoe implement SC1D2 using Delia Lake?
+
+Wheat | said
+
+Scanned by CamScanter

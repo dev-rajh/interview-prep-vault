@@ -1,0 +1,126 @@
+TOP10
+
+SOL Patterns
+
+That show up in
+
+Data Science
+Interview
+
+
+Gin Swipe —
+
+Ranking Within Groups
+
+Find the top N items per category.
+
+SELECT *
+FROM (
+SELECT *,
+ROW_NUMBER( ) OVER (
+PARTITION BY department
+
+ORDER BY salary DESC
+) AS rn
+FROM employees
+) ranked
+WHERE rn <= 3;
+
+This is the most
+common window
+function
+
+question
+
+ROW_NUMBER vs
+RANK vs
+DENSE_RANK — know
+the difference
+
+Top 3 earners
+per
+
+department
+
+
+Swipe ——
+
+Year-over-Year Comparison
+
+Compare this months numbers to the same month Last year.
+
+SELECT
+
+curr.month,
+
+curr.revenue AS this_year,
+
+prev.revenue AS Last_year,
+
+curr.revenue - prev.revenue AS difference
+FROM monthly_revenue curr
+LEFT JOIN monthly_revenue prev
+
+ON curr.month = prev.month
+
+AND curr.year = prev.year + 1;
+
+Self-join oe LEFT JOIN so you Interviewers Love
+
+the same don +t Lose months this for product
+
+table with no prior data and even
+questions
+
+
+Gin Swipe —
+
+Running Totals
+
+Calculate a cumulative sum over time.
+
+SELECT
+date,
+daily_revenue,
+
+SUM(daily_revenue) OVER (
+ORDER BY date
+) AS running_total
+FROM revenue;
+
+The window function Shows up in
+No GROUP BY does the finance and
+needed accumulation row by growth
+
+row questions
+
+
+Swipe —
+
+Finding Duplicates
+
+Identify records that appear more than once.
+
+SELECT
+
+email,
+
+COUNT(*) AS cnt
+FROM users
+GROUP BY email
+HAVING COUNT(*) > 1;
+
+Follow-up is
+usually “now
+delete the
+duplicates”
+
+GROUP BY
+the column
+youre
+checki ng
+
+HAVING filters after
+aggregation (WHERE
+can t do this)
+

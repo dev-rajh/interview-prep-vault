@@ -1,0 +1,18 @@
+CUSTOMER LIFETIME
+
+cust_id order _ date oust_id first last
+A 2023-01-01 A 2023-01-04 2023-04-01
+| A 2025-86-01
+
+SELECT customer_id,
+
+MINCorder_date) AS first_order,
+MAXCorder_date) AS last_order
+FROM orders
+GROUP BY customer_id;
+
+Next: Running Total
+
+J 5 Qe°0sT 0) SAVE
+Fy G2 GE
+

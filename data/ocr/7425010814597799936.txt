@@ -1,0 +1,192 @@
+Data Engineer Interview (Round 2)
+
+Real Scenario-Based Questions
+
+1 Question: PySpark Coding — Remove
+Duplicates While Keeping Latest Record
+
+What they asked me
+
+“You have customer reseed: with mulnple entries. Deduplicote and keep the latest by
+limesiasty.”
+
+What I said
+Tuned Window + rea _narmber:
+
+trom ppapart.egl fapart Window
+inport prapark.agl.furctions os F
+
+« — Window. partitioshyt*custeser_td") -crderip iF, deed (*opdaced_ar*} i
+af fimel - df. vitboelumnt*rn*., £. few sumber().cveriwe) 4
+
+sCLivert*rn — 1°) 4
+trop *en*)
+
+Tips
+
+« Perurfes! expects Window functlons, not peouply + jom (dow),
+« Menten “Dienributed + scalable acletion"
+
+2 Question: Implement SCD Type-2 in
+Delta Lake
+Wheat they ashed me
+
+“How wall yoe implement SC1D2 using Delia Lake?
+
+Wheat | said
+
+Scanned by CamScanter
+
+lexplraned MERGE Inge:
+
+MENCE TETO die _cestomer &
+
+CAIN wpeletas «©
+
+4 t. customer id = s.customer_id
+
+STN PATCHED AWD t.nesh <4) a.hesn TERY
+
+JPISTE SET 1.18 _Ourrem - false, t.¢nd_dace - currest_dateii
+EW “OT MATCHED THEN
+TRAFRT +
+
+« Always mento: hash compartees 0 detect chanpea
+* Delite MERGE = capected euwer
+
+3 Question: PySpark Optimization Scenario
+
+What they etked me
+“Your join is extremely slow. ‘W hea steps would you take to optamize tT”
+What | wid
+Iemed * optimizations:
+L. Broadcast emall Smeets table
+2. di. join (f Broadcast (dinj, "Ld")
+3. Repetition by join ney
+4) Cache reused DetsPrames
+
+5. Avead wide cansiometions: early
+6 Select only needed columms
+
+* Stun with broadcast join
+© Pere! LOVES Spark optineratice,
+
+4 Question: ADF Debug — Pipeline is
+failing randomly
+What they suked me
+
+“A papeline runs sormetamecs but fadke at other times. How will you debug?”
+
+Scanned by CamScanter
+
+Wheat I said
+Step-by-step sppevsch:
+. Check Activity fogs» identify whch octivey Gils
+Werily Linked Service Authenmicnca
+. Vilodnte datoset schema drift
+Check mapping data Dew pariltlens
+
+. Check tetegratien remtime capacity
+Review source-siily thrutiling (SQ1. / Salewcace API linsita}
+
+Merten “Integration Ructeee theta” — commer in Persistent projects
+
+5 Question: SQL — Find Second Highest
+Salary
+
+What they asked me
+"Wine SQL te fetch ioe 2nd bigsest salary wilbou! using BLAM bwuce,”
+What I sad
+
+SISECT salary
+FRAN §
+SESSCT sanlasy.
+DENTE WANES CWE ICHLEIL SY salary CEST! AZ cnk
+FWOR craplopess
+
+ofa = i:
+
+Window Sanctions preferred.
+Avoxd sisur Ll ores. 2 asain auewer
+
+6 Question: Data Partitioning Strategy
+
+What they asked me
+
+“How do you decede pertitiomng for a Delia bie?”
+
+Scanned by CamScanmer
+
+What I saki
+
+leomsider:
+Hiph-cardimaliry (S001 preliemed ror parmtons}
+Query patterns (ilste-bersod)
+Tile siae expectations
+
+Awoud overparuicume
+
+Example:
+Pyntition by orcer date (year, meral) hin MOT by coscsmer_ta.
+
+Tips
+« Always wam aboot “too many partilioms » ema! file problem”.
+
+7 Question: Data Quality Framework in
+Databricks
+
+What they osked me
+“Tew de yo. apply TQ in your Sawer zone?”
+What I sak
+DX) Rules appbed:
+Null cheeks
+Triplicate cheeks
+Patten checks
+Range cheeks
+Retecence mieprity validation
+
+Tewelid rows stored mac
+
+reilver/orreces<tables/ddalens
+
+Tips
+« Pemwen LOVES error elder t+ replay seers.
+
+Scanned by CamScanner
+
+8 Question: ADF — How do you implement
+Incremental Copy?
+
+What they asked tree
+"You oeed to move coly changed records nto ADL. How do you design ios im ADF?"
+What I said
+- Maiiain tasr_setarmare it metedam tbe
+Parametorize Copy Activity
+Lise dynamic query:
+- SPLEST * FROF raoie AMPA last_cedated > #matarzart
+
+. Opelate watermark after siictoe
+Process mm Dunabmricks wih MERGE
+
+Bon't sey “Poll load daily” — they reject imonediintety
+
+9 Question: Handle Small File Problem in
+ADLS
+
+Whal they asked me
+“Tlow der yuu solve the ainall file peotslere?”
+Whail I said
+
+Suliteoms
+
+® di.reparticionii]0) & .coslesce|:u)
+
+© Eeable Agte Optheire + Ato Compaction
+
+« Dse Dele OPTIMIZE ZORDER
+OPTIMIZES sieves voters SAE BS Cordes dale?
+Tips
+
+«© SUBDOK ts 5 Persistent Gvorte keyword.
+
+Scanned by CamScanter

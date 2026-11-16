@@ -1,0 +1,44 @@
+Zer-Copy Cloning = 2 Seowtiske feature hal creates an retant copy of a csighase. echems, or
+tabla without duplicating the undarlying data. When you rin CREATE TABLE my clone CLONE
+original_table, Snowflake creates a new metadata entry pointing to the same micro-paritions as fhe
+ongins!, No date is physicaly coped, so tis instantaneous and free ino extra storage cost]
+Storage costs only acoue when Gala in the clone dhwnges from the orignal — new or modified
+mitto-pariiions ara crealed far changed data (oopry-on-mrita samantics) Zaro-Copy Cloning is
+extremely useful for: (a) creating dewtest environments from production data instandy, (b) ornating
+backups belore a destructive operation, [c) A/S testing diate transiormation logic. (o) data science
+experiments without impacting promuction.
+
+O12 Exphin Snowfiake’s Released Acoess Control (RBAC) model.
+Anawar:
+
+Snowflake uses a hiorarchical Role-Gased Access Control (RAC) modal. Key concepts: (1) Roka
+— Named collectons of prv@ieges. Bullen roles: MOCOUNTADIMIN (highest), SYSADMIN,
+SECURITYADMIN, USERADMIN, PUBLIC, (2) Privileges — permissions granted In roles (e.g.
+SELECT. INSERT, USAGE, CREATE TASLE) (3) Uners — axsigned one of more roles, A user's
+active role dotennines what they can do. (4) Role hierarchy — roles can be gramed to other roles,
+creating a trerarchy. 4 parent role inherits af povileges of chekd roles. Best peactoe: Follow principle
+of leaet priviege, Comate funcdonal roles (6.9, arehyet_roke, loader_role) and grant them to users
+father than grating piviegas direchy. Use SYSADMIN for object managarant, SECURITY ADMIN
+for rokvusar managemant, and ACOOUNTADMIN only when absolutely necessary.
+
+O16 What b Dynaeic Data Masking in Seowflake?
+
+Arawer:
+Gyrerms Dats Masiong (ODM) is 9 colundewe! secunty festure that masks sensitive date a! query
+fifte hated on the role of the user executing Ihe query, A making policy a SOL hunction that
+defines how data should be displayed to different roles. When a masking policy is atlached to a
+column, ful-priviege users see the octual cata while lower-prieiege users see masked data (e.g...
+‘XAX-MX-1234" inetoad of T2EAS-BT RY, Po ciel perder acer adi clea
+masking only happans during quary execution Thi is ideal for complying mith regulators Ghee
+GDPR, HIPGA, and PCI-DSS. You can cenate policies to show partial data (last 4 digits), hasin
+values, or entirety replace sensfve wolues based on role.
+
+O17. What 6 Row-Level Seourity in Snowflake and how is & implemented?
+
+Asawa:
+Fiew-Lewel Security (RLS) in Srovdiake is implemented rough Fire Acces Polices A row acces
+poloy Is a scheme-ievel object that defines a boolean oxpression determining which rows are
+visible to which weers.or eofes. The policy is attached fo a table and evaluated at query time. For
+
+exampls, a sales table might have o pobry thal onhe rete rows where eegian =
+CURRENT ROLE:), ensuring sales ropa in the Wast region only see West data. Flow Access

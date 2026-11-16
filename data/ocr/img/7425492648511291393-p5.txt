@@ -1,0 +1,33 @@
+force lem iepe
+
++ Audit trail of data changes
+
+@ OPTIMIZE & Z-ORDER
+
+Oalta tables aften cansist of many small files due to distributed writes. This can
+slow down quenes. Use cereecr ta compact files and sosor to optimize data
+skipping.
+
+OPTIMIZE:
+
+OPTIMIZE my_tabie;
+ZORDER (Data Skipping):
+OPTIMIZE my_table ZORDER BY (customer_id};
+
+Best Practices:
+* Use on large tables with frequent queries
++ ZORDER on high-cardinality columns used in fitters.
++ improves performance for fiter-based queries
+
+« VACUUM (Garbage Collection)
+
+Delte stores old versions of files 1o enable Time Travel, yecoum femowes these
+Tiles after a retention period.
+
+Syntax:
+VACUUM my_table RETAIN 168 HOURS;
+
+important:
+« Default retention = 7 days (168 hours]
+* Time Travel is no tonger possible for removed versions
++ To ovenide protection [nat recommended in proc]

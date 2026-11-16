@@ -1,0 +1,53 @@
+nm
+veriulaharahbandha - wiser comiavetantendiwcts 901 — Comprehensive Radererce Gece
+
+Examples: MySOL, PostgmSOL Oracka, Microsoft SOL Sarwar.
+
+Types of Databases
+
+Retrional! SOL MySQL. Oracks, PosigreSOL. SOL Structured tw, SOL support ACID.
+Serer relationships, indexing
+
+Tire Series. InfeDG, Timescaiet8, Graphite, High-wrte query performance. fire:
+Prometherus based retention, scalabeity
+
+NoSOL MorgoDe. Cassandm, Andis, Document, Column, Key-vgles,
+Couch Base Graph, Detribeted aechtectuer
+
+2. ACID Properties
+
+ACID stands for Alomicity, Consistency, Isolation, and Durability — four key principles ensuring reliable
+transaction processing. Example scenano: fansteming £1,000 trom Account A to Account B.
+Atomicity
+
+The ending raneecton mus! ether complete fully of not hapgen at al, © the system crashes afer
+deducting from A but batore adding to B, the database rolls back so both accounts remain unchanged.
+Ad of mothing.
+
+Consistency
+
+The transection must keap the catshase ina vabd siete before and after it runs. Bertone A + Be
+70,000, Aller, A+ & rant aff = 910,000, No money should dapper or be crated cul af this air,
+isolation
+
+Tramaactons should mot interfere with each other. Two concurrent tanaters behawe as f ach is the
+only one runeing. Partial results from ome transaction are not viele to others until R completes.
+Prevents dirty reads and conflicts
+
+Durability
+
+Once 2 ianection if commited rasults slay — ever if there is a syalertt craah of power faluee.
+Changes are kept in WAL (Write-Amead Log) unt comenited or rolled back, stored in volai#e mamary,
+aiding recovery on crash. Changes are permanent.
+
+3. Data Types in MySQL
+
+String Data Types
+
+Duta Type
+
+CHAIN] Storms n characters [teecd| nm Sytes |1—8,0005
+NCHARIn) Stora n Unicode characters 2n bytes
+VARCHAS|n) Stores up ton checacters [varuntsis| Actual ergy © 2 bytes
+
+VAPSC HAM MOC) Storms up to 2°-1 chewarters Aectual lerayth © 2 bytes

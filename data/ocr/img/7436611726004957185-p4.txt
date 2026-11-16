@@ -1,0 +1,20 @@
+CUMULATIVE HEADCOUNT
+
+year hires year cumulative
+2022 18 2822 18
+| 2823 28 2823 38
+
+Sun over ordered window
+
+SELECT hire_year,
+
+SUM(hires) OVER (
+ORDER BY hire_year
+) AS cumulative
+FROM employee_stats;
+
+Next: Pet of Total +
+
+J 5 Qe°0sT 0) SAVE
+Fy G2 GE
+

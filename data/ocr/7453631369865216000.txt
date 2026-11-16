@@ -1,0 +1,156 @@
+Must Know
+Pyspark Coding
+Before Your
+
+Next Databricks
+Interview
+
+Tech Interview Titans
+
+b. Find the toca Mighett ialary ay a Catal rare uileg Pyiparte.
+Semaric: Vou Save a Cyt Frame of ernmtopee saleries and marty find Ihe second Mines salary
+thom pyopark tq) port Window
+
+hom pypipart sel functions eepert col, dere_rak
+
+window4pec = Window crceriigjcod “salary” | deucl |)
+@i_weth_rack = cfwiteColurnn| rank”, ceene_rank|| cverjwinceewSpec||
+second_highew salary © dt with rank Sherjool[* rank”) ee 2)setert| salary")
+
+second _tighew_salary. show!)
+2. Coun the sunnber of ft voters in cart Colne of a PySeark Datatrame.
+Stenarice Geen a DaraFrane, deetity tow maty fad valeds Gach cokens contents.
+
+fron Syspark sgl lanelions impor col, inet, wen, COM
+
+ff saber jocartiiwteee|rinaeric) | cole) haul [| cf] abaifec| for cin dl coder [) owt)
+
+1. Catcabrte the moving seerage Creer a window ot ] rows
+
+Seeman: For a crock price caraiet cokubne a merang zeerage ower Me act I day.
+form ey ypark.col import Window
+
+trom pytpark sql fonctions impart avg
+
+window4ipas = Wiedow.crthorty[ "dete )rcerifictwom|.2. th
+d@i_with_mereng_avg = dl withColene|mereng_ovg’,. gg” pric reer [erirckri pec}
+
+with _mererg_avg-thowt)
+
+4. Rencwe duplicate rome based on a subset of colrere in a PySpark CutaFrame.
+Seemaricc You seed to remove duptcates from a DataFrome bated on certale coher,
+dle @.dropustomesy colveend”, “ookend™]}
+
+di stow!)
+
+G. Sple a dinghe cobs with Covens teparaled calves late Wasps Coke
+
+Seema: Your DataFrame contain acntune aah cenwea-seperated yalees You want se spltoms iain muie
+column.
+
+form pyipartaglfenctions import spit
+
+dit_ spit « dlwahCekwnn( nee _sokene)", epltid ogkere"| ""\getinewi0(i |
+wihColenn[ new_colunn2" split color"), ","L genteel |i
+dt spl, ome)
+
+4. Group data by a specific cofurin and calculate Une sem of asother coburn.
+Stemarice Group sabes data by “ product” and calcelate the total sali.
+
+ai groeptty!* product” | wun] “sakes lho)
+
+7. Join tee OatePramnes on a apecific condition.
+
+Scmmarice You Sawe bwo Datel rarren: one for pewtorrer Gata and one for orders Ini these Duta rameson the
+cuitomner iD.
+
+d1_joived « 2f_custorers joinjet_orders, éf_custoeners custoer_M == df_orders.cusnomer_id, ier")
+
+@il_jorreed show)
+
+a. Create a new column based on conditions from eodeting colurnna.
+
+Scemarice Add 3 new column “category” that asdges “high”, “medium”, or “cw” based on the walue of the “colec™
+coun
+
+fom pypartsgl fenctions inport when
+t= df.weth Colored category”, vher(cfasles > 500, “high"|
+nerd! cakes 2° S007) & [of eades > 200}, “retiun*}
+
+thera” kw")
+
+9. Cacolite the percentage conn etion at each wabes in a Codiehe to Che total,
+
+Saemaric: For a wales Canaset, Ca uale The percentage comin bumion of each product's sales oo the notal sabes
+horn oyna tq) functions import dun, col
+
+Getal_sake, = ff _aggiurrd* tales" | abaitotal_sades”|| cobect{/0)f total_sales*|
+
+dl = @withCoturwd perventage”, (pol sates”) / total_sake| * 105)
+
+di who]
+
+8. Find the tag Nrecorcs froma Ostaframe based on a column
+Seemarice Fou need oo And the inp 5 hghew-yelling procects
+dt onder pict "sales" desc Jinedif5 | owl!
+
+12. Write PySpark code to pivot a DutaFrartee.
+
+Saenaric: You have sakes date Oy "pear" and “QTOdUCT”, anc pou WaT OO plwOr The lable ne show "peoducr™ sales ry
+year
+
+d@t_pivot © df goede [ peoduct"| pee yearn oles”)
+dt_pivot shana)
+
+12. Add row nerebers to a PySeark Datatrame baded on a specific ordering.
+Stamaric: Add row number to a Detefreree ordered bry “ieee * in cericerding order.
+thom pytpath igi witdow angel Waredow
+
+from pytpart.sgl fencticrs import pow_esurnber
+
+winderwipes = Windire crchertiy crf “asker “) chewel})
+
+@t_with_row_nemiber © al wthColunin” reaw_numiber”, raa_number().ceer aindoaSpech
+
+@t_with_row_mernier showw||
+
+11, Filter paws Gased an 4 condinios,
+
+Senarice You wart to ther oely Those customers eho mace purchases over EL000.
+di_fered = df (teridl gerchate_sneunt » 1008)
+
+di_fiteredl dowd)
+
+MM. Patten « SON column in Pyipaerk.
+Sumario: Your Datal rane contain « ISON cpoluren, and you want to exteact specific fieics from &
+from pywpart.wq functions import tom juon, col
+fom pyrpart agi pypesinepon Srecil ype, Seructheeds, Sering Ty pe
+scheme © SructTyoel!
+Sructheial “sane”, String! yped), True,
+Sructhiel "age", Swing? ei). Treet
+b
+di = ft wthtolume|{jeon_date” from_jent|ood pom_catumn” |, achernall
+
+dl setect{ juae_data care”, “jeon_dalaage”L stow)
+
+5, Comvert a PySpark CotaPrane colurmm to a bet.
+
+feemaric: Convert 3 colume from your DataProme into a ligt for further procesing
+
+colume_Est = afselect|"colume_nane”) rd atMae beribets « 0) collect)
+
+Df. Handle MULL values by replacing therm with a default valee.
+Seeneric: Replece of WLLL values in the “soles” cohen with ©.
+df = fra sales”: Of)
+
+dishow()
+
+2), Perforce « uelf-jole on a PySperk Ovtel ree.
+
+Stemaricc You awe a tierarchy of erepieyees anc wart to find each enployeer's manager,
+
+d1_sell_join © gly") cide elise "62%, coll el menuager_ki™) om oot ed -emphoper_it™, “Winer™) ',
+sHecicol"el enplowee_pame"| coll"s2 employec_name”| aie “morager_rame"})
+
+d1_sell_join show)
+

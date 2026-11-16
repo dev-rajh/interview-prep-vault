@@ -1,0 +1,40 @@
+Scenario-based SQL Interview
+Questions
+
+1 Find OuplicaneHecerdsinaTable(Amazon)
+
+SELECT ¢olem], columez, COUNT(*)
+PROM your_tajle
+
+oho BF celuent, colemad
+
+HAWING COUNT(*} > a3
+
+2. Metriewe the Secoed Highest Salary Gon Emg@loyee Table
+
+SELECT PAX(salary) AS SecosdHighest Salary
+FROM Employee
+WHERE salary ¢ (SELECT MAx(salary)} FROM Employee) )
+
+1. Fled Employees Without Departrnent (ilber
+
+SELECT @.*
+
+FROM Employes ©
+
+LEFT JOM Geparteest ¢ ON e,department_id = d-department_id
+WHERE d.department_id TS MULL;
+
+4, Calculate the Total Revenee Pes Product (PayPal
+
+SELECT product_ie, Sumiqueetity * price) 45 tetal_reverwe
+FROM Sales
+GROUP BY prodect_14j
+
+3. Gee the Tap 3 Highect-Pais Empiayees (Geagle)
+
+SELECT ©
+FROM Employes
+OROCR OF selary DESC LIFIT 3;
+
+Page t of >

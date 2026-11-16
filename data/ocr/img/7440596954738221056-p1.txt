@@ -1,0 +1,18 @@
+1. WHERE 1=1
+
+When you code has different WHERE conditions,
+having a WHERE 1=1 simplifies the logic.
+
+This is because 1=1 is always true and doesn't affect
+the query's actual result, but it allows you to more
+easily append additional conditions without needing
+special handling for the first condition.
+
+lt improves the overall readability of the code as well.
+
+SELECT * FROM users WHERE 1=
+AND age >
+
+AND city =
+AND gender =
+

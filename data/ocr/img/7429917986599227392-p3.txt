@@ -1,0 +1,22 @@
+Eve Marketing
+Frank Marketing
+Grace HR
+Hank HR
+
+- Product table
+
+product_id product_name category price
+iPhone 15 Electronics 999.00
+MacBook Pro Electronics 2499.00
+AirPods Pro Electronics 249.00
+iPad Air Electronics 599.00
+Nike AirMax Footwear 180.00
+Adidas Ultra Footwear 160.00
+Puma RS-X Footwear 140.00
+
+New Balance Footwear 160.00
+SQL Book Books 45.00
+Python Guide Books 55.00
+Data Science Books 65.00
+ML Handbook Books 55.00
+

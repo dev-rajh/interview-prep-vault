@@ -1,0 +1,35 @@
+For comples wansformations and large dana, PySpark is bemer
+J use both based on use cane,
+
+16. What challenges did you face in your project?
+
+Aaae er
+
+Handling late-ariveag data, performance sues duc Ww skew, and schema changes.
+Solved using watertiack logic, opeimization, and schema evelution in Dela
+
+17. Have you worked with CUCD?
+
+Amaw er:
+
+Yeu we use Cit for version contadl and deploy ADF pipelines usiag ARM tereelaics.
+18, Why Accenture?
+
+Aawweer:
+
+Accenture works on large-scale, complex chs platforms and gives exposure to alobal clients
+and modem coed secknologies.
+
+i's 3 good place oo grow technically
+
+19, What is your role in production support?
+
+Answer:
+Monmoring pipelines, fixing Relunes, opamizing performance, and handling data isuses raised
+by business seams.
+
+20. Any questions for us?
+
+Geod Question to Agke
+“When kind of data platforms and cloud techaologses does the team curently work on”
+

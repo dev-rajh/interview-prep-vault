@@ -1,0 +1,21 @@
+*
+
+3. Find employees without
+department (Left Join usage)
+
+SELECT e.*
+
+FROM Employee e
+
+LEFT JOIN Department d
+
+ON e.department_id =
+d.department_id
+
+WHERE d.department_id IS NULL;
+
+Uber
+
+ff) @Tajamulkhann »
+
+@Tajamul.datascientist

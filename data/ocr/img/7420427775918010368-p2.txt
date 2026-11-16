@@ -1,0 +1,59 @@
+9
+10 ‘Aten happens fan seecutor falls?
+
+Day 6 - Reading 4 Writing Data
+
+1 What fe femats are supported in Dadaiicicn?
+
+2 (OWheerce betes CSV. Pare, aed Dea?
+
+3 Why & scherne enforcerrand inpatient?
+
+4 Wiel & acherta eereree?
+
+S Oileerce betwee appertd and overerie?
+
+& Whal & partitioning wile wilting dal?
+
+7 Weal bh tee are Wes grote?
+
+Od hese: bette erated ane dered lade?
+‘Wiel he tawe eh Serva abe?
+
+‘LD Sheet practices fot reading aed wilting da?
+
+Day 7 - Delta Lake
+
+1 ‘Wher 6 Beto Lake?
+
+2) Why wes Det Late inwosuced?
+
+2 Hoe cioes Dette Lake provide AOD maneactions?
+
+4 Wher 6 he Get vansacton ing?
+
+§ ‘Wher & Tene Trawet?
+
+6 Oilteence benwess Dette and Parquet?
+
+7 Wher 6 scherea enforcemern ws sche evolution?
+
+: ‘When & WERGE in Deo Lake?
+‘When & OPTIMIZE?
+
+Bo wien VACUA?
+
+Day 4 = Performance Optimization
+
+{Wht m pettonng?
+2 ow ches pacddon prong work?
+3 ‘Wher the ore! fen prcthiem?
+
+4 ‘Whent ches OP TIME io?
+
+& ‘Where ZORDER?
+
+& Partioning v= ZORDER?
+
+F (Whee shoud yuu wrod TORDER?
+& How ches opericaton reduce com?

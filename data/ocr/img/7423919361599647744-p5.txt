@@ -1,0 +1,53 @@
+Aase er
+Spark uses lineage graphs instead of dar replication. Ifa parson fels, Spark recompures im
+from the original warsfonnatons.
+
+This approach reduces storage overhead bat requires deternmtiste Gatafornations to cisure
+oureciaca
+
+(2 Explain Catalyse Optimizer and its importance.
+
+Anse er
+Catalyst is Spark's query optimeaper thar
+
+© Rewrines logical plans
+
+« Applies nike-based optimizations
+
+s Chocses effichear physical exeoution seategies
+ht enables Spoek SOL and DataFrane APIs to cutperforn FLDD-based processing
+(4. Hew de you mitigate shulile-related performance ewues?
+
+Agee
+Shefile optenization includex:
+
++ Reducing suflle operators
+
+« Using booadcas jos.
+
+« Adjusting pardon counts
+
+s Avoiding wade nefonmations when possie
+Sheflle tentig is often the biggedt perfirremce pain in Spark jobs.
+1M. Hew dees Spark handle data shew during joins?
+
+Aaswer
+Spark cam ue
+
+«® Broadoms joins for sreall tables
+« Salting techaiques
+» Adaptive Query Exccetion to dynamically opamize execution
+
+Underwtencdierg data distribution i critical befiee choming a sclotion
+
+(S. Whee woeld you still ase KDDs?
+
+Answer:
+RDO are med when
+
+« Custom partitionmg is required
+« Lowdevel tansfonnuations are seeded
+© Date docs not fit abuler models
+
+Tech Interview Titans
+

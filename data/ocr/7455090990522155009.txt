@@ -1,0 +1,63 @@
+[ DELOITTE | [wrenvew ]
+
+FIND MISSING
+NUMBERS
+
+INPUT IDS
+
+cd
+
+THE CORE PATTERN
+[ Generate a Fitter Sertogy ]
+
+1. FIND RANGE
+
+Identify MIN(1) and MAX(10) from table
+
+2. GENERATE SEQUENCE
+
+Create all numbers from 1 to 19
+
+3. FIND MISSING
+
+Keep numbers NOT in original table.
+
+co
+
+RECURSIVE SOLUTION
+
+WITH RECURSIVE number_sequence AS (
+
+SELECT MIN(id) AS num FROM your table
+UNION ALL
+
+SELECT num * 1 FROM number_sequence
+
+)
+
+SELECT ns.num AS Missing_Values
+
+FROM number_sec ce ns
+
+LLOW FOR MORE SQL PATTERNS
+
+<a
+MASTER SEQUENCES
+
+(2) MISSING IDS ™ MISSING DATES
+
+Find skipped employee or student Identify missing dates in a
+
+IDs in @ sequence, time-series
+
+© MISSING ORDERS # MISSING LOGS
+
+fudit order numbers to ensure mo Detect gaps in sequential log
+
+gaps in records. entries
+
+("| REPOST THIS
+
+* FOLLOW FOR MORE SQL PATTERNS
+
+[Anendnereyencn 3] Ji

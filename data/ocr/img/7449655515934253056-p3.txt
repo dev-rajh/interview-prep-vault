@@ -1,0 +1,38 @@
+FUTURE
+TS) minions
+
+LEAD(col, n)
+
+Returnsvalve froma future row, useful for forecasting-style
+comparisons or mext-step behavior analysis,
+
+LEAD(sales, 1) OVER (PARTITION BY store ORDER BY day)
+
+FIRST_VALUE()
+
+Fetchesthefirst valuein o window, useful for baseline comparisons
+{first purchase, first status).
+
+LAST_VALUE()
+
+Fetchesthelast valuein a window; often used to compare current vs
+latest but needs correct frame.
+
+LAST _VALUE(price) OVER (PARTITION BY product ORDER BY day)
+
+NTH_VALUE(col, n)
+
+Returns the nth record inawindow, helpful for finding 2nd/3rd
+highest value or carly milestones.
+
+NTH_VALUE(salary, 3) OVER (PARTITION BY dept ORDER BY
+salary DESC)
+
+SUM() OVER
+
+Colculatesrunningtotals or group totals without collapsing rows like
+GROUP BY.
+
+SUM(amount) OVER (PARTITION BY user_id ORDER BY day)
+
+r swipe

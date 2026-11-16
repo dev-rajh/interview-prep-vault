@@ -1,0 +1,19 @@
+1) FILTER RECORDS (NULL-SAFE)
+
+When to use:
+» Filter users by country
++ Filter by signup month
+
+» Exclude rows with missing phone
+
+Filter Indian users created in Jan-2025 and phone is not NULL
+
+SELECT *
+
+FROM users
+
+WHERE country = ‘India’
+AND created_at >= '2025-@1-01'
+AND created_at < ‘'2025-02-@1'
+AND phone IS NOT NULL;
+

@@ -1,0 +1,23 @@
+‘Signup | 2024-01-01
+Signup (2024-01-01
+Signup 2024-01-01
+
+‘Trial | 2024-01-02
+
+‘Trial =| 2024-01-02
+
+‘Purchase 2024-01-03
+
+DAY 8-9: RANKING FUNCTIONS
+
+ROW_NUMBER()}
+
+Assigns a unique sequential number to every row. Ties
+get different numbers — the order among ties is non-
+deterministic.
+
+When to use: When you need exactly N rows per group
+(e.g., top 3 per category).
+
+Practice 1 — Top 3 Products by Price per Category
+

@@ -1,0 +1,5 @@
+od s& SNOWFLAKE °s °S
+
+© Date stored in cloud (S54, Azure Blob, GCS)
+format
+

@@ -1,0 +1,15 @@
+Question #7: Find Gaps in Sequential Data
+
+The
+
+"Find missing order [Ds in a sequence"
+
+What they're testing:
+
+Can you identify missing records?
+
+Most people get this wrong |
+
+Useful for finding failed transactions or system errors.
+
+Swipe for the answer >

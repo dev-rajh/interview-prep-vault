@@ -1,0 +1,35 @@
+9. Cacolite the percentage conn etion at each wabes in a Codiehe to Che total,
+
+Saemaric: For a wales Canaset, Ca uale The percentage comin bumion of each product's sales oo the notal sabes
+horn oyna tq) functions import dun, col
+
+Getal_sake, = ff _aggiurrd* tales" | abaitotal_sades”|| cobect{/0)f total_sales*|
+
+dl = @withCoturwd perventage”, (pol sates”) / total_sake| * 105)
+
+di who]
+
+8. Find the tag Nrecorcs froma Ostaframe based on a column
+Seemarice Fou need oo And the inp 5 hghew-yelling procects
+dt onder pict "sales" desc Jinedif5 | owl!
+
+12. Write PySpark code to pivot a DutaFrartee.
+
+Saenaric: You have sakes date Oy "pear" and “QTOdUCT”, anc pou WaT OO plwOr The lable ne show "peoducr™ sales ry
+year
+
+d@t_pivot © df goede [ peoduct"| pee yearn oles”)
+dt_pivot shana)
+
+12. Add row nerebers to a PySeark Datatrame baded on a specific ordering.
+Stamaric: Add row number to a Detefreree ordered bry “ieee * in cericerding order.
+thom pytpath igi witdow angel Waredow
+
+from pytpart.sgl fencticrs import pow_esurnber
+
+winderwipes = Windire crchertiy crf “asker “) chewel})
+
+@t_with_row_nemiber © al wthColunin” reaw_numiber”, raa_number().ceer aindoaSpech
+
+@t_with_row_mernier showw||
+

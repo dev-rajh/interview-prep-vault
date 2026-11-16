@@ -1,0 +1,22 @@
+Introduction —
+
+If you've ever wondered how companies like Netflix recommend
+movies, how banks track millions of transactions, or how apps manage
+your data seamlessly, the answer often lies in SQL.
+
+SQL (Structured Query Language) is the language of data, and
+mastering it is one of the fastest ways to unlock careers in data
+analysis, backend development, and beyond.
+
+In this roadmap, you'll not only learn the core SQL concepts step-by-
+step but also apply them immediately through problems designed to
+mimic real-world scenarios.
+
+Think of it as your gym for SQL, where every concept comes with a
+workout to strengthen your skills,
+
+By the end, you won't just ‘know SQL’ you'll be able to use SQL to solve
+meaningful problems and stand out in interviews or projects,
+
+BOSSCODER
+acacemy

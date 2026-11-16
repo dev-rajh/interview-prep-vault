@@ -1,0 +1,52 @@
+Q Sravya Madipalli ©
+
+Master
+Data Cleaning
+in SQL
+
+Handling Missing Values
+
+Missing values can lead to inaccurate analysis or cause
+errors during joins and aggregations. SQL provides
+several ways to deal with missing or null values,
+
+Solution
+
+Use COALESCE) or IFNULL{) to replace missing values
+with defaults.
+
+Code Example:
+
+COALESCE(email, ‘unknown') cleaned_email
+users;
+
+Explanation:
+
+e COALESCE) returns the first non-null value from a
+list of arguments.
+
+e This query replaces any NULL values in the email
+column with ‘unknown, ensuring data integrity.
+
+Standardizing Data Formats
+
+Inconsistent data formats, especially with text, can cause
+issues when performing comparisons or analysis.
+
+Solution: Use UPPER(), LOWER{), and TRIM() to standardize
+text formats.
+
+Code Example:
+
+LOWER(first_name) standardized_name
+
+customers;
+
+Explanation:
+
+e LOWER/) converts text to lowercase, ensuring
+consistent formatting.
+
+e This is especially useful when performing
+case-sensitive comparisons, avoiding mismatches
+due to inconsistent capitalization.

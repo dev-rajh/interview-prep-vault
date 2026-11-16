@@ -1,0 +1,49 @@
+i?
+
+This approach wae detenni netic ondermg co retain the mow recent record In warehouraps,
+this logic is often enplemenced during ETL insead of DELETE operations
+
+(MM. What are commen comses of data shew im SOL, joins?
+
+Agaw er:
+Data skew occurs when a atta nurmber of join keys hold a dspeoporhenstely lange sum ber
+of records Casses include
+
+© Defeolt o all vals
+¢ Popular prodectcustoreer IDs
+* Poorly designed surrogate beys
+
+Mimgation includes pre-aggregation, salting keys, or splitting skewed yale: into separane
+procesang pats
+
+O45. Whee would you denermatire tables despite storage costs?
+
+Amow er:
+Denornali vive is justified whee
+
+*¢ Query performance & critical
++ Joma ave expersive wt pcale
+
+¢ Dees is read-heavy and write-ight
+
+Most aaalyocal systems favor denonmalized schemes to reduce runtime query complecty
+
+1. thew de vou design memeory-cfficient data processing in Python?
+
+Ago or:
+Memory efficiency is achieved by:
+
+* Using generators instead of lies
+
+« Processing data im chunks
+
+« Avoiding full in-exemory materialization
+« Leveraging iterators and streaming APIs
+
+For example. reading lange fies with chunked processing instead of read cay loading
+everything al once.
+
+OD Exploie GUL and its impact on data pipelines.
+
+Tech Interview Titans
+

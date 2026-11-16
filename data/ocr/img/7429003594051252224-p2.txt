@@ -1,0 +1,22 @@
+[|
+
+WHAT IS AWN SCb?
+
+Handling Data Changes
+
+Scenario:
+An employee gets promoted.
+A product price changes.
+
+Question: How do we store this change?
+A: Forget the old value?
+
+B: Keep a history Log?
+
+C: Keep only the previous value?
+
+© SCDs (Slowly Changing Dimensions) are design patterns used in Data
+Warehousing to manage how data changes over time.
+
+Follow for more about SGL and DATA
+

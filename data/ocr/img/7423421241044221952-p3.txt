@@ -1,0 +1,4 @@
+The company collects data and
+stores it from different systems
+
+These are known as 'Sources'

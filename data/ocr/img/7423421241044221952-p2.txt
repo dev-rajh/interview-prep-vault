@@ -1,0 +1,5 @@
+Imagine a retail company that
+wants to analyse its sales data
+to understand customer
+behaviours.
+

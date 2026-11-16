@@ -1,0 +1,101 @@
+A_ BOSSCODER
+TAF acapemy
+
+SQL
+
+ROADMAP
+
+Learn Concepts & Practice Real-World Problems
+
+*Disclaimer*
+
+What matters is developing the problem solving ability
+to solve new problems.
+
+This Doc will help you with the same.
+
+# BOSSCODER
+TAT aceoemy
+
+Introduction —
+
+If you've ever wondered how companies like Netflix recommend
+movies, how banks track millions of transactions, or how apps manage
+your data seamlessly, the answer often lies in SQL.
+
+SQL (Structured Query Language) is the language of data, and
+mastering it is one of the fastest ways to unlock careers in data
+analysis, backend development, and beyond.
+
+In this roadmap, you'll not only learn the core SQL concepts step-by-
+step but also apply them immediately through problems designed to
+mimic real-world scenarios.
+
+Think of it as your gym for SQL, where every concept comes with a
+workout to strengthen your skills,
+
+By the end, you won't just ‘know SQL’ you'll be able to use SQL to solve
+meaningful problems and stand out in interviews or projects,
+
+BOSSCODER
+acacemy
+
+Data, Database and Management
+Systems —
+
+Data: It is a collection of raw, unorganised facts like text, numbers etc.
+
+information:
+* itis processed, organised and structured data.
+
+* it provides context of data and enable design making
+» Information is extracted from data by analysing and extracting
+
+Database: 4 database is a structured collection of data that is organized and stored
+in such a way that it enables efficient retrieval, manipulation and management of
+Data.
+
+DBMS (Database Management System): !t is a software designed to manage and
+organize data in a structured manner.
+
+« Allows users to create, modify and query databases.
+« Handles data storage and retrieval
+
+* Supports data sharing among multiple users
+
+* Manages concurrent access (concurrency control)
+
+« Ensures data integrity and security
+
+BOSSCODER
+ACAGEMY
+
+1. Introduction to SQL —
+
+| SOL (Structured Query Language) is a standard language used to communicate
+with and manage relational databases. It allows you to define, manipulate, retrieve,
+and control access to the data.
+
+| SQL 15 CATEGORIZED INTO DIFFERENT SUB-LANGUAGES BASED ON FUNCTIONALITY:
+
+1. DDL (Data Definition Language): Used to define and modify the structure of
+database objects like tables, schemas, and indexes.
+Example : CREATE, ALTER, DROP
+
+2, DML (Data Manipulation Language): Used to insert, update, or delete data frarn
+database tables.
+Example : INSERT, UPDATE, DELETE
+
+3, DOL (Data Query Language): Used to query and fetch data from a database
+Example : SELECT
+
+4, DCL (Data control language): Used to control access to data and database
+objects
+Example : GRANT, REVOKE
+
+5, TCL (Transection control language): Used to manage changes made by DML
+statements and control the execution of transactions.
+Example : COMMIT, ROLLBACK, SAVEPOINT
+
+BOSSCODER
+ACAGEMY

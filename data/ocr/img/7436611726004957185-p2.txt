@@ -1,0 +1,24 @@
+(seme ) LORE
+DAILY ACTIVE Users
+
+| 2024-01-01 101 2024-01-04 2
+
+| 2824-01-81 192 2024-81-62 1
+
+| 2n24-@1-02 101
+
+Sg Sg NOTE ee eee
+
+cunt @sfinet users per day
+SELECT login_date,
+COUNT(DISTINCT user_id) AS dau
+
+FROM user_Logins
+GROUP BY Login_date
+ORDER BY Login_date;
+
+Next: Cust Lifetime +
+
+J 5 Qe°0sT 0) SAVE
+Fy G2 GE
+

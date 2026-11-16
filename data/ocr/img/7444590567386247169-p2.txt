@@ -1,0 +1,50 @@
+without a
+Solubterr
+
+MLEOT &. kde, DiepArheent game
+
+OF, Write 4 query to ovaplay all employees and their departmants, neluding employees
+department.
+
+LEFT OOM aeparieents al
+i 1. Separ Leer. Fs
+
+O8, Write # query to cfaplay all depariments and their employees, including departments
+With ie aria pees
+Soletiert
+
+SELECT o,eeem, do ceporieert_sace
+BIGHT JOCS ceparteerts
+
+08. Write 2 query to fied departments that do mot have any employees.
+Solwior
+
+ELECT d.deperteart_naee
+
+Tam ikbpattawita o
+
+PT TH ane
+ee ~ @departeent la
+MARAE «employes ®
+
+O00. Write 2 query to calculate fhe average savary in each department.
+Solwion
+
+T dapactmast_id, A®Ginalary)
+
+O12. Write a query to sort employees by depariment_id and sally descending.
+Solution
+
+TRON sap Layee
+
+Solwbor
+
+TRO ea Layee
+
+O13. Write a query to find employees whose savary is grewier than average salary.
+Solwborr
+
+ee eT
+MERE slacy ELECT EVGimalacy! PROM emp loypensi :
+
+Q)4, Write 2 query to count number of employees for each rove.

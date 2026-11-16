@@ -1,0 +1,32 @@
+FUTURE
+> LtEberd
+
+ROW_NUMBER()
+
+Assignsaunique serialnumber to each row inside a aroup, useful ta
+pick Latest/first record.
+ROW_NUMNBER() OVER (PARTITION BY user_id ORDER BY created_at)
+
+Ranks rowswithin a group; ties get same rank but mext ronk is
+
+skipped (1,1,3...).
+RANK() OVER (PARTITION BY dept BY salary DESC)
+
+ROW_NUMBER()
+
+Ranksrows withinagroup; ties get same rank but ranks remain
+continuous (1,1,2...).
+
+DENSE_RANK() OVER (ORDER BY score DESC)
+
+NTILE(n)
+Splitsordered dato, into NM buckets (quartiles/deciles) to categorize
+seqments like top 10%
+NTILE(18) OVER (ORDER BY revenue DESC)
+
+Returnsvalvefrom « previous row, used for day-over-day change,
+trend comparisons, churn detection.
+
+LAG(sales, 1) OVER (PARTITION BY store ORDER BY day)
+
+F swipe >)

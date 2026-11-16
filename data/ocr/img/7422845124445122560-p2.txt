@@ -1,0 +1,28 @@
+ADF pipelines?
+
+8. What are activities in ADF, and can
+you name some important ones you've
+used?
+
+9. What is the tumbling window trigger
+in ADF, and when should you use it?
+
+10. Can you explain the different ways to
+execute pipelines in ADF?
+
+11. What are the main data sources
+supported by ADF?
+
+12. What is the Get Metadata activity in
+ADF?
+
+13. What's the difference between
+Mapping Data Flow and Wrangling Data
+Flow in ADF?
+
+14. How do you work with dynamic
+content and parameters in ADF
+pipelines?
+
+15. How do you manage schema
+changes in ADF?

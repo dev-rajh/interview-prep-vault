@@ -1,0 +1,21 @@
+Table of Contents
+
+« Introduction... Getting Started with Data Cleaning
+
+e Chapterl Rows and Columns: The Building Blocks of Data Cleaning
+
+« Chapter 2 Run Quick Data Checks
+
+« Chapter 3 Check Different Question Types
+
+e Chapter 4 Deal with Missing Data
+
+« Chapter5 Handle Outlier Detection
+
+» Chapter 6 Tackle Conditional Questions
+
+e Chapter? Join, Delimit, or Concatenate Data
+
+« Chapter & Case Study: Cleaning Data from a Paper-Based Survey
+
+« Exercise Solutions

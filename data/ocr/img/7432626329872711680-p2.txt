@@ -1,0 +1,22 @@
+*® Database management system is a software which is used to manage the
+database.
+
+® =D8MS provides an interface to perfonm various aperatians like~
+
+1. Creating databases, tables, and objects.
+
+2. inserting, updating, and deleting data.
+
+4. Dropping databases, tables, and objects.
+
+4, Provides data security.
+
+© Some popular DBMS softwares are MS SOL
+SERVER Oracle, MySQL 08M, O62, PosteresQl ete,
+
+© fis a type of DBMS that manage relational database.
+® fthelps to store, organize and retriewe data efficiently RDBMS softwares
+are MySQL. PostgreSQ, SOL Server, and Oracke.
+
+® Atable in a database is a collection of rows and cofumns.
+® fis used to organize and store data in a structured format.

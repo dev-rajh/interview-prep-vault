@@ -1,0 +1,10 @@
+*Disclaimer*
+
+This roadmap is a guide to help you navigate the journey of
+becoming a Data Engineer.
+
+Treat this as direction, not a fixed rulebook. Real growth comes
+from consistent practice and solving real-world problems.
+
+A BOSSCODER
+TF acaneme

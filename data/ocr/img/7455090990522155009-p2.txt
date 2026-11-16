@@ -1,0 +1,17 @@
+cd
+
+THE CORE PATTERN
+[ Generate a Fitter Sertogy ]
+
+1. FIND RANGE
+
+Identify MIN(1) and MAX(10) from table
+
+2. GENERATE SEQUENCE
+
+Create all numbers from 1 to 19
+
+3. FIND MISSING
+
+Keep numbers NOT in original table.
+

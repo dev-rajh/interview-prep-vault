@@ -1,0 +1,110 @@
+1. WHERE 1=1
+
+When you code has different WHERE conditions,
+having a WHERE 1=1 simplifies the logic.
+
+This is because 1=1 is always true and doesn't affect
+the query's actual result, but it allows you to more
+easily append additional conditions without needing
+special handling for the first condition.
+
+lt improves the overall readability of the code as well.
+
+SELECT * FROM users WHERE 1=
+AND age >
+
+AND city =
+AND gender =
+
+
+2. QUALIFY
+
+lt can be used to filter the results of a query based on
+the result of a window function.
+
+You don’t need nested queries making the code a lot
+easier to read.
+
+It is similar to the HAVING, but instead of filtering
+after an aggregation, QUALIFY filters after the
+application of window functions.
+
+SELECT
+id,
+salesperson,
+amount ,
+
+ROW NUMBER() OVER (PARTITION BY salesperson ORDER BY amount
+DESC) AS rank
+FROM sales
+QUALIFY rank = 1;
+
+
+3. ROW_NUMBER
+
+Incredibly useful when it comes to cleaning data.
+
+ROW_NUMBER () can be used to identifying and
+removing duplicates, and detecting gaps in data.
+
+It can be used to select a SINGLE row based on
+conditions such as latest record, highest/lowest value
+etc.
+
+WITH RankedOrders AS (
+SELECT
+customer_id,
+order id,
+ROW NUMBER() OVER (PARTITION BY customer id ORDER BY order
+
+_date DESC) AS rn
+FROM orders
+
+}
+
+SELECT. *
+
+FROM Rankedorders
+WHERE rn = 1;
+
+
+4. EXCLUDE <COL>
+
+This not standard in SQL but is a feature found in
+some SQL dialects, such as BigQuery.
+
+It allows you to easily select all columns from a table
+except one or more specified columns.
+
+This improves readability and reduces repetitive code.
+
+SELECT coli, col2, col3, col5 -- manually
+excluding col4
+FROM table;
+
+SELECT * EXCLUDE col4
+FROM table;
+
+
+5. EXISTS
+
+Employed when you want to check for the existence of
+records in a related table or subquery. Helps when
+you do your EDA.
+
+It returns a TRUE if the subquery returns at least one
+row,
+
+lt is more performant than using IN or JOIN.
+
+SELECT department_name
+FROM departments d
+WHERE EXISTS (
+
+SELECT 1
+
+FROM employees e
+
+WHERE e.department_id = d.department_id
+)5
+

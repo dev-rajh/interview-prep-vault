@@ -1,0 +1,20 @@
+PwC
+
+Data Analyst Interview Experience
+® CTC: %18LPA
+
+Table Creation
+We'll create a table named Sales to shore bansacton detaits.
+CREATE TABLE sites (
+
+sole_id INT AUTO_INCREMENT PRIMARY KEY,
+
+peoduct_id INT,
+
+peoduct_name VARCHAA/TOO),
+
+category VAACHAA|SO),
+
+sole_daote DATE,
+
+Quarvity INT,

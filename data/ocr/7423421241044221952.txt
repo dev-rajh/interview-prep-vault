@@ -1,0 +1,36 @@
+DATA
+PIPELINE
+-|- @
+
+SIMPLIFIED
+
+BY NISCHAY THAPA
+
+Imagine a retail company that
+wants to analyse its sales data
+to understand customer
+behaviours.
+
+
+The company collects data and
+stores it from different systems
+
+These are known as 'Sources'
+
+For analysis, they would like
+to collect and store all this
+data at one place.
+
+a's
+ate = ate
+
+These are known as 'Destinations'
+
+
+How will they build the connection?
+
+How do! move
+
+the data? Destination
+
+Source

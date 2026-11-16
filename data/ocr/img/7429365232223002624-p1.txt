@@ -1,0 +1,21 @@
+RECENT CUSTOMERS ONLY
+
+= ri
+aaa
+
+cust_id order _date oust_id
+
+1m 2024-04-01 101
+| 182 2822-85-01 |
+
+SELECT cust_id
+
+FROM orders
+GROUP BY cust_id
+HAVING MINCorder_date) > CURRENT_DATE - INTERVAL ‘4 months’;
+
+Next: Calendar Table +
+
+ANANDUARAYANAN S
+y
+

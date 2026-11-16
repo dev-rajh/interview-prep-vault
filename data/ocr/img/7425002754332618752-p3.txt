@@ -1,0 +1,39 @@
+Tips
+
+Schemm drift baadimg is a favorite TechM question.
+Use the terms:
+
+f/f ahem evolution
+
+7 merge eho
+¥ validation
+
+5 What they asked me
+Whee & the difference between managed and external tables m [stabricks?
+What I said
+
+© Masaged table: Detebncks memages beth schema + dma; deleting whte delenes dita
+s External table: Only menedata in metesnore, dota eves in extemal loownen (eager)
+
+Tips
+Sage “In production. we prefer extersal tables to avced socidental deletion.”
+
+6 What they asked me
+
+How do pou handle duplicates 1 PySperk?
+
+What | said
+
+Case i: Exact duplicates
+
+df - df .dgoptuplioanest)
+Case 2; Keep latest record
+
+fram pyepark.agl.window lapore Window
+
+"rn", com _rusberi| ovectel) ofilteri*ca = L*!
+
+Use wlndew Bamctlons for peal pipelmes — they love thet
+
+7 What they asked me
+

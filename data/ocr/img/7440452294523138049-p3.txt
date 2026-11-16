@@ -1,0 +1,14 @@
+Employees Without Department
+
+Find all employees who are not assigned to any
+department
+
+SQL QUERY Uniwersal SOL
+
+SELECT e.*
+FROM Employee e
+LEFT JOIN Department d
+ON e.department_id = d.department_id
+WHERE d.department_id IS NULL;
+
+Anandnarayanan § - Essential SQL Queries See) shane

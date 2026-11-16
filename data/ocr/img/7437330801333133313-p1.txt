@@ -1,0 +1,32 @@
+By - Krinhne Singh
+
+300 Real SQL Interview Questions
+
+Asked at PwC, Deloitte, EY, KPMG,
+
+Tredence, Persistent Systems and
+Accenture & More.
+
+Medium to Advanced SQL Questions (01-300)
+
+1. Find the second highest salary from the Employee
+table
+SELECT MAX(salary) AS SecondHighestSalary
+FROM employees
+WHERE salary = |
+
+SELECT MAX(salary
+
+FROM employees
+
+2, Find duplicate records in a table
+SELECT name, COUNT(*)
+FROM employees
+
+GROUP BY name
+
+HAVING COUNT(*) > 1:
+
+3, Retrieve employees who earn more than their
+Mana fer
+

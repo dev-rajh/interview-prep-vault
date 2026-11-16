@@ -1,0 +1,18 @@
+3) (ncnosorr >)
+Top Earners
+
+Get employees in the top 10% salary bracket of their dept.
+
+SELECT * FROM (
+SELECT *, NTILE(10) OVER(
+PARTITION BY dept_id ORDER BY salary DESC
+) as decile
+FROM employees
+) sub
+WHERE decile = 1;
+
+Next: Freed Detection
+
+Anandnarayanan S fm save |
+The 20-Pattern SQL Cheat Sheet
+

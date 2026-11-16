@@ -1,0 +1,15 @@
+Y
+
+Dela epeany ES _ Advanced
+: Data Analy =
+Warehousing ro ey Data Analytics
+‘Crganize, Swucture , Prepare, “Understand Data, Baswer Business Questions.
+ETL/ELT Processing Basic Queries Complex Queries
+Data Architecture Data Picking Window Functions
+Data Integration Sieple Aggeegatons CTE
+Deda Cleansing Svbquery Subqueres
+Data Load Reports
+Data Modeling.
+ade
+
+SQL Course | SQL Data Warehouse Project | ETL DATA wi Baza
