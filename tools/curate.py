@@ -126,8 +126,20 @@ TOPIC_MAP = [
 
 def detect_company(text: str, headline: str) -> str:
     # text only — author headlines ("Senior DE @ ZS") describe employment, not the question source
+    # strip hashtags first: "#Microsoft" filler should not beat "Accenture Interview" in the body
+    body = re.sub(r"#\w+", " ", text)
+    hits = []
     for name, pat in COMPANIES:
-        if re.search(pat, text, re.IGNORECASE):
+        m = re.search(pat, body, re.IGNORECASE)
+        if m:
+            hits.append((m.start(), name))
+    if hits:
+        hits.sort()
+        return hits[0][1]
+    # fallback: company named only as a hashtag (e.g. "interview at #Oracle")
+    tags = " ".join(re.findall(r"#(\w+)", text))
+    for name, pat in COMPANIES:
+        if re.search(pat, tags, re.IGNORECASE):
             return name
     return "General"
 

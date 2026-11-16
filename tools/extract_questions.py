@@ -60,6 +60,46 @@ GENERIC = {"can you solve this", "can you solve", "how would you solve this", "h
 
 MIN_LEN = 14
 
+# lead-in labels like "The Challenge:", "Task:", "🎯Question:"
+LABEL = re.compile(r"^(?:the\s+)?(?:challenge|task|question|scenario|problem|goal|objective|ask|interview question)\s*[:\-–]\s*", re.I)
+
+# narrative sentences that trail or break a question ("The twist? I had to...", "Why interviewers ask this…")
+META_SENTENCE = re.compile(
+    r"^(?:the\s+twist|why\s+(?:this|interviewers|they|do|is)|what\s+this\s+(?:tests|question)|"
+    r"key\s+takeaway|takeaway|note\b|p\.?s\.?\b|credits|reality|lesson|most candidates|"
+    r"interviewers\s+(?:are|love|use|ask)|this\s+(?:question|is|one)|reality check|bonus\b|also\b|"
+    r"follow\s+(?:me|up\b)|follow-up\b|the\s+reason|in\s+my\s+(?:case|interview)|what\s+i\s+(?:did|learned))",
+    re.I,
+)
+
+# where the actual question starts inside a longer run-on candidate
+QSTART_STRONG = re.compile(
+    r"(?:^|[\.\?!:]\s+|👉\s*|➡️?\s*)"
+    r"(Write|Explain|How\s|What\s|Why\s|Find\s|Given\s|Design\s|Describe\s|Calculate\s|Identify\s|"
+    r"List\s|Compare\s|Retrieve\s|Fetch\s|Tell me|Write a query|Optimize|Debug|Implement|Convert)",
+    re.I,
+)
+
+
+def trim_question(q: str) -> str:
+    q = q.replace("👉", ". ").replace("➡️", " ").replace("→", " ")
+    q = re.sub(r"\s+\.(?=\s)", ".", q)
+    q = re.sub(r"\s+", " ", q).strip(" -:;·,")
+    q = LABEL.sub("", q)
+    # trim lead-in narrative before the actual question sentence
+    m = QSTART_STRONG.search(q)
+    if m and m.start() > 0 and "?" not in q[:m.start()]:
+        q = q[m.start():].lstrip(" .:;·,–—-")
+    # drop trailing narrative sentences
+    parts = re.split(r"(?<=[.?!])\s+", q)
+    for i, part in enumerate(parts):
+        if i > 0 and META_SENTENCE.match(part):
+            parts = parts[:i]
+            break
+    q = " ".join(parts).strip(" -:;·,")
+    q = re.sub(r"^[^\w\"'(]+\s*", "", q)
+    return q.strip()
+
 
 def is_heading(line: str) -> bool:
     if "?" in line or len(line) > 30:
@@ -105,6 +145,11 @@ def split_questions(text: str) -> list:
         if NOISE.search(line) or META.match(line) or SQLCODE.match(line):
             cur = None
             continue
+        if META_SENTENCE.match(line):
+            if cur:
+                out.append(cur)
+            cur = None
+            continue
         if is_heading(line):
             cur = None
             continue
@@ -125,6 +170,7 @@ def split_questions(text: str) -> list:
     seen = set()
     result = []
     for q in out:
+        q = trim_question(q)
         if not qualifies(q):
             continue
         k = normalize_key(q)
@@ -198,31 +244,6 @@ def dedupe(items: list) -> list:
 
 # ---------- tagging ----------
 
-COMPANIES = [
-    ("Tredence", r"\bTredence\b"), ("Mastercard", r"\bMastercard\b"), ("HashedIn", r"HashedIn"),
-    ("American Express", r"American Express|\bAmex\b"), ("Atlassian", r"\bAtlassian\b"),
-    ("Goldman Sachs", r"Goldman Sachs"), ("Tiger Analytics", r"Tiger Analytics"),
-    ("Deloitte", r"\bDeloitte\b"), ("PwC", r"\bPwC\b|PWC"), ("EY", r"\bEY\b"), ("KPMG", r"\bKPMG\b"),
-    ("Genpact", r"\bGenpact\b"), ("JPMorgan", r"J\.?P\.? Morgan|JPMorgan"), ("Netflix", r"\bNetflix\b"),
-    ("Walmart", r"\bWalmart\b"), ("Uber", r"\bUber\b"), ("PayPal", r"\bPayPal\b"), ("Amazon", r"\bAmazon\b"),
-    ("Microsoft", r"\bMicrosoft\b"), ("Google", r"\bGoogle\b"), ("Meta", r"\bMeta\b"), ("Adobe", r"\bAdobe\b"),
-    ("Swiggy", r"\bSwiggy\b"), ("Zomato", r"\bZomato\b"), ("Flipkart", r"\bFlipkart\b"), ("Blinkit", r"\bBlinkit\b"),
-    ("ZS Associates", r"\bZS\b|\bZSAssociates\b"), ("Fractal", r"\bFractal\b"), ("HDFC Bank", r"\bHDFC\b"),
-    ("HSBC", r"\bHSBC\b"), ("Citi", r"\bCiti\b"), ("Barclays", r"\bBarclays\b"), ("NTT Data", r"\bNTT ?DATA\b"),
-    ("Wells Fargo", r"Wells Fargo"), ("Accenture", r"\bAccenture\b"), ("TCS", r"\bTCS\b|Tata Consultancy"),
-    ("Infosys", r"\bInfosys\b"), ("Wipro", r"\bWipro\b"), ("Cognizant", r"\bCognizant\b"),
-    ("HCLTech", r"\bHCL\b"), ("Persistent", r"Persistent Systems"), ("UST", r"\bUST\b"),
-    ("Capgemini", r"\bCapgemini\b"), ("Optum", r"\bOptum\b"), ("PepsiCo", r"\bPepsiCo\b"),
-    ("Oracle", r"\bOracle\b"), ("L&T", r"\bL&T\b"), ("Altimetrik", r"\bAltimetrik\b"),
-    ("Navya", r"Navya sri"), ("Koantek", r"\bKoantek\b"), ("Prodapt", r"\bProdapt\b"),
-    ("Publicis Sapient", r"Publicis Sapient"), ("Tide", r"\bTide\b"), ("Emirates NBD", r"Emirates NBD"),
-    ("Vanguard", r"\bVanguard\b"), ("Kyndryl", r"\bKyndryl\b"), ("Alinea", r"Alinea"),
-    ("DAZN", r"\bDAZN\b"), ("Hexaware", r"Hexaware"), ("Coforge", r"\bCoforge\b"),
-    ("Kimberly Clark", r"Kimberly Clark"), ("Atlas Copco", r"Atlas Copco"), ("Zscaler", r"\bZscaler\b"),
-    ("BCG", r"\bBCG\b"), ("Namshi", r"\bNamshi\b"), ("PayU", r"\bPayU\b"), ("Huron", r"\bHuron\b"),
-    ("GyanSys", r"\bGyanSys\b"), ("Apexon", r"\bApexon\b"), ("Mattel", r"\bMattel\b"),
-    ("Celebal", r"Celebal"), ("NIKE", r"\bNIKE\b"),
-]
 
 FIELD_RULES = [
     ("Behavioral", r"tell me about|why do you want|describe a (time|situation|challenging)|how do you (handle|prioriti|manage|communicate)|stakeholder|conflict|deadline|take ownership|production failure you|mistake you"),
