@@ -12,7 +12,7 @@
     "topn-ranking": "Top-N / ranking",
     "consecutive": "Consecutive events",
     "running-total": "Running totals",
-    "pyspark": "PySpark",
+    "pyspark": "PySpark/Spark",
     "delta-lake": "Delta Lake",
     "scd": "SCD",
     "streaming": "Streaming",

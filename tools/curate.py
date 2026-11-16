@@ -67,8 +67,7 @@ COMPANIES = [
 ]
 
 FIELDS = [
-    ("PySpark", r"\bPySpark\b|pyspark"),
-    ("Spark", r"\bSpark\b|\bSparkSQL\b"),
+    ("PySpark/Spark", r"\bPySpark\b|pyspark|\bSpark\b|SparkSQL"),
     ("Python", r"\bPython\b|\bPandas\b|\bNumPy\b"),
     ("SQL", r"\bSQL\b|sql query|sql interview"),
     ("Databricks", r"\bDatabricks\b"),
@@ -155,7 +154,7 @@ def detect_field(text: str, headline: str) -> str:
     if not hits:
         return "Other"
     # prefer the dominant specialty over generic matches
-    priority = ["PySpark", "Spark", "Databricks", "Snowflake", "dbt", "Delta Lake",
+    priority = ["PySpark/Spark", "Databricks", "Snowflake", "dbt", "Delta Lake",
                 "Azure", "AWS", "GCP", "Power BI", "Airflow", "Kafka",
                 "Data Modeling", "System Design", "DSA", "ETL",
                 "Machine Learning", "Python", "SQL"]
