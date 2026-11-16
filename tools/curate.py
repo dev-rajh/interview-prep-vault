@@ -125,15 +125,15 @@ TOPIC_MAP = [
 
 
 def detect_company(text: str, headline: str) -> str:
-    blob = f"{headline} {text}"
+    # text only — author headlines ("Senior DE @ ZS") describe employment, not the question source
     for name, pat in COMPANIES:
-        if re.search(pat, blob, re.IGNORECASE):
+        if re.search(pat, text, re.IGNORECASE):
             return name
     return "General"
 
 
 def detect_field(text: str, headline: str) -> str:
-    blob = f"{headline} {text}"
+    blob = text
     hits = [name for name, pat in FIELDS if re.search(pat, blob, re.IGNORECASE)]
     if not hits:
         return "Other"
