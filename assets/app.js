@@ -39,6 +39,7 @@
     topic: "",
     exp: "",
     doneView: "all",
+    srcTopics: [],
     visible: 50,
   };
   const DONE_KEY = "ipv-qdone-v1";
@@ -50,6 +51,7 @@
     controls: $("controls"),
     stats: $("stats"), search: $("search"), searchCount: $("searchCount"),
     field: $("fieldFilter"), company: $("companyFilter"), topic: $("topicFilter"),
+    topicMultiGroup: $("topicMultiGroup"), topicMultiBtn: $("topicMultiBtn"), topicMultiPanel: $("topicMultiPanel"),
     exp: $("expFilter"), doneView: $("doneFilter"), reset: $("resetBtn"),
     questions: $("questions"), learnings: $("learnings"), sources: $("sources"), empty: $("empty"),
     qTpl: $("qTpl"), sTpl: $("sTpl"), lTpl: $("lTpl"), activeTopics: $("activeTopics"),
@@ -123,14 +125,67 @@
   function rebuildFieldForTab() {
     if (state.tab === "learnings") {
       fillSelect(els.field, countBy(state.learnings, (l) => l.field), "All fields");
+      fillSelect(els.company, countBy(state.learnings, (l) => l.company), "All companies");
+    } else if (state.tab === "sources") {
+      fillSelect(els.field, countBy(state.posts, (p) => p.field), "All fields");
+      rebuildSourcesFilters();
     } else {
       fillSelect(els.field, countBy(state.questions, (q) => q.field), "All fields");
+      fillSelect(els.company, countBy(state.questions, (q) => q.company), "All companies");
     }
     els.field.value = state.field;
     if (![...els.field.options].some((o) => o.value === state.field)) {
       state.field = "";
       els.field.value = "";
     }
+    els.company.value = state.company;
+    if (![...els.company.options].some((o) => o.value === state.company)) {
+      state.company = "";
+      els.company.value = "";
+    }
+  }
+
+  /* sources tab: company select + multi-select topics built from posts */
+  function rebuildSourcesFilters() {
+    fillSelect(els.company, countBy(state.posts, (p) => p.company), "All companies");
+    els.company.value = state.company;
+    if (![...els.company.options].some((o) => o.value === state.company)) {
+      state.company = "";
+      els.company.value = "";
+    }
+    const topicMap = new Map();
+    for (const p of state.posts) {
+      for (const t of p.topics || []) topicMap.set(t, (topicMap.get(t) || 0) + 1);
+    }
+    els.topicMultiPanel.innerHTML = "";
+    for (const [t, c] of [...topicMap.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))) {
+      const lab = document.createElement("label");
+      const box = document.createElement("input");
+      box.type = "checkbox";
+      box.value = t;
+      box.checked = state.srcTopics.includes(t);
+      box.addEventListener("change", () => {
+        if (box.checked) {
+          if (!state.srcTopics.includes(t)) state.srcTopics.push(t);
+        } else {
+          state.srcTopics = state.srcTopics.filter((x) => x !== t);
+        }
+        updateTopicMultiBtn();
+        renderActiveTopics();
+        state.visible = 50;
+        render();
+      });
+      lab.appendChild(box);
+      lab.appendChild(document.createTextNode(`${topicLabel(t)} (${c})`));
+      els.topicMultiPanel.appendChild(lab);
+    }
+    updateTopicMultiBtn();
+  }
+
+  function updateTopicMultiBtn() {
+    const n = state.srcTopics.length;
+    els.topicMultiBtn.textContent = n ? `Topics (${n}) ▴` : "All topics ▾";
+    els.topicMultiBtn.classList.toggle("active", n > 0);
   }
 
   /* ---------- rendering ---------- */
@@ -178,6 +233,19 @@
 
   function renderActiveTopics() {
     els.activeTopics.innerHTML = "";
+    if (state.tab === "sources") {
+      // selected topics as removable chips
+      for (const t of state.srcTopics) {
+        els.activeTopics.appendChild(chip(`#${topicLabel(t)} ✕`, () => {
+          state.srcTopics = state.srcTopics.filter((x) => x !== t);
+          updateTopicMultiBtn();
+          rebuildSourcesFilters();
+          state.visible = 50;
+          render();
+        }));
+      }
+      return;
+    }
     const counts = new Map();
     for (const q of state.questions) for (const t of q.topics || []) counts.set(t, (counts.get(t) || 0) + 1);
     const top = [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 18);
@@ -210,8 +278,12 @@
   }
 
   function sourceMatches(p) {
-    if (state.q) {
-      return (p.text + " " + p.author + " " + p.company + " " + p.field).toLowerCase().includes(state.q);
+    if (state.q && !(p.text + " " + p.author + " " + p.company + " " + p.field).toLowerCase().includes(state.q)) {
+      return false;
+    }
+    if (state.tab === "sources") {
+      if (state.company && p.company !== state.company) return false;
+      if (state.srcTopics.length && !(p.topics || []).some((t) => state.srcTopics.includes(t))) return false;
     }
     return true;
   }
@@ -316,6 +388,28 @@
       compB.remove();
     }
     node.querySelector("[data-count]").textContent = (p.question_count || 0) + " questions";
+    const body = node.querySelector("[data-text]");
+    body.textContent = p.text || "(media-only post — text lives in the attached images/document)";
+    const clampBtn = node.querySelector("[data-clamp]");
+    requestAnimationFrame(() => {
+      if (body.scrollHeight > 300) {
+        body.classList.add("clamped");
+        clampBtn.hidden = false;
+        clampBtn.addEventListener("click", () => {
+          const clamped = body.classList.toggle("clamped");
+          clampBtn.textContent = clamped ? "Show more ▾" : "Show less ▴";
+        });
+      }
+    });
+    const topicsWrap = node.querySelector("[data-topics]");
+    for (const t of (p.topics || []).slice(0, 6)) {
+      topicsWrap.appendChild(chip(topicLabel(t), () => {
+        if (!state.srcTopics.includes(t)) state.srcTopics.push(t);
+        updateTopicMultiBtn();
+        state.visible = 50;
+        render();
+      }));
+    }
     node.querySelector("[data-author]").textContent = p.author || "Unknown";
     node.querySelector("[data-time]").textContent = p.time || "";
     node.querySelector("[data-link]").href = p.post_url;
@@ -324,6 +418,7 @@
 
   function render() {
     rebuildFieldForTab();
+    if (state.tab === "sources") renderActiveTopics();
     els.loadMore.hidden = true;
     els.empty.hidden = true;
     if (state.tab === "questions") {
@@ -349,10 +444,13 @@
       renderStats(visible.length, "learnings", state.learnings.length);
     } else {
       const visible = state.posts.filter(sourceMatches);
+      const slice = visible.slice(0, state.visible);
       els.sources.innerHTML = "";
       const frag = document.createDocumentFragment();
-      for (const p of visible) frag.appendChild(renderSource(p));
+      for (const p of slice) frag.appendChild(renderSource(p));
       els.sources.appendChild(frag);
+      els.loadMore.hidden = visible.length <= state.visible;
+      els.loadMore.textContent = `Load more (${visible.length - state.visible} remaining)`;
       els.empty.hidden = visible.length !== 0;
       els.searchCount.textContent = `${visible.length} / ${state.posts.length} source posts`;
       renderStats(visible.length, "posts", state.posts.length);
@@ -406,13 +504,16 @@
     els.tabQuestions.classList.toggle("active", tab === "questions");
     els.tabLearnings.classList.toggle("active", tab === "learnings");
     els.tabSources.classList.toggle("active", tab === "sources");
-    // learnings/sources: hide question-specific filters
+    // learnings/sources: hide question-specific filters; sources gets company + topics multi
     const showQ = tab === "questions";
-    els.company.parentElement.classList.toggle("hide", !showQ);
+    const showS = tab === "sources";
+    els.company.parentElement.classList.toggle("hide", !showQ && !showS);
     els.topic.parentElement.classList.toggle("hide", !showQ);
+    els.topicMultiGroup.classList.toggle("hide", !showS);
     els.exp.parentElement.classList.toggle("hide", !showQ);
     els.doneView.parentElement.classList.toggle("hide", !showQ);
-    els.activeTopics.classList.toggle("hide", !showQ);
+    els.activeTopics.classList.toggle("hide", !showQ && !showS);
+    if (showS) renderActiveTopics();
     render();
   }
 
@@ -429,10 +530,22 @@
     els.doneView.addEventListener("change", () => { state.doneView = els.doneView.value; state.visible = 50; render(); });
     els.reset.addEventListener("click", () => {
       state.q = ""; state.field = ""; state.company = ""; state.topic = ""; state.exp = ""; state.visible = 50;
+      state.srcTopics = [];
       els.search.value = ""; els.field.value = ""; els.company.value = ""; els.topic.value = ""; els.exp.value = "";
       els.doneView.value = "all";
       rebuildFieldForTab();
+      updateTopicMultiBtn();
+      renderActiveTopics();
       render();
+    });
+    els.topicMultiBtn.addEventListener("click", () => {
+      els.topicMultiPanel.classList.toggle("hide");
+      els.topicMultiBtn.textContent = state.srcTopics.length
+        ? `Topics (${state.srcTopics.length}) ${els.topicMultiPanel.classList.contains("hide") ? "▴" : "▾"}`
+        : "All topics ▾";
+    });
+    document.addEventListener("click", (e) => {
+      if (!els.topicMultiGroup.contains(e.target)) els.topicMultiPanel.classList.add("hide");
     });
     els.tabQuestions.addEventListener("click", () => setTabUI("questions"));
     els.tabLearnings.addEventListener("click", () => setTabUI("learnings"));
@@ -442,7 +555,7 @@
     els.mockClose.addEventListener("click", () => els.mockDialog.close());
     els.mockGo.addEventListener("click", runMock);
     window.addEventListener("scroll", () => {
-      if (state.tab !== "questions" || els.loadMore.hidden) return;
+      if ((state.tab !== "questions" && state.tab !== "sources") || els.loadMore.hidden) return;
       if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 400) {
         state.visible += 100;
         render();

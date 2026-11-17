@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css?v=6" />
+  <link rel="stylesheet" href="assets/style.css?v=8" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>" />
 </head>
 <body>
@@ -51,6 +51,13 @@
         <div class="filter-group">
           <label>Topic</label>
           <select id="topicFilter"><option value="">All topics</option></select>
+        </div>
+        <div class="filter-group hide" id="topicMultiGroup">
+          <label>Topics</label>
+          <div class="multi-wrap">
+            <button id="topicMultiBtn" class="multi-btn" type="button">All topics ▾</button>
+            <div class="multi-panel hide" id="topicMultiPanel"></div>
+          </div>
         </div>
         <div class="filter-group">
           <label>Experience</label>
@@ -139,6 +146,9 @@
         </div>
         <span class="qcount" data-count></span>
       </div>
+      <div class="card-body" data-text></div>
+      <button class="clamp-toggle" data-clamp hidden>Show more ▾</button>
+      <div class="card-topics" data-topics></div>
       <div class="src-meta"><span data-author></span><span class="dot">·</span><span data-time></span></div>
       <div class="src-foot"><a class="src-link" data-link target="_blank" rel="noopener">View original on LinkedIn ↗</a></div>
     </article>
@@ -163,6 +173,6 @@
     </article>
   </template>
 
-  <script src="assets/app.js?v=7"></script>
+  <script src="assets/app.js?v=8"></script>
 </body>
 </html>
