@@ -1,0 +1,22 @@
+Tiger Analytics offered my friend a package of 25 LPA.
+
+Role: AZURE Data Engineer
+Exp: 5+ years
+CTC = 25 LPA
+
+1. Describe your project experience, including specific examples and your role in them.
+2. Explain all concepts related to triggers in Azure Data Factory (ADF).
+3. Describe how to implement all types of Slowly Changing Dimensions (SCD) in PySpark.
+4. How do you restart a pipeline in ADF if it fails?
+5. Explain how to configure CI/CD in notebooks for deployment.
+6. List and describe the different activities used in ADF.
+7. Explain Databricks Delta Live Tables (DLT) — when do you use batch vs. streaming?
+8. How do you ensure data quality and integrity in your ETL processes?
+9. Describe the architecture and implementation details of your recent project.
+10. How do you handle schema evolution in your data pipelines?
+11. What strategies do you use to optimize Spark jobs for large-scale datasets?
+12. Explain data partitioning and why it's beneficial.
+13. Tell me about a time you handled a production issue under pressure — how did you manage it?
+14. How do you explain technical solutions to non-technical clients?
+15. Imagine a client has unrealistic expectations on delivery timelines — how would you handle it?
+16. Describe a situation where you worked with multiple teams having conflicting priorities. How did you manage deadlines?

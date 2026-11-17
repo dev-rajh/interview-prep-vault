@@ -1,0 +1,38 @@
+What they asked me
+“Hee weold pou opimse a Databncks Spark job sulfenng from skew or
+What I said
+Liollowed a structured optinizanon approach:
+© Identify chewed keys using Spark U1
++ Apply brosdeast join foe erred cimensien tables
+Lae salting tectmicpie dor howvily sewed keys
+Fiber carly and select only required oolemas
+Enable Adaptive Query Exeration
+
+Increase executor memory if required
+Avoid nnirecewory caching,
+
+Deloine values reasoning over lbting necliniques
+Alsays mention Spark UT aod metrics
+
+4. Small Parquet files problem and solution
+
+What they asked me
+
+“Yeu see to many enall Panqeet files in the lake Why is ita problen and heer do yon fix itt
+What I said
+
+Probbens
+
+Sivall files ierease ioetidate overticad
+
+Slow query periormance
+
+inefficient Spark job pleming
+
+High cost in cloud storage operations
+Seletion:
+
+«© Use cepamtition of coalesce befoee writing
++ Schedele compaction jobs
+© Use Delia OPTIMIZE where applicable
+

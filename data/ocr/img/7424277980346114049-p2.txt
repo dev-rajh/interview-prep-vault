@@ -1,0 +1,40 @@
+© Synapse Serverless used for analytics
+@  Prewer Bl conaenes crated Cink dats
+Tips
+
+© Delete cepects clarity between hatch vs strewreng design
+« Merten fuk tolerance, checkpointing, and scalability
+
+2. Incremental loading (CDC) using watermark or change
+
+————— eee eee
+
+What they asked me
+
+“Teer wonld pou implement inccemental leading in ADP
+
+What I said
+
+Ll eeplercuted a worermark. beeed CIC appronoti:
+erremnarenerenetyitintee
+
+Source query filtered trang wetermark colores
+MERE modified date > uetecmarh
+
+Incremental data [oaded into Bronze bayer
+Delta MERGE used in Detebocks for upsets
+‘Watermaric upebated only aber sccemdial look
+
+For 801 Server somoce
+« Use Change Tracking of CIC tables
+
+« Captes INSERT, UPDATE DELETE operations
+© Proces changes ocrermermlly
+
+Tips
+
+© Delottte prefers metedataedrven COC
+« Alvays mention Mempotency and rolibeck safety
+
+3, Optimize a Spark job with skew or memory issues
+

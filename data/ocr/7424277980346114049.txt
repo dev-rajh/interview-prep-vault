@@ -1,0 +1,191 @@
+Deloitte.
+Data Engineer Interview Questions (3 YOE)
+
+1. Design an ingestion pipeline in Avure Data Factory for
+bateh and streaming data
+
+What they asked me
+
+“Deeg an ngedion pipeline in ADP fer both batch and dreening dats ute ADS and
+5 5
+
+What f said
+
+I designed o bytes! ingestion anchitectare
+
+Batch mgestiom
+Source wyatee SQL Server, Qeecke, fat files, REST APs
+ADF Copy Activity tsed for batch imaeson
+Data ended Ge ADLS Gen? Brome lever
+
+Folder aructare partinoned bw somree and dane
+Scher stoned a-i (scherre-on-rewt}
+
+Sterna aueetian
+© Realtime evews apested via Even Hub
+s Ave Dehricks Sireenre? Seewieg reads hem Breer Heb
+© Data wrote w ADLS Delta cites (Brome)
+e Checkpourtng enelbed for fall tolerance
+Dewi
+
+© = Deatabeicks massfents date into Silver and Gold levers
+
+
+© Synapse Serverless used for analytics
+@  Prewer Bl conaenes crated Cink dats
+Tips
+
+© Delete cepects clarity between hatch vs strewreng design
+« Merten fuk tolerance, checkpointing, and scalability
+
+2. Incremental loading (CDC) using watermark or change
+
+————— eee eee
+
+What they asked me
+
+“Teer wonld pou implement inccemental leading in ADP
+
+What I said
+
+Ll eeplercuted a worermark. beeed CIC appronoti:
+erremnarenerenetyitintee
+
+Source query filtered trang wetermark colores
+MERE modified date > uetecmarh
+
+Incremental data [oaded into Bronze bayer
+Delta MERGE used in Detebocks for upsets
+‘Watermaric upebated only aber sccemdial look
+
+For 801 Server somoce
+« Use Change Tracking of CIC tables
+
+« Captes INSERT, UPDATE DELETE operations
+© Proces changes ocrermermlly
+
+Tips
+
+© Delottte prefers metedataedrven COC
+« Alvays mention Mempotency and rolibeck safety
+
+3, Optimize a Spark job with skew or memory issues
+
+
+What they asked me
+“Hee weold pou opimse a Databncks Spark job sulfenng from skew or
+What I said
+Liollowed a structured optinizanon approach:
+© Identify chewed keys using Spark U1
++ Apply brosdeast join foe erred cimensien tables
+Lae salting tectmicpie dor howvily sewed keys
+Fiber carly and select only required oolemas
+Enable Adaptive Query Exeration
+
+Increase executor memory if required
+Avoid nnirecewory caching,
+
+Deloine values reasoning over lbting necliniques
+Alsays mention Spark UT aod metrics
+
+4. Small Parquet files problem and solution
+
+What they asked me
+
+“Yeu see to many enall Panqeet files in the lake Why is ita problen and heer do yon fix itt
+What I said
+
+Probbens
+
+Sivall files ierease ioetidate overticad
+
+Slow query periormance
+
+inefficient Spark job pleming
+
+High cost in cloud storage operations
+Seletion:
+
+«© Use cepamtition of coalesce befoee writing
++ Schedele compaction jobs
+© Use Delia OPTIMIZE where applicable
+
+
+© Conrel micr-berch sives in streaming.
++ = Avoid frequent emall writes
+Tips
+
+© Thi ise very commen Delowte quewion
+« Always connect # to perfonmance and cost
+
+§. SOL: 2nd highest salary using window function
+What they asked me
+“White a SOM query to find the Ind highest salary.”
+What T said
+SELECT salary
+FRoM |
+
+GELECT salary,
+
+CEH BANE () COVER (ORDER WE salary GE2c) AS enk
+FROM explopes
+
+et
+WHERE ak = £4
+
+‘Tips
+« Deloitte experts window fenctions, pot subquery hecks
+
+6, Design a modern Avure data warehouse (batch + real-
+time)
+
+What they asked me
+
+“Hew wold you desge s modem Acune dats warehouse for multiple clenes?”
+What E said
+
+Idestzned a sealable, urolti-tenast acchatecte:
+
+« figestien: ADP (atch), Event Hub (streaming
+
+
+Storage: AIMLS Gen? vith Beouze!SaheenGold
+Processing: Databncks with PySperk
+
+Storage formal: Delta Lake
+
+Securit: RBAC, date munking clea! Holeiom
+Monitermg: Log Analyties, pipeline metres
+
+Tips
+
+© Deloitte ficuers on eterprice-arede deage
+* Menten nailtclicu! selvion asd povemeace
+
+7. Heavy shuMe during Spark join
+
+What they asked me
+
+“Yeu see heavy shuffle during a Spark join What de you do?"
+What I said
+
+Check Spork UI for shuffle suges
+Firrewlcad enall tables
+
+Line sadting Sor skewed keys
+Reepastitica by jou hey
+
+Avold Ginecessamy joins
+
+Enable Ae
+
+Cache only peesed chtzeets
+
+© Metihen diate size and task shew explicily
+
+8. Explain end-to-end data Mow (ADF — ADLS —
+Databricks — Synapse — Power BI)
+
+What they asked me
+“Expien the complet dats flow”
+

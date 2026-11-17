@@ -1,0 +1,67 @@
+From Zero to 60+ LPA as a Senior Data Engineering Architect
+Here's the interview roadmap I'd recommend:
+
+Step 1: SQL (Non-Negotiable at Every Level)
+Interviewers don't ask SQL to check syntax — they check thinking.
+Common Interview Questions:
+- How do CTEs differ from subqueries? When would you avoid them?
+- Explain window functions with a real business use case
+- How would you optimize a slow-running query?
+- Index vs Partition — when do you use which?
+- How do you handle duplicate records in large tables?
+At senior levels, why matters more than how
+
+Step 2: Python
+Python interviews go beyond Pandas.
+Common Interview Questions:
+- Explain OOP concepts with a data pipeline example
+- How do you design reusable and modular ETL code?
+- How do you handle memory optimization in Python?
+- When would you choose Pandas vs PySpark?
+- How do you integrate APIs with retry & failure handling?
+Clean, scalable code > clever one-liners
+
+Step 3: Big Data & Distributed Processing
+This is where mid -> senior filtering happens.
+Common Interview Questions:
+- Explain Spark architecture (Driver, Executors, Cluster Manager)
+- What causes data skew and how do you fix it?
+- Partition vs Repartition vs Coalesce
+- How does shuffle impact performance?
+- How would you design a Spark job to reduce cost?
+Interviews test performance intuition, not just APIs
+
+Step 4: Data Modeling & Warehousing
+Architects are judged heavily here.
+Common Interview Questions:
+- OLTP vs OLAP — design trade-offs?
+- When would you choose Star vs Snowflake schema?
+- Explain SCD Type 1 vs Type 2 with examples
+- How do you design facts & dimensions for scalability?
+- How do modeling choices impact BI performance?
+Bad models = expensive analytics forever
+
+Step 5: Cloud & Data Platforms
+Tools change. Architecture principles don't.
+Common Interview Questions:
+- Design a cloud-based data lake architecture
+- Lake vs Warehouse vs Lakehouse — when & why?
+- How do you handle IAM, data security & governance?
+- Batch vs Streaming — how do you decide?
+- How do you optimize cloud costs in data pipelines?
+Senior interviews = design + trade-offs
+
+Step 6: Architect-Level Rounds
+This is where most candidates struggle.
+Common Interview Questions:
+- Design an end-to-end data platform from scratch
+- How would you build fault-tolerant ETL pipelines?
+- How do you implement data quality & observability?
+- How do you handle schema evolution?
+- How do you design CI/CD for data pipelines?
+You're evaluated on decisions, not diagrams
+
+Key Interview Shift for Senior / Architect Roles:
+You move from "How do I implement this?" to "Is this the best, scalable, secure & cost-efficient design?"
+
+If you're preparing for senior IC or architect interviews, focus less on memorizing tools — and more on reasoning, trade-offs & real-world decisions.

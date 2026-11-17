@@ -1,0 +1,20 @@
+J.P. Morgan keeps asking these Data Engineering questions repeatedly.
+CTC - 35 LPA
+
+1. How do you identify and remove duplicate records in a table without losing data?
+2. Write a SQL query to find the second highest salary per department.
+3. Difference between INNER JOIN vs LEFT JOIN with a real-world use case.
+4. How do indexes work internally, and when do they actually hurt performance?
+5. What is slowly changing dimension (SCD)? Explain Type 1 vs Type 2.
+6. How would you design an ETL pipeline to ingest data from multiple sources in near real-time?
+7. Difference between ETL and ELT. Which one would you choose for cloud data warehouses and why?
+8. How do you handle late-arriving data in data pipelines?
+9. How do you make pipelines fault-tolerant?
+10. Explain idempotency and why it is critical in data pipelines.
+11. How does Apache Spark handle shuffle operations, and why are they expensive?
+12. Difference between partitioning and bucketing in Spark/Hive.
+13. How would you optimize a Spark job that runs slowly on large datasets?
+14. Explain the CAP theorem with a practical example.
+15. How do you ensure data consistency and reliability in distributed systems?
+
+I have prepared Complete Interview Prep Guide for Data Engineers.

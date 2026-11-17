@@ -1,0 +1,37 @@
+© Conrel micr-berch sives in streaming.
++ = Avoid frequent emall writes
+Tips
+
+© Thi ise very commen Delowte quewion
+« Always connect # to perfonmance and cost
+
+§. SOL: 2nd highest salary using window function
+What they asked me
+“White a SOM query to find the Ind highest salary.”
+What T said
+SELECT salary
+FRoM |
+
+GELECT salary,
+
+CEH BANE () COVER (ORDER WE salary GE2c) AS enk
+FROM explopes
+
+et
+WHERE ak = £4
+
+‘Tips
+« Deloitte experts window fenctions, pot subquery hecks
+
+6, Design a modern Avure data warehouse (batch + real-
+time)
+
+What they asked me
+
+“Hew wold you desge s modem Acune dats warehouse for multiple clenes?”
+What E said
+
+Idestzned a sealable, urolti-tenast acchatecte:
+
+« figestien: ADP (atch), Event Hub (streaming
+

@@ -1,0 +1,15 @@
+Deloitte Data Engineer Interview Questions (3 YOE)
+
+If you're preparing for Data Engineer interviews, focus on real scenarios, not just theory.
+
+Here are the most asked Deloitte-style questions:
+- Design batch + streaming ingestion in ADF
+- Implement Incremental Load (CDC + Watermark)
+- Optimize Spark jobs (Skew + Memory issues)
+- Solve Small File Problem in Data Lake
+- Heavy shuffle during Spark joins -> Fix strategy
+- End-to-End flow: ADF -> ADLS -> Databricks -> Synapse -> Power BI
+- Partial ETL failure recovery without full reload
+- Observability: Monitoring + Data Quality checks
+
+(Attached document: "Deloitte_Data_Engineer_Interview", 5 pages - OCR'd separately.)

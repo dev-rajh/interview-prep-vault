@@ -1,0 +1,38 @@
+I am hiring you as a Data Engineer if you can answer these 21 questions:
+
+SQL
+- Write a query to find the second highest salary from an employee table without using MAX in subquery.
+- Explain the difference between INNER JOIN, LEFT JOIN, and FULL OUTER JOIN with examples.
+- Given a sales table, find the top 3 products sold in each region using RANK or DENSE_RANK.
+
+Python
+- How do you handle a file that is too large to fit into memory in Python? Show an example.
+- What is the difference between mutable and immutable data types? Give examples.
+- Write Python code to merge multiple CSV files from a directory into a single Pandas DataFrame.
+
+PySpark
+- Explain the difference between narrow and wide transformations in Spark. Give examples.
+- How do you perform joins in PySpark and handle skewed data?
+- Given a large dataset, write PySpark code to calculate the average sales per region per month.
+
+Azure Databricks
+- Explain the difference between a cluster, job cluster, and all-purpose cluster in Databricks.
+- How do you optimize Delta Lake performance in Databricks?
+- How do you integrate Databricks with Azure Data Lake Storage for both reading and writing data?
+
+Azure Data Factory
+- What is the difference between mapping data flows and wrangling data flows?
+- How do you implement incremental load in Azure Data Factory?
+- Explain how triggers work in ADF and how to schedule pipelines.
+
+Microsoft Fabric
+- Explain the architecture of OneLake in Microsoft Fabric.
+- How does Fabric differ from Azure Synapse Analytics and Power BI?
+- How would you migrate existing ADF pipelines to Microsoft Fabric Data Factory?
+
+Azure Synapse Analytics
+- Explain the difference between dedicated SQL pool and serverless SQL pool in Synapse.
+- How do you partition data in Synapse for better query performance?
+- What are materialized views in Synapse and when should you use them?
+
+I have prepared Complete Interview Preparation Guide for Data Engineers.

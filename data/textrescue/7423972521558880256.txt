@@ -1,0 +1,36 @@
+When you are giving interviews in companies like Amazon, Oracle, Wells Fargo, Goldman Sachs, BMW Group, Atlassian for a Data Engineer role — Use the below key points to clear the interview:
+
+Here are 3 key takeaways from the experience:
+- Big companies don't focus on memorized queries. They evaluate how you think and solve problems.
+- Knowing tools is just the starting point — what matters is explaining why you choose a particular approach or technology.
+- End-to-end ownership is expected — from data ingestion to transformation, governance, and optimization.
+
+This experience taught me more than several shortlists ever did. Here's a quick breakdown of how the interviews went:
+
+Round 1: Data Modeling & SQL
+- Solving top-N SQL problems
+- Designing an e-commerce data model
+- Normalization vs denormalization concepts
+- Composite keys and performance tuning
+- Slowly Changing Dimensions (SCDs)
+
+Round 2: Big Data & Distributed Systems
+- Designing pipelines for high-volume data (1TB+/day)
+- When to use Hadoop, Spark, or Flink
+- S3 optimization strategies and Hive partitioning
+- Data processing using Glue and EMR
+
+Round 3: AWS & Cloud Architecture
+- Redshift performance optimization
+- ETL orchestration using Lambda and Step Functions
+- Security, governance, and real-time ingestion patterns
+- Design decisions around Kinesis and Kafka
+
+Although I didn't clear all the rounds, I wasn't discouraged. Instead, I gained clarity on exactly what areas I need to strengthen.
+
+What stood out most was that these interviews reward:
+- Strong fundamentals
+- Structured thinking
+- Clear communication of design choices
+
+That realization itself made me a better engineer.

@@ -1,0 +1,32 @@
+Deloitte.
+Data Engineer Interview Questions (3 YOE)
+
+1. Design an ingestion pipeline in Avure Data Factory for
+bateh and streaming data
+
+What they asked me
+
+“Deeg an ngedion pipeline in ADP fer both batch and dreening dats ute ADS and
+5 5
+
+What f said
+
+I designed o bytes! ingestion anchitectare
+
+Batch mgestiom
+Source wyatee SQL Server, Qeecke, fat files, REST APs
+ADF Copy Activity tsed for batch imaeson
+Data ended Ge ADLS Gen? Brome lever
+
+Folder aructare partinoned bw somree and dane
+Scher stoned a-i (scherre-on-rewt}
+
+Sterna aueetian
+© Realtime evews apested via Even Hub
+s Ave Dehricks Sireenre? Seewieg reads hem Breer Heb
+© Data wrote w ADLS Delta cites (Brome)
+e Checkpourtng enelbed for fall tolerance
+Dewi
+
+© = Deatabeicks massfents date into Silver and Gold levers
+

@@ -1,0 +1,40 @@
+Storage: AIMLS Gen? vith Beouze!SaheenGold
+Processing: Databncks with PySperk
+
+Storage formal: Delta Lake
+
+Securit: RBAC, date munking clea! Holeiom
+Monitermg: Log Analyties, pipeline metres
+
+Tips
+
+© Deloitte ficuers on eterprice-arede deage
+* Menten nailtclicu! selvion asd povemeace
+
+7. Heavy shuMe during Spark join
+
+What they asked me
+
+“Yeu see heavy shuffle during a Spark join What de you do?"
+What I said
+
+Check Spork UI for shuffle suges
+Firrewlcad enall tables
+
+Line sadting Sor skewed keys
+Reepastitica by jou hey
+
+Avold Ginecessamy joins
+
+Enable Ae
+
+Cache only peesed chtzeets
+
+© Metihen diate size and task shew explicily
+
+8. Explain end-to-end data Mow (ADF — ADLS —
+Databricks — Synapse — Power BI)
+
+What they asked me
+“Expien the complet dats flow”
+
