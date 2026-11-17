@@ -183,10 +183,19 @@ LEARN = re.compile(
     r"pro tips?|patterns? (?:that|every|to)|day \d+\s*/\s*\d+|execution order|"
     r"architecture (?:explained|of|design)|in simple (?:terms|words)|"
     r"\d+\s*(?:advanced|real|interview|frequently asked)\s*(?:sql|pyspark|python|spark|data)?\s*questions|"
-    r"must (?:know|try)|every (?:developer|engineer|analyst|data) (?:should|must)|"
+    r"must (?:know|try)|every (?:\w+\s+){0,2}(?:should|must)\s+know|every (?:developer|engineer|analyst|data) (?:should|must)|"
     r"essential \S+ commands|learning (?:journey|path)|things (?:every|to know)|"
     r"how (?:i|you) (?:would )?(?:cracked?|approach|prepare|answer)|roadmap i|"
     r"concepts? (?:explained|you must)|translate business logic|think(?:ing)? (?:like an? )?(?:engineer|analyst|data)",
+    re.I,
+)
+
+
+# Solved-walkthrough markers: the post answers its own question(s) inside the text.
+# Such posts are teaching content -> Learnings, kept as ONE complete post (never split).
+ANSWER_MARKS = re.compile(
+    r"candidate\s*:|interviewer\s*:|answers?\s*:|interview-ready answer|my takeaway|"
+    r"expected output|solution\s*:|real-time scenario|how does it work",
     re.I,
 )
 
@@ -200,6 +209,20 @@ def classify(text: str) -> str:
     qs = split_questions(t)
     qn = len(qs)
     has_schema = "create table" in t.lower()
+    # explainer / solved-question posts stay whole in Learnings, never divided
+    # (a schema + worked answer is still teaching content, so no has_schema guard here)
+    marks = len(ANSWER_MARKS.findall(t))
+    if marks >= 2 and qn <= 8:
+        return "learnings"
+    if marks >= 1 and qn <= 1 and t.count("?") <= 4:
+        return "learnings"
+    # concept/guide posts ("X techniques every engineer should know") with almost no
+    # question structure — but never first-person interview experiences
+    if (LEARN.search(t) and qn <= 2 and t.count("?") <= 2
+            and not re.search(r"interview experience|questions? i (?:faced|was asked|got)|"
+                              r"my interview|CTC|\bLPA\b|round\s*\d|"
+                              r"recently[^.]{0,40}interview\w* with", t, re.I)):
+        return "learnings"
     if qn >= 2 or (qn >= 1 and has_schema):
         return "interview"
     if LEARN.search(t) and len(t) > 150:

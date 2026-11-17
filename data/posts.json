@@ -1,23 +1,5 @@
 [
  {
-  "id": "7528074702523863041",
-  "author": "Aditya Chandak",
-  "author_url": "https://www.linkedin.com/in/ACoAAAVMVVYBMt4nu_TNd5BBUqPdrQgoaY3nT4Q",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7528074702523863041/",
-  "time": "5h",
-  "text": "Data Engineer Interview!!\n\nInterviewer: How would you efficiently process a 1 TB dataset in PySpark?\nCandidate: Let's break it down!!\n\n🔹 1. Optimize Data Format\n- Use Parquet or Delta Lake for:\n - Columnar storage: Read only what you need.\n - Compression: Save space, boost speed.\n - Predicate pushdown: Skip unnecessary data.\n\n🔹 2. Partition Smarter\n- Split 1 TB into ~8,000 partitions (128 MB each).\n- Why? More partitions = more parallel tasks. Avoid skew!\n\n🔹 3. Size the Cluster (Granular Details)\n- Example: 20 nodes × 16 cores × 64 GB RAM.\n - Node Count (20):\n - With 8,000 partitions and 16 cores/node, each core handles ~25 partitions (8,000 ÷ 20 ÷ 16 ≈ 25 tasks/core).\n - Processes in ~25 \"waves\" (8,000 partitions ÷ (20 nodes × 16 cores)), balancing CPU utilization.\n - Cores (16 per node):\n - For CPU-heavy transforms (e.g., complex calculations): Use 32+ cores/node for faster crunching.\n - For simple ETL: 8 cores/node is enough.\n - Memory (64 GB per node):\n - For general tasks: ~40 GB usable (after OS, Spark overhead). Handles most transformations.\n - For heavy joins/aggregations: Bump to 128 GB/node or optimize joins (broadcast).\n - Storage:\n - Use local SSDs for faster shuffle reads/writes.\n - Ensure HDFS or Delta Lake storage is nearby (low latency).\n - Scaling Strategy:\n - Start small (5-10 nodes), monitor, scale out. Use Databricks' auto-scaling for cost-efficiency.\n - Node types: Pick memory-optimized instances (e.g., AWS r5, Azure E-series).\n\n🔹 4. Manage Memory\n- Watch out for shuffles! Use SSDs for faster spills.\n- Monitor usage, minimize disk writes.\n\n🔹 5. Speed Tweaks\n- Try these configs:\n - Adaptive execution: Adjust partitions dynamically.\n - Broadcast joins: Boost small-table joins.\n - Incremental loads: Process chunks, save time.\n\n👉 Takeaway: Balance compute, memory, and partitions for smooth 1 TB processing.\n\n#PySpark #Databricks #DataEngineering #Spark",
-  "company": "General",
-  "field": "PySpark/Spark",
-  "topics": [
-   "joins",
-   "groupby",
-   "skew",
-   "spark-optimization",
-   "delta-lake",
-   "optimization"
-  ]
- },
- {
   "id": "7528072450543308801",
   "author": "Kasi V",
   "author_url": "https://www.linkedin.com/in/ACoAAChBnBoBX3HfFvTzstdLSYdJLLLsJuuM-Jg",
@@ -138,26 +120,6 @@
   ]
  },
  {
-  "id": "7527757140174987265",
-  "author": "Pooja Sankanagoudra",
-  "author_url": "https://www.linkedin.com/in/ACoAADGeuXkB5qUlHJD1MsEDQRW_O6bVf6rf5us",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7527757140174987265/",
-  "time": "1d",
-  "text": "🔥 ADVANCED PYSPARK INTERVIEW QUESTION\n\nHow do you optimize a slow Spark job?\n\nSpark optimization improves execution time, resource utilization and overall pipeline performance.\n\n🔵 Important optimization techniques\n\n1. Broadcast Join – Avoid unnecessary shuffle when one side is sufficiently small.\n2. Repartition – Redistribute data when needed.\n3. Coalesce – Reduce the number of partitions.\n4. Cache – Reuse frequently accessed intermediate data.\n5. Predicate Pushdown – Filter data as early as possible.\n6. Partition Pruning – Read only required partitions.\n7. AQE – Optimize execution plans at runtime.\n8. Avoid Python UDFs – Prefer built-in Spark functions.\n9. File Optimization – Avoid too many small files.\n\nEnable AQE:\n\nspark.conf.set(\n \"spark.sql.adaptive.enabled\",\n \"true\"\n)\n\n📌 REAL-TIME SCENARIO\n\nSuppose a Databricks job takes two hours to process a large transaction table.\n\nI check the Spark UI to identify slow stages, shuffle size, data skew and task execution time. Then I optimize joins, partitions, filtering and file sizes based on the bottleneck.\n\n🎯 INTERVIEW-READY ANSWER\n\n\"When a Spark job is slow, I first analyze the Spark UI to identify the bottleneck. Then I optimize joins, reduce unnecessary shuffles, apply partition pruning, handle data skew, use AQE and avoid unnecessary UDFs.\"\n\n💡 Remember: Analyze first, optimize based on the bottleneck.\n\n#PySpark #SparkOptimization #AzureDatabricks #AzureDataEngineer #PerformanceTuning #DataEngineering",
-  "company": "General",
-  "field": "PySpark/Spark",
-  "topics": [
-   "joins",
-   "nulls",
-   "skew",
-   "spark-optimization",
-   "delta-lake",
-   "streaming",
-   "optimization",
-   "career"
-  ]
- },
- {
   "id": "7527687576816758784",
   "author": "DHANASEKARAN D",
   "author_url": "https://www.linkedin.com/in/ACoAADVJBg4Befr33hpGfST0Zh-PYYoqvUjJcNU",
@@ -175,22 +137,6 @@
    "scd",
    "streaming",
    "optimization"
-  ]
- },
- {
-  "id": "7527580043930267648",
-  "author": "Srinivas Reddy",
-  "author_url": "https://www.linkedin.com/in/ACoAAD6k9BYB1vg_EstK6gv2_JcvuUsCscKPlSE",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7527580043930267648/",
-  "time": "1d",
-  "text": "🤝GCP Data Engineer Interview Preparation – 7/30\n\n1.BigQuery query that normally takes 2 minutes is now taking 20 minutes. How will you troubleshoot?\n\nAnswer:\nI will investigate the following:\nCheck query execution details in BigQuery.\nIdentify large table scans.\nCheck partition pruning.\nVerify whether clustering is being used effectively.\nReview joins and shuffle operations.\nAvoid SELECT * and select only required columns.\nCheck whether data volume has increased.\n\nExample: If the table is partitioned by load_date, I will filter using the partition column to reduce scanned data.\n\n2. Your BigQuery pipeline loads duplicate records every day. How will you resolve this?\nAnswer:\n\nFirst, I will identify why duplicates are coming into the target table.\n\nCheck whether the source file contains duplicates.\n\nIdentify a primary/business key.\n\nUse ROW_NUMBER() to identify duplicate records.\n\nUse MERGE to perform upsert operations.\nMaintain an audit table to track processed files\n\n\nSELECT *\nFROM (\n SELECT *,\n ROW_NUMBER() OVER (\n PARTITION BY customer_id\n ORDER BY updated_timestamp DESC\n ) AS rn\n FROM customer_data\n)\nWHERE rn = 1;\n\n#GCP #GoogleCloudPlatform #GCPDataEngineer #DataEngineer #DataEngineering #GCPInterviewQuestions #BigQuery #Dataflow #PubSub #Dataproc #PySpark #CloudComposer #ApacheAirflow #SQL #Python #ETL #ELT",
-  "company": "General",
-  "field": "PySpark/Spark",
-  "topics": [
-   "window-functions",
-   "dedup",
-   "spark-optimization",
-   "career"
   ]
  },
  {
@@ -690,20 +636,6 @@
   ]
  },
  {
-  "id": "7510178224904253440",
-  "author": "Korrapati Jaswanth 🇮🇳",
-  "author_url": "https://www.linkedin.com/in/ACoAADj1xvcBPVNKVz1jKvkv2OuuJutrjUkFdgQ",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7510178224904253440/",
-  "time": "1mo",
-  "text": "Dear Data enthusiasts,\n\n🔵One of the SQL Question Asked in HSBC and Atlassian🔵\n\n💡𝐐𝐮𝐞𝐬𝐭𝗶𝗼𝗻:- \n/*\nWrite an SQL query to find the salaries of the employees after applying taxes.\n\nThe tax rate is calculated for each company based on the following criteria:\n0% If the max salary of any employee in the company is less than 1000$. 24% If the max salary of any employee in the company is in the range [1000, 10000] inclusive. 49% If the max salary of any employee in the company is greater than 10000$.\n\nReturn the result table in any order. Round the salary to the nearest integer.\n*/\n\n-- 𝐓𝐚𝐛𝐥𝐞 \nCREATE TABLE Salaries (\n company_id INT,\n employee_id INT,\n employee_name VARCHAR(50),\n salary INT,\n PRIMARY KEY (company_id, employee_id)\n);\n\n- 𝐈𝐧𝐬𝐞𝐫𝐭 𝐭𝐡𝐞 𝐝𝐚𝐭𝐚 \nINSERT INTO Salaries (company_id, employee_id, employee_name, salary) VALUES\n(1, 1, 'Tony', 2000),(1, 2, 'Pronub', 21300),\n(1, 3, 'Tyrrox', 10800),(2, 1, 'Pam', 300),\n(2, 7, 'Bassem', 450),(2, 9, 'Hermione', 700),\n(3, 7, 'Bocaben', 100),(3, 2, 'Ognjen', 2200),\n(3, 13, 'Nyancat', 3300),(3, 15, 'Morninngcat', 7777);\n\n🚀 𝐖𝐚𝐧𝐭 𝐭𝐨 𝐦𝐚𝐬𝐭𝐞𝐫 𝟐𝟎𝟎+ 𝐪𝐮𝐞𝐬𝐭𝗶𝗼𝗻𝘀 𝗹𝗶𝗸𝗲 𝘁𝗵𝗶𝘀 𝐟𝗿𝗼𝗺 𝐫𝗲𝗮𝗹 𝐜𝗼𝗺𝗽𝗮𝗻𝘆 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄𝘀?I’ve got you covered 👇Introducing 💥\"𝟐𝟎𝟎+ 𝐫𝐞𝐚𝐥 𝐒𝐐𝐋 𝐢𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬\" — your all-in-one guide to ace SQL interviews like a pro!\n\n💡 𝐖𝐡𝐚𝐭’𝐬 𝐈𝐧𝐬𝐢𝐝𝐞: \n✔ 200+ real-world SQL interview questions (from companies like PayPal, Uber, Amazon, Microsoft, Google, Deloitte, Swiggy & More..) \n✔ Sample data + expected outputs \n✔ SQL Cheat Sheet for quick revision \n✔ Theoretical Q&A to strengthen your core concepts \n✔ Hands-on practice to boost real interview confidence\n\n📌 𝟐𝟎𝟎+ 𝐑𝐞𝐚𝐥 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐒𝐐𝐋 𝐐𝐮𝐞𝐬𝐭𝗶𝗼𝗻𝐬 in 𝐏𝐫𝐨𝐝𝐮𝐜𝐭-𝐁𝐚𝐬𝐞𝐝 𝐂𝐨𝗺𝐩𝐚𝗻𝗶𝗲𝘀, 𝐌𝐍𝐂𝐬, 𝐒𝐞𝐫𝐯𝐢𝐜𝗲-𝐁𝗮𝐬𝗲𝗱 𝗙𝗶𝗿𝗺𝘀 & 𝐒𝐭𝐚𝐫𝐭𝐮𝐩𝘀, 𝐆𝐫𝐚𝐛 𝐲𝐨𝐮𝐫 𝐜𝐨𝐩𝐲 𝐧𝐨𝐰 𝗮𝗻𝗱 𝘀𝗮𝘁𝗮𝗿𝘁 𝗽𝗿𝗮𝗰𝘁𝗶𝗰𝗶𝗻𝗴 𝗹𝗶𝗸𝗲 𝗮 𝗽𝗿𝗼!\n👉 [ https://lnkd.in/dNDm2EJC ]\n\n📌𝐜𝐫𝐚𝐜𝗸 𝐫𝐞𝐚𝐥-𝘄𝗼𝗿𝗹𝗱 𝗽𝗿𝗼𝗯𝗹𝗲𝗺𝘀 asked in top companies like 𝐒𝐰𝐢𝐠𝐠𝐲, 𝐙𝐨𝗺𝗮𝘁𝗼, 𝐁𝐥𝐢𝐧𝐤𝐢𝐭, 𝐙𝐞𝐩𝐭𝗼.\n👉[ https://lnkd.in/g7HC6TDi ]\n\nIf this post resonated with you,\n𝐋𝐈𝐊𝐄 & 𝐑𝐄𝐒𝐇𝐀𝐑𝐄 — it might help someone stuck at the same stage.\n\n💙 𝐅𝐨𝐥𝐥𝐨𝐰 Korrapati Jaswanth 🇮🇳 for more SQL interview questions, Data Analytics content, and career tips.\n\n#TechCareers #CodingInterview #InterviewQuestions #RealWorldSQL #SQLProblems #DataCareer #LearnSQL #SQLDeveloper #MicrosoftSQLServer #PowerBI #BusinessIntelligence #AmazonJobs #Microsoft #Google #Deloitte #HSBC #Atlassian #KorrapatiJaswanth",
-  "company": "HSBC",
-  "field": "Power BI",
-  "topics": [
-   "career",
-   "cheatsheet"
-  ]
- },
- {
   "id": "7507997382584868864",
   "author": "Riya Khandelwal",
   "author_url": "https://www.linkedin.com/in/ACoAAB2PgcYBKz49p1yEcPIiQrrsvsga68Qk2kA",
@@ -751,23 +683,6 @@
    "second-highest",
    "delta-lake",
    "pyspark-code",
-   "optimization",
-   "system-design",
-   "career"
-  ]
- },
- {
-  "id": "7458357546396028928",
-  "author": "Kushboo Chauhan",
-  "author_url": "https://www.linkedin.com/in/ACoAAFx4RowBNGjzOejuqQu38aUGGx-gitTmnfw",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7458357546396028928/",
-  "time": "6mo",
-  "text": "🚨 Accenture + MNC Data Engineer interviews in 2026 are on another level now.\nI reviewed the latest Azure Data Engineering interview questions…\n and one thing became crystal clear 👇\n👉 Companies are NOT hiring “tool users” anymore.\n 👉 They are hiring problem solvers.\n📌 (The guide focuses on real Azure Data Engineering scenarios with ADF, Databricks, Delta Lake & Synapse)\n🔥 One of the MOST asked questions:\n👉 “Explain your end-to-end Azure Data Engineering architecture.”\nMost candidates say:\n ❌ “We used ADF and Databricks…”\nThat’s NOT enough anymore.\n💥 What strong candidates explain:\n✔️ Source Systems → ADF Pipelines\n ✔️ ADLS Gen2 → Raw Storage\n ✔️ Databricks → Bronze → Silver → Gold transformations\n ✔️ Synapse SQL Pool → Curated analytics\n ✔️ Power BI → Reporting\n👉 THAT shows architecture thinking.\n🔥 Real Production Scenario They Asked:\nA retail client processed:\n ✔️ 20M+ transactions daily\n ✔️ Multiple ERP systems\n ✔️ Near real-time dashboards\n🚨 Problem?\n Pipeline runtime = 3 HOURS\n💡 Solution:\n ✔️ Parallel activities in ADF\n ✔️ Spark optimization\n ✔️ Delta Lake partitioning\n🔥 Result:\n Execution time reduced from 3 hours → 40 minutes\n📌 (This exact optimization scenario is explained in the guide)\n💥 Another favorite interview trap:\n👉 “ADF vs Databricks?”\nWrong answer:\n ❌ “Both are ETL tools”\nCorrect mindset:\n ✔️ ADF = orchestration\n ✔️ Databricks = large-scale transformation\n👉 They WORK TOGETHER.\nThey explain features…\n📘 Crack Azure Data Engineer Interviews (Topic-wise Q&A)\n👉 https://lnkd.in/gF4_tCQj\n---------------------**********--------------------\n💼 500+ Company-wise Azure Data Engineer Questions\n👉 https://lnkd.in/gZ4NJDzw\n---------------------**********--------------------\n🔥 Data Engineer Mega Pack (1300+ Scenario Q&A)\n👉 https://lnkd.in/gEushWwU\n---------------------**********--------------------\n📊 600+ Real Questions from Top Companies\n👉 https://lnkd.in/gvX-we8v\n instead of explaining:\n ✔️ WHY they used it\n ✔️ WHAT problem it solved\n ✔️ HOW performance improved\n💬 Preparing for Accenture / Deloitte / Infosys / TCS / MNC Data Engineer interviews?\nComment “AZURE” and I’ll share more real interview Q&A 🔥\n#Azure #DataEngineering #Databricks #ADF #BigData #DeltaLake #InterviewPreparation #TechCareers #CareerGrowth #LinkedInGrowth",
-  "company": "Accenture",
-  "field": "PySpark/Spark",
-  "topics": [
-   "delta-lake",
-   "streaming",
    "optimization",
    "system-design",
    "career"
@@ -875,26 +790,6 @@
   ]
  },
  {
-  "id": "7453646499533606914",
-  "author": "Devikrishna R",
-  "author_url": "https://www.linkedin.com/in/ACoAABB_4qgBj2fLfk1RgIOXWoROCGM0ivCPlBY",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7453646499533606914/",
-  "time": "7mo",
-  "text": "🚀 𝗗𝗔𝗧𝗔 𝗘𝗡𝗚𝗜𝗡𝗘𝗘𝗥 (3–7 𝗬𝗘𝗔𝗥𝗦) – 𝗥𝗘𝗔𝗟 𝗜𝗡𝗧𝗘𝗥𝗩𝗜𝗘𝗪 𝗤𝗨𝗘𝗦𝗧𝗜𝗢𝗡𝗦 & 𝗛𝗢𝗪 𝗧𝗢 𝗔𝗡𝗦𝗪𝗘𝗥\nMost candidates prepare answers…\nbut top candidates know how to structure them 👇\n🧠 𝗧𝗘𝗟𝗟 𝗠𝗘 𝗔𝗕𝗢𝗨𝗧 𝗬𝗢𝗨𝗥𝗦𝗘𝗟𝗙\n→ Mention experience + tools (ADF, Databricks, PySpark, SQL)\n→ Talk about real work (pipelines, optimization)\n→ Add impact (performance, reliability)\n📌 As shown on page 1: structure = Experience + Skills + Impact\n📊 𝗕𝗨𝗦𝗜𝗡𝗘𝗦𝗦 𝗣𝗥𝗢𝗕𝗟𝗘𝗠 𝗘𝗫𝗣𝗟𝗔𝗡𝗔𝗧𝗜𝗢𝗡\n→ Problem → Solution → Impact\n→ Example: delayed reports → pipeline → faster decisions\n📌 Always connect tech → business value\n💻 𝗦𝗤𝗟 (𝗖𝗢𝗥𝗘 𝗟𝗢𝗚𝗜𝗖)\n→ Salary > average → subquery\n→ Duplicates → GROUP BY + HAVING\n→ Delete duplicates → CTE + ROW_NUMBER()\n📌 Core SQL patterns from page 2–3\n⚡ 𝗣𝗬𝗦𝗣𝗔𝗥𝗞 (𝗥𝗘𝗔𝗟 𝗦𝗞𝗜𝗟𝗟𝗦)\n→ groupBy + avg (aggregation)\n→ DataFrame transformations\n📌 Focus on clean logic + output understanding\n🔥 𝗦𝗣𝗔𝗥𝗞 𝗢𝗣𝗧𝗜𝗠𝗜𝗭𝗔𝗧𝗜𝗢𝗡\n→ Handle data skew (salting, AQE)\n→ Broadcast joins, repartitioning\n📌 Mention Spark UI + performance fixes\n☁️ 𝗔𝗗𝗙 (𝗗𝗬𝗡𝗔𝗠𝗜𝗖 𝗣𝗜𝗣𝗘𝗟𝗜𝗡𝗘𝗦)\n→ Parameters → read-only\n→ Variables → change during execution\n📌 Common interview trap (page 3)\n🏗 𝗗𝗔𝗧𝗔𝗕𝗥𝗜𝗖𝗞𝗦 𝗙𝗨𝗡𝗗𝗔𝗠𝗘𝗡𝗧𝗔𝗟𝗦\n→ Workspace → notebooks, clusters, jobs\n→ Cluster types → all-purpose vs job clusters\n📌 Understand usage, not just definitions\n🔄 𝗠𝗢𝗡𝗜𝗧𝗢𝗥𝗜𝗡𝗚 & 𝗧𝗥𝗢𝗨𝗕𝗟𝗘𝗦𝗛𝗢𝗢𝗧𝗜𝗡𝗚\n→ Logs + Spark UI\n→ Identify skew, shuffle issues\n→ Fix + prevent with alerts\n📌 Shows production experience\n🔐 𝗦𝗘𝗖𝗨𝗥𝗜𝗧𝗬 & 𝗚𝗢𝗩𝗘𝗥𝗡𝗔𝗡𝗖𝗘\n→ RBAC\n→ Unity Catalog\n→ Secret scopes / Key Vault\n📌 Must for real-world roles\n⚡ 𝗣𝗘𝗥𝗙𝗢𝗥𝗠𝗔𝗡𝗖𝗘 (𝗔𝗗𝗩𝗔𝗡𝗖𝗘𝗗)\n→ Handle small files (OPTIMIZE, compaction)\n→ Partition control\n→ Efficient storage formats\n📌 Strong differentiator (page 5)\n💡 𝗥𝗲𝗮𝗹𝗶𝘁𝘆:\nInterviews are NOT about knowing everything…\nThey are about structured thinking + real-world clarity\n📍 𝗧𝗛𝗘 𝗗𝗜𝗙𝗙𝗘𝗥𝗘𝗡𝗖𝗘:\nAverage → Answers questions\nStrong candidate → Explains with logic, structure & impact\n✔ Use structured answers (Problem → Solution → Impact)\n✔ Practice SQL + Spark together\n✔ Focus on real scenarios\n✔ Always explain “why”\n📌 Save this & crack your Data Engineering interviews 🚀\n.\n.\n📌 Follow — Devikrishna R | VISION BOARD for Data Engineering insights\n\n👉 Daily Job Updates & Webinar (WhatsApp): https://lnkd.in/gWAtJBN3\n👉 Success Stories: https://lnkd.in/g6_7Q7mK\n\n\n📞 Contact: +91 6235526324\n\n🔁 𝗙𝗼𝘂𝗻𝗱 𝘁𝗵𝗶𝘀 𝗵𝗲𝗹𝗽𝗳𝘂𝗹? 𝗥𝗲𝗽𝗼𝘀𝘁 𝗶𝘁!\n\nBest Regards,\nDevikrishna R",
-  "company": "General",
-  "field": "PySpark/Spark",
-  "topics": [
-   "window-functions",
-   "joins",
-   "groupby",
-   "dedup",
-   "cte",
-   "skew",
-   "spark-optimization",
-   "delta-lake"
-  ]
- },
- {
   "id": "7453641978732511232",
   "author": "Gopi Kathi",
   "author_url": "https://www.linkedin.com/in/ACoAADNpI98BY__2bhzOVEBrrI0JhdMPMXhd7z0",
@@ -912,22 +807,6 @@
    "delta-lake",
    "data-warehouse",
    "pyspark-code"
-  ]
- },
- {
-  "id": "7453335958399361024",
-  "author": "Shubham D.",
-  "author_url": "https://www.linkedin.com/in/ACoAADIq4wIBa1s42-g_MdwoVg3YVHuZAM0M4ec",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7453335958399361024/",
-  "time": "7mo",
-  "text": "Cleared my SQL round with this one sheet 🔥\n\n\nThey asked 6 topics in one interview.\nI had revised all 6 the night before.\n\nHere is the complete SQL breakdown ↓\n\n→ DDL vs DML vs DCL vs TCL\n\n• DDL - CREATE, ALTER, DROP, TRUNCATE\n ↳ Rollback - No | Data after DROP - Lost\n\n• DML - INSERT, UPDATE, DELETE, SELECT\n ↳ Rollback - Yes | DML can be rolled back\n\n• DCL - GRANT, REVOKE\n ↳ Controls who accesses what\n\n• TCL - COMMIT, ROLLBACK, SAVEPOINT\n ↳ Controls when changes are permanent\n\n→ SQL Execution Order\n\n• FROM → get the table first\n• WHERE → filter rows\n• GROUP BY → group filtered rows\n• HAVING → filter groups\n• SELECT → pick columns\n• ORDER BY → sort result\n• LIMIT → restrict rows\n\nWHERE runs before SELECT\nAlias not allowed in WHERE - this is why\n\n→ Joins in One Line\n\n• INNER - matching rows only\n• LEFT - all left + matched right\n• RIGHT - all right + matched left\n• FULL OUTER - all rows both sides\n• SELF - table joined to itself\n\n→ Window Functions\n\n• ROW_NUMBER - unique rank, no ties\n• RANK - same rank, yes gaps\n• DENSE_RANK - same rank, no gaps\n• LAG - previous row value\n• LEAD - next row value\n\nAll work with PARTITION BY and ORDER BY\nNo rows are lost unlike GROUP BY\n\n→ NULL Handling\n\n• COALESCE - returns first non-null value\n• NULLIF - returns null if two values are equal\n• COUNT(*) counts nulls\n• COUNT(col) ignores nulls\n\n→ One Line Summary\n\nDDL = structure\nDML = data\nDCL = access\nTCL = transactions\nWHERE = rows | HAVING = groups\n\nMost candidates know SELECT.\nVery few know the execution order under pressure. 💪\n\n↳ Save this before your next SQL interview.\n\nGet my NOTES here: https://lnkd.in/ghCp94Z2\n\nGet it.",
-  "company": "General",
-  "field": "SQL",
-  "topics": [
-   "window-functions",
-   "groupby",
-   "nulls",
-   "spark-optimization"
   ]
  },
  {
@@ -1029,38 +908,6 @@
   ]
  },
  {
-  "id": "7444583012098502656",
-  "author": "Kushboo Chauhan",
-  "author_url": "https://www.linkedin.com/in/ACoAAFx4RowBNGjzOejuqQu38aUGGx-gitTmnfw",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7444583012098502656/",
-  "time": "8mo",
-  "text": "🚨 90% of candidates FAIL this… even after preparing for months.\nNot because they don’t study.\nBut because they answer like this:\n👉 “Definition… definition… definition…”\n❌ That’s NOT how interviews work anymore.\nLet me show you what actually gets you SELECTED 👇\n💡 Interviewer: “What is ETL?”\nMost candidates say:\n👉 “Extract, Transform, Load”\nTop 10% say:\n👉 “It’s how raw data becomes business-ready insights — like turning app logs into dashboards used by managers.”\n🔥 See the difference?\n💣 Here’s the REAL secret:\nInterviewers don’t test knowledge.\nThey test:\n✔ How you THINK\n✔ How you EXPLAIN\n✔ How you CONNECT concepts to real-world\n🎯 Example (Game-Changer):\n❌ “Star Schema has fact and dimension tables”\n✅ “Star schema is used to simplify reporting and improve query performance in BI tools”\n👉 One sounds like a student\n👉 One sounds like a Data Engineer\n⚡ If you want to stand out, follow this formula:\n👉 Concept + Purpose + Real Example\nExample:\n“OLTP is used for daily transactions like placing orders, while OLAP is used for analyzing trends like monthly revenue.”\n🚀 Reality check:\nI’ve seen candidates with LESS knowledge get selected…\nAnd candidates with MORE knowledge get rejected.\nWhy?\n👉 Communication > Memorization\n📌 Before your next interview, remember this:\n✔ Don’t just study\n✔ Practice explaining\n✔ Think like you’re already working\n💬 Comment “INTERVIEW” and I’ll share real Q&A that helped candidates crack interviews\n*********************************************\n📘 100 Real Data Engineer Interview Questions & Answers (4–8 YOE)\n👉 https://lnkd.in/gFuBy7EV\n*********************************************\n💼 600 Real Data Engineer Interview Questions & Answers (Top Tech Companies – EY, Infosys, TCS, Dell, Wipro & More)\n👉 https://lnkd.in/gvX-we8v\n************************************************************\n🔥 Data Engineer Mega Interview Pack 2026 (1300+ Real Scenario-Based Q&As – Azure, ADF, Databricks, PySpark, SQL, Data Warehouse)\n👉 https://lnkd.in/gEushWwU\n***********************************************\n🎓 Top 100 Real Data Engineer Interview Questions (1–4 YOE)\n👉 https://lnkd.in/gau5s8h7\n🔁 Repost this to help someone who’s silently struggling\n📌 Save this before your next interview\n#DataEngineer #InterviewPrep #Freshers #CareerGrowth #SQL #ETL #DataWarehouse #TechJobs #LinkedInGrowth #JobTips",
-  "company": "EY",
-  "field": "PySpark/Spark",
-  "topics": [
-   "data-warehouse",
-   "optimization",
-   "career"
-  ]
- },
- {
-  "id": "7443174705475489792",
-  "author": "Biswajit Panda",
-  "author_url": "https://www.linkedin.com/in/ACoAAGWXGtIBKEvYmzlpORq9rxuci8lwF2EMkes",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7443174705475489792/",
-  "time": "8mo",
-  "text": "🚨 Most people FAIL this SQL interview question — not because it’s hard… but because they think about it the wrong way.\n👉 Problem:\nFind employees who earn MORE than their department’s average salary.\n❌ Where people go wrong:\n• Mixing row-level data with aggregated data\n• Adding emp_id inside a grouped CTE (🚫 logic break)\n• Confusing table aliases (c.salary vs e.salary)\n• Trying to solve everything in one messy query\n• Not separating the problem into clear steps\n✅ The correct thinking (this is what interviewers look for):\n1️⃣ First → Calculate average salary per department\n2️⃣ Then → Join it back to employees\n3️⃣ Next → Compare each employee’s salary\n4️⃣ Finally → Filter those earning above average\n💡 This is why CTEs are powerful:\nThey turn complex logic into clean, readable steps.\n🧠 Clean Solution:\nWITH cte AS (\n SELECT department, AVG(salary) AS avg_salary\n FROM employees\n GROUP BY department\n)\nSELECT e.emp_id, e.department, e.salary\nFROM cte c\nJOIN employees e\n ON c.department = e.department\nWHERE e.salary > c.avg_salary;\n✨ Simple query.\n💥 Powerful interview pattern.\n📌 Easy to mess up if your fundamentals aren’t clear.\n💬 How would YOU explain this to a beginner?\nOr… can you solve it without using a CTE?\n\n\n\nn#SQL #SQLInterview #CTE #DataAnalytics #LearnSQL\n#SQLPractice #DataEngineering #AnalyticsEngineer\n#TechCareers #InterviewPrep #Coding #DataScience\n#SQLTips #Database #QueryOptimization #TechCommunity",
-  "company": "General",
-  "field": "SQL",
-  "topics": [
-   "joins",
-   "groupby",
-   "cte",
-   "optimization",
-   "career"
-  ]
- },
- {
   "id": "7442799297584144384",
   "author": "Surbhi Goyal",
   "author_url": "https://www.linkedin.com/in/ACoAACN2Wz0BAtXYDTNFKXbgQKMrYbd7fEgJXAU",
@@ -1138,19 +985,6 @@
    "groupby",
    "skew",
    "optimization"
-  ]
- },
- {
-  "id": "7441288658688749568",
-  "author": "Ekta Patel",
-  "author_url": "https://www.linkedin.com/in/ACoAAD0cHsMBtT5zaBh4kB2Tujamq34p6v72yGM",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7441288658688749568/",
-  "time": "8mo",
-  "text": "🚀 SQL Practice | Real Interview Scenario\n\nToday I worked on an interesting SQL problem:\n\n👉 Find customers who purchased both “Laptop” and “Mobile”\n\nAt first glance, it looks simple using IN ('Laptop','Mobile'), but that only filters rows — it doesn’t guarantee that a customer bought both products.\n\n💡 The real challenge:\nWe need to identify customers who have purchased both categories, not just either one.\n\n🧠 My Approach:\nI used:\nGROUP BY → to group data at customer level\nHAVING → to filter aggregated results\nCOUNT(DISTINCT product) → to ensure both products exist\n\n✅ Solution:\nSELECT customer_id, customer_name \nFROM sales_orders\nWHERE product IN ('Laptop','Mobile')\nGROUP BY customer_id, customer_name\nHAVING COUNT(DISTINCT product) > 1;\n\n🔍 Key Insight:\n👉 COUNT(DISTINCT product) > 1 ensures the customer purchased both Laptop AND Mobile\n\n📈 What I learned:\nDifference between row-level filtering vs group-level filtering\nImportance of HAVING in solving real business problems\nHow small logic changes can completely change the result\n\nIf you have solved this differently, would love to see your approach 👇\n\n#SQL #DataAnalytics #LearningSQL #InterviewPrep #PowerBI #DataAnalyst.",
-  "company": "General",
-  "field": "Power BI",
-  "topics": [
-   "groupby"
   ]
  },
  {
@@ -1256,24 +1090,6 @@
   "topics": [
    "dedup",
    "second-highest",
-   "career"
-  ]
- },
- {
-  "id": "7439495204929351680",
-  "author": "Vani Reddy",
-  "author_url": "https://www.linkedin.com/in/ACoAAECPb58BlSYWrX16N3keP5uCRL1nm6tAAXo",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7439495204929351680/",
-  "time": "8mo",
-  "text": "[OCR from post images]\nUNDERSTANDING\nETL PIPELINE\nFOR DATA ENGINEERS\n*Disclaimer*\nThis roadmap is a guide to help you navigate the journey of\nbecoming a Data Engineer.\nTreat this as direction, not a fixed rulebook. Real growth comes\nfrom consistent practice and solving real-world problems.\nA BOSSCODER\nTF acaneme\nTABLE OF CONTENTS\nINTRODUCTION 4-8\nWhat ls ETL And Wry ht Matters:\nImportance For Anadytics, Machine Leansing, And Operations.\nETL Ws ELT Explained Simply.\nETL BASICS 10-16\nExtract + Gather Data From Sources\nTransform + Clean, Standardize, Enrich\nLoad + Store inte Warehouse/Laka\nBatch Vs Real-Time Pipelines + Chafenges\nETL ARCHITECTURE 17-21\nLayers: Sources + Staging + Transformation + Warehouse + Consumption\nShows The Structured Flow From Awe Date To insights\nTOOLS & TECHNOLOGIES 22-31\nIngestion Katka, Preetran, Glue\nTransformation Spark, Ott, Pandas\nStorage: Snowllake. BigQuery, 523\nOrchestration: Afiom, Predect\nMonitoring: Great Expectations, Monte Carlo\nBEST PRACTICES 92-93\nModular Design, ELT in Modern Warehouses\nAutomated Data Quality Checks\nSchema Evolution, Monkoring, Scalatelity\nShows Real Business Value Of ETL Pipetnes\nUSE CASES a4\nDaily Sales Reporting + Walmart\nCustomer Personalization © Amazon\nInvemory Optimization + Target\nShows Real ueness Vale Of ETL Pipetnes\nBOSSCODER\nacaGimy\nIntroduction\n01 What ls ETL In Data Engineering?\n« ETL (Extract, Transform, Load) is the process of moving raw data from\ndifferent sources into a centralized storage system,\n« Extract - Data is collected frorn multiple sources such as databases, APIs,\nlogs, loT devices, or streaming platforms.\n« Transform - The raw data is cleaned, standardized, enriched, and reshaped to\nmatch business requirements.\n« Load - The processed data is stored in a target system like a data warehouse\n(Snowflake, Redshift, BigQuery) or a data lake (53, GCS, HDFS).\n« For Data Engineers, ETL pipelines are critical to ensure that data is reliable,\nscalable, and accessible for analysts, data scientists, and business teams.\nTHE ETL PROCESS EXPLAINED\n@) - Ci\n=\nEXTRACT TRANSFORM LOAD\nRetrieves and verifies data Processes and eogenizan Moves transformed data to\nfrom wanous sources extracted data so itis usable a data repository\nBOSSCODER\nACAGEMY\n02 Why Is ETL Important?\nETL pepelines are the backbone of data-driven organizations. Their importance es\nin:\n1. Analytics & Business Intelligence (Bi):\n* Structured, aggregated data supports dashboards and reports.\n+ Leadership can make better decisions based on accurate, timely insights.\n2, Machine Learning & Data Science:\n* High-quality data enables effective feature engineering,\n+ Models perform better when trained on clean, consistent datasets.\n3. Operational Efficiency:\n+ Automates repetitive data preparation tasks.\n+ Reduces manual effort and ensures data freshness.\n4. Data Consistency:\n+ Establishes 6 single source of truth, avoiding conflicts across teams.\n+ Maintains data governance and compliance.\n03 ~~‘ Traditional ETL Vs Modern ELT\nETL pipelines are the backbone of data-driven organizations. Their importance fies\nin:\n1. Traditional ETL (Extract + Transform + Load):\n+ Data is transformed before loading into the warehouse.\nBOSSCODER\nACAGEMY",
-  "company": "Bosscoder",
-  "field": "PySpark/Spark",
-  "topics": [
-   "streaming",
-   "data-warehouse",
-   "python-code",
-   "optimization",
-   "system-design",
    "career"
   ]
  },
@@ -1691,26 +1507,6 @@
   ]
  },
  {
-  "id": "7426861344907329538",
-  "author": "Avinash S.",
-  "author_url": "https://www.linkedin.com/in/ACoAACSKJA8B3kO2jSzXZgXfhQatVFOQnAHIt8M",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7426861344907329538/",
-  "time": "9mo",
-  "text": "[OCR from post images]\n€ SNOWFLAKE\nMock Interview: Questions & Answers\nData Engiieering. Analytics & Adminstration\nCowors. Come Coscepts | Pofornanoe | Security | Archtectro | Foal-Woed Soorice\n01. What ls Snowflake and how does it differ from traditional data warehouses?\nArawer:\nSrowllake is a cloud-netes data pation bell on & unique malb-chster shared cats architecture,\nUnbke tractiional dat warehouses (2.9, Crack, Teradata) hal Sgnly couple compute and storage\non feed hardware, Snowlake completoly soparaies storage from compute. Storage sits in cloud\nobject storage (59, Azure Blob, G65) and compute 6 handled by ‘virtual Warehouses thal can\nscale independently, This means you can acike storage witioul Buying more cormpute, and vice\nversa. Traditional marchouses require capacty planning upfront, while Snowflake scales elastically.\nSnowflake also offers automatic query optieization, bull-in compression. zero-copy cloning, and\ntrue mult-cloud support.\nG2: Explain the three layors of Seowfiake's archiecturc.\nAuawer:\nSnowflakes architecture hea fren distinct! layers. (1) Storage Layer — Dale is stored in a\ncompressed, columnar format in cloud object storage (SASCSizure Blob). Snowlake manages al\naspects of storage including compression, metadata. and statistics, Dinta is stored in micro-\npartibors (typically 50-500 ME compressed) (2) Compute Layer (Query Procaesing) — Virtual\nWiaeoinouses ara independant MPP [massively parallel processing) clusters thal execute queries.\nThey access dota from storage Sut do not store data themectwes Multiple sarshouses can run\nsimulsneousty on the same cain without contenbon, Ch) Clad Sereoes Layer — The brain of\nSnewfilake. Handles suiheicaton, medala management query Oplitizabon, query parsing,\ntransaction management, and infaatuctuies management. hvala eprint a\nis always running.\n‘G2. What are micro-partitions in Smowllake? How do they help with query performance?\nArcawer:\nMicro-partiions are he furdamental storage urel in Snowtais, Ab dete in Seorefiaie tatsbecs\nauiomatioally divided iio micro-partitions, which are contiguous units of storage ranging from 60\nMB to 500 M8. of uncompressed data (much smaller when comperssed). Each miceo-parttion\nstores dats in colummar format and contains metadata sbout the rows & holds — inducing the\nminnac values, full counts, and distinc! value counts for each coluen. This metadata anabhes\nPartition Pruning (also called Micro-Partiion Pruning): during query exaoution, the query optimizer\nreads the metadata and stips entre mcro-parttions that cannot contzen esfevani data based on the\nWHERE causes, This drarrestically reduces 91D and speeds up queries, sepecielly on large table\nWith selective fillers.\n© What is Clustering im Snowfiske and when should you use it?\nanswer\n(Clustering ofers to how data is co4ocated wthin mcro-partifions. By datault, Snowflake dustors\ndats based on nserton onder, Wher inttes grow very large and queries frequently filter on speciic\ncalurins, the defied chistarings mary ceaull in queries scanning many micro-partlions, Exolici\nClustering Keys can be defined so that Snowflake auiomatoaly re-chusters data, grouping rows\nwih similar values together in the same micro-partitions. Ths improves pruning effectiveness. You\nshould use custenng when: (a) 2 isdle is very lange (hundreds of GH o> TB), (b} query filers\nfrequently target specific colutins, (c| tie table is frequanty queried Bul not bequanty updated.\nClustering Mas a cost (Aunomatic Clustering service credits), so f should not be appbed to small or\nfrequently loaded tables.\n‘OS. What is the ditterenoe between a Virtual Warchouse and a Cloud Servioes layer?\nArawer:\n4 Vielual Warehouse (WH) i & comput cater thal executes SOL queries. it i uaer-provisiored,\ncan be slared/suspended¥asized on demand, and con@umes Smowsfake credits based on runtime.\nVirwal Warehouses handle DML, DOL, and cate Inading operations. The Gioud Services Layer, on\nthe other hand, is always cunning and is tally managed by Snowflake. Il handing metadata\nManagarant, query compilation and optimization, authentication and authorization, fansacton\ncoordination, and infrastructure management. Cloud Services does not execute query data\nprocessing — that is the warehouse's job. Cloud Servoes charges apply only if they exceed 10% of\ndaly warehouse compute credits: ohenwise they are induced at no esdra change\n‘Of What Is the Result Cache and how oan it improwe performance?\nAnswer:\nSnowilake mainiains a Resull Cache (also called Query Fiesull Cache) in the Cloud Saréoes Layer.\nWhen a query is executed, Snowfake stores the result for 24 hours. H the esact same query is\nexecuted again — by any user on the same scoount — ond the underteng data has not changed,\nSnewilake retums the cached maul Patenthy withoul apinning up a Virtual Warehouse, This means\n20r0 COMpUTS credit usage for repeated identical queries. The cache is invalidated whan: (aj tha\ntable data changes, (b) 24 hours have passed, [c| fhe query uses mon-detenmiedstic\nfunctions like CURRENT _TIMESTAME)) or RANDOM). Bees! practos: deegn dashboards and fl\nnok io ube parameterized Queries Lo Lake advantage of reall caching\nO° What ie the diHeconce between T-shirt sires for Virtual Warehooses (XS, 5, iM, L, etc J?\nanswer:\nSrowllske Viral Warehouses scale in sine using T-shiri sng 5, $, MLL, XL, 2XL, SOL. 4x,\nS2L and 6L. Each size doubles tha compute rsources and credit consumption of the pravious:\nXS = 1 cradbhouwr, S=2,M=4,.L=8, XL = 06, 241 = 32, and so on. Larger warnhouses have\nmore nodes in the MPP cluster. enabling them to handis mone data in parallel and run complen\nmost workoads. Scale up for complex analyaics or large data loads, then scale back down or\nsuspend fhe mmeshouse when adie,\n‘Of How does Mulli-Cluster Warehouse help with concurrency?\nAnswer:\nA Muli-Cluster Warehouse (MCW) allows a single virtual wardhouse to automatically scale out by\nadding additional warehouse clusters when demand increases, and scale back in when kad\ndecreases. This is especially useful for concurrent user workloads where many users run queries\naimullaneously — & Common scene in Bireporting took, Without MCW, queries queue up if te\nwarahouse bb busy. With MCW: Snowdiake monitors the query queue and automatically provisions\nadditional dusters (up to the configured maximum) Scaling polices can be set to Economy\n(conserves credits, waits before adding clusters) or Standard limmeciotely adds clusters when\nqueuing occurs) MCW is availabiy on Erterprise edition and above. It aches Be concurrency\nproblam withoul requiting users to anually manage multige warehouses\n‘O) What query optimization techniques can you use im Snowtlake?\nArawer;\nKey optimization techniques include (1) Leverage Micro-Partiton Pruning — appty selective\nWHERE fitters on coluinma with good candieahly io teduoe scared paritiona, (2) Une Chaatering\nKeys on lange, frequently fhared tables. (3) Awokd SELECT * — select only the columns you need\n(colummar storage makes this highly efector). (4) Use LIMIT ond appropriate thers to reduce result\nsets. (5) Ansiyze QUERY PRROPILE — Snowliske's query profiling tool shows execution plans,\noperator coats, and api-io-cisk wamings. (6) Avoid expensive operations lke crow joie and large\nCartesian products. (7) Use CTEs and proper join order — place the most selective flier first. {8}\nConsider Search Optienization Senice for point lookups on large tables. (9) Use appropriate\nwarehouse sine for the workload,\n‘O10 What s Query Spilling and how do you resolve it?\nAngwer:\nSpilling occurs whan & Virtual Warehouse runs oul of in-memory space during quary aeecuton and\nmust write intermediate data to local disk (spill to local disk) or, worse, fo remote storage (spill to\nremote disk) Soil to local disk causes modeente slowdowns spill to remote disk causes severe\nPerformance degradaton. Spilling is vieibie in the Query Profile as orange of fad operators.\nRiesohtion strategies: (1) Scala up the Virtual Warehouse to a larger sine — more mammary per\nnods reduces sping. (2) Optmine the query — reduce intermediate result sizes via better dering,\npushing peecicates cartier. or odting unecessary aggregations (-}) Gresk complex queries into\namaliar stapes using CTEs of lamporary tables. (4) Check for data shaw — skewed dala causes\nsome nodes to process much more data than afters.\nQU) What are Stages in Snowflake and what types exist?\nAnswer:\nA Stage is a named cloud storage location from which dala can be loaded into Snosflake or\nunbaded from Snowflake. Types (1) Intemal Stages — storage manmaged by Smowfiake. Subtypes:\nUser Stage [each user has one by default, referenced os @)~), Table Stage (one per table,\nreferenced aa @itablanamna), Narnad inarnal Stage jaapicity created, stared Bry wees) (2)\nExtemal Stages — point to extemal doud storage (53, GCS, Azure Blob) outside Snowflake.\nNamed and require cloud credentials or AM eoles. Best practos: Lise named stages for production\nPipelines for charity and mousateity, Exterral stages are preferred whan Gala originates torn aateerval\naySheMns and you want to avoid Wansfaring data ino Sncwilake's tamed storage fest.\nO12 Explain the COPY INTO command and ita key optices.\nArawer;\nCOPY INTO is Snowfake’s primary bulk dom loading command. Syntax COPY INTO <table>\nFROM «stage FILE FORMAT =(_.) [opto]. Key options (1) FILE_FORMAT — specifies format\n(CSV. JSON, Parquet, ORC, Aveo, XML) with optors like FIELD | DELIMITER, SHIP_HEADER,\nDATE_FORMAT, COMPRESSION (27) ON ERROR — controts error handling: CONTINUE (skp\nbad rows), SKIP_FILE {stop file on error), ABORT_STATEMENT (deloull, rollback on any error). (3)\nPURGE = TRUE — removes flv from atege afer maccHevhal ined (4) FORCE = TRUE — reloads\nfiles van i they ward previously loaded (bypasses logd history’ (5) PATTERN — loads only fas\nmatching 2 reges pattem. $5) VALIDATION_MODE — vabdates without loading\n(RETURN_ERRORS or RETURN _»_ROWS) Secedate trcks which dies have been baded and\navoit dupliies unieas FORCE = TRUE\nOD Wheat  Seowpipe and how does it work?\nAnswer:\nSnowpice 6 Snovwlake’s continuous. serweress data ingeston service for near-real-time loading.\nUnbke COPY INTO (batch-based Snosppe automatcally ingests fies as soon os fhey amve no\nSioud slorage Incalion, How ® works: lan dad tg attr (2). An event notification\n(84 809, GCS Pub/Eub, Azure Event Grid) triggers Smowpipe. (3) Snowpige queues fe fle and\nuses 2 Snowlake-managed (serveriess) compute pool fo run a COPY INTO statement defined in\nthe pipe (4) Dots appears in She teeget inble within seconds tn minutes, Sooepips is telied based\non compule used per file Ibacked [per-aecord telling) Ifa ideal for areaming scenarios fhe oT dala,\ncicksinaams, or log ingestion where waiting for a bath window is not acceptable.\nO14. What tt Zaro-Copy Cloning in Snowflake?\nAnswer;\nZer-Copy Cloning = 2 Seowtiske feature hal creates an retant copy of a csighase. echems, or\ntabla without duplicating the undarlying data. When you rin CREATE TABLE my clone CLONE\noriginal_table, Snowflake creates a new metadata entry pointing to the same micro-paritions as fhe\nongins!, No date is physicaly coped, so tis instantaneous and free ino extra storage cost]\nStorage costs only acoue when Gala in the clone dhwnges from the orignal — new or modified\nmitto-pariiions ara crealed far changed data (oopry-on-mrita samantics) Zaro-Copy Cloning is\nextremely useful for: (a) creating dewtest environments from production data instandy, (b) ornating\nbackups belore a destructive operation, [c) A/S testing diate transiormation logic. (o) data science\nexperiments without impacting promuction.\nO12 Exphin Snowfiake’s Released Acoess Control (RBAC) model.\nAnawar:\nSnowflake uses a hiorarchical Role-Gased Access Control (RAC) modal. Key concepts: (1) Roka\n— Named collectons of prv@ieges. Bullen roles: MOCOUNTADIMIN (highest), SYSADMIN,\nSECURITYADMIN, USERADMIN, PUBLIC, (2) Privileges — permissions granted In roles (e.g.\nSELECT. INSERT, USAGE, CREATE TASLE) (3) Uners — axsigned one of more roles, A user's\nactive role dotennines what they can do. (4) Role hierarchy — roles can be gramed to other roles,\ncreating a trerarchy. 4 parent role inherits af povileges of chekd roles. Best peactoe: Follow principle\nof leaet priviege, Comate funcdonal roles (6.9, arehyet_roke, loader_role) and grant them to users\nfather than grating piviegas direchy. Use SYSADMIN for object managarant, SECURITY ADMIN\nfor rokvusar managemant, and ACOOUNTADMIN only when absolutely necessary.\nO16 What b Dynaeic Data Masking in Seowflake?\nArawer:\nGyrerms Dats Masiong (ODM) is 9 colundewe! secunty festure that masks sensitive date a! query\nfifte hated on the role of the user executing Ihe query, A making policy a SOL hunction that\ndefines how data should be displayed to different roles. When a masking policy is atlached to a\ncolumn, ful-priviege users see the octual cata while lower-prieiege users see masked data (e.g...\n‘XAX-MX-1234\" inetoad of T2EAS-BT RY, Po ciel perder acer adi clea\nmasking only happans during quary execution Thi is ideal for complying mith regulators Ghee\nGDPR, HIPGA, and PCI-DSS. You can cenate policies to show partial data (last 4 digits), hasin\nvalues, or entirety replace sensfve wolues based on role.\nO17. What 6 Row-Level Seourity in Snowflake and how is & implemented?\nAsawa:\nFiew-Lewel Security (RLS) in Srovdiake is implemented rough Fire Acces Polices A row acces\npoloy Is a scheme-ievel object that defines a boolean oxpression determining which rows are\nvisible to which weers.or eofes. The policy is attached fo a table and evaluated at query time. For\nexampls, a sales table might have o pobry thal onhe rete rows where eegian =\nCURRENT ROLE:), ensuring sales ropa in the Wast region only see West data. Flow Access",
-  "company": "General",
-  "field": "Snowflake",
-  "topics": [
-   "joins",
-   "groupby",
-   "skew",
-   "spark-optimization",
-   "delta-lake",
-   "streaming",
-   "optimization",
-   "system-design"
-  ]
- },
- {
   "id": "7426565646144036864",
   "author": "Jakub Lasak",
   "author_url": "https://www.linkedin.com/in/ACoAACDuEmoBQtIcrqSXW9NcXC4uPSYrjVS5SS4",
@@ -2120,24 +1916,6 @@
   ]
  },
  {
-  "id": "7422860872425050112",
-  "author": "Faheem ㅤ",
-  "author_url": "https://www.linkedin.com/in/ACoAAEwXA68BzBKFIR_8A3oiD5Z2Q-I8tt6VTOg",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7422860872425050112/",
-  "time": "10mo",
-  "text": "🚀 PySpark Optimization Techniques Every Data Engineer Should Know\n\nWorking with big data? Performance in PySpark can make or break your pipelines. Here are key optimization techniques used in real-world data engineering 👇\n\n🔹 1. Use Proper Data Formats\n✔ Prefer Parquet / ORC over CSV or JSON\n✔ Columnar storage = faster reads + compression\n\n🔹 2. Filter Early (Predicate Pushdown)\n✔ Apply filter() as early as possible\n✔ Reduces data shuffled across the cluster\n\n🔹 3. Avoid Wide Transformations\n✔ Minimize groupBy, join, distinct\n✔ Use reduceByKey instead of groupByKey\n\n🔹 4. Optimize Joins\n✔ Use Broadcast Join for small tables\n✔ Tune spark.sql.autoBroadcastJoinThreshold\n\n🔹 5. Repartition & Coalesce Wisely\n✔ repartition() → increase partitions (shuffle)\n✔ coalesce() → reduce partitions (no shuffle)\n\n🔹 6. Cache Only When Needed\n✔ Use cache() / persist() for reused DataFrames\n✔ Unpersist when done to free memory\n\n🔹 7. Avoid UDFs When Possible\n✔ Prefer built-in Spark SQL functions\n✔ UDFs break query optimization (Catalyst)\n\n🔹 8. Optimize File Size\n✔ Avoid too many small files\n✔ Target 128MB–1GB per file\n\n🔹 9. Use Explain Plan\n✔ df.explain() to analyze physical & logical plans\n✔ Spot unnecessary shuffles & scans\n\n📌 Key Takeaway:\nGood PySpark performance = less shuffle, fewer scans, smarter joins.\n\n💡 Tools that make life easier:\nSpark UI | Databricks | Delta Lake | Adaptive Query Execution (AQE)\n\n\n#PySpark #DataEngineering #BigData #ApacheSpark #Optimization #ETL #Databricks #Performance",
-  "company": "General",
-  "field": "PySpark/Spark",
-  "topics": [
-   "joins",
-   "nulls",
-   "spark-optimization",
-   "delta-lake",
-   "pyspark-code",
-   "optimization"
-  ]
- },
- {
   "id": "7422845124445122560",
   "author": "DHANASEKARAN D",
   "author_url": "https://www.linkedin.com/in/ACoAADVJBg4Befr33hpGfST0Zh-PYYoqvUjJcNU",
@@ -2255,26 +2033,6 @@
    "optimization",
    "system-design",
    "career"
-  ]
- },
- {
-  "id": "7422469807947767808",
-  "author": "Kushboo Chauhan",
-  "author_url": "https://www.linkedin.com/in/ACoAAFx4RowBNGjzOejuqQu38aUGGx-gitTmnfw",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7422469807947767808/",
-  "time": "10mo",
-  "text": "Deloitte Data Engineer interviews don’t reject you for syntax.\n They reject you for shallow thinking.\nAfter going through real Deloitte Data Engineer interview questions (0–4 YOE), one thing is very clear 👇\nThey don’t ask:\n ❌ “What is PySpark?”\nThey ask:\n ✅ “How would you design this in the real world?”\nHere’s what Deloitte actually tests 👇\n🔹 SQL window functions — second highest, duplicates, ranking\n 🔹 LEFT JOIN vs NOT EXISTS — performance matters\n 🔹 PySpark transformations — lazy vs action mindset\n 🔹 Broadcast joins — when & why, not just how\n 🔹 GroupBy & aggregation — alias, optimization follow-ups\n 🔹 End-to-end pipeline design — API → Raw → Transform → Serve\n 🔹 SCD Type 1 vs Type 2 — MERGE / UPSERT logic\n 🔹 ADF vs Databricks — orchestration vs transformation\n 🔹 Incremental data loads — metadata tracking, Autoloader\n 🔹 Real production thinking — performance tuning & cost awareness\n👉 What interviewers really want:\n • Clear explanation of why, not just what\n • Real-world trade-offs\n • Incremental & scalable design\n • Confidence in fundamentals\nIf you’re preparing for Deloitte / Big4 / Product-based data roles, remember this 👇\n 📌 Concepts + scenarios > memorized answers\nI’ve structured these questions exactly how Deloitte asks them — round-wise, scenario-based, and interview-ready.\n📘 100 Real Data Engineer Interview Questions & Answers (4–8 YOE)\n👉 https://lnkd.in/gFuBy7EV\n💼 600 Real Data Engineer Interview Questions & Answers (Top Tech Companies – EY, Infosys, TCS, Dell, Wipro & More)\n👉 https://lnkd.in/gvX-we8v\n🔥 Data Engineer Mega Interview Pack 2025 (1300+ Real Scenario-Based Q&As – Azure, ADF, Databricks, PySpark, SQL, Data Warehouse)\n👉 https://lnkd.in/gEushWwU\n🎓 Top 100 Real Data Engineer Interview Questions (1–4 YOE)\n👉 https://lnkd.in/gau5s8h7\n👇 Comment “DELOITTE” and I’ll share more real interview breakdowns.\n#DataEngineering #Deloitte #SQL #PySpark #ADF #Databricks #ETL #InterviewPreparation #Freshers #Big4 #AnalyticsCareers",
-  "company": "Deloitte",
-  "field": "PySpark/Spark",
-  "topics": [
-   "window-functions",
-   "joins",
-   "groupby",
-   "dedup",
-   "second-highest",
-   "spark-optimization",
-   "scd",
-   "pyspark-code"
   ]
  },
  {
@@ -3729,20 +3487,6 @@
   ]
  },
  {
-  "id": "7391330859578146816",
-  "author": "Ankit Yadav",
-  "author_url": "https://www.linkedin.com/in/ACoAADADAbMBWmcNWvRKARVJS1RwNFPBEcJ1wlQ",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7391330859578146816/",
-  "time": "1yr",
-  "text": "When I went for my Deloitte 𝗗𝗮𝘁𝗮 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄….\n\nI thought they’d ask basic questions like 𝗣𝘆𝘀𝗽𝗮𝗿𝗸 𝗦𝘆𝗻𝘁𝗮𝘅 𝗼𝗿 𝗘𝘅𝗽𝗹𝗮𝗶𝗻 𝗦𝗤𝗟 𝗷𝗼𝗶𝗻𝘀.\n\n𝗕𝘂𝘁 𝗶𝗻𝘀𝘁𝗲𝗮𝗱, 𝘁𝗵𝗲 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄𝗲𝗿 𝗮𝘀𝗸𝗲𝗱:\n If 10 million rows of data come in every day from different regions, how will you design a scalable and cost-efficient data pipeline on the cloud?”\n\n𝗧𝗵𝗮𝘁’𝘀 𝘄𝗵𝗲𝗻 𝗜 𝗿𝗲𝗮𝗹𝗶𝘇𝗲𝗱 - \ndoesn’t test what you memorize, they test how you think like a Data Engineer.\n\nHere’s what I learned👇\n𝗪𝗵𝗮𝘁 Deloitte Digital 𝗥𝗲𝗮𝗹𝗹𝘆 𝗟𝗼𝗼𝗸𝘀 𝗙𝗼𝗿\n\nThey don’t care how many tools you list. \n𝗧𝗵𝗲𝘆 𝗰𝗮𝗿𝗲 𝗵𝗼𝘄 𝘄𝗲𝗹𝗹 𝘆𝗼𝘂 𝗰𝗮𝗻: \n ✅ Design resilient pipelines \n ✅ Explain real-world decisions \n ✅ Communicate business impact\n\nIf you can explain why you did something — not just how — you’re already ahead.\n\n\nIf this helped, feel free to share it 🔁 \nFollow Ankit Yadav 🇮🇳 for more tips on Data Engineering ✅\n\n\n#DataEngineering #InterviewPrep #Deloitte #Spark #BigData #SystemDesign #Naukri #CareerGrowth #TechInterviews #DataEngineer #JobSuccess #AzureDataEngineer #Big4",
-  "company": "Deloitte",
-  "field": "PySpark/Spark",
-  "topics": [
-   "optimization",
-   "career"
-  ]
- },
- {
   "id": "7390274812981612545",
   "author": "Jaydeep Patel",
   "author_url": "https://www.linkedin.com/in/ACoAAD9UUCIB0CtCj-q7Y5pUX_bxv6o66U6D1hM",
@@ -3793,24 +3537,6 @@
    "python-code",
    "optimization",
    "system-design"
-  ]
- },
- {
-  "id": "7384773904990527488",
-  "author": "Aishwarya Pani",
-  "author_url": "https://www.linkedin.com/in/ACoAACfCAw4BA-Q3eIGeUh3q2LGvuLTDscTa_p0",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7384773904990527488/",
-  "time": "1yr",
-  "text": "[OCR from post images]\nUNDERSTANDING\nETL PIPELINE\nFOR DATA ENGINEERS\n*Disclaimer*\nThis roadmap is a guide to help you navigate the journey of\nbecoming a Data Engineer.\nTreat this as direction, not a fixed rulebook. Real growth comes\nfrom consistent practice and solving real-world problems.\nA BOSSCODER\nTF acaneme\nTABLE OF CONTENTS\nINTRODUCTION 4-8\nWhat ls ETL And Wry ht Matters:\nImportance For Anadytics, Machine Leansing, And Operations.\nETL Ws ELT Explained Simply.\nETL BASICS 10-16\nExtract + Gather Data From Sources\nTransform + Clean, Standardize, Enrich\nLoad + Store inte Warehouse/Laka\nBatch Vs Real-Time Pipelines + Chafenges\nETL ARCHITECTURE 17-21\nLayers: Sources + Staging + Transformation + Warehouse + Consumption\nShows The Structured Flow From Awe Date To insights\nTOOLS & TECHNOLOGIES 22-31\nIngestion Katka, Preetran, Glue\nTransformation Spark, Ott, Pandas\nStorage: Snowllake. BigQuery, 523\nOrchestration: Afiom, Predect\nMonitoring: Great Expectations, Monte Carlo\nBEST PRACTICES 92-93\nModular Design, ELT in Modern Warehouses\nAutomated Data Quality Checks\nSchema Evolution, Monkoring, Scalatelity\nShows Real Business Value Of ETL Pipetnes\nUSE CASES a4\nDaily Sales Reporting + Walmart\nCustomer Personalization © Amazon\nInvemory Optimization + Target\nShows Real ueness Vale Of ETL Pipetnes\nBOSSCODER\nacaGimy\nIntroduction\n01 What ls ETL In Data Engineering?\n« ETL (Extract, Transform, Load) is the process of moving raw data from\ndifferent sources into a centralized storage system,\n« Extract - Data is collected frorn multiple sources such as databases, APIs,\nlogs, loT devices, or streaming platforms.\n« Transform - The raw data is cleaned, standardized, enriched, and reshaped to\nmatch business requirements.\n« Load - The processed data is stored in a target system like a data warehouse\n(Snowflake, Redshift, BigQuery) or a data lake (53, GCS, HDFS).\n« For Data Engineers, ETL pipelines are critical to ensure that data is reliable,\nscalable, and accessible for analysts, data scientists, and business teams.\nTHE ETL PROCESS EXPLAINED\n@) - Ci\n=\nEXTRACT TRANSFORM LOAD\nRetrieves and verifies data Processes and eogenizan Moves transformed data to\nfrom wanous sources extracted data so itis usable a data repository\nBOSSCODER\nACAGEMY\n02 Why Is ETL Important?\nETL pepelines are the backbone of data-driven organizations. Their importance es\nin:\n1. Analytics & Business Intelligence (Bi):\n* Structured, aggregated data supports dashboards and reports.\n+ Leadership can make better decisions based on accurate, timely insights.\n2, Machine Learning & Data Science:\n* High-quality data enables effective feature engineering,\n+ Models perform better when trained on clean, consistent datasets.\n3. Operational Efficiency:\n+ Automates repetitive data preparation tasks.\n+ Reduces manual effort and ensures data freshness.\n4. Data Consistency:\n+ Establishes 6 single source of truth, avoiding conflicts across teams.\n+ Maintains data governance and compliance.\n03 ~~‘ Traditional ETL Vs Modern ELT\nETL pipelines are the backbone of data-driven organizations. Their importance fies\nin:\n1. Traditional ETL (Extract + Transform + Load):\n+ Data is transformed before loading into the warehouse.\nBOSSCODER\nACAGEMY",
-  "company": "Bosscoder",
-  "field": "PySpark/Spark",
-  "topics": [
-   "streaming",
-   "data-warehouse",
-   "python-code",
-   "optimization",
-   "system-design",
-   "career"
   ]
  },
  {
@@ -4019,17 +3745,6 @@
    "python-code",
    "optimization"
   ]
- },
- {
-  "id": "7374648434265534464",
-  "author": "Aditya Bansal",
-  "author_url": "https://www.linkedin.com/in/ACoAAB8c2Z8Bcu4nHPJW24bZAavnMChCO7Q0wCQ",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7374648434265534464/",
-  "time": "1yr",
-  "text": "👇SQL Scenario based Interview Challenge: How would you \nfind each customer’s latest order amount along with the amount of the second latest order. \n\n✅ Given Table:\n1)We are given an Orders Table with 4 columns (order_id,customer_id,order_date,order_amount).\n\n🎯Your Task:\nWrite a query to find each customer’s latest order amount along with the amount of the second latest order. \nPlease check the expected output snapshot for your reference.\n\nThis question is easy but the challenging part is to do it in a single query.\n\n👇I have put both the table creation and insert statements in comments.\n📸 I have attached the input table and expected output snapshot to the post.\n🫴But there is a catch ,you have to do in shortest code possible.\n\n👇 I share case studies as SQL Zero to Hero project on my channel:\nHere is the latest one ,please take a look and ace your next SQL interview\n\nSQL Zero to Hero Project | For Data Engineers & Analysts 👇\n 🎥 https://lnkd.in/gSwx5ybP\n\nShoutout to other great SQL enthusiasts:\nAnkit Bansal Navya sri Kurapati🧑‍💻 Korrapati Jaswanth 🇮🇳\nVishal Kaushal Lovee Kumar\n\n#Deloitte #SQL #SQLChallenge #BigQuery #DataEngineer #DataEngineer #InterviewPrep #DataAnalytics #SQLInterview #Big4Interviews #DataScience #AdityaBansal #SQLJunction",
-  "company": "Deloitte",
-  "field": "GCP",
-  "topics": []
  },
  {
   "id": "7368171759910469635",
