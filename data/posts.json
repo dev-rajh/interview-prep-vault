@@ -71,22 +71,6 @@
   ]
  },
  {
-  "id": "7527948917079154688",
-  "author": "Ajay Kadiyala",
-  "author_url": "https://www.linkedin.com/in/ACoAACMqY_UBKQi4wg8LG5QtUPu56SUEChkue1g",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7527948917079154688/",
-  "time": "13h",
-  "text": "Two Data Engineers can have the exact same 5 years of experience and the exact same tools on their resume.\n\nYet one gets stuck at ₹16 LPA (or AED 14,000 in Dubai), while the other lands ₹35 LPA+ (or AED 30,000+ in Dubai).\n\nAfter taking 14,800+ bookings on Topmate, I see the real reason for this gap every single week.\n\nCompanies do not pay big salaries for the tools you know. They pay for the level of problems you can solve.\n\nHere are the 3 levels of Data Engineers in the market right now:\n\n---\n\n1. Level 1: Writing Basic Pipelines (Low Salary Band)\n• Salary in India: ₹10 – ₹16 LPA\n• Salary in Dubai: AED 12,000 – AED 16,000/month\n• What they do: Move data from source to target using ADF, Glue, or basic PySpark notebooks without knowing what happens under the hood.\n• Why they get stuck: Thousands of engineers can write basic SQL and PySpark today. You are easy to replace.\n\n---\n\n2. Level 2: Building Reliable Systems (Mid Salary Band)\n• Salary in India: ₹18 – ₹26 LPA\n• Salary in Dubai: AED 18,000 – AED 24,000/month\n• What they do: Handle incremental loads, fix schema changes, manage Airflow failures, and write clean, tested code.\n• Reality: Good stable career, but you still get rejected in final rounds at Tier-1 banks and product companies.\n\n---\n\n3. Level 3: Fixing Performance & Cloud Cost (Top 5% Salary Band)\n• Salary in India: ₹30 – ₹50+ LPA\n• Salary in Dubai: AED 28,000 – AED 42,000+/month\n• What they do: Debug slow jobs in Spark UI, fix data skew without doubling cluster size, design table partitioning, and cut cloud bills by 30–40%.\n• Reality: Hiring managers fight to hire you because you save the company real money every month.\n\n---\n\nMy honest advice for 2026:\n\nStop adding 15 different tools to your resume.\n\nPick your core stack (SQL + Python + PySpark + 1 Cloud) and learn how to debug slow pipelines, handle bad data, and reduce compute costs.\n\nSave this post and share it with a friend preparing for Data Engineering interviews right now.\n\n(I shared my Free DataGeeks Starter Kit + complete Interview & Dubai Job Search resources in the first comment 👇)\n\nWhich area are you focusing on more right now—learning new tools or going deeper into performance and architecture? 👇",
-  "company": "General",
-  "field": "PySpark/Spark",
-  "topics": [
-   "skew",
-   "optimization",
-   "system-design",
-   "career"
-  ]
- },
- {
   "id": "7527940096185241600",
   "author": "Jay Kumar",
   "author_url": "https://www.linkedin.com/in/ACoAAFU3k3MB9ri-YT3-Psv-ag-wCwSMSyuuhCw",
@@ -1226,19 +1210,6 @@
   ]
  },
  {
-  "id": "7432626329872711680",
-  "author": "Kashish Kathuria",
-  "author_url": "https://www.linkedin.com/in/ACoAAB25lxkBEmDwJxtZNAFhRsR4dS3sE6hS21k",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7432626329872711680/",
-  "time": "9mo",
-  "text": "[OCR from post images]\nSQL NOTES\nBY: NIDHE RUSHWAHA\n© Date 6 a collection of facts, such a3 murmibers, words, measurements,\nobservations or descriptions of things.\nExamples-\noO Numbers |e.g., 42,3.14}\no Words [eg. “Hello”, “SOL\")\no Measurements (@.6., height . weight)\n© Observations [e@.. “It is raining”)\n® A database is an organized collection of data, generally stored and\naccessed electronically from a computer system.\n® fallow for efficient storage, retriewal, and management of data.\nExamples af Databases:\no E-commerce platéorms (e.g., Amazon}\no Social media platforms fe.g., Facebook]\n*® Database management system is a software which is used to manage the\ndatabase.\n® =D8MS provides an interface to perfonm various aperatians like~\n1. Creating databases, tables, and objects.\n2. inserting, updating, and deleting data.\n4. Dropping databases, tables, and objects.\n4, Provides data security.\n© Some popular DBMS softwares are MS SOL\nSERVER Oracle, MySQL 08M, O62, PosteresQl ete,\n© fis a type of DBMS that manage relational database.\n® fthelps to store, organize and retriewe data efficiently RDBMS softwares\nare MySQL. PostgreSQ, SOL Server, and Oracke.\n® Atable in a database is a collection of rows and cofumns.\n® fis used to organize and store data in a structured format.\nRow and Column\n® Arowis a horizontal arrangement of data moving fram right to lett it is\noften referred to as a record of a tuple. It repeesents indivdual data\nentries.\n® Acolumnis a vertical arrangement of data mowing from top to bottom. fit\nis often referred to as an attribute or a field. It represents the\ncharacteristics ar properties of the data,\nExample 4 “Customers” table might have columns tke CustomerID, Name,\nEmail, avd Phone with each row representing 4 different customer.\n© SOL stands for Structured Query Language was initially developed bry\naM.\n© Wnitially it was called as SEQUEL (Structure English Query Language]\n© SOLis 4 prograenming language used to leteract with database,\n* SQL allows you to create, read, update, and delete (CRUD) deta ins\nrelational database,\nSQL Data Types\n© Qata Types define the type of data that can be stored in a table column.\n© Mensures data integrity and optienizes storage.\nCommanly used Data Types are-\nA. Mring Datatypes: It stores text strings.\n1. CHAR.\n© Can stare characters of fixed length.\n© The site paraeneter specifies the coluenn length in characters can\nbe from O16 255,\n2. WARCHAR-\n* Can store characters up to given length.\n« The size parameter specifies the maximum column langth in\ncharacters can be fram 0 to 65535.\nB. Numeric Datatypes: These datatypes store numbers, bath integer and\nfloating paint number.\n1. INT-\n* Used far storing whale numbers without decimal,\n2, FLOAT-\n© Used for storing numbers without decenal.\n® Float gives approximate value while performing calculations.\n3. Decimal (P, 5)-\n© Used to store numbers with a fixed number of decimal places,\n® Gecimal gives exact value.\n* Total range of digits can be 1-38, [Precision-P)\n© Range after decal should be 0-30. (Scale-$)\nC Date and Time Datatypes- These datatypes stores date and time.\n*® DATE. Stores date values (Farmat:- Yer-MM-D0).\n© TIME- Stores time yahies [Foerat: HH:MM:55).\n® DATETIME: Stores both date and time values (Format: YY-Mi-DD\nHH: feIh: SS).\nD, BIT Dasatype- BIT data type can store either True or False values\n(represents by 1 ane O),\nExample-\nCREATE TABLE Employees [\nEmployeeiD INT,\nFirstName VARCHAR(SD),\nLastName CHARI 2D),\nSalary DECIMAL(10, 2},\nBirthDate DATE,\nHireTime TIME,\nIsActive BIT\niF\n* SQL commands are instructions,\n© fis used to communicate with the database to perform tasks, functions\nand queries of data.\n® There are free types of SOL commands.",
-  "company": "Amazon",
-  "field": "SQL",
-  "topics": [
-   "career"
-  ]
- },
- {
   "id": "7431921646913015808",
   "author": "Rajat Jain",
   "author_url": "https://www.linkedin.com/in/ACoAABbjaiwBNQXzSmOs9pltYVlFnvxCM4v0P-M",
@@ -1350,20 +1321,6 @@
    "data-warehouse",
    "optimization",
    "career"
-  ]
- },
- {
-  "id": "7428005004109672448",
-  "author": "Rakshit Bhatnagar",
-  "author_url": "https://www.linkedin.com/in/ACoAAAb4NhMBl1FPCtKbnObLe-npmruudxflr9g",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7428005004109672448/",
-  "time": "9mo",
-  "text": "Data engineering interviews are evolving in 2026.\n\nHere’s how you can increase your chances!!\n\nYou can master theory, but that’s NOT enough. I see too many people reading, not building. You want to stand out? \n\nHere’s where you need to focus 👇\n\n→ 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐢𝐧𝐠 (Python is a MUST)\n- Write code from scratch (no copy-paste)\n- Build small projects to show your skills\n- Start here:\n• 30-Days-Of-Python: https://lnkd.in/gEaSaPvi\n• Project Based Learning: https://lnkd.in/gK_TG7Xq\n\n→ 𝐒𝐐𝐋 (The real interview killer)\n- Know basics AND window functions, joins, CTEs\n- Solve problems with real datasets, not toy examples\n- Top picks:\n• Learn-SQL Basics: https://lnkd.in/gR4VfqHF\n• SQL in 30 Days: https://lnkd.in/gpY_Yevk\n• Beyond Leetcode SQL: https://lnkd.in/g92JKggB\n\n→ 𝐒𝐩𝐚𝐫𝐤 & 𝐃𝐚𝐭𝐚𝗯𝗿𝗶𝗰𝗸𝘀\n- Understand core Spark concepts (RDD, Dataframes, transformations)\n- Use Databricks for real projects\n- Start here:\n• Spark by Examples: https://lnkd.in/gvysr-f4\n• Medallion Project: https://lnkd.in/gPbsDw8u\n\n→ 𝐂𝐥𝗼𝘂𝗱 & 𝐃𝗲𝘃𝗢𝗽𝘀\n- Use Azure or AWS for storage, compute, pipelines\n- Learn CI/CD and version control\n- Useful links:\n• Azure DevOps: https://lnkd.in/gFpZkrcA\n• Version-Control: https://lnkd.in/gTGg2mYB\n• Airflow: https://lnkd.in/gcCmdtir\n\n→ 𝐏𝐫𝗼𝗷𝗲𝗰𝘁𝘀 & 𝐀𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲\n- Show end-to-end work: data modeling, ETL, reporting\n- Don’t skip architecture questions!\n• Data Engineering Handbook: https://lnkd.in/gpSKmg2b\n• End to End Project: https://lnkd.in/gi9GrvXp\n\nBiggest mistakes I see:\n- Only reading, not building projects\n- Ignoring cloud and DevOps\n- Practicing with fake data (use real-world datasets)\n\nPick ONE topic. Build a mini-project. Repeat.\n\n\n♻️ Found this useful? Repost it!\n➕ Follow for daily DATA insights.",
-  "company": "General",
-  "field": "PySpark/Spark",
-  "topics": [
-   "window-functions",
-   "system-design"
   ]
  },
  {
@@ -1895,24 +1852,6 @@
    "optimization",
    "system-design",
    "career"
-  ]
- },
- {
-  "id": "7422863367142490113",
-  "author": "Surbhi Goyal",
-  "author_url": "https://www.linkedin.com/in/ACoAACN2Wz0BAtXYDTNFKXbgQKMrYbd7fEgJXAU",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7422863367142490113/",
-  "time": "10mo",
-  "text": "🚀 SQL Best Practices That Actually Matter\nWriting SQL that works is easy. Writing SQL that scales and stays readable is the real skill.\n\n🔹 Avoid SELECT *\n Fetch only required columns to reduce data scan and improve performance.\n🔹 Filter before you join\n Apply WHERE conditions early to minimize data movement in joins.\n🔹 Choose joins intentionally\n Use INNER JOIN by default. LEFT JOIN only when nulls are truly needed.\n🔹 Handle NULLs explicitly\n Use COALESCE / NVL to avoid unexpected results in aggregations and filters.\n🔹 Use CTEs for complex logic\n CTEs improve readability and make debugging much easier than nested subqueries.\n🔹 Be careful with GROUP BY\n Group only necessary columns. Extra columns can silently explode result size.\n🔹 Index with purpose\n Index columns used in JOIN, WHERE, and GROUP BY. Avoid over-indexing.\n🔹 Always review execution plans\n Small query changes can cause big performance shifts. Never assume.\n\n💡 Clean SQL today saves hours of debugging tomorrow.\n\n#SQL #DataEngineering #Analytics #Databricks #Performance #BestPractices",
-  "company": "General",
-  "field": "Databricks",
-  "topics": [
-   "joins",
-   "groupby",
-   "nulls",
-   "spark-optimization",
-   "pyspark-code",
-   "optimization"
   ]
  },
  {
@@ -3580,56 +3519,6 @@
   ]
  },
  {
-  "id": "7383728924637257728",
-  "author": "Sarita Jha",
-  "author_url": "https://www.linkedin.com/in/ACoAABHUS84BzlB5s16P1EE6INa_qDOzZCi-eL4",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7383728924637257728/",
-  "time": "1yr",
-  "text": "COUNT(*) vs COUNT(column) - The Great Counting Myth\n\nIf you've worked with SQL long enough, you've probably heard this one:\n \n\"Never use COUNT(*); it's inefficient.\"\n\nSounds logical, right? After all, that * looks like it's counting every single column. But here's the twist, it doesn't.\n\nCOUNT(*) simply counts rows, not columns.\nIt's the database equivalent of counting people in a room, no questions asked, no forms checked.\n\nCOUNT(column), on the other hand, is pickier.\nIt only counts rows where that column has a non-null value.\nThink of it as counting how many people brought popcorn to movie night. No popcorn? You don't get counted.\n\nAnd here's the interesting part - in most modern databases, COUNT(*) is actually faster than COUNT(column).\nWhy? Because it doesn't need to inspect any column values. It can rely on metadata or index-only scans to get the row count efficiently.\n\nUse COUNT(*) when you want to count rows. It's clean, correct, and optimized.\nUse COUNT(column) when NULLs matter and you only want non-empty values.\n\n\n\n#sql #aggregations #dataengineering #database #performance #concepts",
-  "company": "General",
-  "field": "SQL",
-  "topics": [
-   "groupby",
-   "nulls",
-   "delta-lake",
-   "optimization"
-  ]
- },
- {
-  "id": "7383707712238313472",
-  "author": "Dharm Raj",
-  "author_url": "https://www.linkedin.com/in/ACoAACFh8UwBG30UWgYP6RGLw-uLotm40O_r8sI",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7383707712238313472/",
-  "time": "1yr",
-  "text": "[OCR from post images]\nSQL NOTES\n* Data ba collection of facts, such as numbers, words, measurements,\nobservations or descriptions of things.\nExampies-\no Numbers fe.g., 42,3.14)\no Words [e.g., “Hello*, “SO0\")\n0 Measurements (e.g., height, weight}\nOo Observations (e@., \"Ht is raining”)\nDatabase\n© Adatabase is an organized collection of data, generally stored and\naccessed electronically fram a computer system,\n© fallow for efficient storage, retrieval, and management of data,\nfxamoles of Databases:\no E-commerce platfonns (eg, Amazoe}\n0 Social media platforms (e.g., Facebook)\nDatabase Management System (DBMS\n* Database management system Is a software which is used ta manage the\ndatabase.\n® DMS provides an interface to perform various operations bke~\n1. Creating databases, tables, and objects.\n2. inserting, updating, and deleting data.\n3. Dropping databases, tables, and objects.\n4, Provides data seourity.\n® Some pooular DOMS softwares are MS SOL\nSERVER, Oracke MySQL JBM, DB2,PostgreSOl ete,\nRelational Database Management System(RDBM\n© fis atype of O8MS that manage relstional database.\n® fthelpsto store, organize and retrieve data efficiently. ROBMS softwares\nare MySQL, PostpreSOl, SO1 Server, and Oracle.\n© Atable ina database is a collection of rows and colurnns.\n® fis used to organize and store data in a structured format.\nRow and Column\n© Arow is a horizontal arrangement of data moving froen right ta bett, it is\noften referred to as a record of a tuple. It represents individual data\nentries.\n® Acolumn és a vertical arrangement of data moving from top to bottom. it\nis often referred to as an attribute or a field. & represents the\ncharacteristics or properties of the data.\ntxamole- 4 “Qustomers” table might have columns like CustomeriD, Name,\nErnail, and Phone with each row representing a different customer.\n® SQL stands for Structured Query Language was initially developed by\nSM.\n© = Witially it was called as SEQUEL (Structure English Query Language}\n* SQLs 2 programming language used to ieiteract with database,\n* SOL allows you to create, read, update, and delete (CRUD) data ins\nrelational database.\n© Geta Types define the type of data that can be stored in a table column.\n® ensures data integnty and optimizes storage.\nCommonly used Data Types are\nA, String Datatypes- & stares text strings.\n1. CHAR-\n® Can store characters of fixed kength\n* The site parameter specifies the column length in characters cam\nbe from 0 to 255.\n2. VARCHAR-\n* Can store characters up to given length.\n@ The size parameter specifies the maximurn column length in\ncharacters can be from 0 to 655.35.\n&. Numeric Datatypes- These datatypes store numbers, both integer and\nfloating-point number.\n1. INT-\n® Used for storing whole numbers without decimal.\n2. FLOAT:\n© Used for storing numbers without decienal.\n® Float gwes approximate value while performing calculations.\n3. Decimal (P, $+\n* Used ta store numbers with a fixed nuenber of decimal places.\n© Decimal gives exact value.\n® Total range of digits can be 1-38. [Precision-F)\n© Range after decimal should be 0-30, [Scate-5]\nC Date and Time Datatypes- These datatypes stores date and time,\n© DATE- Stores date values [Format Y¥Y9-hMhM-DD).\n® TIME: Stores time values (Format:: HHoMIM:S5].\n© DATETIME- Stores both date and time values [Format YY¥¥-MiM-00\nHH:MM55)\nD. BIT Datatype: 817 data type can store either True or False values\n(represents by 2 and O].\nExample-\nCREATE TABLE Employers [\nEmpiayeetD INT,\nFirstWame VARCHAR|SO],\nLastWame CHAR{2D),\nSalary DECIMAL(10, 2),\nBirthDate DATE,\nHireTime TIME,\nIsActive BIT\ni\nSOL Commands\n© SQL commands are instructions,\n© fis used to comemurecate with the database to perform tasks, functions\nand queries of data.\n© There are five types af SQL commands.",
-  "company": "Oracle",
-  "field": "SQL",
-  "topics": [
-   "delta-lake",
-   "optimization",
-   "career"
-  ]
- },
- {
-  "id": "7383464647515049984",
-  "author": "Ankita Gulati",
-  "author_url": "https://www.linkedin.com/in/ACoAACQtFQYB1_PbEeNyEykWDB8Vn2pWa5uy45o",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7383464647515049984/",
-  "time": "1yr",
-  "text": "[OCR from post images]\n(0) Top 3 products by total sales per region in the Last 6 months (handle\nties)\nApproach:\n* Filter sates in the last 6 months\n* Aggregate by region, product_id\n® Use DENSE RANE( ) to handle ties\n© Pickronke2\nWITH sales fa AS ¢\nSELECT regian,\npraduct_id,\nSUM(sales_amgunt) AS total_sales\nFROM sales\nWHERE sale date >= DATEADD(MONTH, -6, CURRENT DATE)\nGROUP BY region, preduct_id\n1.\nranked AS (\nSELECT region,\nproduct_id,\ntotal_sales,\nOPNSE RANK{) OVER [\nPARTITION BY region\nORDER BY total_sales DESC\n} AS rk\nFROM sales Ge\n}\nSELECT region, product_id, total_sales\nFROM ranked\nWHERE rok c= 3;\n(2) Orders where shipping took longer than the month's average\nApproach:\n* Compute shipping cuestion pee cedar\n© =Compubt ananige duration peer mraeith\n* Compare gech order's duration with the monthly average\nWITH order durations AS {\nSELECT order_id,\nEXTRACT( YEAR FROM order date) AS order_year,\nEXTRACT(MONTH FROM order date) AS order_month,\nDATE_PART( ‘day’, shipped date - order_date) AS ship days\nFROM orders\nis\nmonth_awe AS ¢\nSELECT order_year,\norder_sonth,\nOvG(ship_days) AS avg_ship_days\nFROM order_durations\nGROUP BY order_year, order_month\n}\nSELECT o.order_id,\no.ship_days,\nmove _ship_days\nFROM order_durstions o\nJOIN month_svg =\nON o.order_year = @,order_year\n48D o.order_month = w.order_month\nWHLRL o.ship_days > ®,avg_ship_days;\n1} Recursive query: List all subordinates for a given manager\nApproach:\n* Tabloemployees(emp id, aup_nase, sanager_id)\n« Anchor direct reports of manager *\n® Aeoursive step: employees whose manager_id = one of previously found emp_ids\nWITH RECURSIVE subordinates as [\n-- anchar; direct reports\nSELECT eup_id, esp_nare, manager_id\nFROM employees\nWHERE manager_id = :wanager_id = -- pass manager here\nUNTOM ALL\n-- recursion: indirect reports\nSELECT e¢.emp_id, e.erp_name, ¢.manager_id\nFROM esployees e@\nIMMER DOIN subordinates 5\nOM e.menager_id = s,emp_id\n}\nSELECT * PROM subordinates;\n(§) Deduplicate a huge table while keeping the most recent record\nApproach:\n® Use ROW _NUMBER( ) partitioned by the natural key\n* Onder by updated at DESC to get the latest reoord\n® Pik row_mumber = 1\nWITH ranked AS ¢\nSELECT *,\nRoM_MUMBER() COVER (\nPARTITION BY natueal_key_colusn\nORDER AY updated_at DESC\n7 AS en\nFROM big table\n}\nSELECT *\nFROA ranked\nWHERE rn = 1;\n(Aepioce noturel_tey_coleen with the colwnn{s) thet define duplicates.)\n® Python\nEfficiently read/transtonm/write a 20GB CSV daily to a database\nApereach:\n* 20GB ise bigtor mamory, process in chums using\npandas. resd_csy(chunksizes_) or plain csv reader.\n® Apply transformation jogic chunk by chunk,\n© Use 08 bulk-nsert (eg. to_sql(if_exists='append' ) withaethod='aulti' or\nemeoubenany'.\n* Wrap ina streaming pipeline.\nimport pandas as pd\nfrom sqlalchesy ieport create_engine\nengine « create_engine({\"postgresagl ://user:pass@host/db\")\nchutksize = S30 889 A Tune this\nfor chunk in pd.read_csv(\"dally file.cow\", chunksize=chunksize):\n# transfora\nchunk[\"sale_date\"] = pd.te_datetime(chunk[\"sale_date\"])\nchunk[“awount™) = chunk[\"amount™].#illna(a}\n* load to O8\nchunk. to_sql(“sales\", engine, if_exists=\"append\",\nindexePalse, method=“multi\")\n(For ultra-high throwgnpur, uae COPY / bulk-iowd unilitkes.)\nC3} Detect anomalies in sales data (3 std-dev spikes/drops)\nApproach:\n* Compute mean & std for your metric\n© Flag vale beyond 3.4 aa anormadiag.\n© Vectoriaed with NuenPy for seven.\nimport mumpy as np\nimport pandas as pd\ndef detect_anagalies(df, col-\"sales_amount\"):\nfu = d#[col).mean{)\nsigna = dé[col}.std{)\ndf[\"anataly flag\") = np.wherel\n(df[col) > su + 3*sigea) | (af[col] « au - 3*sigma),\nTrue, False\n}\nreturn dé[d#[\"anowaly flag” ]]\n* usage:\n© aromalies = detect_snorslies(sales_df, “daily sales\")\n(0 streaming, maintain rolling moon & std wa Wrelford's aygonitivn)\nfF) Group transactions by customer + return top N by purchase frequency\n(no Pandas)\nApproach:\n© Uso beilt-in collections.Counter of defaultdict( int}.\n* Count percustomerin one pass.\n* Useheapg.nlargest to gettop-N.\nfron collections isport Counter\nimport heapq\ndef top on_custowers(transactions, m=5):\n# transactions is an iterable of (cust_id, awount)\ncounts = Counter{cust_id for cust_id, _ in transactions)\nreturn heapg.nlargest(n, counts.items(), key=lawbda x: x[1])",
-  "company": "General",
-  "field": "Python",
-  "topics": [
-   "joins",
-   "groupby",
-   "dedup",
-   "second-highest",
-   "streaming",
-   "python-code",
-   "optimization"
-  ]
- },
- {
   "id": "7383449455498452992",
   "author": "Rohit Honde",
   "author_url": "https://www.linkedin.com/in/ACoAACuentoBFLDtdEpcYSuecVxgM773KWnRNVg",
@@ -3809,23 +3698,6 @@
   "company": "Microsoft",
   "field": "Machine Learning",
   "topics": []
- },
- {
-  "id": "7359155395023499265",
-  "author": "Tripathi Aditya Prakash",
-  "author_url": "https://www.linkedin.com/in/ACoAAC0NUY8BMgnW_orwdsjdg4BgAiA-p_v_3ic",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7359155395023499265/",
-  "time": "1yr",
-  "text": "𝗦𝗤𝗟 𝗠𝗶𝗻𝗱𝗺𝗮𝗽 𝟮𝟬𝟮𝟱 – Your Go-To SQL Roadmap\n\nIf you’re serious about data, you can’t afford to guess SQL.\nThis mindmap?\nIt’s everything you need, from basic SELECT to advanced analytics.\n\nWhat you’ll find (and what actually matters):\n\n1. SQL Basics:\nSELECT, WHERE, GROUP BY, ORDER BY.\n(Master these — 90% of interviews start here.)\n\n2. Filtering, Sorting, Aggregations:\nUse WHERE, BETWEEN, LIKE, IN, AND/OR.\nGet your sums and averages with COUNT, SUM, AVG, MIN, MAX, GROUP BY.\n\n3. Joins (the real deal):\nINNER, LEFT, RIGHT, FULL OUTER — learn when to use each.\nMost analyst rounds test joins, not fancy theory.\n\n4. Window Functions:\nRANK(), ROW_NUMBER(), LAG(), LEAD().\n(Separates the real analysts from the copy-paste crowd.)\n\n5. Date Functions:\nWork with dates: NOW(), DATE_TRUNC(), EXTRACT() — saves you in reporting tasks.\n\n6. CTEs, Temp Tables, Subqueries:\nWrite cleaner, reusable queries.\n(Huge for complex dashboards or business logic.)\n\n7. Performance & Optimization:\nUse indexes, skip SELECT *, limit joins.\nEXPLAIN your queries. Make them run faster, not just “work.”\n\nHow to actually learn:\n\nPractice writing basic SELECT + WHERE + JOIN queries\nUse free public datasets (Kaggle, Google BigQuery, etc.)\nChallenge yourself with window functions & date logic\nBuild a sample dashboard (PowerBI/Tableau) using real SQL\nKeep this mindmap open whenever you get stuck\n\nThis is the shortcut I wish I had when I started.\n\n→ Save this, use it, share it with someone prepping for data roles.\nLink in comment for more hands-on SQL guides & resume tips.",
-  "company": "Google",
-  "field": "GCP",
-  "topics": [
-   "window-functions",
-   "joins",
-   "groupby",
-   "optimization",
-   "career"
-  ]
  },
  {
   "id": "7358398393771094016",
@@ -4053,26 +3925,6 @@
   ]
  },
  {
-  "id": "7351268444673097731",
-  "author": "Arabinda Pani",
-  "author_url": "https://www.linkedin.com/in/ACoAAARk6l8BMM3CjWQdEleXZdIa-sri5944zqM",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7351268444673097731/",
-  "time": "1yr",
-  "text": "N𝗧𝗧 𝗗𝗔𝗧𝗔 asked these 𝗦𝗤𝗟 questions in a Data Engineering interview \nCTC → 𝟮𝟴-𝟯𝟱 𝗟𝗣𝗔 (Difficulty level = Intermediate)\n\n1.⁠ ⁠Write a SQL query to get the daily count of active users (logged in at least once).\n2.⁠ ⁠Find the 2nd highest transaction per user without using LIMIT or TOP.\n3.⁠ ⁠Identify data gaps in time-series event logs (e.g., missing hourly records).\n4.⁠ ⁠Fetch the first purchase date per user and calculate days since then.\n5.⁠ ⁠Detect schema changes in SCD Type 2 tables using Delta Lake.\n6.⁠ ⁠Join product and transaction tables and filter out null foreign keys safely.\n7.⁠ ⁠Get users who upgraded to premium within 7 days of signup.\n8.⁠ ⁠Calculate cumulative distinct product purchases per customer.\n9.⁠ ⁠Retrieve customers who spent above average in their region.\n10.⁠ ⁠Find duplicate rows in an ingestion table (based on all columns).\n11.⁠ ⁠Compute daily revenue growth % using lag window function.\n12.⁠ ⁠Identify products with declining sales 3 months in a row.\n13.⁠ ⁠Get users with at least 3 logins per week over last 2 months.\n14.⁠ ⁠Rank users by frequency of login in the current quarter.\n15.⁠ ⁠Fetch users who purchased same product multiple times in one day.\n16.⁠ ⁠Detect and delete late-arriving data for current month partitions.\n17.⁠ ⁠Get top 5 products by profit margin across all categories.\n18.⁠ ⁠Compare rolling 30-day revenue vs previous 30-day window.\n19.⁠ ⁠Flag transactions happening outside business hours.\n20.⁠ ⁠Write an optimized SQL query using broadcast join hints for small lookup tables.\n\nFollow Arabinda Pani for more details",
-  "company": "General",
-  "field": "Delta Lake",
-  "topics": [
-   "window-functions",
-   "joins",
-   "dedup",
-   "second-highest",
-   "nulls",
-   "spark-optimization",
-   "delta-lake",
-   "scd"
-  ]
- },
- {
   "id": "7348606922792538112",
   "author": "Shirin Khosravi Jam",
   "author_url": "https://www.linkedin.com/in/ACoAACAffBABmg0i0TxuEnNvNKeuiy2-Kq7k_Ds",
@@ -4085,26 +3937,6 @@
    "spark-optimization",
    "python-code",
    "optimization"
-  ]
- },
- {
-  "id": "7348188721541754881",
-  "author": "Surbhi Goyal",
-  "author_url": "https://www.linkedin.com/in/ACoAACN2Wz0BAtXYDTNFKXbgQKMrYbd7fEgJXAU",
-  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7348188721541754881/",
-  "time": "1yr",
-  "text": "𝗗𝗲𝗹𝗼𝗶𝘁𝘁𝗲 asked these SQL questions in a Data Engineering interview (𝟯+ 𝗬𝗢𝗘)\nCTC → 𝟯𝟬–𝟰𝟬 𝗟𝗣𝗔 (Difficulty level = Advanced)\n\n1.⁠ ⁠Calculate daily user retention for a 30-day cohort window.\n2.⁠ ⁠Retrieve the latest 3 events per user using window functions.\n3.⁠ ⁠Detect out-of-order events in time-series logs using timestamps.\n4.⁠ ⁠Backfill missing dates in a partitioned dataset using calendar table.\n5.⁠ ⁠Compute rolling 7-day distinct active users per platform.\n6.⁠ ⁠Identify users with no activity in the last 30 days (churn analysis).\n7.⁠ ⁠Perform multi-level aggregation (category → subcategory → product).\n8.⁠ ⁠Compare current vs previous month revenue per region.\n9.⁠ ⁠Join fact and dimension tables with SCD Type 2 handling.\n10.⁠ ⁠Detect schema drift between raw and curated layers via metadata.\n11.⁠ ⁠Calculate 95th percentile of transaction amounts by user.\n12.⁠ ⁠Fetch top 3 categories contributing to 80% of total revenue.\n13.⁠ ⁠Identify seasonal patterns in monthly product sales.\n14.⁠ ⁠Use broadcast join hints to optimize small dimension lookups.\n15.⁠ ⁠Flag revenue anomalies using z-score or standard deviation.\n16.⁠ ⁠Remove duplicates using ROW_NUMBER on ingestion timestamp.\n17.⁠ ⁠Calculate session time from login-logout events.\n18.⁠ ⁠Compare revenue growth across last 3 quarters per product line.\n19.⁠ ⁠Identify users who upgraded to premium but never used the features.\n20.⁠ ⁠Track update frequency on records in an SCD Type 2 table.\n\nIf you’re preparing for a Data Engineering role at companies like Deloitte, Amazon, TCS, or Snowflake, then I’d suggest checking Bosscoder Academy.\n\n👉🏻 Check them here: https://bit.ly/44Av3bY\n\nThey’ve helped 2200+ tech professionals switch to top companies, and you can do the same with their support:\n💡 A structured curriculum covering ETL, Big Data, Cloud, and DataOps\n💡 Mentorship from engineers at Google, Samsung & more\n💡 Hands-on Big Data projects to showcase on your resume\n💡 Resume help, mock interviews & complete job switch support\n\n𝗣.𝗦. These SQL questions aren’t just for interviews, they're solid practice for real-world data challenges too!\n\n#dataengineering #deloitte #sql #interviewprep #brandpartnership #workingprofessionals",
-  "company": "Deloitte",
-  "field": "Snowflake",
-  "topics": [
-   "window-functions",
-   "joins",
-   "groupby",
-   "dedup",
-   "spark-optimization",
-   "delta-lake",
-   "scd",
-   "data-warehouse"
   ]
  },
  {

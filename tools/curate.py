@@ -200,6 +200,16 @@ ANSWER_MARKS = re.compile(
 )
 
 
+# Canonical question shape: ends with '?' or starts with a question/task starter.
+CANON_START = re.compile(
+    r"^(how|what|why|when|which|where|who|write|explain|describe|design|find|difference|"
+    r"tell|walk|implement|optimize|troubleshoot|given|create|build|you are given|scenario|"
+    r"handle|debug|solve|calculate|identify|list|name|share|have you|did you|can you|"
+    r"do you|are you)\b",
+    re.I,
+)
+
+
 def classify(text: str) -> str:
     """three-way: interview (question source) | learnings | other"""
     from extract_questions import split_questions
@@ -209,6 +219,15 @@ def classify(text: str) -> str:
     qs = split_questions(t)
     qn = len(qs)
     has_schema = "create table" in t.lower()
+    # a post whose "questions" are mostly statement bullets is not a question list —
+    # keep it whole in Learnings instead of dividing it into fragment cards
+    if qn >= 2:
+        like = sum(1 for q in qs
+                   if (q.rstrip().endswith("?") or CANON_START.match(q))
+                   and not re.match(r"^(what (they|it|he|she) (do|does|did)|why (they|people|candidates|most)|"
+                                    r"salary|compensation|role|position|experience|ctc)\s*:", q, re.I))
+        if like / qn < 0.5:
+            return "learnings"
     # explainer / solved-question posts stay whole in Learnings, never divided
     # (a schema + worked answer is still teaching content, so no has_schema guard here)
     marks = len(ANSWER_MARKS.findall(t))

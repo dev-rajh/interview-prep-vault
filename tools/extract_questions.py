@@ -360,6 +360,9 @@ def main():
         exp = exp_bucket(text)
         post_company = p.get("company") or "General"
         for q in split_questions(text):
+            # junk fragments: OCR debris, page furniture, answer bullets misread as questions
+            if re.search(r"\(META\)|«|^\s*(is|are|can|has|have)\s+", q) or len(q) > 260:
+                continue
             raw_items.append({
                 "key": normalize_key(q),
                 "toks": tokens(normalize_key(q)),
