@@ -1611,6 +1611,19 @@
   ]
  },
  {
+  "id": "7425387799245381632",
+  "author": "Manish Kumar Singh",
+  "author_url": "",
+  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7425387799245381632/",
+  "time": "9mo",
+  "text": "During an interview, I asked a candidate about designing a Bronze layer table.\nThe initial answer sounded right, until we went a bit deeper.\n\nYou need to pull a set of files daily from a link and load that data into the staging (Bronze) layer.\nSource columns - OrderID, ProductID, OrderAmount, Discount, FinalAmount\nWhat columns will you have in your staging table?\n\nHis answer was straightforward, use the same columns as the file.\nHis reasoning was fair: Bronze layer should store raw data, transformations will happen in next layer.\n\nThen I followed up - How would he handle incremental processing?\nHe said we could use OrderDate - Again, fair in an ideal case.\n\nSo I went one step further - What if an order detail gets updated after 1-2 days? How would that record be updated in your staging table, as the order date is already processed?\n\nThat's where he got confused. What was missing were ETL Metadata columns. For example:\n\n- load_date or load_timestamp : Tracks when the file was loaded\n- file_name : Tracks the filename\n- batch_id : Tracks the batch id if multiple batches are used\n- record_ingestion_ts : timestamp when that particular record was ingested\n- record_modified_ts : timestamp when that particular record was updated\n\nThese columns don't come with the source file but are critical for data engineering. They help in various use cases like:\n- Track when data arrived\n- Reprocess or backfill data safely\n- Handle late-arriving or updated records etc.",
+  "company": "General",
+  "field": "ETL",
+  "topics": [
+   "streaming"
+  ]
+ },
+ {
   "id": "7425237864633991168",
   "author": "Sedhu Madhavan S",
   "author_url": "https://www.linkedin.com/in/ACoAAB6zEVUB7TsCTokOUAQ59O59tRGTrjWoEN0",
@@ -1626,6 +1639,26 @@
    "data-warehouse",
    "optimization",
    "system-design"
+  ]
+ },
+ {
+  "id": "7425123606910779393",
+  "author": "Karthik K.",
+  "author_url": "",
+  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7425123606910779393/",
+  "time": "9mo",
+  "text": "Scenario-based Azure Data Engineer interview questions for 3-5 years experience:\n\n1. Your ADF pipeline loads 500+ tables daily. Some tables fail randomly due to schema changes. How would you design the pipeline to handle this without manual intervention?\n2. A pipeline works fine for small data but fails when data size increases. How do you identify the bottleneck and fix it?\n3. You need to reprocess data for only failed dates from the past 6 months. How would you design this in ADF?\n4. Incremental load logic breaks when source system sends late-arriving updates. How would you fix this?\n5. How would you design metadata-driven pipelines to load 1000+ tables with different schemas?\n6. ADF copy activity is slow when writing to ADLS. What steps would you take to optimize it?\n7. How would you build a reusable error-handling and alerting framework in ADF?\n8. You must orchestrate Databricks notebooks, Synapse SQL, and REST APIs in a single pipeline. How would you design it?\n9. How do you implement idempotent pipelines in ADF?\n10. A pipeline run succeeded but data is partially missing. How would you detect and prevent this?\n11. A Spark job runs fine in dev but fails with executor OOM in production. How do you debug and fix it?\n12. A join between a 5 TB fact table and multiple dimension tables is extremely slow. How would you optimize it?\n13. You are receiving nested JSON with changing schema daily. How do you handle this in Spark without breaking downstream tables?\n14. Delta Lake tables are growing too fast and queries are slowing down. What actions would you take?\n15. You see severe data skew after a join even though partitions look balanced. How do you diagnose and resolve it?\n16. A structured streaming job restarts and reprocesses old data. How do you prevent duplicates?\n17. How would you design CDC ingestion using Databricks and Delta Lake?\n18. Spark jobs generate millions of small files daily. How would you fix this?\n19. How do you manage cluster sizing for unpredictable workloads?\n20. Your Databricks job intermittently fails due to shuffle spill. How would you tune it?\n\n(Karthik K., Seekho Bigdata Institute)",
+  "company": "General",
+  "field": "PySpark/Spark",
+  "topics": [
+   "joins",
+   "dedup",
+   "skew",
+   "spark-optimization",
+   "delta-lake",
+   "streaming",
+   "data-warehouse",
+   "optimization"
   ]
  },
  {

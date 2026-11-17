@@ -1,0 +1,27 @@
+During an interview, I asked a candidate about designing a Bronze layer table.
+The initial answer sounded right, until we went a bit deeper.
+
+You need to pull a set of files daily from a link and load that data into the staging (Bronze) layer.
+Source columns - OrderID, ProductID, OrderAmount, Discount, FinalAmount
+What columns will you have in your staging table?
+
+His answer was straightforward, use the same columns as the file.
+His reasoning was fair: Bronze layer should store raw data, transformations will happen in next layer.
+
+Then I followed up - How would he handle incremental processing?
+He said we could use OrderDate - Again, fair in an ideal case.
+
+So I went one step further - What if an order detail gets updated after 1-2 days? How would that record be updated in your staging table, as the order date is already processed?
+
+That's where he got confused. What was missing were ETL Metadata columns. For example:
+
+- load_date or load_timestamp : Tracks when the file was loaded
+- file_name : Tracks the filename
+- batch_id : Tracks the batch id if multiple batches are used
+- record_ingestion_ts : timestamp when that particular record was ingested
+- record_modified_ts : timestamp when that particular record was updated
+
+These columns don't come with the source file but are critical for data engineering. They help in various use cases like:
+- Track when data arrived
+- Reprocess or backfill data safely
+- Handle late-arriving or updated records etc.

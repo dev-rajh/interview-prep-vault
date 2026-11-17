@@ -1,0 +1,24 @@
+Scenario-based Azure Data Engineer interview questions for 3-5 years experience:
+
+1. Your ADF pipeline loads 500+ tables daily. Some tables fail randomly due to schema changes. How would you design the pipeline to handle this without manual intervention?
+2. A pipeline works fine for small data but fails when data size increases. How do you identify the bottleneck and fix it?
+3. You need to reprocess data for only failed dates from the past 6 months. How would you design this in ADF?
+4. Incremental load logic breaks when source system sends late-arriving updates. How would you fix this?
+5. How would you design metadata-driven pipelines to load 1000+ tables with different schemas?
+6. ADF copy activity is slow when writing to ADLS. What steps would you take to optimize it?
+7. How would you build a reusable error-handling and alerting framework in ADF?
+8. You must orchestrate Databricks notebooks, Synapse SQL, and REST APIs in a single pipeline. How would you design it?
+9. How do you implement idempotent pipelines in ADF?
+10. A pipeline run succeeded but data is partially missing. How would you detect and prevent this?
+11. A Spark job runs fine in dev but fails with executor OOM in production. How do you debug and fix it?
+12. A join between a 5 TB fact table and multiple dimension tables is extremely slow. How would you optimize it?
+13. You are receiving nested JSON with changing schema daily. How do you handle this in Spark without breaking downstream tables?
+14. Delta Lake tables are growing too fast and queries are slowing down. What actions would you take?
+15. You see severe data skew after a join even though partitions look balanced. How do you diagnose and resolve it?
+16. A structured streaming job restarts and reprocesses old data. How do you prevent duplicates?
+17. How would you design CDC ingestion using Databricks and Delta Lake?
+18. Spark jobs generate millions of small files daily. How would you fix this?
+19. How do you manage cluster sizing for unpredictable workloads?
+20. Your Databricks job intermittently fails due to shuffle spill. How would you tune it?
+
+(Karthik K., Seekho Bigdata Institute)
