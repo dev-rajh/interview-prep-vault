@@ -30,6 +30,7 @@
 
   const state = {
     questions: [],
+    learnings: [],
     posts: [],
     tab: "questions",
     q: "",
@@ -45,13 +46,13 @@
 
   const $ = (id) => document.getElementById(id);
   const els = {
-    tabQuestions: $("tabQuestions"), tabSources: $("tabSources"),
+    tabQuestions: $("tabQuestions"), tabLearnings: $("tabLearnings"), tabSources: $("tabSources"),
     controls: $("controls"),
     stats: $("stats"), search: $("search"), searchCount: $("searchCount"),
     field: $("fieldFilter"), company: $("companyFilter"), topic: $("topicFilter"),
     exp: $("expFilter"), doneView: $("doneFilter"), reset: $("resetBtn"),
-    questions: $("questions"), sources: $("sources"), empty: $("empty"),
-    qTpl: $("qTpl"), sTpl: $("sTpl"), activeTopics: $("activeTopics"),
+    questions: $("questions"), learnings: $("learnings"), sources: $("sources"), empty: $("empty"),
+    qTpl: $("qTpl"), sTpl: $("sTpl"), lTpl: $("lTpl"), activeTopics: $("activeTopics"),
     loadMore: $("loadMore"),
     mockBtn: $("mockBtn"), mockDialog: $("mockDialog"), mockClose: $("mockClose"),
     mockField: $("mockField"), mockCompany: $("mockCompany"), mockExp: $("mockExp"),
@@ -61,9 +62,12 @@
   /* ---------- data ---------- */
 
   async function load() {
-    const [qRes, pRes] = await Promise.all([fetch("data/questions.json"), fetch("data/posts.json")]);
+    const [qRes, lRes, pRes] = await Promise.all([
+      fetch("data/questions.json"), fetch("data/learnings.json"), fetch("data/posts.json"),
+    ]);
     if (!qRes.ok) throw new Error("questions.json failed: " + qRes.status);
     state.questions = await qRes.json();
+    state.learnings = lRes.ok ? await lRes.json() : [];
     state.posts = pRes.ok ? await pRes.json() : [];
     const qc = {};
     for (const q of state.questions) {
@@ -89,30 +93,44 @@
     }
   }
 
+  const countBy = (items, fn) => {
+    const m = new Map();
+    for (const it of items) {
+      const v = fn(it);
+      if (v) m.set(v, (m.get(v) || 0) + 1);
+    }
+    return m;
+  };
+
   function buildOptions() {
-    const count = (fn) => {
-      const m = new Map();
-      for (const q of state.questions) {
-        const v = fn(q);
-        if (v) m.set(v, (m.get(v) || 0) + 1);
-      }
-      return m;
-    };
-    fillSelect(els.field, count((q) => q.field), "All fields");
-    fillSelect(els.company, count((q) => q.company), "All companies");
+    fillSelect(els.field, countBy(state.questions, (q) => q.field), "All fields");
+    fillSelect(els.company, countBy(state.questions, (q) => q.company), "All companies");
     const topicMap = new Map();
     for (const q of state.questions) {
       for (const t of q.topics || []) topicMap.set(t, (topicMap.get(t) || 0) + 1);
     }
     fillSelect(els.topic, topicMap, "All topics", (t, c) => `${topicLabel(t)} (${c})`);
-    fillSelect(els.exp, count((q) => q.exp), "Any experience");
-    fillSelect(els.mockField, count((q) => q.field), "Any field");
-    fillSelect(els.mockCompany, count((q) => q.company), "Any company");
-    fillSelect(els.mockExp, count((q) => q.exp), "Any");
+    fillSelect(els.exp, countBy(state.questions, (q) => q.exp), "Any experience");
+    fillSelect(els.mockField, countBy(state.questions, (q) => q.field), "Any field");
+    fillSelect(els.mockCompany, countBy(state.questions, (q) => q.company), "Any company");
+    fillSelect(els.mockExp, countBy(state.questions, (q) => q.exp), "Any");
     els.field.value = state.field;
     els.company.value = state.company;
     els.topic.value = state.topic;
     els.exp.value = state.exp;
+  }
+
+  function rebuildFieldForTab() {
+    if (state.tab === "learnings") {
+      fillSelect(els.field, countBy(state.learnings, (l) => l.field), "All fields");
+    } else {
+      fillSelect(els.field, countBy(state.questions, (q) => q.field), "All fields");
+    }
+    els.field.value = state.field;
+    if (![...els.field.options].some((o) => o.value === state.field)) {
+      state.field = "";
+      els.field.value = "";
+    }
   }
 
   /* ---------- rendering ---------- */
@@ -126,20 +144,27 @@
     return btn;
   }
 
-  function renderStats(visible) {
-    const n = state.questions.length;
-    const fields = new Set(state.questions.map((q) => q.field)).size;
-    const companies = new Set(state.questions.map((q) => q.company).filter((c) => c !== "General")).size;
-    const doneCount = state.questions.filter((q) => done.has(q.id)).length;
-    const pct = n ? Math.round((doneCount / n) * 100) : 0;
+  function renderStats(visible, totalLabel, total) {
+    const fields = new Set(state[totalLabel].map((x) => x.field)).size;
+    const companies = new Set(state[totalLabel].map((x) => x.company).filter((c) => c && c !== "General")).size;
+    const doneCount = state.tab === "questions" ? state.questions.filter((q) => done.has(q.id)).length : 0;
+    const pct = state.questions.length && state.tab === "questions" ? Math.round((doneCount / state.questions.length) * 100) : 0;
     els.stats.innerHTML = "";
-    for (const [b, s, cls] of [
-      [n.toLocaleString(), "unique questions", ""],
-      [fields, "fields", ""],
-      [companies, "companies", ""],
-      [doneCount + " / " + n, "done (" + pct + "%)", "progress"],
-      [visible.toLocaleString(), "showing", ""],
-    ]) {
+    const tiles = state.tab === "questions"
+      ? [
+          [state.questions.length.toLocaleString(), "unique questions", ""],
+          [fields, "fields", ""],
+          [companies, "companies", ""],
+          [doneCount + " / " + state.questions.length, "done (" + pct + "%)", "progress"],
+          [visible.toLocaleString(), "showing", ""],
+        ]
+      : [
+          [state[totalLabel].length.toLocaleString(), state.tab === "learnings" ? "learning posts" : "source posts", ""],
+          [fields, "fields", ""],
+          [companies, "companies", ""],
+          [visible.toLocaleString(), "showing", ""],
+        ];
+    for (const [b, s, cls] of tiles) {
       const div = document.createElement("div");
       div.className = "stat" + (cls ? " " + cls : "");
       const bEl = document.createElement("b");
@@ -157,7 +182,7 @@
     for (const q of state.questions) for (const t of q.topics || []) counts.set(t, (counts.get(t) || 0) + 1);
     const top = [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 18);
     for (const [t, c] of top) {
-      els.activeTopics.appendChild(chip(`#${topicLabel(t)} ${c}`, () => { state.topic = t; els.topic.value = t; render(); }));
+      els.activeTopics.appendChild(chip(`#${topicLabel(t)} ${c}`, () => { state.topic = t; els.topic.value = t; state.tab = "questions"; setTabUI("questions"); render(); }));
     }
   }
 
@@ -171,6 +196,22 @@
     if (state.q) {
       const hay = (q.text + " " + q.field + " " + q.company + " " + (q.topics || []).map(topicLabel).join(" ")).toLowerCase();
       if (!hay.includes(state.q)) return false;
+    }
+    return true;
+  }
+
+  function learningMatches(l) {
+    if (state.field && l.field !== state.field) return false;
+    if (state.q) {
+      const hay = (l.text + " " + l.author + " " + l.field + " " + l.company).toLowerCase();
+      if (!hay.includes(state.q)) return false;
+    }
+    return true;
+  }
+
+  function sourceMatches(p) {
+    if (state.q) {
+      return (p.text + " " + p.author + " " + p.company + " " + p.field).toLowerCase().includes(state.q);
     }
     return true;
   }
@@ -226,10 +267,41 @@
       authorEl.textContent = "via " + ((q.authors || [])[0] || "unknown");
     }
 
-    const link = node.querySelector("[data-link]");
-    link.href = "https://www.linkedin.com/feed/update/urn:li:activity:" + (q.sources || [])[0] + "/";
+    node.querySelector("[data-link]").href = "https://www.linkedin.com/feed/update/urn:li:activity:" + (q.sources || [])[0] + "/";
 
     if (done.has(q.id)) card.classList.add("is-done");
+    return node;
+  }
+
+  function renderLearning(l) {
+    const node = els.lTpl.content.cloneNode(true);
+    const fieldB = node.querySelector("[data-field]");
+    fieldB.textContent = l.field;
+    const compB = node.querySelector("[data-company]");
+    if (l.company && l.company !== "General") {
+      compB.textContent = l.company;
+    } else {
+      compB.remove();
+    }
+    const body = node.querySelector("[data-text]");
+    body.textContent = l.text;
+    const clampBtn = node.querySelector("[data-clamp]");
+    requestAnimationFrame(() => {
+      if (body.scrollHeight > 260) {
+        body.classList.add("clamped");
+        clampBtn.hidden = false;
+        clampBtn.addEventListener("click", () => {
+          const clamped = body.classList.toggle("clamped");
+          clampBtn.textContent = clamped ? "Show more ▾" : "Show less ▴";
+        });
+      }
+    });
+    const topicsWrap = node.querySelector("[data-topics]");
+    for (const t of (l.topics || []).slice(0, 5)) {
+      topicsWrap.appendChild(chip(topicLabel(t), () => { state.tab = "questions"; setTabUI("questions"); state.topic = ""; render(); }));
+    }
+    node.querySelector("[data-author]").textContent = "by " + (l.author || "unknown");
+    node.querySelector("[data-link]").href = l.post_url;
     return node;
   }
 
@@ -251,6 +323,9 @@
   }
 
   function render() {
+    rebuildFieldForTab();
+    els.loadMore.hidden = true;
+    els.empty.hidden = true;
     if (state.tab === "questions") {
       const visible = state.questions.filter(questionMatches);
       const slice = visible.slice(0, state.visible);
@@ -258,30 +333,33 @@
       const frag = document.createDocumentFragment();
       for (const q of slice) frag.appendChild(renderQuestion(q));
       els.questions.appendChild(frag);
-      els.sources.hidden = true;
-      els.questions.hidden = false;
       els.loadMore.hidden = visible.length <= state.visible;
       els.loadMore.textContent = `Load more (${visible.length - state.visible} remaining)`;
       els.empty.hidden = visible.length !== 0;
       els.searchCount.textContent = `${visible.length.toLocaleString()} / ${state.questions.length.toLocaleString()} questions`;
-      renderStats(visible.length);
+      renderStats(visible.length, "questions", state.questions.length);
+    } else if (state.tab === "learnings") {
+      const visible = state.learnings.filter(learningMatches);
+      els.learnings.innerHTML = "";
+      const frag = document.createDocumentFragment();
+      for (const l of visible) frag.appendChild(renderLearning(l));
+      els.learnings.appendChild(frag);
+      els.empty.hidden = visible.length !== 0;
+      els.searchCount.textContent = `${visible.length} / ${state.learnings.length} learnings`;
+      renderStats(visible.length, "learnings", state.learnings.length);
     } else {
-      const q2 = state.q;
-      const visible = state.posts.filter((p) => {
-        if (!q2) return true;
-        return (p.text + " " + p.author + " " + p.company + " " + p.field).toLowerCase().includes(q2);
-      });
-      els.questions.hidden = true;
-      els.sources.hidden = false;
+      const visible = state.posts.filter(sourceMatches);
       els.sources.innerHTML = "";
-      els.loadMore.hidden = true;
       const frag = document.createDocumentFragment();
       for (const p of visible) frag.appendChild(renderSource(p));
       els.sources.appendChild(frag);
       els.empty.hidden = visible.length !== 0;
       els.searchCount.textContent = `${visible.length} / ${state.posts.length} source posts`;
-      renderStats(visible.length);
+      renderStats(visible.length, "posts", state.posts.length);
     }
+    els.questions.hidden = state.tab !== "questions";
+    els.learnings.hidden = state.tab !== "learnings";
+    els.sources.hidden = state.tab !== "sources";
   }
 
   /* ---------- mock interview ---------- */
@@ -323,6 +401,21 @@
 
   /* ---------- wiring ---------- */
 
+  function setTabUI(tab) {
+    state.tab = tab;
+    els.tabQuestions.classList.toggle("active", tab === "questions");
+    els.tabLearnings.classList.toggle("active", tab === "learnings");
+    els.tabSources.classList.toggle("active", tab === "sources");
+    // learnings/sources: hide question-specific filters
+    const showQ = tab === "questions";
+    els.company.parentElement.classList.toggle("hide", !showQ);
+    els.topic.parentElement.classList.toggle("hide", !showQ);
+    els.exp.parentElement.classList.toggle("hide", !showQ);
+    els.doneView.parentElement.classList.toggle("hide", !showQ);
+    els.activeTopics.classList.toggle("hide", !showQ);
+    render();
+  }
+
   function wire() {
     let debounce;
     els.search.addEventListener("input", () => {
@@ -338,10 +431,12 @@
       state.q = ""; state.field = ""; state.company = ""; state.topic = ""; state.exp = ""; state.visible = 50;
       els.search.value = ""; els.field.value = ""; els.company.value = ""; els.topic.value = ""; els.exp.value = "";
       els.doneView.value = "all";
+      rebuildFieldForTab();
       render();
     });
-    els.tabQuestions.addEventListener("click", () => setTab("questions"));
-    els.tabSources.addEventListener("click", () => setTab("sources"));
+    els.tabQuestions.addEventListener("click", () => setTabUI("questions"));
+    els.tabLearnings.addEventListener("click", () => setTabUI("learnings"));
+    els.tabSources.addEventListener("click", () => setTabUI("sources"));
     els.loadMore.addEventListener("click", () => { state.visible += 100; render(); });
     els.mockBtn.addEventListener("click", () => els.mockDialog.showModal());
     els.mockClose.addEventListener("click", () => els.mockDialog.close());
@@ -353,14 +448,6 @@
         render();
       }
     }, { passive: true });
-  }
-
-  function setTab(tab) {
-    state.tab = tab;
-    els.tabQuestions.classList.toggle("active", tab === "questions");
-    els.tabSources.classList.toggle("active", tab === "sources");
-    els.controls.classList.toggle("hidden-controls", tab !== "questions");
-    render();
   }
 
   /* ---------- init ---------- */
