@@ -86,7 +86,7 @@
     optAll.value = "";
     optAll.textContent = labelAll;
     select.appendChild(optAll);
-    const sorted = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    const sorted = [...counts.entries()].sort((a, b) => a[0].localeCompare(b[0]));
     for (const [v, c] of sorted) {
       const o = document.createElement("option");
       o.value = v;
@@ -158,7 +158,7 @@
       for (const t of p.topics || []) topicMap.set(t, (topicMap.get(t) || 0) + 1);
     }
     els.topicMultiPanel.innerHTML = "";
-    for (const [t, c] of [...topicMap.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))) {
+    for (const [t, c] of [...topicMap.entries()].sort((a, b) => topicLabel(a[0]).localeCompare(topicLabel(b[0])))) {
       const lab = document.createElement("label");
       const box = document.createElement("input");
       box.type = "checkbox";
