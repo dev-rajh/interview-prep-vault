@@ -1,0 +1,30 @@
+« Works perfectly when there is 1 record por day.
+Pthané are nbising cays, we adjust using RANGE iewerval
+
+rd
+
+Assume Table: transactions(txn_date)
+Goal
+Find dates that ary missing in the sequence,
+SQL Logic
+
++ (Gomerate each date’s previous date.
+
++ Mf ben_date @ not exactly 1 day attar previous
+
+=. <
+
+LAG|bo_date! OVER (Oo ate
+
+FROM tronsactions
+) . S
+SELECT SS
+J; | she) AS missing start,
+1, un_dace) AS missing amd
+
+EDIPFictey, prev_date, fan_ciste) » 1;
+interpretation
+
+Mf previous date = 2024-01-01 and current * 2024-01-05
++ Miscuirg date: 2, 3, 4,
+

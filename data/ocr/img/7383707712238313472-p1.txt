@@ -1,0 +1,20 @@
+SQL NOTES
+
+* Data ba collection of facts, such as numbers, words, measurements,
+observations or descriptions of things.
+Exampies-
+o Numbers fe.g., 42,3.14)
+o Words [e.g., “Hello*, “SO0")
+0 Measurements (e.g., height, weight}
+Oo Observations (e@., "Ht is raining”)
+
+Database
+
+© Adatabase is an organized collection of data, generally stored and
+accessed electronically fram a computer system,
+© fallow for efficient storage, retrieval, and management of data,
+
+fxamoles of Databases:
+
+o E-commerce platfonns (eg, Amazoe}
+0 Social media platforms (e.g., Facebook)

@@ -1,0 +1,17 @@
+(] Deloitte Data Engineer Interviews
+(20-40 LPA) — Most Repeated
+Questions & Patterns >
+
+RS
+SQL Wo
+
+Assume Table: crders|user eS
+Problem Logic
+
+We need semen erie oerae calendar days (not 3 orders, but 3 back-to-
+Eumck chara).
+3 ola Gate wilh row nurtiteer.
+1_clate - en] ia Cons i'a @ conseculive sequence
+WITH cote 45 ¢
+SELECT
+urer_id,

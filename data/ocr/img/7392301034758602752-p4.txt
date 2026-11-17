@@ -1,0 +1,41 @@
+5. Write a query to find employees earning more than
+their managers.
+
+Assure the table employees hag
+emp_id, name, salary, manager_id
+
+SELECT ename AS employee_name, ¢.salary, m.name 4S manager_name,
+m.salary AS manager_salary
+
+FROM ermmlayees e
+
+ICQN employees im OM emanagerid = memp id
+
+WHERE e-salary > m.salary:
+
+Explanation:
+* SelF-join: matches employees [e) with their managers [m)
+* Filters thase where employee's salary > manager's salary.
+
+6, What is a window function in SOL? Provide examples of
+ROW_NUMBER and RANK.
+
+Definition:
+A window function performs calculations across a set of table rows
+related to the current row — without collapsing rows like GROUP BY.
+
+Syntax:
+FUNCTION NAME) OVER (PARTITION BY column ORDER BY column)
+
+Example: ROW_NMUMBER(}
+Assigns a unique sequential number to each row within a partition.
+
+SELECT name, department, salary,
+
+ROW _NUMBER() OVER (PARTITION BY department ORDER BY salary
+DESC) AS row_mum
+
+FROM employees;
+
+MandarPat
+

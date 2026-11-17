@@ -1,0 +1,38 @@
+Time Tenved iso feature in Delta Lake that shows you to query or rewert to ofder versions
+of your Delta table using version number or timestamp.
+
+This ia macke possible because Delta Lake maintains transaction loge (stored in
+_delte_log!) that record every aperstion perlonmed on the date jeg., maert, upctebe, delete),
+
+Use Cases:
+= #Aooldental Delotes of Updates ~ Rollback to previous version
+© Auditing - See what the data locked like at a specitic point in time
++ Reproducibility - un ML models on hatorical data anagehors
+
+Example (using PySpark or Databricks SQL:
+
+Query by version:
+
+SELECT * FAOM deta.” /mnttima/‘sales” VERSION AS OF 3;
+
+Quary by timastaenp:
+
+SELECT * FROM cette.” /mnctintafealas’ TIMESTAMP AS OF 2024-06-01T12<Kn00;
+Restore 2 table to 5 previous version:
+
+RESTORE TABLE celta /mntidate/sales TO VERSION AS OF 2;
+
+3) Difference between Partition and Bucketing
+
+Goth Partitioning and Gucketing are techniques to optenize date storage and querying in
+distributed systems Ske Hadoop, Spark, Hive, or Delta Lake. They both aim to reduce scan
+time and improve performance, but tay work dittarantly.
+
+© Partitioning:
+
+= Detinition: Orgareces cate to G@irectories based on distinct yatues of one of more
+columns.
+
++ Exarngla:
+you partition Gy country, your lies yall fe etored sa;
+

@@ -1,0 +1,12 @@
+If you're planning to switch into Data Engineering, mastering ETL (Extract, Transform, Load) is where your journey begins.
+
+This curated ETL guide (from Bosscoder Academy) covers everything you need from core concepts to real-world use cases used by companies like Amazon, Netflix, and NTT DATA.
+
+What's Inside:
+- Step-by-step breakdown of Extract -> Transform -> Load
+- ETL vs ELT explained with modern architectures
+- Tools used by top data teams like Airflow, Spark, dbt, Snowflake, Kafka & more
+- Real-world ETL case studies (Walmart Sales, Amazon Personalization, Target Inventory)
+- Best practices for scalability, fault tolerance & data quality
+
+(Attached document: "ETL guide", 5 pages - OCR'd separately.)

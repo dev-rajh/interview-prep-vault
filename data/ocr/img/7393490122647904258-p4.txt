@@ -1,0 +1,30 @@
+fram pyspark.sql import SoarkSessian
+spark = SparkSession. builder. appName"Exampie"|.getOrcreatat}
+
+data = [
+{"id*: 1, “name: “Alice”, “age: 29},
+{"id*: 2, “name: "Bob", “age”: 35}
+
+@ = sport createDetaframeldatal
+of shoe)
+
+Reading Files
+
+# Basic CSV fies
+Of = spark read format! csy") kad “/pathyto/saenple csv")
+
+#csv with header
+Gf = spark read. option header*, Truel. csel"/pattitosamgle.cay")
+
+# muitinie aotions
+Gf = spark read option! inferSchema’, True). option! delimiter’.".").csvi"/path/to!san
+
+7 mith deivied schema
+from pyspark.sql.types import StructType. Structfield, StongType. IntegerType
+schema = StructTyped[
+StructFiehi(Cname*, StringTypet}. True),
+StructField(*age”. IntegerTypel), True!
+It
+@ > spark read fonmat(csy") schemalschema) load" /paltvtasampie cay")
+
+Oe OnE nS nT OTD ST re Oe SOT eT .

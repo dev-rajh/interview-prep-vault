@@ -1,0 +1,23 @@
+Ultimate Data Engineering Interview Playbook!
+
+I just explored an in-depth Zeta Data Engineer Interview Guide that covers everything from SQL mastery to large-scale data architecture — and it's a goldmine for anyone preparing for Data Engineering roles.
+
+What it includes:
+- Top Required Skills — SQL, PySpark, ETL, AWS, Data Modeling, Data Warehousing, System Design
+- Structured Interview Rounds focusing on:
+  - SQL + Database Concepts
+  - Data Quality, CDC, History Tracking
+  - Data Architecture & System Design
+  - Multi-source Data Integration
+  - Cloud-Agnostic Architectures
+- Real-world Scenarios used by top-tier companies
+- Deep-dive problem sets on history tables, triggers, OLTP -> OLAP flows, and more
+- Modern Data Engineering Tools & Design Patterns
+
+Perfect for anyone preparing for mid-senior Data Engineer roles, especially in high-scale fintech & product-based companies.
+
+Why it's powerful: it not only tests knowledge — it tests how you think about data systems, scalability, correctness, and cloud architecture.
+
+If you're aiming for roles at companies like Zeta, Stripe, Uber, Google, Amazon, or any large-scale data platform — this is the preparation blueprint you need.
+
+(Attached document: "Zeta Data Engineering Interview Guide", 5 pages - OCR'd separately.)

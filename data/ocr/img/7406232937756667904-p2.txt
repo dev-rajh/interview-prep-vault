@@ -1,0 +1,13 @@
+ETL System
+
+Extract, Transform, Load (ETL) system is
+responsible for extracting data from
+source systems, transforming it to fit
+business needs, and loading it into a data
+warehouse.
+
+A retail company extracts sales data
+from its point-of-sale system,
+transforms it to analyze seasonal
+trends, and loads it into a data
+warehouse.

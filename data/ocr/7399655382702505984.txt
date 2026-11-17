@@ -1,0 +1,105 @@
+QUESTIONS
+
+| eceateem cai
+| customernamne
+; ; . »| onderid
+customer ia
+| —P>
+| preductid __] [pee
+| preduct_naria m ‘
+
+
+*Disclaimer*
+
+Before you begin, here's a quick note.
+
+This sheet is here to help you learn SQL In & smart and
+structured way, But remember — don't just rush through the
+answers. Write the queries yourself. Run them, test them,
+even make mistakes and fix them, Only after that, check other
+solutions.
+
+That's how you build real SQL confidence — the kind that helps
+in interviews and on the job,
+
+A 6 ODER
+oe
+
+Why This Sheet —
+
+Here's why we feel this sheet is right for you
+
+1. Clear Learning Path
+Questions are arranged step by step — from simple filtering to
+advanced functions — so your skills qrow naturally.
+
+2. Real-World Relevance
+The problems are based on practical scenarios like e-commerce,
+finance, and social media — exactly what companies deal with.
+
+3. Hands-On Practice
+This isn't about memorizing. It's about solving. You'll practice writing
+efficient, accurate queries under real conditions.
+
+This sheet is designed to make SQL feel clear, practical, and useful — so
+when it's time for interviews, you're ready.
+
+BOSSCODER
+aAcAGEMY
+
+Introduction to SQL —
+
+SQL (Structured Query Language) is a standard language used to
+communicate with and manage relational databases. It allows you to
+define, manipulate, retrieve, and control access to the data.
+
+SOL is categorized into different sub-lanquages based on functionality:
+
+1. DDL (Data Definition Language) : Used to define and modify the
+Structure of database objects like tables, schemas, and indexes.
+Example : CREATE, ALTER, DROP, TRUNCATE.
+
+2. DML (Data Manipulation Language) : Used to insert, update, or
+delete data fram database tables.
+Example : INSERT, UPDATE, DELETE, MERGE.
+
+3. DQL (Data Query Language) : Used to query and fetch data froma
+database. Example : SELECT, WHERE, ORDER BY, GROUP BY.
+
+4. DCL (Data Control! Language) : Used to control access to data and
+database objects.
+Example : GRANT, REVOKE
+
++ TCL (Transection Control Language) : Used to manage changes
+made by DML statements and control the execution of transactions.
+Example : COMMIT, ROLLBACK, SAVEPOINT
+
+BOSSCODER
+acaGcimy
+
+Key SQL Concept —
+
+1. Tables : A table is a collection of rows (records) and columns (fields).
+Each table represents a single entity, like Students or Orders.
+
+2. Keys :
+a. PRIMARY KEY - Uniquely identifies a row.
+b. FOREIGN KEY - Linked tables together.
+
+3. Joins : Joins are used to combine data from multiple tables
+a. INNER JOIN - Only matching rows.
+b, LEFT JOIN - All rows from left table + matches from the right.
+c. RIGHT JOIN - All rows from right table + matches from the left.
+d. FULL JOIN - All rows from both tables
+
+4, Constraints : Rules applied to table columns
+4. NOT NULL - Column must have a value.
+b. UNIQUE - Values must be unique.
+c. CHECK - Values must satisfy a condition.
+d, DEFAULT - Sets a default value if none is provided,
+
+5. Aqgregate Functions : Used to perform calculations on multiple rows.
+like - COUNT(), SUM(), AVG(), MIN(), MAX()
+
+BOSSCODER
+aAcAGEMY

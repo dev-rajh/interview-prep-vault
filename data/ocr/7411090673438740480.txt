@@ -1,0 +1,101 @@
+(] Deloitte Data Engineer Interviews
+(20-40 LPA) — Most Repeated
+Questions & Patterns >
+
+RS
+SQL Wo
+
+Assume Table: crders|user eS
+Problem Logic
+
+We need semen erie oerae calendar days (not 3 orders, but 3 back-to-
+Eumck chara).
+3 ola Gate wilh row nurtiteer.
+1_clate - en] ia Cons i'a @ conseculive sequence
+WITH cote 45 ¢
+SELECT
+urer_id,
+
+ROW _NUMBERD OVER (PARTITION BY userid ORDER BY crderdme) AS rn
+FROM cedars
+h
+ap AS |
+SELECT
+cramr_ied,
+cedor_doin,
+DATEADON day, -rn, ceder date) AS grp_key
+FROM coe
+)
+SELECT user_
+FROM arp
+GROUP BY user_id, anp_kay
+
+HAVING COUNT|*) == % SN
+
+|, name, value, updated st)
+
+fo
+
+WITH ranked AS [
+SELECT *,
+ROW _NUMBER)) OVER (PARTITION BY id ORDER BY upeloted_at DESC) AS mn
+FAOM customer
+
+
+}
+SELECT id, name, value, updated_at
+FROM ranked
+WHERE rn 1;
+Why ROW _NUMBER?
++ Because we want oety the top 1.
++ Using RANKDENSE RANK may give duplicates when brmests
+
+Assume Table: salas|sala_dete, rewarue)
+
+Requirement 8)
+For each date + compute:
+AVG|ravenue over last 7 days includin we
+
+= y
+
+a
+
+6 PRECEDING AND CURRENT RoW
+145 Felina,
+FROM sa
+ORDER BY sale_cate:
+Koy Points
++ Uses window frame of 7 sows [not 7 cloves).
+
+
+« Works perfectly when there is 1 record por day.
+Pthané are nbising cays, we adjust using RANGE iewerval
+
+rd
+
+Assume Table: transactions(txn_date)
+Goal
+Find dates that ary missing in the sequence,
+SQL Logic
+
++ (Gomerate each date’s previous date.
+
++ Mf ben_date @ not exactly 1 day attar previous
+
+=. <
+
+LAG|bo_date! OVER (Oo ate
+
+FROM tronsactions
+) . S
+SELECT SS
+J; | she) AS missing start,
+1, un_dace) AS missing amd
+
+EDIPFictey, prev_date, fan_ciste) » 1;
+interpretation
+
+Mf previous date = 2024-01-01 and current * 2024-01-05
++ Miscuirg date: 2, 3, 4,
+
+

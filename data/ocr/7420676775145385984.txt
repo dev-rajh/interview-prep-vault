@@ -1,0 +1,140 @@
+AZURE
+
+DATA ENGINEER
+INTERVIEW QUESTIONS
+
+1) What are Parameters and Variables in ADF (Azure Data
+Factory)?
+Pacanvetars:
+
+« Definition; Parseveters in MOF are external values Chil are pared into pipelines,
+datasets. dotatiows, of linked services at the time of mepcution.
+
+« Use Case: They are mostly used when you wont 10 make your pipeline reusable and
+dyrarnic jeg, pasaing tle nares, table meante, of teicher guach).
+
+« Scope: Paceenetars are delined al the pipeline lawl and art euad-onby within Ure
+Pipeliees.
+
++ Example:
+Suppose youre ingesting data from a bled storage pathe
+
+You can defing & parameter Caled FileName aed use if in your dataset or linked
+service.
+
+“name” "FilaName’,
+
+
+“type”: “sinng”
+)
+
+Inthe dataset path:
+Soorcalf input’, pipelined) parameters, Filaharrey)
+
+Variables:
+
+« Definition: Varebles in ADF ore used ievside the pipeline to store temporary values
+during execution. They con be moditied using Set Variable or Aopend Variable
+activitias
+
+Use Case: Track status flags, accumulate walues, count iterations, of act as loop
+counters inside ForEach loops.
+
+Soope: Pipeine scope; can be updated during pipeline execution.
+Example:
+[
+“name “Counter,
+“type”: “int,
+“detoultVetue”: Oo
+)
+Use the Set Variable activity to increase its value as readied.
+© Key Ditterunce:
+
+2) What is Time Travel in Delta Lake?
+Definition:
+
+
+Time Tenved iso feature in Delta Lake that shows you to query or rewert to ofder versions
+of your Delta table using version number or timestamp.
+
+This ia macke possible because Delta Lake maintains transaction loge (stored in
+_delte_log!) that record every aperstion perlonmed on the date jeg., maert, upctebe, delete),
+
+Use Cases:
+= #Aooldental Delotes of Updates ~ Rollback to previous version
+© Auditing - See what the data locked like at a specitic point in time
++ Reproducibility - un ML models on hatorical data anagehors
+
+Example (using PySpark or Databricks SQL:
+
+Query by version:
+
+SELECT * FAOM deta.” /mnttima/‘sales” VERSION AS OF 3;
+
+Quary by timastaenp:
+
+SELECT * FROM cette.” /mnctintafealas’ TIMESTAMP AS OF 2024-06-01T12<Kn00;
+Restore 2 table to 5 previous version:
+
+RESTORE TABLE celta /mntidate/sales TO VERSION AS OF 2;
+
+3) Difference between Partition and Bucketing
+
+Goth Partitioning and Gucketing are techniques to optenize date storage and querying in
+distributed systems Ske Hadoop, Spark, Hive, or Delta Lake. They both aim to reduce scan
+time and improve performance, but tay work dittarantly.
+
+© Partitioning:
+
+= Detinition: Orgareces cate to G@irectories based on distinct yatues of one of more
+columns.
+
++ Exarngla:
+you partition Gy country, your lies yall fe etored sa;
+
+
+o Farther filtering and scanning
++ Conn:
+o Too mery partitions [high cardinality! can lead to metedsts overhend.
+» Use Case
+o Partition by year, month, or region in lange datasets.
+SH Buckating:
+
+« Detinition; Deedes date nto o fixed mumber of buckets (files) by applying o hash
+function on the column vatues.
+
+Stored inside a single partition but across multiple buckets /files}.
+
+Example:
+Bucketing ty cuatomer_id into 10 buckets mauns each row if sasgined bo a bucket
+based on hash|customer_ic) % 10.
+
+Pros:
+o Useful in joes where both tables are bucketed by the join key.
+o Solyas shred cate isaue in high cardinality cobumnne
+Cone
+o Less dynamic (equires bucket count to be detined upfront)
+Use Case:
+o Lange joins om customer i or product ID.
+
+B Comparison Tabla:
+
+
+4) Explain Medallion Architecture
+© Dafinition:
+
+The Medatiion Architecture (piso called the Multi-Mop Architecture) is 5 date gesign
+pattern used in Getta Lake jand Garetrinks), which organizes data pipelines into theee
+
+logical layers:
+1, Brows (Raw Date Layer)
+2. Sever (Cleaned and Enriched Dats Layer)
+
+4, Gold (Business-Level Aggregated Data Layer)
+
+B Plow Diagram:
+rs |
+| Beonzs | + Raw ingested Dota (CSV, ISON, logs}
+
+| Sliver | + Claarec,, Filtered, Joined Data
+

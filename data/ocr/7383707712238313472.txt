@@ -1,0 +1,138 @@
+SQL NOTES
+
+* Data ba collection of facts, such as numbers, words, measurements,
+observations or descriptions of things.
+Exampies-
+o Numbers fe.g., 42,3.14)
+o Words [e.g., “Hello*, “SO0")
+0 Measurements (e.g., height, weight}
+Oo Observations (e@., "Ht is raining”)
+
+Database
+
+© Adatabase is an organized collection of data, generally stored and
+accessed electronically fram a computer system,
+© fallow for efficient storage, retrieval, and management of data,
+
+fxamoles of Databases:
+
+o E-commerce platfonns (eg, Amazoe}
+0 Social media platforms (e.g., Facebook)
+
+Database Management System (DBMS
+
+* Database management system Is a software which is used ta manage the
+database.
+
+® DMS provides an interface to perform various operations bke~
+
+1. Creating databases, tables, and objects.
+
+2. inserting, updating, and deleting data.
+
+3. Dropping databases, tables, and objects.
+
+4, Provides data seourity.
+
+® Some pooular DOMS softwares are MS SOL
+SERVER, Oracke MySQL JBM, DB2,PostgreSOl ete,
+
+Relational Database Management System(RDBM
+
+© fis atype of O8MS that manage relstional database.
+® fthelpsto store, organize and retrieve data efficiently. ROBMS softwares
+are MySQL, PostpreSOl, SO1 Server, and Oracle.
+
+© Atable ina database is a collection of rows and colurnns.
+® fis used to organize and store data in a structured format.
+
+Row and Column
+
+© Arow is a horizontal arrangement of data moving froen right ta bett, it is
+often referred to as a record of a tuple. It represents individual data
+entries.
+
+® Acolumn és a vertical arrangement of data moving from top to bottom. it
+is often referred to as an attribute or a field. & represents the
+characteristics or properties of the data.
+
+txamole- 4 “Qustomers” table might have columns like CustomeriD, Name,
+Ernail, and Phone with each row representing a different customer.
+
+® SQL stands for Structured Query Language was initially developed by
+SM.
+
+© = Witially it was called as SEQUEL (Structure English Query Language}
+
+* SQLs 2 programming language used to ieiteract with database,
+
+* SOL allows you to create, read, update, and delete (CRUD) data ins
+relational database.
+
+© Geta Types define the type of data that can be stored in a table column.
+® ensures data integnty and optimizes storage.
+
+Commonly used Data Types are
+A, String Datatypes- & stares text strings.
+
+1. CHAR-
+® Can store characters of fixed kength
+* The site parameter specifies the column length in characters cam
+be from 0 to 255.
+
+2. VARCHAR-
+* Can store characters up to given length.
+@ The size parameter specifies the maximurn column length in
+characters can be from 0 to 655.35.
+
+&. Numeric Datatypes- These datatypes store numbers, both integer and
+floating-point number.
+
+1. INT-
+® Used for storing whole numbers without decimal.
+
+2. FLOAT:
+© Used for storing numbers without decienal.
+® Float gwes approximate value while performing calculations.
+
+3. Decimal (P, $+
+
+* Used ta store numbers with a fixed nuenber of decimal places.
+© Decimal gives exact value.
+
+® Total range of digits can be 1-38. [Precision-F)
+
+© Range after decimal should be 0-30, [Scate-5]
+
+C Date and Time Datatypes- These datatypes stores date and time,
+© DATE- Stores date values [Format Y¥Y9-hMhM-DD).
+® TIME: Stores time values (Format:: HHoMIM:S5].
+
+© DATETIME- Stores both date and time values [Format YY¥¥-MiM-00
+HH:MM55)
+
+D. BIT Datatype: 817 data type can store either True or False values
+(represents by 2 and O].
+
+Example-
+
+CREATE TABLE Employers [
+EmpiayeetD INT,
+FirstWame VARCHAR|SO],
+LastWame CHAR{2D),
+Salary DECIMAL(10, 2),
+BirthDate DATE,
+HireTime TIME,
+
+IsActive BIT
+
+i
+
+SOL Commands
+
+© SQL commands are instructions,
+
+© fis used to comemurecate with the database to perform tasks, functions
+and queries of data.
+
+© There are five types af SQL commands.

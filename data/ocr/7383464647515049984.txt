@@ -1,0 +1,184 @@
+(0) Top 3 products by total sales per region in the Last 6 months (handle
+ties)
+
+Approach:
+
+* Filter sates in the last 6 months
+
+* Aggregate by region, product_id
+® Use DENSE RANE( ) to handle ties
+
+© Pickronke2
+
+WITH sales fa AS ¢
+SELECT regian,
+praduct_id,
+SUM(sales_amgunt) AS total_sales
+FROM sales
+WHERE sale date >= DATEADD(MONTH, -6, CURRENT DATE)
+GROUP BY region, preduct_id
+1.
+ranked AS (
+SELECT region,
+product_id,
+total_sales,
+OPNSE RANK{) OVER [
+PARTITION BY region
+ORDER BY total_sales DESC
+} AS rk
+FROM sales Ge
+}
+SELECT region, product_id, total_sales
+FROM ranked
+WHERE rok c= 3;
+
+(2) Orders where shipping took longer than the month's average
+
+Approach:
+
+* Compute shipping cuestion pee cedar
+© =Compubt ananige duration peer mraeith
+* Compare gech order's duration with the monthly average
+
+WITH order durations AS {
+SELECT order_id,
+EXTRACT( YEAR FROM order date) AS order_year,
+EXTRACT(MONTH FROM order date) AS order_month,
+DATE_PART( ‘day’, shipped date - order_date) AS ship days
+FROM orders
+is
+month_awe AS ¢
+SELECT order_year,
+order_sonth,
+OvG(ship_days) AS avg_ship_days
+FROM order_durations
+GROUP BY order_year, order_month
+}
+SELECT o.order_id,
+o.ship_days,
+move _ship_days
+FROM order_durstions o
+JOIN month_svg =
+ON o.order_year = @,order_year
+48D o.order_month = w.order_month
+WHLRL o.ship_days > ®,avg_ship_days;
+
+1} Recursive query: List all subordinates for a given manager
+Approach:
+
+* Tabloemployees(emp id, aup_nase, sanager_id)
+« Anchor direct reports of manager *
+® Aeoursive step: employees whose manager_id = one of previously found emp_ids
+
+WITH RECURSIVE subordinates as [
+-- anchar; direct reports
+
+SELECT eup_id, esp_nare, manager_id
+FROM employees
+WHERE manager_id = :wanager_id = -- pass manager here
+
+UNTOM ALL
+
+-- recursion: indirect reports
+SELECT e¢.emp_id, e.erp_name, ¢.manager_id
+FROM esployees e@
+IMMER DOIN subordinates 5
+OM e.menager_id = s,emp_id
+}
+SELECT * PROM subordinates;
+
+(§) Deduplicate a huge table while keeping the most recent record
+
+Approach:
+
+® Use ROW _NUMBER( ) partitioned by the natural key
+* Onder by updated at DESC to get the latest reoord
+® Pik row_mumber = 1
+
+WITH ranked AS ¢
+SELECT *,
+RoM_MUMBER() COVER (
+PARTITION BY natueal_key_colusn
+ORDER AY updated_at DESC
+7 AS en
+FROM big table
+}
+SELECT *
+FROA ranked
+WHERE rn = 1;
+
+(Aepioce noturel_tey_coleen with the colwnn{s) thet define duplicates.)
+
+® Python
+
+Efficiently read/transtonm/write a 20GB CSV daily to a database
+Apereach:
+
+* 20GB ise bigtor mamory, process in chums using
+pandas. resd_csy(chunksizes_) or plain csv reader.
+
+® Apply transformation jogic chunk by chunk,
+
+© Use 08 bulk-nsert (eg. to_sql(if_exists='append' ) withaethod='aulti' or
+emeoubenany'.
+
+* Wrap ina streaming pipeline.
+
+import pandas as pd
+from sqlalchesy ieport create_engine
+
+engine « create_engine({"postgresagl ://user:pass@host/db")
+chutksize = S30 889 A Tune this
+for chunk in pd.read_csv("dally file.cow", chunksize=chunksize):
+# transfora
+chunk["sale_date"] = pd.te_datetime(chunk["sale_date"])
+chunk[“awount™) = chunk["amount™].#illna(a}
+* load to O8
+
+chunk. to_sql(“sales", engine, if_exists="append",
+indexePalse, method=“multi")
+
+(For ultra-high throwgnpur, uae COPY / bulk-iowd unilitkes.)
+
+C3} Detect anomalies in sales data (3 std-dev spikes/drops)
+
+Approach:
+
+* Compute mean & std for your metric
+© Flag vale beyond 3.4 aa anormadiag.
+© Vectoriaed with NuenPy for seven.
+
+import mumpy as np
+import pandas as pd
+
+def detect_anagalies(df, col-"sales_amount"):
+fu = d#[col).mean{)
+signa = dé[col}.std{)
+df["anataly flag") = np.wherel
+(df[col) > su + 3*sigea) | (af[col] « au - 3*sigma),
+True, False
+
+}
+return dé[d#["anowaly flag” ]]
+
+* usage:
+© aromalies = detect_snorslies(sales_df, “daily sales")
+
+(0 streaming, maintain rolling moon & std wa Wrelford's aygonitivn)
+
+fF) Group transactions by customer + return top N by purchase frequency
+(no Pandas)
+
+Approach:
+
+© Uso beilt-in collections.Counter of defaultdict( int}.
+* Count percustomerin one pass.
+* Useheapg.nlargest to gettop-N.
+
+fron collections isport Counter
+import heapq
+
+def top on_custowers(transactions, m=5):
+# transactions is an iterable of (cust_id, awount)
+counts = Counter{cust_id for cust_id, _ in transactions)
+return heapg.nlargest(n, counts.items(), key=lawbda x: x[1])

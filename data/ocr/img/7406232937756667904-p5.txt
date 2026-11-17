@@ -1,0 +1,12 @@
+Transform
+
+The process of converting extracted data
+into a format that can be loaded into the
+data warehouse, including cleaning,
+conforming, and integrating data from
+multiple sources.
+
+Standardizing date formats and
+removing duplicates from customer
+records before loading them into the
+data warehouse.

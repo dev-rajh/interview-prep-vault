@@ -1,0 +1,120 @@
+Data Engineering
+Interview
+Questions
+
+oSlo
+a
+
+Ankita Gulati Shubh Goyal
+
+Job Details
+
+¢ Position: Data Engineer ||
+
+¢ Experience: 5+ years
+
+e Location: Bangalore / Mumbai
+¢ Work mode: Office
+
+« Compensation: 730-40LPA
+
+¢ Total Rounds: 3
+
+¢ Top Required Skills:
+
+1. SQL
+
+2. PySpark
+
+3. ETL Development
+
+4. AWS
+
+5. Data Modeling
+
+6. Data Warehousing
+
+7.System Design / Architecture
+
+Ankita Gulati Shubh Goyal
+
+Round |
+SOL & Database Concepts
+
+SQL
+
+1, What are the different types of joins in SQL? Briefly
+explain each with an example.
+
+2. What is the difference between UNION, UNION ALL,
+and UNION DISTINCT? Which one would you prefer for
+very large datasets, and why?
+
+3. Suppose you have an employee table and a
+manager table. You want a combined list of unique
+IDs from both. Since managers are also employees,
+their IDs may already exist in the employee table, but
+some may not.
+
+- How would you write a query using UNION ALL to
+ensure no duplicates?
+
+4. From a performance perspective, which is more
+efficient: UNION ALL with DISTINCT, UNION ALL with
+window functions or plain UNION ?
+
+Ankita Gulati Shubh Goyal
+
+5. Explain the difference between normalization and
+denormalization. When would you prefer which ?
+
+6. Give an example of a table in First Normal Form
+(INF) and then transform it into Second Normal Form
+(2NF) with explanation.
+
+SQL - Scenarios
+
+7. Given an Employee table with columns id (primary
+key), name, department, and manager _id (which
+references id and can be NULL if the employee has no
+manager, with the condition that no employee
+manages themselves), write a SQL query to display
+each employee along with the name of their
+manager.
+
+8. You have an orders table with: order _id,
+
+customer _id, order_date, amount, reason.
+
+Write a query to calculate the 7-day rolling average of
+amount for each reason.
+
+Ankita Gulati Shubh Goyal
+
+Round 2
+Data Management Concepts
+
+Data Quality & CDC
+
+1. How does a data validation framework like Great
+Expectations fit into ensuring data quality in an OLTP
+— OLAP pipeline?
+
+2. Schema changes in OLTP often require application
+code updates. How can the impact of schema
+changes be minimized?
+
+3. In an OLTP system, how can triggers be used to
+capture every insert, update, or delete into a history
+table?
+
+4. What would be the schema for a Card table and its
+corresponding Cardhistory table? How does each
+column support change tracking?
+
+5. Why do we include valid_from and valid_to
+columns in history tables when the latest state can be
+derived from entry order? What additional value do
+they provide?
+
+Ankita Gulati Shubh Goyal

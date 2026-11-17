@@ -1,0 +1,17 @@
+[a]
+RUNNING TOTAL
+(BY DEPT)
+
+Reset total for each department
+
+-- Cumulutive sum per group
+
+SELECT dept, date, amount,
+SUM(amount) OVER(
+PARTITION BY dept
+ORDER BY date
+) AS dept_running_total
+FROM expenses;
+
+Anandnarayanan S SOL INTERVIEW PREP
+® car

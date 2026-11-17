@@ -1,0 +1,29 @@
+# Chack for missing values
+
+erintict ianull|} aunty)
+
+# PM missing values with meanimedan'mode
+dt|"cotummn_name”).Alina(dt{columm_nome”|.mean)|), inplace= True}
+
+# Drop rows columns with missing values
+dt drognstingtiace=Trus}
+
+2 Removing Duplicates
+tdrop_duplicotesjingtace= True]
+
+2. Dots Type Conversion
+t["dete_colume’] = po.to_datetime|dt[dabe_column"|]
+@t]"numeric_columey] = pd-to_numeriofdt[numeric_oolumn’”], errors*"coerce™)
+
+4. String Cleaning (Removing Special Characters, Loweroasing. etc.)
+dif]"test_oolumn”] * dif text_colume”]| str.lowen).strreplace(rya-24-Z20-97, "", regex" True}
+
+& Handling Outliers
+
+You can remove outliers of cap them Gased on a threshold.
+# Rarove rows with outliers
+
+af = difaffcolurn_name’] < threshold vale)
+
+# Allernalively, cag cuthers
+dif'coluenn name] = di[cotumn name’). clip|lower=-nin_ walue, upper=max walue)

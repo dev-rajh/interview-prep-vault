@@ -1,0 +1,26 @@
+RANE) OVER (PARTITION BY Gepartment ORDER BY salary DESC] AS solery_rank
+FROM empioyan;
+4. How would you optimize a query that takes too Long to execute?
+« Use Indexes on frequently queried columns
+« Avoid **SELECT ***; ratriewe only required colurterd.
++ Optimize [00s fry incdesang kere.
++ Use BSPLAIN PLAN to anahee query performance,
+> Normalize the datehase structure,
+* Avoid redundant subqueries and use CTEs.
+5. Write a query to find duplicate records in a table,
+SELECT column]. colurmnz. COUNT")
+FROM toble_name
+GAGUP BY columnm!, column?
+HAVING COMUNTI*] > 1;
+6. How do you handle NULL values in SQL?
+> Use COALESCED to replace MULLS:
+SELECT COALESCE/salary, 0} FAOM employee;
+«» Use lS NULL/IS NOT NULL in conditions.
+* Use FFNULL (MySQL) or NVL{) (Oracial,
+7. Explain the difference between DELETE, TRUNCATE, and DROP,
++ OGLETE: Aemoves speotic rows, can be rolled back, and logs each row deletion.
+» TRUNCATE: Remnowes all rows, faster than DELETE, cannot be rolled back
+« GAOP: Remowes the entire table from the database.
+4, What is a CTE (Common Table Expression), and how Is it different trom a
+subquery?
++ (CTE: Temporary result set used in complex queries, improving readability.

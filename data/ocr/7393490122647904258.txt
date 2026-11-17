@@ -1,0 +1,119 @@
+> Spark
+ay) Playground
+
+PySpark Syntax Cheat
+Sheet - Quick Syntax
+Guide For Data
+Engineers
+
+Welcome to the Spark Playgroand’s Py Spark Syntax Cheat Sheet! This document is
+designed to provide a quick reference to essential PySpark functions and operations.
+
+Check out the Spark Playground website here
+
+Create DataFrame
+
+from pyspark.sq! import SparkSession
+spark = SperkSession. builder appNamet"Exemple”| getOrtreatet}
+Gata = [(1, “Alice*, 79). (2, “Bob *, 351]
+
+dg? = spark createDataFrameldata, (*id", “name”, “age"]l
+a? show)
+
+Explicit Schema
+
+fram pyspark.sql.types import StructType. StructField, integerType. Strieg Type
+
+schoama = 5
+StrvctField(*i*, Denestiveetk True),
+StructFieli(*name", StringTypet}. True).
+StructField("age”. IntegerTypel), True)
+b
+
+Of = spark createDataFrameldata, schema)
+Gf printSchemall
+of .show)
+
+# Scheme as 3 string
+
+data = [(1, “Alice”, 29), (2, "Bob", 35)]
+
+schema = “id INT, mame STRING, age INT™
+
+of = spark createDetaFrameldata, schema=schemal
+
+# Scheme String with Flow and Boolean Types
+
+pivscgic = “INT, mame STRING, salary FLOAT, is_asctive BOOLEAN”
+= [C1, “Alice, 0000.75, True), (2, "Heb", 6000050, False]
+
+pad = spert createOetaframeldsts, schema=schemal
+
+# Scheme String with Dare ang Tintestane
+
+from datetime import dete. datetime
+
+schema = “id INT, name STRING, join_date DATE, last login TIMESTAMP"
+
+Gata = (C1, “Alice, datel2023, 1, 15), datetime|2024, 3, 10, 14, 30, OM,
+(2, "Bod", date{2023, 1, 15). datetime{2024, 3, 10, 14, 30, OF)
+
+@ = spark createDataFrameldata, schema=schemal
+
+~
+
+Using a List of Dictionaries
+
+
+fram pyspark.sql import SoarkSessian
+spark = SparkSession. builder. appName"Exampie"|.getOrcreatat}
+
+data = [
+{"id*: 1, “name: “Alice”, “age: 29},
+{"id*: 2, “name: "Bob", “age”: 35}
+
+@ = sport createDetaframeldatal
+of shoe)
+
+Reading Files
+
+# Basic CSV fies
+Of = spark read format! csy") kad “/pathyto/saenple csv")
+
+#csv with header
+Gf = spark read. option header*, Truel. csel"/pattitosamgle.cay")
+
+# muitinie aotions
+Gf = spark read option! inferSchema’, True). option! delimiter’.".").csvi"/path/to!san
+
+7 mith deivied schema
+from pyspark.sql.types import StructType. Structfield, StongType. IntegerType
+schema = StructTyped[
+StructFiehi(Cname*, StringTypet}. True),
+StructField(*age”. IntegerTypel), True!
+It
+@ > spark read fonmat(csy") schemalschema) load" /paltvtasampie cay")
+
+Oe OnE nS nT OTD ST re Oe SOT eT .
+
+# Sasic SOW He
+@ = spark resd.format! json"). load|"/pathito/sam@le.json"}
+
+# /SOW with srolti-ine records
+Gf & spark read.option| multiline", Truel.|son("/pathyto/sample json")
+
+# (SOW with a defined schema
+from pyspark.sql.types import StructType. StructField, StingType. IntegerType
+schema = StructTypel[
+StructFicki(*name", StringTypet}, True),
+StrvctFieki( age”. IntegerTypel), True)
+Ih
+
+Of > spark read fonmat( json") schemalschema) load /pathtosample jsan*)
+
+Here's the full set of examples for writing files in PySpark, covering CS¥, JEON, Parquet,
+ORC, amd Delta formats:
+
+Writing Files
+
+CSV Files

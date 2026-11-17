@@ -1,0 +1,19 @@
+[a]
+
+2ND HIGHEST
+SALARY
+
+Handling ties with Dense_Rank
+
+-- Use CTE or Subquery
+
+SELECT * FROM (
+SELECT *, DENSE_RANK() OVER(
+ORDER BY salary DESC
+) AS rnk
+FROM employees
+)%
+WHERE rnk = 2;
+
+Anandnarayanan S aia
+@ a=

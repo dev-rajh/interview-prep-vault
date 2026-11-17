@@ -1,0 +1,26 @@
+AZURE
+
+DATA ENGINEER
+INTERVIEW QUESTIONS
+
+1) What are Parameters and Variables in ADF (Azure Data
+Factory)?
+Pacanvetars:
+
+« Definition; Parseveters in MOF are external values Chil are pared into pipelines,
+datasets. dotatiows, of linked services at the time of mepcution.
+
+« Use Case: They are mostly used when you wont 10 make your pipeline reusable and
+dyrarnic jeg, pasaing tle nares, table meante, of teicher guach).
+
+« Scope: Paceenetars are delined al the pipeline lawl and art euad-onby within Ure
+Pipeliees.
+
++ Example:
+Suppose youre ingesting data from a bled storage pathe
+
+You can defing & parameter Caled FileName aed use if in your dataset or linked
+service.
+
+“name” "FilaName’,
+

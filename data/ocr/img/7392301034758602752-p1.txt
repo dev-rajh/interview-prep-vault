@@ -1,0 +1,32 @@
+American Express Data Analyst
+Interview Questions
+
+Experience: 0-3 Years
+
+CTC: 17-19 LPA
+
+Prepared By Mandar Patil
+SQL Questions:
+
+1. Write a query to find duplicate rows in a table.
+Ta detect dughcates, identity columens that should be unique and group
+Oy them.
+
+Example:
+
+SELECT column], ¢oluenn2, OOUNT(*) AS count
+FROM your_table
+
+GROUP BY columml, column?
+
+MAVING QOUNT|*) >a;
+
+Explanation:
+* GROUP BY combines rows with the same values in the specified
+colurnns.
+* HAVING COUNT["] > 1 filters those combieations that otour mare
+than ance, indicating duplicates,
+Tip: Add ROW NUMBERS) or RANK) with CTE to highlight or delete
+duplicates if needed
+
+MandarPat

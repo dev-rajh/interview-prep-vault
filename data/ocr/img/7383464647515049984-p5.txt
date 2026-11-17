@@ -1,0 +1,38 @@
+* Compute mean & std for your metric
+© Flag vale beyond 3.4 aa anormadiag.
+© Vectoriaed with NuenPy for seven.
+
+import mumpy as np
+import pandas as pd
+
+def detect_anagalies(df, col-"sales_amount"):
+fu = d#[col).mean{)
+signa = dé[col}.std{)
+df["anataly flag") = np.wherel
+(df[col) > su + 3*sigea) | (af[col] « au - 3*sigma),
+True, False
+
+}
+return dé[d#["anowaly flag” ]]
+
+* usage:
+© aromalies = detect_snorslies(sales_df, “daily sales")
+
+(0 streaming, maintain rolling moon & std wa Wrelford's aygonitivn)
+
+fF) Group transactions by customer + return top N by purchase frequency
+(no Pandas)
+
+Approach:
+
+© Uso beilt-in collections.Counter of defaultdict( int}.
+* Count percustomerin one pass.
+* Useheapg.nlargest to gettop-N.
+
+fron collections isport Counter
+import heapq
+
+def top on_custowers(transactions, m=5):
+# transactions is an iterable of (cust_id, awount)
+counts = Counter{cust_id for cust_id, _ in transactions)
+return heapg.nlargest(n, counts.items(), key=lawbda x: x[1])

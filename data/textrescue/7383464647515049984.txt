@@ -1,0 +1,33 @@
+PEPSICO DATA ENGINEERING INTERVIEW QUESTIONS (31 LPA / 4.5 YRS EXP)
+
+Thinking of switching to Data Engineering or upskilling?
+These aren't theory questions — these are real-world problems you'll face in top DE roles:
+
+SQL Challenges
+1. Top 5 products by total sales per region (handle ties!)
+2. Orders where shipping took longer than the monthly average
+3. Recursive query: list all subordinates for a manager
+4. Deduplicate a huge table while keeping only the latest record
+
+Python
+5. Efficiently read/transform/write a 18GB CSV daily
+6. Detect anomalies in sales data (3-sigma spikes/drops)
+7. Group transactions by customer -> return top N by frequency (no Pandas)
+
+PySpark / Big Data
+8. Solve the "small file problem" in ADLS/S3
+9. Design a PySpark job to join billions of rows efficiently
+10. Handle skew in a Spark join
+
+Data Modeling & Architecture
+11. Implement SCD Type 2 in a data warehouse
+12. Design a global supply chain model for historical + real-time analytics
+13. Unify schemas from multiple sources for reporting
+
+Real-Time & Cloud
+14. Build a real-time data pipeline (Kafka + Spark Streaming + Cloud DW)
+15. Migrate 12TB from on-prem SQL -> cloud with minimal downtime
+
+These aren't just interview stumpers, they're exactly the problems top companies expect you to solve.
+
+(Attached document: "Pepsico DE", 5 pages - OCR'd separately.)

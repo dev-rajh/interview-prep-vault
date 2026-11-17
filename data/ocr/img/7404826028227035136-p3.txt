@@ -1,0 +1,42 @@
+12, Identity the Most SeRing Product (Asahe/ Walmart}
+
+SELECT product_is, SUM quastity) 45 tetal_qty
+FROM Sales
+
+GROUP GY prodect_id
+
+OROCR OF tetal_qty DESC LIFIT 1;
+
+12, Get Total Reverse and Member of Orders Per Region (Meta)
+
+SELECT region, SUM(total_asouet) AS tetal_revenwe, COUNT(*) AS order_coust
+FROM Orders
+GROUP Br region;
+
+14. Count Customers with More Than 5 Orders (Amacan!
+
+SELECT COUNT("} AS customer count
+FROM
+
+SELECT customer_id
+
+PRO Orders
+
+geour 8Y customer_id
+
+Hevital COUNT(*) & &
+) AS eubquery;
+
+15. Retrieve Cestemers with Geders Above Average Order Value (PayPal)
+
+SELECT GISTINCT customer id
+FROM Orders
+WIERE tetal_amount > (SELECT AVG(tetal_amount) PROM Orders);
+
+‘16. Pind All Employees bored un Weekends (Google)
+
+SELECT *
+FROM Employee
+WHERE ESTRACT(DOW FROM Hire_date) IM (8, 633
+
+Page 3 of

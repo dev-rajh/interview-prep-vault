@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css?v=2" />
+  <link rel="stylesheet" href="assets/style.css?v=6" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>" />
 </head>
 <body>
@@ -28,6 +28,7 @@
   <main class="container">
     <nav class="tabs" aria-label="Views">
       <button class="tab active" id="tabQuestions" type="button">Questions</button>
+      <button class="tab" id="tabLearnings" type="button">Learnings</button>
       <button class="tab" id="tabSources" type="button">Sources</button>
     </nav>
 
@@ -69,8 +70,9 @@
     </section>
 
     <section id="questions" class="posts" aria-live="polite"></section>
+    <section id="learnings" class="posts" hidden aria-label="Learnings"></section>
     <div class="load-wrap"><button id="loadMore" class="btn btn-ghost" type="button" hidden>Load more questions</button></div>
-    <p id="empty" class="empty" hidden>No questions match your filters. Try resetting them.</p>
+    <p id="empty" class="empty" hidden>No items match your filters. Try resetting them.</p>
 
     <section id="sources" class="posts" hidden aria-label="Source posts"></section>
   </main>
@@ -142,6 +144,25 @@
     </article>
   </template>
 
-  <script src="assets/app.js?v=4"></script>
+  <template id="lTpl">
+    <article class="card">
+      <div class="card-head">
+        <div class="card-badges">
+          <span class="badge field" data-field></span>
+          <span class="badge company" data-company></span>
+        </div>
+        <span class="ltag">📘 learning</span>
+      </div>
+      <div class="card-body" data-text></div>
+      <button class="clamp-toggle" data-clamp hidden>Show more ▾</button>
+      <div class="card-topics" data-topics></div>
+      <div class="card-foot">
+        <span class="author" data-author></span>
+        <a class="src-link" data-link target="_blank" rel="noopener">View original on LinkedIn ↗</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="assets/app.js?v=6"></script>
 </body>
 </html>

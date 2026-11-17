@@ -1,0 +1,9 @@
+Tt _¥_¥§_
+
+Extract
+
+The process of retrieving data from
+different source systems.
+
+Extracting customer data from a CRM
+system and sales data from an ERP system.

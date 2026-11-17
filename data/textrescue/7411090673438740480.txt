@@ -1,0 +1,8 @@
+📘 Deloitte Data Engineer Interviews (₹20–40 LPA) — Most Repeated Questions & Patterns
+Over the past few months, I've collected and solved the frequently asked questions in Deloitte Data Engineer interviews — across SQL, PySpark, and Azure Data Factory.
+
+This PDF includes real production-style problems like schema drift, skew handling, consecutive day logic, rolling aggregates, broadcast joins, and ADF orchestration patterns.
+
+Sharing it with the community so others can benefit from structured, scenario-based preparation.
+
+(Attached document: "Deloitte Data Engineer Interviews — Most Repeated Questions & Patterns", 5 pages - OCR'd separately.)

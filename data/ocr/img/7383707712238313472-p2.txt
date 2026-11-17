@@ -1,0 +1,26 @@
+Database Management System (DBMS
+
+* Database management system Is a software which is used ta manage the
+database.
+
+® DMS provides an interface to perform various operations bke~
+
+1. Creating databases, tables, and objects.
+
+2. inserting, updating, and deleting data.
+
+3. Dropping databases, tables, and objects.
+
+4, Provides data seourity.
+
+® Some pooular DOMS softwares are MS SOL
+SERVER, Oracke MySQL JBM, DB2,PostgreSOl ete,
+
+Relational Database Management System(RDBM
+
+© fis atype of O8MS that manage relstional database.
+® fthelpsto store, organize and retrieve data efficiently. ROBMS softwares
+are MySQL, PostpreSOl, SO1 Server, and Oracle.
+
+© Atable ina database is a collection of rows and colurnns.
+® fis used to organize and store data in a structured format.

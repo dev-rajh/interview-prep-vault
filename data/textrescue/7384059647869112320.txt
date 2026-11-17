@@ -1,0 +1,18 @@
+Dreaming of Deloitte? Let's talk Data Engineering Interviews!
+
+Many aspirants fear Big4 interviews, but here's the truth: Deloitte focuses on your core problem-solving skills, not just buzzwords.
+
+Some real Data Engineer interview highlights:
+- Write a query to fetch the Top 3 salaries (think DENSE_RANK()!)
+- Explain the difference between clustered & non-clustered indexes
+- How do you optimize a slow SQL query?
+- DELETE vs TRUNCATE vs DROP -> know the impact!
+- Ensuring data quality in ETL pipelines (nulls, duplicates, schema checks)
+- Pandas vs PySpark -> when to use what?
+- Snowflake vs BigQuery -> understanding architectures
+- Role of Kafka in real-time pipelines
+
+If you're prepping, don't just memorize syntax. Focus on why a particular approach is better in a given scenario (trade-offs matter).
+Pro tip: Pair every answer with a real-world example from your projects.
+
+(Attached document: "Interview Question" for Deloitte, 5 pages - OCR'd separately.)

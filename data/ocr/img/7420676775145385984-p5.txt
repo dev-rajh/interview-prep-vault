@@ -1,0 +1,18 @@
+4) Explain Medallion Architecture
+© Dafinition:
+
+The Medatiion Architecture (piso called the Multi-Mop Architecture) is 5 date gesign
+pattern used in Getta Lake jand Garetrinks), which organizes data pipelines into theee
+
+logical layers:
+1, Brows (Raw Date Layer)
+2. Sever (Cleaned and Enriched Dats Layer)
+
+4, Gold (Business-Level Aggregated Data Layer)
+
+B Plow Diagram:
+rs |
+| Beonzs | + Raw ingested Dota (CSV, ISON, logs}
+
+| Sliver | + Claarec,, Filtered, Joined Data
+

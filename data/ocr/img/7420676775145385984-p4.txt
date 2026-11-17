@@ -1,0 +1,26 @@
+o Farther filtering and scanning
++ Conn:
+o Too mery partitions [high cardinality! can lead to metedsts overhend.
+» Use Case
+o Partition by year, month, or region in lange datasets.
+SH Buckating:
+
+« Detinition; Deedes date nto o fixed mumber of buckets (files) by applying o hash
+function on the column vatues.
+
+Stored inside a single partition but across multiple buckets /files}.
+
+Example:
+Bucketing ty cuatomer_id into 10 buckets mauns each row if sasgined bo a bucket
+based on hash|customer_ic) % 10.
+
+Pros:
+o Useful in joes where both tables are bucketed by the join key.
+o Solyas shred cate isaue in high cardinality cobumnne
+Cone
+o Less dynamic (equires bucket count to be detined upfront)
+Use Case:
+o Lange joins om customer i or product ID.
+
+B Comparison Tabla:
+

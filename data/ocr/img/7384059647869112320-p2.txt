@@ -1,0 +1,34 @@
+1. Write 4 query to retrieve the top 3 highest salaries from an employee
+table,
+
+SELECT OSTINCT sotary
+
+FROM employee
+
+ORDER BY salary DESC
+
+UMIT 3;
+
+Attematively, if there are duplioate salaries and we need an accurate top 3:
+
+SELECT salary
+
+FROM (
+SELECT aalary, DENSE RANK|) OVER (ORDER BY aalary DESC) AS mk
+FROM employee
+
+J ranked salaries WHERE mk <= 3
+
+2. Explain the difference between a clustered and a non-clustered index.
+
+«+ Gusbered Indes: Determines the physical order ot dete ina table, A table con heave
+only one clustered index,
+
+« Non Clustered Indes: Creates a separate structure to store index data. A table can
+have multiole non-clustered indewes.
+3. What are window functions in SOL? Provide examples,
+
+Window functions pertorm onioulations across a set of table rows related to the current
+row. Example:
+
+SELECT emplkryae_id, deguaertrneent, aalary,

@@ -1,0 +1,13 @@
+ETL Terminology - Quick Guide
+
+Sharing a concise PDF that explains key ETL (Extract, Transform, Load) concepts used in real-world data engineering projects.
+
+This document covers:
+- Core ETL terms
+- Data extraction, transformation, and loading basics
+- Incremental vs full load
+- Data quality and validation concepts
+
+A helpful reference for beginners and a quick refresher for experienced data professionals.
+
+(Attached document: "ETL Terminology Quick Guide", 5 pages - OCR'd separately.)

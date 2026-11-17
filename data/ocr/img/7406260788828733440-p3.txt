@@ -1,0 +1,44 @@
+Create DataFrame
+With Default Schema
+from pyspark.sql leport SparkSession
+spark = SparkSesslon builder. applame (“Example”). getOrcreater)
+
+asta = [{1, “Alice”, 29), (2, “Bob”, 35))
+of = spark. cresteDataFrase(data, [“ic", “neme". “age” ]}
+OF. showl)
+
+Explicit Schema
+
+from pyspark.sql.types import StractType, StructField, IntegerType,
+StringType
+
+schema = SteuctTyped[
+Structfield{“id*, IntegerType(), Troe},
+StructField( ‘nave, StringTypet}, True),
+StructFileld{"age", IntegerTypel), True)
+1)
+
+af = apark.createDutafrase(data, ichera)
+2f.printSchemal}
+@f, shoal)
+
+* Schema a5 a string
+
+@ata = [{1, "Alice", 29), (2, "Boe", 35)]
+Schema = “id INT, nam STRING, age INT™
+
+@f © spark.createfutafrare(data, scheraescheea)
+
+© Schews String with Float and Boolean Types
+
+schema = “id INT, name STRING, salary FLOAT, is_actiwe BOOLEAN"
+data = [(1, "Alice", 56806.75, True), (2, "Bob", 68060.58, Falsa}]
+af = apark.createDutaPrase(data, icheta-achena)
+
+ Schews String with Date and Timestaep
+from datetime import date, datetime
+schema = "id INT, name STRING, join_date DATE, Last_login TIMESTAMP”
+
+Spork Playground = Learn & Practice PySpark Online
+Tutorials + interview Questions + Online Compiler - Cheat dheat
+

@@ -1,0 +1,197 @@
+American Express Data Analyst
+Interview Questions
+
+Experience: 0-3 Years
+
+CTC: 17-19 LPA
+
+Prepared By Mandar Patil
+SQL Questions:
+
+1. Write a query to find duplicate rows in a table.
+Ta detect dughcates, identity columens that should be unique and group
+Oy them.
+
+Example:
+
+SELECT column], ¢oluenn2, OOUNT(*) AS count
+FROM your_table
+
+GROUP BY columml, column?
+
+MAVING QOUNT|*) >a;
+
+Explanation:
+* GROUP BY combines rows with the same values in the specified
+colurnns.
+* HAVING COUNT["] > 1 filters those combieations that otour mare
+than ance, indicating duplicates,
+Tip: Add ROW NUMBERS) or RANK) with CTE to highlight or delete
+duplicates if needed
+
+MandarPat
+
+2. Explain the difference between INNER JOIN and OUTER
+JOIN with examples.
+
+INNER JOIN:
+Returns only matching records from both tables.
+
+SELECT ¢.name, d.department_name
+
+FROM emmlayees @
+
+ONNER JOWN departments d ON e.department_id = d.department_id;
+* Output: Only employees who belong to a department
+
+LEFT OUTER JOIN:
+
+Returns all records fram the left table, and matching records from the
+right table, Hf na match, WULL is returned,
+
+SELECT ¢.name, d.department_name
+FROM ammloyees @
+
+LEFT JOON departments d ON e.department_id = d.departrent_id;
+* Qutput: All employees, with department info where available,
+
+RIGHT OUTER JOIN:
+Returns all records fram the right table, and matching records fram the
+lett.
+
+FULL OUTER JIM:
+Returns all records from both tables, matching where possible.
+
+Key Difference:
+* INNER JOON = intersection [matched data only)
+* OUTER JOON = union + NULLS [matched + umatched data}
+
+MandarPat
+
+
+3. Write a query to fetch the second-highest salary from
+an employee table.
+
+Option 1; Using DISTINCT, ORDER BY, and LOMIT [MySQL/PostgresQL)
+
+SELECT DISTINCT salary
+FROM employees
+ORDER BY salary DESC
+LIMIT 1 OFFSET 1;
+
+Option 2: Using subquery (Gemerkc SOL)
+
+SELECT MAX|salary}
+
+FROM employees
+
+WHERE salary < (SELECT MAX[Salaery) FROM empires |;
+
+Explanation:
+* The subquery fetches the highest salary.
+* The outer query fieds the maximum salary bess than the highest —
+giving the second highest.
+
+4,How do you use GROUP BY and HAVING together?
+Provide an example.
+
+Use GROUP BY to group data and HAVING to filter aggregated results
+(uMfike WHERE, which filters raw rors),
+
+SELECT department_id, COUNT/") AS emp_count
+
+FROM employees
+
+GROUP BY department_id
+
+HAVING COUNT|") > 5:
+
+Explanation:
+* Groups employees by department.
+* Filters groups where the count of employees is more than 5.
+
+Mandar Pat|
+
+
+5. Write a query to find employees earning more than
+their managers.
+
+Assure the table employees hag
+emp_id, name, salary, manager_id
+
+SELECT ename AS employee_name, ¢.salary, m.name 4S manager_name,
+m.salary AS manager_salary
+
+FROM ermmlayees e
+
+ICQN employees im OM emanagerid = memp id
+
+WHERE e-salary > m.salary:
+
+Explanation:
+* SelF-join: matches employees [e) with their managers [m)
+* Filters thase where employee's salary > manager's salary.
+
+6, What is a window function in SOL? Provide examples of
+ROW_NUMBER and RANK.
+
+Definition:
+A window function performs calculations across a set of table rows
+related to the current row — without collapsing rows like GROUP BY.
+
+Syntax:
+FUNCTION NAME) OVER (PARTITION BY column ORDER BY column)
+
+Example: ROW_NMUMBER(}
+Assigns a unique sequential number to each row within a partition.
+
+SELECT name, department, salary,
+
+ROW _NUMBER() OVER (PARTITION BY department ORDER BY salary
+DESC) AS row_mum
+
+FROM employees;
+
+MandarPat
+
+
+Each employee with the same department pets a row number based on
+salary rank [highest first).
+
+Example: RANK)
+Assigns the same rank to rows with equal values, but skips the next
+rarikes}.
+SELECT name, department, salary.
+RANK() OVER (PARTITION BY department ORDER BY salary DESC) AS
+rari _rum
+FROM employees;
+* 2 employees have the same salary, both get rank 1, and the next
+gets rank 3,
+
+7. Write a query to fetch the top 3 performing products
+based on sales,
+
+Assume table sales_data has:
+product_id, product_name, total sales
+
+SELECT product_id, product_name, total_sales
+FROM sales_data
+
+ORDER AY total_sales DESC
+
+LIT 3;
+
+Altermate using RANK) (if ties matter):
+
+SELECT product_id, product_name, total_sales
+
+FROM [
+
+SELECT *, RANK{) OVER (ORDER BY total_sales DESC) AS rank_num
+FROM sales data
+
+] ranked_sales
+
+WHERE rank_nian <- 3;
+
+Maida Patil

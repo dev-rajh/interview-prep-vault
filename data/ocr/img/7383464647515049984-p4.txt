@@ -1,0 +1,34 @@
+® Python
+
+Efficiently read/transtonm/write a 20GB CSV daily to a database
+Apereach:
+
+* 20GB ise bigtor mamory, process in chums using
+pandas. resd_csy(chunksizes_) or plain csv reader.
+
+® Apply transformation jogic chunk by chunk,
+
+© Use 08 bulk-nsert (eg. to_sql(if_exists='append' ) withaethod='aulti' or
+emeoubenany'.
+
+* Wrap ina streaming pipeline.
+
+import pandas as pd
+from sqlalchesy ieport create_engine
+
+engine « create_engine({"postgresagl ://user:pass@host/db")
+chutksize = S30 889 A Tune this
+for chunk in pd.read_csv("dally file.cow", chunksize=chunksize):
+# transfora
+chunk["sale_date"] = pd.te_datetime(chunk["sale_date"])
+chunk[“awount™) = chunk["amount™].#illna(a}
+* load to O8
+
+chunk. to_sql(“sales", engine, if_exists="append",
+indexePalse, method=“multi")
+
+(For ultra-high throwgnpur, uae COPY / bulk-iowd unilitkes.)
+
+C3} Detect anomalies in sales data (3 std-dev spikes/drops)
+
+Approach:

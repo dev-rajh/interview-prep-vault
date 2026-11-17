@@ -1,0 +1,15 @@
+Sihe_ coding wrard
+
+1. Creating Tables:
+
+CREATE TABLE table_name (
+column! datatype,
+column2 datatype,
+column3 datatype
+
+3
+
+2. Inserting Data:
+
+INSERT INTO table_name (column), column2)
+VALUES (valuel, value2);

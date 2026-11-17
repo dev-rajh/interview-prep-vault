@@ -1,0 +1,13 @@
+Data
+Warehouse
+
+A central repository of integrated data from
+multiple sources, designed to support
+decision making and business intelligence
+activities.
+
+A healthcare organization uses a
+data warehouse to integrate patient
+data from various departments for
+comprehensive reporting and
+analysis.

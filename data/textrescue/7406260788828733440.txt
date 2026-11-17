@@ -1,0 +1,36 @@
+Why Writing PySpark Read & Write Code for Different File Formats Is NON-NEGOTIABLE for Data Engineers
+
+Why it matters in production:
+
+Performance optimization
+Different formats behave differently:
+Parquet / ORC -> columnar, predicate pushdown, compression
+JSON / CSV -> row-based, schema inference cost
+Knowing how to read/write them properly directly impacts job runtime & cost.
+
+Schema enforcement & data quality
+Explicit schemas prevent:
+Silent type mismatches
+String-typed columns everywhere
+Downstream data corruption
+
+Scalability & reliability
+Correct write modes (append, overwrite, merge) ensure:
+Idempotent pipelines
+Safe re-runs
+No duplicate data
+
+Interview & real-project readiness
+Most Spark interviews ask:
+"How do you read/write Parquet, JSON, CSV, Avro, Delta in PySpark?"
+
+What every Data Engineer should practice:
+- Read & write CSV, JSON, Parquet, ORC, Avro, Delta
+- Use explicit schemas
+- Apply partitioning & compression
+- Understand when and why each format is used
+
+Spark isn't just about transformations.
+Data Engineers are responsible for how data is READ and how it is WRITTEN.
+
+(Attached document, 5 pages - OCR'd separately.)

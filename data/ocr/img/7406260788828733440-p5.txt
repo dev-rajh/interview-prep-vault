@@ -1,0 +1,45 @@
+schema = StructType([
+StructFleld{"naee", StringType(}, True),
+Structleld{*age", Integerfype(), True)
+1}
+@f © spark.read,formst( “cow’}.schema(schema), load(“/path/to/sample.cev)
+
+JSON Files
+
+# Basic JSON File
+of = spark.read.format( "json").load("/path/to/sample.jsom")
+
+# ISON with multi-line records
+@f © spark.read,option( “eultiline”, True), json("/path/to/seeple, json")
+
+# JSON with a defined sche
+from pyspark.sql.types ieport StractType, StructField, StrisgType,
+
+Integertype
+
+schema «© StructType([
+StructFleld{ "nase", StringTypet}, True),
+StructField{"age", IntegerType(), True)
+rf
+
+@f > spark.read,format(“jxon").scheme(echea). load(“/path/to/sample. json")
+
+Writing Files
+CSV Files
+
+© Besic write to CoV
+Of erite, cov{"/path/tofoutput_csw" )
+
+# With header
+@f weite.option{“header", True). civ" /path/to/eutput <cav"}
+
+© With ewltiple options
+
+Of erite option{ "header", True)’
+-optios("delisditer™, ","}4,
+-optios("quote™, '"")>',
+-Cav("/path/te/foetpet_cav")
+
+Spork Playground = Learn & Practice PySpark Online
+Tutorials + interview Questions + Online Compiler - Cheat dheat
+

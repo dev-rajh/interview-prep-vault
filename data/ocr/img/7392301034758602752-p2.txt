@@ -1,0 +1,37 @@
+2. Explain the difference between INNER JOIN and OUTER
+JOIN with examples.
+
+INNER JOIN:
+Returns only matching records from both tables.
+
+SELECT ¢.name, d.department_name
+
+FROM emmlayees @
+
+ONNER JOWN departments d ON e.department_id = d.department_id;
+* Output: Only employees who belong to a department
+
+LEFT OUTER JOIN:
+
+Returns all records fram the left table, and matching records from the
+right table, Hf na match, WULL is returned,
+
+SELECT ¢.name, d.department_name
+FROM ammloyees @
+
+LEFT JOON departments d ON e.department_id = d.departrent_id;
+* Qutput: All employees, with department info where available,
+
+RIGHT OUTER JOIN:
+Returns all records fram the right table, and matching records fram the
+lett.
+
+FULL OUTER JIM:
+Returns all records from both tables, matching where possible.
+
+Key Difference:
+* INNER JOON = intersection [matched data only)
+* OUTER JOON = union + NULLS [matched + umatched data}
+
+MandarPat
+

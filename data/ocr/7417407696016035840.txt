@@ -1,0 +1,91 @@
+INTERVIEW PREP
+
+TOP IS WINDOW
+FUNCTION QUESTIONS
+
+Easy to Hedium - < 4 Lines of Code
+
+1 wens me
+|
+[2 seams || 8 cee |
+—_  \amm |
+———
+1. Gap Anckyste | 12 Cume_bist |
+a ee |
+
+WR Reverse Rank
+
+—
+SSE
+
+[ar
+
+FIND
+DUPLICATES
+
+Identify emails appearing > once
+
+-- Common interview starter
+SELECT * FROM (
+SELECT *, ROW_NUMBER() OVER(
+PARTITION BY email ORDER BY id
+
+) AS rn
+FROM users
+)%
+WHERE rn > 1;
+
+
+[a]
+
+2ND HIGHEST
+SALARY
+
+Handling ties with Dense_Rank
+
+-- Use CTE or Subquery
+
+SELECT * FROM (
+SELECT *, DENSE_RANK() OVER(
+ORDER BY salary DESC
+) AS rnk
+FROM employees
+)%
+WHERE rnk = 2;
+
+Anandnarayanan S aia
+@ a=
+
+[|
+MoM GROWTH %
+
+Current vs Previous Month
+
+-- (Curr - Prev) / Prev
+
+SELECT month, sales,
+(sales - LAG(sales) OVER(ORDER BY month))
+/ LAG(sales) OVER(ORDER BY month)
+
+AS mom_growth
+FROM monthly_sales;
+
+® Anandrarayanan S | | sa erervewrser |
+
+[a]
+RUNNING TOTAL
+(BY DEPT)
+
+Reset total for each department
+
+-- Cumulutive sum per group
+
+SELECT dept, date, amount,
+SUM(amount) OVER(
+PARTITION BY dept
+ORDER BY date
+) AS dept_running_total
+FROM expenses;
+
+Anandnarayanan S SOL INTERVIEW PREP
+® car

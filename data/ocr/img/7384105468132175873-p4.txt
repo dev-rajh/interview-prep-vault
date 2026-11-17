@@ -1,0 +1,19 @@
+Web Developer (0) »>
+@ihe_ coding ward
+
+6. Deleting Data:
+
+DELETE FROM table_name
+WHERE condition;
+
+7. Dropping Tables:
+DROP TABLE table_name;
+
+8. Altering Tables:
+
+ALTER TABLE table_name
+ADD column_name datatype;
+
+Comment "SQL" for SQL CheatSheet
+
+a

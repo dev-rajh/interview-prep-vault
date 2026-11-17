@@ -1,0 +1,18 @@
+Scenario-Based SQL Questions Are the Real Game Changer
+
+Anyone can write SELECT * — but real data engineers shine when SQL meets real-world scenarios.
+Interviews today focus less on syntax and more on problem-solving with data.
+
+Here are the scenarios that matter:
+- Identifying duplicates with business rules
+- Calculating running totals & window-based insights
+- Transforming messy data into clean models
+- Detecting anomalies, gaps, and late-arriving records
+- Joining complex tables with performance in mind
+
+Scenario-based SQL isn't just a skill — it reflects how you think, how you debug, and how you design data.
+
+Keep practicing. Keep solving.
+Your next breakthrough query may land you your next offer.
+
+(Attached document: "Sql-Scenario-questions", 5 pages - OCR'd separately.)

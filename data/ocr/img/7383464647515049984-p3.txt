@@ -1,0 +1,35 @@
+SELECT eup_id, esp_nare, manager_id
+FROM employees
+WHERE manager_id = :wanager_id = -- pass manager here
+
+UNTOM ALL
+
+-- recursion: indirect reports
+SELECT e¢.emp_id, e.erp_name, ¢.manager_id
+FROM esployees e@
+IMMER DOIN subordinates 5
+OM e.menager_id = s,emp_id
+}
+SELECT * PROM subordinates;
+
+(§) Deduplicate a huge table while keeping the most recent record
+
+Approach:
+
+® Use ROW _NUMBER( ) partitioned by the natural key
+* Onder by updated at DESC to get the latest reoord
+® Pik row_mumber = 1
+
+WITH ranked AS ¢
+SELECT *,
+RoM_MUMBER() COVER (
+PARTITION BY natueal_key_colusn
+ORDER AY updated_at DESC
+7 AS en
+FROM big table
+}
+SELECT *
+FROA ranked
+WHERE rn = 1;
+
+(Aepioce noturel_tey_coleen with the colwnn{s) thet define duplicates.)

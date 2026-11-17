@@ -1,0 +1,21 @@
+Why This Sheet —
+
+Here's why we feel this sheet is right for you
+
+1. Clear Learning Path
+Questions are arranged step by step — from simple filtering to
+advanced functions — so your skills qrow naturally.
+
+2. Real-World Relevance
+The problems are based on practical scenarios like e-commerce,
+finance, and social media — exactly what companies deal with.
+
+3. Hands-On Practice
+This isn't about memorizing. It's about solving. You'll practice writing
+efficient, accurate queries under real conditions.
+
+This sheet is designed to make SQL feel clear, practical, and useful — so
+when it's time for interviews, you're ready.
+
+BOSSCODER
+aAcAGEMY

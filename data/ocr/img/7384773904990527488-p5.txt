@@ -1,0 +1,31 @@
+02 Why Is ETL Important?
+
+ETL pepelines are the backbone of data-driven organizations. Their importance es
+in:
+
+1. Analytics & Business Intelligence (Bi):
+* Structured, aggregated data supports dashboards and reports.
++ Leadership can make better decisions based on accurate, timely insights.
+
+2, Machine Learning & Data Science:
+* High-quality data enables effective feature engineering,
++ Models perform better when trained on clean, consistent datasets.
+
+3. Operational Efficiency:
++ Automates repetitive data preparation tasks.
++ Reduces manual effort and ensures data freshness.
+
+4. Data Consistency:
++ Establishes 6 single source of truth, avoiding conflicts across teams.
++ Maintains data governance and compliance.
+
+03 ~~‘ Traditional ETL Vs Modern ELT
+
+ETL pipelines are the backbone of data-driven organizations. Their importance fies
+in:
+
+1. Traditional ETL (Extract + Transform + Load):
++ Data is transformed before loading into the warehouse.
+
+BOSSCODER
+ACAGEMY

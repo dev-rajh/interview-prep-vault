@@ -1,0 +1,146 @@
+> Spark
+Playground
+
+PySpark Syntax Cheat Sheet - Quick Syntax Guide
+for Data Engineers
+
+ee 3
+
+Spork Playground = Leann & Practice PySpark Online
+Tutoriais + interview Questions + Oniing Compiler - Chock Sheet
+
+Spork Playground = Learn & Practice PySpark Online
+Tutorials + interview Questions + Ondine Compiler + Cheat Shmet
+
+Create DataFrame
+With Default Schema
+from pyspark.sql leport SparkSession
+spark = SparkSesslon builder. applame (“Example”). getOrcreater)
+
+asta = [{1, “Alice”, 29), (2, “Bob”, 35))
+of = spark. cresteDataFrase(data, [“ic", “neme". “age” ]}
+OF. showl)
+
+Explicit Schema
+
+from pyspark.sql.types import StractType, StructField, IntegerType,
+StringType
+
+schema = SteuctTyped[
+Structfield{“id*, IntegerType(), Troe},
+StructField( ‘nave, StringTypet}, True),
+StructFileld{"age", IntegerTypel), True)
+1)
+
+af = apark.createDutafrase(data, ichera)
+2f.printSchemal}
+@f, shoal)
+
+* Schema a5 a string
+
+@ata = [{1, "Alice", 29), (2, "Boe", 35)]
+Schema = “id INT, nam STRING, age INT™
+
+@f © spark.createfutafrare(data, scheraescheea)
+
+© Schews String with Float and Boolean Types
+
+schema = “id INT, name STRING, salary FLOAT, is_actiwe BOOLEAN"
+data = [(1, "Alice", 56806.75, True), (2, "Bob", 68060.58, Falsa}]
+af = apark.createDutaPrase(data, icheta-achena)
+
+ Schews String with Date and Timestaep
+from datetime import date, datetime
+schema = "id INT, name STRING, join_date DATE, Last_login TIMESTAMP”
+
+Spork Playground = Learn & Practice PySpark Online
+Tutorials + interview Questions + Online Compiler - Cheat dheat
+
+
+gata = [{1, "Alice", date¢2@23, 1, 15), datetime( 2024, 3, 18, 14, 38, 8)),
+(2, "Bob", date(2623, 2, 15), datetiae(2024, 3, 18, 14, 38, 6)}]
+@f = apark.createbataPrate(data, ichite-ichesa)
+
+Using 4 List of Dictionaries
+from pyspark.sql Leport SparkSession
+spark © SparkSession. builder, eppMame(“Ceample”), getOrcreatel }
+
+ats « [
+{"id": 2, "name": "Alice", "age": 25),
+("id™: 2, “nama”: "Bob", "age": 35}
+
+]
+
+ef © spark.crestefataFrare(dats)
+af, show( }
+
+Reading Files
+
+CSV Files
+
+M@asic CSV files
+Of = spark.read, format( "cow" }.load(”/path/toysaeple.csy")
+
+csv with Meader
+@f = apark. read .option( “header”, True).cov("/path/te/sample.cav")
+
+® sultiple options
+
+ee
+
+spark. read aptlon("inferschesa", True) .option{"delisditer",”,").csv("/path/to
+fsample.cow"}
+
+® with defined schewws
+fros pyspark.sgl.types deport StrectType, StructField, StringType,
+IntegerType
+
+Spork Playground = Learn & Practice PySpark Online
+Tutorials + interview Questions + Online Compiler - Cheat dheat
+
+
+schema = StructType([
+StructFleld{"naee", StringType(}, True),
+Structleld{*age", Integerfype(), True)
+1}
+@f © spark.read,formst( “cow’}.schema(schema), load(“/path/to/sample.cev)
+
+JSON Files
+
+# Basic JSON File
+of = spark.read.format( "json").load("/path/to/sample.jsom")
+
+# ISON with multi-line records
+@f © spark.read,option( “eultiline”, True), json("/path/to/seeple, json")
+
+# JSON with a defined sche
+from pyspark.sql.types ieport StractType, StructField, StrisgType,
+
+Integertype
+
+schema «© StructType([
+StructFleld{ "nase", StringTypet}, True),
+StructField{"age", IntegerType(), True)
+rf
+
+@f > spark.read,format(“jxon").scheme(echea). load(“/path/to/sample. json")
+
+Writing Files
+CSV Files
+
+© Besic write to CoV
+Of erite, cov{"/path/tofoutput_csw" )
+
+# With header
+@f weite.option{“header", True). civ" /path/to/eutput <cav"}
+
+© With ewltiple options
+
+Of erite option{ "header", True)’
+-optios("delisditer™, ","}4,
+-optios("quote™, '"")>',
+-Cav("/path/te/foetpet_cav")
+
+Spork Playground = Learn & Practice PySpark Online
+Tutorials + interview Questions + Online Compiler - Cheat dheat
+

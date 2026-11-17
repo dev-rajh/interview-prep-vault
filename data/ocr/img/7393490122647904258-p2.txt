@@ -1,0 +1,15 @@
+Welcome to the Spark Playgroand’s Py Spark Syntax Cheat Sheet! This document is
+designed to provide a quick reference to essential PySpark functions and operations.
+
+Check out the Spark Playground website here
+
+Create DataFrame
+
+from pyspark.sq! import SparkSession
+spark = SperkSession. builder appNamet"Exemple”| getOrtreatet}
+Gata = [(1, “Alice*, 79). (2, “Bob *, 351]
+
+dg? = spark createDataFrameldata, (*id", “name”, “age"]l
+a? show)
+
+Explicit Schema

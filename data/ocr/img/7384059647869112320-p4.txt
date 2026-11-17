@@ -1,0 +1,30 @@
++ Subquen: A nested query eside another query. Example CTE:
+WITH SalesDate AS [
+SELECT customer_id, SUMjamount) AS rotal_sates
+FROM aabea
+GAQUP BY custamar_ie
+) SELECT * FROM SalesDate WHERE tote_sales > 1000;
+9. Write a query to calculate the running total of sales for each month,
+
+SELECT mnanth, sales,
+SUM{sales| OVER (OADER BY month) AS running_total
+FROM sales_tabie;
+10, Explain the difference between INNER JOIN, LEFT JOIN, and PULL
+OUTER JOIN,
++» INNER JOON: Retured only mutiching racorda.
+
++ LEFT JOIN: Returns afl records from the left table aed matching records from the
+right,
+
+FULL OUTER JOIN: Returns of records froen both tables, filing nom matching
+records wath MLA Le Esarrypies
+
+11. How would you use Python for data cleaning and transformation?
+
+Python is widely used for data claaning and tanaformation in data analysis and
+nectine learning workllows, You can ute libraries tke paces, MumPy, and ra to perfor
+various date preparmtion teake etficmensty,
+
+1 Mending Missing Dota
+import pandas as pd
+dt pd.read_oswdata.osy"}

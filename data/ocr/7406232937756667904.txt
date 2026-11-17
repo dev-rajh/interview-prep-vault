@@ -1,0 +1,60 @@
+in) ED hetpsi/www. //www.linkedin. comvin/pradyumny-barwal —_
+
+DATA ENGINEERING
+
+(6) 5)
+
+DATA ENGINEERING
+
+Everything you need to begin the journey
+
+ETL System
+
+Extract, Transform, Load (ETL) system is
+responsible for extracting data from
+source systems, transforming it to fit
+business needs, and loading it into a data
+warehouse.
+
+A retail company extracts sales data
+from its point-of-sale system,
+transforms it to analyze seasonal
+trends, and loads it into a data
+warehouse.
+
+Data
+Warehouse
+
+A central repository of integrated data from
+multiple sources, designed to support
+decision making and business intelligence
+activities.
+
+A healthcare organization uses a
+data warehouse to integrate patient
+data from various departments for
+comprehensive reporting and
+analysis.
+
+Tt _¥_¥§_
+
+Extract
+
+The process of retrieving data from
+different source systems.
+
+Extracting customer data from a CRM
+system and sales data from an ERP system.
+
+Transform
+
+The process of converting extracted data
+into a format that can be loaded into the
+data warehouse, including cleaning,
+conforming, and integrating data from
+multiple sources.
+
+Standardizing date formats and
+removing duplicates from customer
+records before loading them into the
+data warehouse.

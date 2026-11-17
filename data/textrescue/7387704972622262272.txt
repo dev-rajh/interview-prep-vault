@@ -1,0 +1,19 @@
+Still stuck with traditional SQL systems? It's time to upgrade your data engineering career.
+
+Snowflake Data Engineering is the future of cloud-based analytics. And YES — getting started is easier than you think.
+
+Snowflake Data Engineering Roadmap:
+- Understand Snowflake Architecture & Core Concepts
+- Install & Use SnowSQL | Manage Users & Roles
+- Work with Virtual Warehouses & Storage Layers
+- Load & Query JSON, CSV, XML (Structured & Semi-Structured Data)
+- Automate Data Ingestion with Snowpipe
+- Use Snowpark + Apache Spark for advanced processing
+- Build ETL Pipelines & Performance-Tune Workloads
+- Orchestrate Workflows with Airflow / AWS Glue / ADF
+- Implement DBT for Transformations & Testing
+- Deploy Real-World Projects & BI Dashboards
+
+Inside the masterclass: Foundations of Modern Data Warehousing, Snowflake Curriculum Overview, Tools: SnowSQL, Snowpark, DBT, Airflow, Real-World Projects & Demo Scenarios, Certification & Interview Prep, Salary Insights & Job Roles, Live Q&A with Industry Mentors.
+
+(Promo/masterclass post. Attached document: "Snowflake Data Engineering Roadmap", 2 pages - OCR'd separately.)

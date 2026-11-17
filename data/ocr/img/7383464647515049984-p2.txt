@@ -1,0 +1,36 @@
+* Compute shipping cuestion pee cedar
+© =Compubt ananige duration peer mraeith
+* Compare gech order's duration with the monthly average
+
+WITH order durations AS {
+SELECT order_id,
+EXTRACT( YEAR FROM order date) AS order_year,
+EXTRACT(MONTH FROM order date) AS order_month,
+DATE_PART( ‘day’, shipped date - order_date) AS ship days
+FROM orders
+is
+month_awe AS ¢
+SELECT order_year,
+order_sonth,
+OvG(ship_days) AS avg_ship_days
+FROM order_durations
+GROUP BY order_year, order_month
+}
+SELECT o.order_id,
+o.ship_days,
+move _ship_days
+FROM order_durstions o
+JOIN month_svg =
+ON o.order_year = @,order_year
+48D o.order_month = w.order_month
+WHLRL o.ship_days > ®,avg_ship_days;
+
+1} Recursive query: List all subordinates for a given manager
+Approach:
+
+* Tabloemployees(emp id, aup_nase, sanager_id)
+« Anchor direct reports of manager *
+® Aeoursive step: employees whose manager_id = one of previously found emp_ids
+
+WITH RECURSIVE subordinates as [
+-- anchar; direct reports

@@ -1,0 +1,43 @@
+72, Mheratity the Fest and Last Onder Date for Each Customer (es)
+
+SELECT customer_id, FKIN(erder_date) AS first_erder, Max(erder_dote) 45 Last_order
+FROM Onders
+(RAP AY cestomer_id;
+
+21. Show Product Sales Distribution |[Peccent of Tatal Revenue) (PayPal)
+
+WITH Totala@everue 45 (
+SELECT Sumquaetity * erice) AS tetal face Sales
+
+}
+SELECT a.prodect_id,
+
+SuM(s. quantity * s.erice) AS revenue,
+
+SUM(s, quantity * s.erice) * i@% / t.total 45 rewesue_pct
+FROM Sales ©
+CROSS DOIN TotalBevence ¢
+GROUP OF s.preduct_id, t.tetal;
+
+order_date,
+LaG{arder_date} OVER (
+PARTITION BY custemer_ie
+ORDER @Y erder_date
+) AS prew_crder_cate
+Fai Orders
+J
+SELECT customer_id, order_date, prev_erder_date
+FROM cte
+WHERE order_date - peev_order_date = EMTERum, ‘i" Gay;
+
+25. Find Cheened Custoners (Me Orders in the Last 6 Mortis) (Amazon)
+
+SELECT ¢ustomer_id
+
+FROM Orders
+
+hour br cesteser_id
+
+HAWING PAX(orger_date) < (NOW() - DMTERVAL “6 moeths'))
+
+Page 5 of F

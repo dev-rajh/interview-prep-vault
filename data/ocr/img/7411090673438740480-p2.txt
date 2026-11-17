@@ -1,0 +1,25 @@
+ROW _NUMBERD OVER (PARTITION BY userid ORDER BY crderdme) AS rn
+FROM cedars
+h
+ap AS |
+SELECT
+cramr_ied,
+cedor_doin,
+DATEADON day, -rn, ceder date) AS grp_key
+FROM coe
+)
+SELECT user_
+FROM arp
+GROUP BY user_id, anp_kay
+
+HAVING COUNT|*) == % SN
+
+|, name, value, updated st)
+
+fo
+
+WITH ranked AS [
+SELECT *,
+ROW _NUMBER)) OVER (PARTITION BY id ORDER BY upeloted_at DESC) AS mn
+FAOM customer
+

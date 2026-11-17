@@ -1,0 +1,37 @@
+Scenario-based SQL interviews don't fail on SQL.
+They fail on unspoken assumptions.
+
+If you've ever gotten the "right" query and the "wrong" answer, you already know why.
+
+Most candidates start typing the moment they hear the prompt.
+
+The problem isn't query-writing.
+
+It's problem-definition.
+
+Assumption: the interviewer wants syntax.
+Reality: they're watching how you pin down meaning.
+
+-You don't confirm grain before joining (user vs session vs order vs line item).
+-You treat "missing" as a filter problem instead of a join problem (LEFT JOIN + null logic).
+-You reach for NOT IN and forget that NULLs change the truth table.
+-You use MAX(date) and think you retrieved the latest row, not just the latest value.
+-You bucket time without stating boundaries (inclusive/exclusive, timezone, partial periods).
+-You use window functions, but can't justify the partition/order as a business rule.
+
+Average candidates produce outputs.
+Great candidates produce definitions that survive edge cases.
+
+Skip definition control and the costs stack up:
+
+-inflated counts from duplicate joins
+-disappearing entities from the wrong join type
+-"correct" logic that breaks on NULLs
+-time-based answers that drift month to month
+
+Stop thinking in "write the query." Start thinking in "lock the contract."
+
+Scenario SQL is data modeling under time pressure.
+The interviewer is testing whether your query encodes the right assumptions (on purpose).
+
+(Attached document: "Scenario Based SQL Interview Questions", 20 pages - document preview failed to load; post text extracted.)

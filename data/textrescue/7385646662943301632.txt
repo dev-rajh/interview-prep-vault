@@ -1,0 +1,12 @@
+Amazon – 70% rounds: SQL + System Design + ETL
+Google – 80% rounds: SQL + Python + Distributed Systems
+PwC – 80% rounds: SQL + Python + PySpark
+
+If you want to crack Data Engineering interviews, the key isn't just practicing random questions.
+It's about recognizing the pattern: what topics each company emphasizes, and preparing smartly around them.
+
+Rahul was confident he'd nailed his Zeta Data Engineering interview… until he realized he had studied everything generically, without looking at real interview experiences. The result? A 40+ LPA offer slipped away.
+
+That's why "Interview Safarnama: Data Engineering" was created — a kit with 100+ real interview experiences, including: insights from both product & service companies, mostly first-hand real-time experiences, exact questions asked in each round, structured roadmap to focus on the right topics from Day 1.
+
+(Promo post. Attached document: "Zeta Data Engineer Interview", 5 pages - OCR'd separately.)

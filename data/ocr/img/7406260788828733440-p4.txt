@@ -1,0 +1,41 @@
+gata = [{1, "Alice", date¢2@23, 1, 15), datetime( 2024, 3, 18, 14, 38, 8)),
+(2, "Bob", date(2623, 2, 15), datetiae(2024, 3, 18, 14, 38, 6)}]
+@f = apark.createbataPrate(data, ichite-ichesa)
+
+Using 4 List of Dictionaries
+from pyspark.sql Leport SparkSession
+spark © SparkSession. builder, eppMame(“Ceample”), getOrcreatel }
+
+ats « [
+{"id": 2, "name": "Alice", "age": 25),
+("id™: 2, “nama”: "Bob", "age": 35}
+
+]
+
+ef © spark.crestefataFrare(dats)
+af, show( }
+
+Reading Files
+
+CSV Files
+
+M@asic CSV files
+Of = spark.read, format( "cow" }.load(”/path/toysaeple.csy")
+
+csv with Meader
+@f = apark. read .option( “header”, True).cov("/path/te/sample.cav")
+
+® sultiple options
+
+ee
+
+spark. read aptlon("inferschesa", True) .option{"delisditer",”,").csv("/path/to
+fsample.cow"}
+
+® with defined schewws
+fros pyspark.sgl.types deport StrectType, StructField, StringType,
+IntegerType
+
+Spork Playground = Learn & Practice PySpark Online
+Tutorials + interview Questions + Online Compiler - Cheat dheat
+

@@ -1,0 +1,28 @@
+“type”: “sinng”
+)
+
+Inthe dataset path:
+Soorcalf input’, pipelined) parameters, Filaharrey)
+
+Variables:
+
+« Definition: Varebles in ADF ore used ievside the pipeline to store temporary values
+during execution. They con be moditied using Set Variable or Aopend Variable
+activitias
+
+Use Case: Track status flags, accumulate walues, count iterations, of act as loop
+counters inside ForEach loops.
+
+Soope: Pipeine scope; can be updated during pipeline execution.
+Example:
+[
+“name “Counter,
+“type”: “int,
+“detoultVetue”: Oo
+)
+Use the Set Variable activity to increase its value as readied.
+© Key Ditterunce:
+
+2) What is Time Travel in Delta Lake?
+Definition:
+

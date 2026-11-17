@@ -1,0 +1,31 @@
+€ELLIPS>
+
+Performance Tuning & Cost Optimization
+
+Description: control costs using clustering, caching, query
+plans, and auto-suspend.
+
+Role-Based Access Control (RBAC)
+
+Description: Secure Snowflake using roles, grants, and
+least-privilege access policies.
+
+Data Sharing & Marketplace
+
+Description: Share live datasets across
+accounts securely. Explore Snowflake
+Marketplace for external data.
+
+—————
+Snowpark & Python UDFs
+
+Description: Write Python code inside Snowflake using
+Snowpark. Build complex logic with UDFs
+
+———=f}
+Real-World Projects & Integrations
+
+Description: Build ETL and streaming pipelines with Airflow,
+dbtFivetran, and Kafka. Use Git & Cl/CD.
+
+www.educationellipse.com

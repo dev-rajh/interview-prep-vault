@@ -1,0 +1,37 @@
+(0) Top 3 products by total sales per region in the Last 6 months (handle
+ties)
+
+Approach:
+
+* Filter sates in the last 6 months
+
+* Aggregate by region, product_id
+® Use DENSE RANE( ) to handle ties
+
+© Pickronke2
+
+WITH sales fa AS ¢
+SELECT regian,
+praduct_id,
+SUM(sales_amgunt) AS total_sales
+FROM sales
+WHERE sale date >= DATEADD(MONTH, -6, CURRENT DATE)
+GROUP BY region, preduct_id
+1.
+ranked AS (
+SELECT region,
+product_id,
+total_sales,
+OPNSE RANK{) OVER [
+PARTITION BY region
+ORDER BY total_sales DESC
+} AS rk
+FROM sales Ge
+}
+SELECT region, product_id, total_sales
+FROM ranked
+WHERE rok c= 3;
+
+(2) Orders where shipping took longer than the month's average
+
+Approach:

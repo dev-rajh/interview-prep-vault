@@ -1,0 +1,17 @@
+[ar
+
+FIND
+DUPLICATES
+
+Identify emails appearing > once
+
+-- Common interview starter
+SELECT * FROM (
+SELECT *, ROW_NUMBER() OVER(
+PARTITION BY email ORDER BY id
+
+) AS rn
+FROM users
+)%
+WHERE rn > 1;
+

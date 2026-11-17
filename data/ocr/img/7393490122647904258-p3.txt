@@ -1,0 +1,42 @@
+fram pyspark.sql.types import StructType. StructField, integerType. Strieg Type
+
+schoama = 5
+StrvctField(*i*, Denestiveetk True),
+StructFieli(*name", StringTypet}. True).
+StructField("age”. IntegerTypel), True)
+b
+
+Of = spark createDataFrameldata, schema)
+Gf printSchemall
+of .show)
+
+# Scheme as 3 string
+
+data = [(1, “Alice”, 29), (2, "Bob", 35)]
+
+schema = “id INT, mame STRING, age INT™
+
+of = spark createDetaFrameldata, schema=schemal
+
+# Scheme String with Flow and Boolean Types
+
+pivscgic = “INT, mame STRING, salary FLOAT, is_asctive BOOLEAN”
+= [C1, “Alice, 0000.75, True), (2, "Heb", 6000050, False]
+
+pad = spert createOetaframeldsts, schema=schemal
+
+# Scheme String with Dare ang Tintestane
+
+from datetime import dete. datetime
+
+schema = “id INT, name STRING, join_date DATE, last login TIMESTAMP"
+
+Gata = (C1, “Alice, datel2023, 1, 15), datetime|2024, 3, 10, 14, 30, OM,
+(2, "Bod", date{2023, 1, 15). datetime{2024, 3, 10, 14, 30, OF)
+
+@ = spark createDataFrameldata, schema=schemal
+
+~
+
+Using a List of Dictionaries
+

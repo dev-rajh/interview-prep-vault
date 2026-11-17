@@ -1,0 +1,32 @@
+Snowflake Data €LLIPSDS
+
+EOUCATION
+
+Engineering Roadmap
+
+Cloud & Data Warehouse Foundations
+
+Description: basics of cloud computing and modern
+data warehouse design
+
+Snowflake Architecture Deep Dive
+
+Description: Understand Snowflake’s architecture
+virtual warehouses, micro-partitions, andcompute
+& storage
+
+==)
+
+Data Loading & File Formats
+
+Description: Load data into Snowflake and
+Work with CSV, JSON, and Parquet.
+
+Querying & Transformations
+
+Description: Write advanced SQL in Snowflake
+
+Time Travel & Cloning
+Description: Use Time Travel to recover past data
+
+www.educationellipse.com

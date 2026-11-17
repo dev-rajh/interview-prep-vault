@@ -1,0 +1,34 @@
+© Geta Types define the type of data that can be stored in a table column.
+® ensures data integnty and optimizes storage.
+
+Commonly used Data Types are
+A, String Datatypes- & stares text strings.
+
+1. CHAR-
+® Can store characters of fixed kength
+* The site parameter specifies the column length in characters cam
+be from 0 to 255.
+
+2. VARCHAR-
+* Can store characters up to given length.
+@ The size parameter specifies the maximurn column length in
+characters can be from 0 to 655.35.
+
+&. Numeric Datatypes- These datatypes store numbers, both integer and
+floating-point number.
+
+1. INT-
+® Used for storing whole numbers without decimal.
+
+2. FLOAT:
+© Used for storing numbers without decienal.
+® Float gwes approximate value while performing calculations.
+
+3. Decimal (P, $+
+
+* Used ta store numbers with a fixed nuenber of decimal places.
+© Decimal gives exact value.
+
+® Total range of digits can be 1-38. [Precision-F)
+
+© Range after decimal should be 0-30, [Scate-5]

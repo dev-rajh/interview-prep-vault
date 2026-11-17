@@ -1,0 +1,19 @@
+Web Developer »
+Sihe_ coding wrard
+
+3. Selecting Data:
+SELECT columnt, column2
+
+FROM table_name;
+4. Selecting All Columns:
+
+SELECT. *
+FROM table_name;
+
+5. Updating Data:
+
+UPDATE table_name
+SET column! = valuel, column2 = value2
+WHERE condition;
+
+W oD

@@ -1,0 +1,96 @@
+SOL
+Cheat Sheet
+
+
+Sihe_ coding wrard
+
+1. Creating Tables:
+
+CREATE TABLE table_name (
+column! datatype,
+column2 datatype,
+column3 datatype
+
+3
+
+2. Inserting Data:
+
+INSERT INTO table_name (column), column2)
+VALUES (valuel, value2);
+
+Web Developer »
+Sihe_ coding wrard
+
+3. Selecting Data:
+SELECT columnt, column2
+
+FROM table_name;
+4. Selecting All Columns:
+
+SELECT. *
+FROM table_name;
+
+5. Updating Data:
+
+UPDATE table_name
+SET column! = valuel, column2 = value2
+WHERE condition;
+
+W oD
+
+Web Developer (0) »>
+@ihe_ coding ward
+
+6. Deleting Data:
+
+DELETE FROM table_name
+WHERE condition;
+
+7. Dropping Tables:
+DROP TABLE table_name;
+
+8. Altering Tables:
+
+ALTER TABLE table_name
+ADD column_name datatype;
+
+Comment "SQL" for SQL CheatSheet
+
+a
+
+Web Developer (0s) »
+®the_coding_witard
+
+9. Joins:
+
+INNER JOIN
+
+SELECT columni, column2
+
+FROM table1
+
+INNER JOIN table2
+
+ON table1.column = table2.column;
+
+LEFT JOIN
+
+SELECT column1, column2
+
+FROM table’
+
+LEFT JOIN table2
+
+ON tablel.column = table2.column;
+
+RIGHT JOIN
+
+SELECT columni, column2
+
+FROM table’
+
+RIGHT JOIN table2
+
+ON tablel.column = table2.column:;
+
+a>

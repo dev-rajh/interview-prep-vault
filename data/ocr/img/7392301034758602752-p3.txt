@@ -1,0 +1,43 @@
+3. Write a query to fetch the second-highest salary from
+an employee table.
+
+Option 1; Using DISTINCT, ORDER BY, and LOMIT [MySQL/PostgresQL)
+
+SELECT DISTINCT salary
+FROM employees
+ORDER BY salary DESC
+LIMIT 1 OFFSET 1;
+
+Option 2: Using subquery (Gemerkc SOL)
+
+SELECT MAX|salary}
+
+FROM employees
+
+WHERE salary < (SELECT MAX[Salaery) FROM empires |;
+
+Explanation:
+* The subquery fetches the highest salary.
+* The outer query fieds the maximum salary bess than the highest —
+giving the second highest.
+
+4,How do you use GROUP BY and HAVING together?
+Provide an example.
+
+Use GROUP BY to group data and HAVING to filter aggregated results
+(uMfike WHERE, which filters raw rors),
+
+SELECT department_id, COUNT/") AS emp_count
+
+FROM employees
+
+GROUP BY department_id
+
+HAVING COUNT|") > 5:
+
+Explanation:
+* Groups employees by department.
+* Filters groups where the count of employees is more than 5.
+
+Mandar Pat|
+

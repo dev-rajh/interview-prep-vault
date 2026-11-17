@@ -1,0 +1,17 @@
+I cracked Bank of America in my first attempt with a 25+ LPA package in 2024!
+Looking back, PySpark was a real game-changer.
+
+Here are the concepts I focused on (and mastered through tons of hands-on practice):
+
+PySpark Essentials
+- DataFrames & RDDs -> lazy evaluation, transformations, actions
+- Partitioning -> distributing data efficiently across clusters
+- Joins -> broadcast, shuffle, and join optimization for performance
+- Window functions -> row_number, rank, lag/lead for analytical queries
+- Memory management -> caching, persistence, garbage collection
+- Performance tuning -> predicate pushdown, column pruning, bucketing
+
+One key learning?
+Most candidates fail PySpark interviews not because they don't know the APIs, but because they can't explain real-world trade-offs or why they'd choose one approach over another.
+
+(Attached document: "PySpark cheat sheet", 5 pages - OCR'd separately.)

@@ -1,0 +1,139 @@
+Deloitte.
+
+Asked In Service Based Company
+DATA ENGINEER INTERVIEW QU
+
+Note:- Asked In @DELOITTE
+
+JE
+
+eTIAAIC
+STIO! NS .
+
+(0-5 Years)
+
+CLEAN AND SHORT POF Fos YOU
+EASY TO LEARN
+
+1. Write 4 query to retrieve the top 3 highest salaries from an employee
+table,
+
+SELECT OSTINCT sotary
+
+FROM employee
+
+ORDER BY salary DESC
+
+UMIT 3;
+
+Attematively, if there are duplioate salaries and we need an accurate top 3:
+
+SELECT salary
+
+FROM (
+SELECT aalary, DENSE RANK|) OVER (ORDER BY aalary DESC) AS mk
+FROM employee
+
+J ranked salaries WHERE mk <= 3
+
+2. Explain the difference between a clustered and a non-clustered index.
+
+«+ Gusbered Indes: Determines the physical order ot dete ina table, A table con heave
+only one clustered index,
+
+« Non Clustered Indes: Creates a separate structure to store index data. A table can
+have multiole non-clustered indewes.
+3. What are window functions in SOL? Provide examples,
+
+Window functions pertorm onioulations across a set of table rows related to the current
+row. Example:
+
+SELECT emplkryae_id, deguaertrneent, aalary,
+
+RANE) OVER (PARTITION BY Gepartment ORDER BY salary DESC] AS solery_rank
+FROM empioyan;
+4. How would you optimize a query that takes too Long to execute?
+« Use Indexes on frequently queried columns
+« Avoid **SELECT ***; ratriewe only required colurterd.
++ Optimize [00s fry incdesang kere.
++ Use BSPLAIN PLAN to anahee query performance,
+> Normalize the datehase structure,
+* Avoid redundant subqueries and use CTEs.
+5. Write a query to find duplicate records in a table,
+SELECT column]. colurmnz. COUNT")
+FROM toble_name
+GAGUP BY columnm!, column?
+HAVING COMUNTI*] > 1;
+6. How do you handle NULL values in SQL?
+> Use COALESCED to replace MULLS:
+SELECT COALESCE/salary, 0} FAOM employee;
+«» Use lS NULL/IS NOT NULL in conditions.
+* Use FFNULL (MySQL) or NVL{) (Oracial,
+7. Explain the difference between DELETE, TRUNCATE, and DROP,
++ OGLETE: Aemoves speotic rows, can be rolled back, and logs each row deletion.
+» TRUNCATE: Remnowes all rows, faster than DELETE, cannot be rolled back
+« GAOP: Remowes the entire table from the database.
+4, What is a CTE (Common Table Expression), and how Is it different trom a
+subquery?
++ (CTE: Temporary result set used in complex queries, improving readability.
+
++ Subquen: A nested query eside another query. Example CTE:
+WITH SalesDate AS [
+SELECT customer_id, SUMjamount) AS rotal_sates
+FROM aabea
+GAQUP BY custamar_ie
+) SELECT * FROM SalesDate WHERE tote_sales > 1000;
+9. Write a query to calculate the running total of sales for each month,
+
+SELECT mnanth, sales,
+SUM{sales| OVER (OADER BY month) AS running_total
+FROM sales_tabie;
+10, Explain the difference between INNER JOIN, LEFT JOIN, and PULL
+OUTER JOIN,
++» INNER JOON: Retured only mutiching racorda.
+
++ LEFT JOIN: Returns afl records from the left table aed matching records from the
+right,
+
+FULL OUTER JOIN: Returns of records froen both tables, filing nom matching
+records wath MLA Le Esarrypies
+
+11. How would you use Python for data cleaning and transformation?
+
+Python is widely used for data claaning and tanaformation in data analysis and
+nectine learning workllows, You can ute libraries tke paces, MumPy, and ra to perfor
+various date preparmtion teake etficmensty,
+
+1 Mending Missing Dota
+import pandas as pd
+dt pd.read_oswdata.osy"}
+
+# Chack for missing values
+
+erintict ianull|} aunty)
+
+# PM missing values with meanimedan'mode
+dt|"cotummn_name”).Alina(dt{columm_nome”|.mean)|), inplace= True}
+
+# Drop rows columns with missing values
+dt drognstingtiace=Trus}
+
+2 Removing Duplicates
+tdrop_duplicotesjingtace= True]
+
+2. Dots Type Conversion
+t["dete_colume’] = po.to_datetime|dt[dabe_column"|]
+@t]"numeric_columey] = pd-to_numeriofdt[numeric_oolumn’”], errors*"coerce™)
+
+4. String Cleaning (Removing Special Characters, Loweroasing. etc.)
+dif]"test_oolumn”] * dif text_colume”]| str.lowen).strreplace(rya-24-Z20-97, "", regex" True}
+
+& Handling Outliers
+
+You can remove outliers of cap them Gased on a threshold.
+# Rarove rows with outliers
+
+af = difaffcolurn_name’] < threshold vale)
+
+# Allernalively, cag cuthers
+dif'coluenn name] = di[cotumn name’). clip|lower=-nin_ walue, upper=max walue)

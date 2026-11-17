@@ -1,0 +1,17 @@
+If you can't solve real SQL & pipeline problems under pressure, you're not interview-ready yet.
+
+That's exactly why I'm sharing this 'Top 100 SQL Interview Questions for Data Engineering' guide.
+
+A huge thanks to Bosscoder Academy for putting this together!
+
+If you've already gone through SQL basics, revisit these and see how many you can solve without looking up syntax or challenge a colleague who's also switching domains.
+
+Because in Data Engineering, it's not about memorising queries.
+It's about understanding patterns that actually show up in MAANG, fintech & analytics interviews.
+
+- 100 curated SQL questions
+- Covers JOINS, window functions, CTEs, aggregates & case studies
+- Structured exactly like real PBC & startup interviews
+- Perfect for revision before your next DE round
+
+(Attached document: "SQL Questions pdf / Top 100 SQL Interview Questions for Data Engineering", 5 pages - OCR'd separately.)

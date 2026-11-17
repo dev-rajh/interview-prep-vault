@@ -1,0 +1,15 @@
+*Disclaimer*
+
+Before you begin, here's a quick note.
+
+This sheet is here to help you learn SQL In & smart and
+structured way, But remember — don't just rush through the
+answers. Write the queries yourself. Run them, test them,
+even make mistakes and fix them, Only after that, check other
+solutions.
+
+That's how you build real SQL confidence — the kind that helps
+in interviews and on the job,
+
+A 6 ODER
+oe

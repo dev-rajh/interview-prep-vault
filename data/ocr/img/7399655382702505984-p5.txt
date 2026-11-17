@@ -1,0 +1,26 @@
+Key SQL Concept —
+
+1. Tables : A table is a collection of rows (records) and columns (fields).
+Each table represents a single entity, like Students or Orders.
+
+2. Keys :
+a. PRIMARY KEY - Uniquely identifies a row.
+b. FOREIGN KEY - Linked tables together.
+
+3. Joins : Joins are used to combine data from multiple tables
+a. INNER JOIN - Only matching rows.
+b, LEFT JOIN - All rows from left table + matches from the right.
+c. RIGHT JOIN - All rows from right table + matches from the left.
+d. FULL JOIN - All rows from both tables
+
+4, Constraints : Rules applied to table columns
+4. NOT NULL - Column must have a value.
+b. UNIQUE - Values must be unique.
+c. CHECK - Values must satisfy a condition.
+d, DEFAULT - Sets a default value if none is provided,
+
+5. Aqgregate Functions : Used to perform calculations on multiple rows.
+like - COUNT(), SUM(), AVG(), MIN(), MAX()
+
+BOSSCODER
+aAcAGEMY

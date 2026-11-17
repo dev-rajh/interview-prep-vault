@@ -1,0 +1,15 @@
+[|
+MoM GROWTH %
+
+Current vs Previous Month
+
+-- (Curr - Prev) / Prev
+
+SELECT month, sales,
+(sales - LAG(sales) OVER(ORDER BY month))
+/ LAG(sales) OVER(ORDER BY month)
+
+AS mom_growth
+FROM monthly_sales;
+
+® Anandrarayanan S | | sa erervewrser |

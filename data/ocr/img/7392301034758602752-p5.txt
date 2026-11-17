@@ -1,0 +1,40 @@
+Each employee with the same department pets a row number based on
+salary rank [highest first).
+
+Example: RANK)
+Assigns the same rank to rows with equal values, but skips the next
+rarikes}.
+SELECT name, department, salary.
+RANK() OVER (PARTITION BY department ORDER BY salary DESC) AS
+rari _rum
+FROM employees;
+* 2 employees have the same salary, both get rank 1, and the next
+gets rank 3,
+
+7. Write a query to fetch the top 3 performing products
+based on sales,
+
+Assume table sales_data has:
+product_id, product_name, total sales
+
+SELECT product_id, product_name, total_sales
+FROM sales_data
+
+ORDER AY total_sales DESC
+
+LIT 3;
+
+Altermate using RANK) (if ties matter):
+
+SELECT product_id, product_name, total_sales
+
+FROM [
+
+SELECT *, RANK{) OVER (ORDER BY total_sales DESC) AS rank_num
+FROM sales data
+
+] ranked_sales
+
+WHERE rank_nian <- 3;
+
+Maida Patil

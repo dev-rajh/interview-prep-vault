@@ -1,0 +1,25 @@
+5. Explain the difference between normalization and
+denormalization. When would you prefer which ?
+
+6. Give an example of a table in First Normal Form
+(INF) and then transform it into Second Normal Form
+(2NF) with explanation.
+
+SQL - Scenarios
+
+7. Given an Employee table with columns id (primary
+key), name, department, and manager _id (which
+references id and can be NULL if the employee has no
+manager, with the condition that no employee
+manages themselves), write a SQL query to display
+each employee along with the name of their
+manager.
+
+8. You have an orders table with: order _id,
+
+customer _id, order_date, amount, reason.
+
+Write a query to calculate the 7-day rolling average of
+amount for each reason.
+
+Ankita Gulati Shubh Goyal

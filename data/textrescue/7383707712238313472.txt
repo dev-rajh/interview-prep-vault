@@ -1,0 +1,16 @@
+You Don't Need to "Learn" SQL — You Need to Understand It!
+
+Let's be real — anyone can run a SELECT * FROM table; but when real data problems come, most people freeze.
+
+Because SQL isn't about commands. It's about how you think, how you connect tables, and how you tell a story with data.
+
+That's why Complete SQL Notes was made — simple, visual, and packed with real-world logic.
+
+What You'll Get Inside:
+- Core to Advanced SQL Concepts
+- Joins, Subqueries & CTEs (made super easy)
+- GROUP BY, HAVING & Aggregations
+- Keys, Indexing & Constraints
+- Window Functions + Real Interview Questions
+
+(Attached document: "Sql Notes Basic to Advanced", 5 pages - OCR'd separately.)

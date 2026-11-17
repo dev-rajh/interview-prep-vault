@@ -1,0 +1,15 @@
+Aiming for Data Analyst Roles in the 20-30 LPA Range?
+
+At this stage, interviewers aren't just checking your SQL syntax or dashboard designs — they're evaluating how you think with data: how you uncover insights, drive decisions, and quantify business impact.
+
+Curated list of 30+ real interview questions used by top companies across key areas:
+
+- SQL & Query Optimization — writing efficient queries and optimizing performance
+- Exploratory Data Analysis (EDA) — translating raw data into meaningful patterns
+- Tableau / Power BI — crafting visual stories that guide business strategy
+- Python / R for Analytics — using code to automate, analyze, and validate insights
+- Business Case Studies & ROI Storytelling — linking data findings to measurable business outcomes
+
+If you're preparing for high-impact analyst roles, this guide helps you focus on what truly differentiates great analysts from good ones.
+
+(Attached document: American Express Data Analyst questions, 5 pages - OCR'd separately.)

@@ -1,0 +1,36 @@
+Web Developer (0s) »
+®the_coding_witard
+
+9. Joins:
+
+INNER JOIN
+
+SELECT columni, column2
+
+FROM table1
+
+INNER JOIN table2
+
+ON table1.column = table2.column;
+
+LEFT JOIN
+
+SELECT column1, column2
+
+FROM table’
+
+LEFT JOIN table2
+
+ON tablel.column = table2.column;
+
+RIGHT JOIN
+
+SELECT columni, column2
+
+FROM table’
+
+RIGHT JOIN table2
+
+ON tablel.column = table2.column:;
+
+a>

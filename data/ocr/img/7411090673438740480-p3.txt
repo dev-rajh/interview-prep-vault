@@ -1,0 +1,25 @@
+}
+SELECT id, name, value, updated_at
+FROM ranked
+WHERE rn 1;
+Why ROW _NUMBER?
++ Because we want oety the top 1.
++ Using RANKDENSE RANK may give duplicates when brmests
+
+Assume Table: salas|sala_dete, rewarue)
+
+Requirement 8)
+For each date + compute:
+AVG|ravenue over last 7 days includin we
+
+= y
+
+a
+
+6 PRECEDING AND CURRENT RoW
+145 Felina,
+FROM sa
+ORDER BY sale_cate:
+Koy Points
++ Uses window frame of 7 sows [not 7 cloves).
+

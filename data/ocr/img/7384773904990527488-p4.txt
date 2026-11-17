@@ -1,0 +1,30 @@
+Introduction
+
+01 What ls ETL In Data Engineering?
+
+« ETL (Extract, Transform, Load) is the process of moving raw data from
+different sources into a centralized storage system,
+
+« Extract - Data is collected frorn multiple sources such as databases, APIs,
+logs, loT devices, or streaming platforms.
+
+« Transform - The raw data is cleaned, standardized, enriched, and reshaped to
+match business requirements.
+
+« Load - The processed data is stored in a target system like a data warehouse
+(Snowflake, Redshift, BigQuery) or a data lake (53, GCS, HDFS).
+
+« For Data Engineers, ETL pipelines are critical to ensure that data is reliable,
+scalable, and accessible for analysts, data scientists, and business teams.
+
+THE ETL PROCESS EXPLAINED
+
+@) - Ci
+=
+
+EXTRACT TRANSFORM LOAD
+Retrieves and verifies data Processes and eogenizan Moves transformed data to
+from wanous sources extracted data so itis usable a data repository
+
+BOSSCODER
+ACAGEMY

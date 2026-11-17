@@ -1,0 +1,35 @@
+Stop learning SQL queries.
+
+Start learning SQL patterns.
+
+I spent 48+ hours analyzing real SQL interview questions.
+
+The concept that appeared most?
+Window functions.
+
+⭐ 15 SQL Window Function Patterns You Must Know
+
+1️⃣ Find Duplicates – ROW_NUMBER()
+2️⃣ 2nd Highest Salary – DENSE_RANK()
+3️⃣ MoM Growth % – LAG()
+4️⃣ Running Total by Dept – SUM() OVER(PARTITION BY)
+5️⃣ Diff From Average – Mix row + window aggregate
+6️⃣ % of Total Revenue – Empty OVER()
+7️⃣ 3-Day Rolling Sum – ROWS BETWEEN
+8️⃣ Consecutive Groups – Gaps & Islands trick
+9️⃣ Last Value (Fixed) – UNBOUNDED frame
+🔟 Nth Value – Pick exact position
+1️⃣1️⃣ Gap Analysis – LEAD()
+1️⃣2️⃣ CUME_DIST – Percentile ranking
+1️⃣3️⃣ Reverse Rank – Bottom performers
+1️⃣4️⃣ Count Per Group – Agg without GROUP BY
+1️⃣5️⃣ Median – PERCENTILE_CONT(0.5)
+
+You don't need to memorize every function.
+You need to recognize these 15 interview patterns.
+
+Which one do you see most in interviews or real work?
+
+♻️ Repost to save someone 100+ hours of studying the wrong SQL questions.
+
+(Attached document: "Top 15 SQL Window Function Patterns", 5 pages - OCR'd separately.)

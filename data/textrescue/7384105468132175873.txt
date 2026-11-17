@@ -1,0 +1,13 @@
+SQL Relations Cheatsheet
+
+Understanding relations in SQL is key to mastering databases. This cheatsheet covers:
+
+- One-to-One, One-to-Many, and Many-to-Many relationships
+- Primary Key & Foreign Key concepts
+- Joins – INNER, LEFT, RIGHT, FULL
+- Normalization and how to avoid data redundancy
+- Examples of relational queries and table linking
+
+If you're learning SQL or preparing for interviews, this will help you understand how data is connected inside a database system!
+
+(Attached document: "SQL Relations Cheatsheet", 5 pages - OCR'd separately.)

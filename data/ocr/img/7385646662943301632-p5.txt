@@ -1,0 +1,27 @@
+Round 2
+Data Management Concepts
+
+Data Quality & CDC
+
+1. How does a data validation framework like Great
+Expectations fit into ensuring data quality in an OLTP
+— OLAP pipeline?
+
+2. Schema changes in OLTP often require application
+code updates. How can the impact of schema
+changes be minimized?
+
+3. In an OLTP system, how can triggers be used to
+capture every insert, update, or delete into a history
+table?
+
+4. What would be the schema for a Card table and its
+corresponding Cardhistory table? How does each
+column support change tracking?
+
+5. Why do we include valid_from and valid_to
+columns in history tables when the latest state can be
+derived from entry order? What additional value do
+they provide?
+
+Ankita Gulati Shubh Goyal

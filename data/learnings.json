@@ -1587,6 +1587,20 @@
   ]
  },
  {
+  "id": "7406260788828733440",
+  "author": "Lakshmi Rajendran",
+  "author_url": "https://www.linkedin.com/in/ACoAABGMy3oBDkk9ZUNF8iM0BbZ653jlt9v9m64",
+  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7406260788828733440/",
+  "time": "1yr",
+  "text": "[OCR from post images]\n> Spark\nPlayground\nPySpark Syntax Cheat Sheet - Quick Syntax Guide\nfor Data Engineers\nee 3\nSpork Playground = Leann & Practice PySpark Online\nTutoriais + interview Questions + Oniing Compiler - Chock Sheet\nSpork Playground = Learn & Practice PySpark Online\nTutorials + interview Questions + Ondine Compiler + Cheat Shmet\nCreate DataFrame\nWith Default Schema\nfrom pyspark.sql leport SparkSession\nspark = SparkSesslon builder. applame (“Example”). getOrcreater)\nasta = [{1, “Alice”, 29), (2, “Bob”, 35))\nof = spark. cresteDataFrase(data, [“ic\", “neme\". “age” ]}\nOF. showl)\nExplicit Schema\nfrom pyspark.sql.types import StractType, StructField, IntegerType,\nStringType\nschema = SteuctTyped[\nStructfield{“id*, IntegerType(), Troe},\nStructField( ‘nave, StringTypet}, True),\nStructFileld{\"age\", IntegerTypel), True)\n1)\naf = apark.createDutafrase(data, ichera)\n2f.printSchemal}\n@f, shoal)\n* Schema a5 a string\n@ata = [{1, \"Alice\", 29), (2, \"Boe\", 35)]\nSchema = “id INT, nam STRING, age INT™\n@f © spark.createfutafrare(data, scheraescheea)\n© Schews String with Float and Boolean Types\nschema = “id INT, name STRING, salary FLOAT, is_actiwe BOOLEAN\"\ndata = [(1, \"Alice\", 56806.75, True), (2, \"Bob\", 68060.58, Falsa}]\naf = apark.createDutaPrase(data, icheta-achena)\nSchews String with Date and Timestaep\nfrom datetime import date, datetime\nschema = \"id INT, name STRING, join_date DATE, Last_login TIMESTAMP”\nSpork Playground = Learn & Practice PySpark Online\nTutorials + interview Questions + Online Compiler - Cheat dheat\ngata = [{1, \"Alice\", date¢2@23, 1, 15), datetime( 2024, 3, 18, 14, 38, 8)),\n(2, \"Bob\", date(2623, 2, 15), datetiae(2024, 3, 18, 14, 38, 6)}]\n@f = apark.createbataPrate(data, ichite-ichesa)\nUsing 4 List of Dictionaries\nfrom pyspark.sql Leport SparkSession\nspark © SparkSession. builder, eppMame(“Ceample”), getOrcreatel }\nats « [\n{\"id\": 2, \"name\": \"Alice\", \"age\": 25),\n(\"id™: 2, “nama”: \"Bob\", \"age\": 35}\n]\nef © spark.crestefataFrare(dats)\naf, show( }\nReading Files\nCSV Files\nM@asic CSV files\nOf = spark.read, format( \"cow\" }.load(”/path/toysaeple.csy\")\ncsv with Meader\n@f = apark. read .option( “header”, True).cov(\"/path/te/sample.cav\")\n® sultiple options\nee\nspark. read aptlon(\"inferschesa\", True) .option{\"delisditer\",”,\").csv(\"/path/to\nfsample.cow\"}\n® with defined schewws\nfros pyspark.sgl.types deport StrectType, StructField, StringType,\nIntegerType\nSpork Playground = Learn & Practice PySpark Online\nTutorials + interview Questions + Online Compiler - Cheat dheat\nschema = StructType([\nStructFleld{\"naee\", StringType(}, True),\nStructleld{*age\", Integerfype(), True)\n1}\n@f © spark.read,formst( “cow’}.schema(schema), load(“/path/to/sample.cev)\nJSON Files\n# Basic JSON File\nof = spark.read.format( \"json\").load(\"/path/to/sample.jsom\")\n# ISON with multi-line records\n@f © spark.read,option( “eultiline”, True), json(\"/path/to/seeple, json\")\n# JSON with a defined sche\nfrom pyspark.sql.types ieport StractType, StructField, StrisgType,\nIntegertype\nschema «© StructType([\nStructFleld{ \"nase\", StringTypet}, True),\nStructField{\"age\", IntegerType(), True)\nrf\n@f > spark.read,format(“jxon\").scheme(echea). load(“/path/to/sample. json\")\nWriting Files\nCSV Files\n© Besic write to CoV\nOf erite, cov{\"/path/tofoutput_csw\" )\n# With header\n@f weite.option{“header\", True). civ\" /path/to/eutput <cav\"}\n© With ewltiple options\nOf erite option{ \"header\", True)’\n-optios(\"delisditer™, \",\"}4,\n-optios(\"quote™, '\"\")>',\n-Cav(\"/path/te/foetpet_cav\")\nSpork Playground = Learn & Practice PySpark Online\nTutorials + interview Questions + Online Compiler - Cheat dheat",
+  "company": "General",
+  "field": "PySpark/Spark",
+  "topics": [
+   "career",
+   "cheatsheet"
+  ]
+ },
+ {
   "id": "7406249205721157632",
   "author": "José Siles",
   "author_url": "https://www.linkedin.com/in/ACoAACRqgpYBB7N6Q75afNwMp9eGHUAftOHGjro",
@@ -1646,6 +1660,23 @@
   "topics": [
    "dedup",
    "nulls"
+  ]
+ },
+ {
+  "id": "7399655382702505984",
+  "author": "Surbhi Goyal",
+  "author_url": "https://www.linkedin.com/in/ACoAACN2Wz0BAtXYDTNFKXbgQKMrYbd7fEgJXAU",
+  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7399655382702505984/",
+  "time": "1yr",
+  "text": "[OCR from post images]\nQUESTIONS\n| eceateem cai\n| customernamne\n; ; . »| onderid\ncustomer ia\n| —P>\n| preductid __] [pee\n| preduct_naria m ‘\n*Disclaimer*\nBefore you begin, here's a quick note.\nThis sheet is here to help you learn SQL In & smart and\nstructured way, But remember — don't just rush through the\nanswers. Write the queries yourself. Run them, test them,\neven make mistakes and fix them, Only after that, check other\nsolutions.\nThat's how you build real SQL confidence — the kind that helps\nin interviews and on the job,\nA 6 ODER\noe\nWhy This Sheet —\nHere's why we feel this sheet is right for you\n1. Clear Learning Path\nQuestions are arranged step by step — from simple filtering to\nadvanced functions — so your skills qrow naturally.\n2. Real-World Relevance\nThe problems are based on practical scenarios like e-commerce,\nfinance, and social media — exactly what companies deal with.\n3. Hands-On Practice\nThis isn't about memorizing. It's about solving. You'll practice writing\nefficient, accurate queries under real conditions.\nThis sheet is designed to make SQL feel clear, practical, and useful — so\nwhen it's time for interviews, you're ready.\nBOSSCODER\naAcAGEMY\nIntroduction to SQL —\nSQL (Structured Query Language) is a standard language used to\ncommunicate with and manage relational databases. It allows you to\ndefine, manipulate, retrieve, and control access to the data.\nSOL is categorized into different sub-lanquages based on functionality:\n1. DDL (Data Definition Language) : Used to define and modify the\nStructure of database objects like tables, schemas, and indexes.\nExample : CREATE, ALTER, DROP, TRUNCATE.\n2. DML (Data Manipulation Language) : Used to insert, update, or\ndelete data fram database tables.\nExample : INSERT, UPDATE, DELETE, MERGE.\n3. DQL (Data Query Language) : Used to query and fetch data froma\ndatabase. Example : SELECT, WHERE, ORDER BY, GROUP BY.\n4. DCL (Data Control! Language) : Used to control access to data and\ndatabase objects.\nExample : GRANT, REVOKE\n+ TCL (Transection Control Language) : Used to manage changes\nmade by DML statements and control the execution of transactions.\nExample : COMMIT, ROLLBACK, SAVEPOINT\nBOSSCODER\nacaGcimy\nKey SQL Concept —\n1. Tables : A table is a collection of rows (records) and columns (fields).\nEach table represents a single entity, like Students or Orders.\n2. Keys :\na. PRIMARY KEY - Uniquely identifies a row.\nb. FOREIGN KEY - Linked tables together.\n3. Joins : Joins are used to combine data from multiple tables\na. INNER JOIN - Only matching rows.\nb, LEFT JOIN - All rows from left table + matches from the right.\nc. RIGHT JOIN - All rows from right table + matches from the left.\nd. FULL JOIN - All rows from both tables\n4, Constraints : Rules applied to table columns\n4. NOT NULL - Column must have a value.\nb. UNIQUE - Values must be unique.\nc. CHECK - Values must satisfy a condition.\nd, DEFAULT - Sets a default value if none is provided,\n5. Aqgregate Functions : Used to perform calculations on multiple rows.\nlike - COUNT(), SUM(), AVG(), MIN(), MAX()\nBOSSCODER\naAcAGEMY",
+  "company": "Bosscoder",
+  "field": "SQL",
+  "topics": [
+   "joins",
+   "groupby",
+   "nulls",
+   "optimization",
+   "career"
   ]
  },
  {
@@ -1823,6 +1854,20 @@
   ]
  },
  {
+  "id": "7393490122647904258",
+  "author": "Mohit Motwani",
+  "author_url": "https://www.linkedin.com/in/ACoAAB9WWgwBa-PCgzpuUignc9_gPAa4ubfOOKc",
+  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7393490122647904258/",
+  "time": "1yr",
+  "text": "[OCR from post images]\n> Spark\nay) Playground\nPySpark Syntax Cheat\nSheet - Quick Syntax\nGuide For Data\nEngineers\nWelcome to the Spark Playgroand’s Py Spark Syntax Cheat Sheet! This document is\ndesigned to provide a quick reference to essential PySpark functions and operations.\nCheck out the Spark Playground website here\nCreate DataFrame\nfrom pyspark.sq! import SparkSession\nspark = SperkSession. builder appNamet\"Exemple”| getOrtreatet}\nGata = [(1, “Alice*, 79). (2, “Bob *, 351]\ndg? = spark createDataFrameldata, (*id\", “name”, “age\"]l\na? show)\nExplicit Schema\nfram pyspark.sql.types import StructType. StructField, integerType. Strieg Type\nschoama = 5\nStrvctField(*i*, Denestiveetk True),\nStructFieli(*name\", StringTypet}. True).\nStructField(\"age”. IntegerTypel), True)\nb\nOf = spark createDataFrameldata, schema)\nGf printSchemall\nof .show)\n# Scheme as 3 string\ndata = [(1, “Alice”, 29), (2, \"Bob\", 35)]\nschema = “id INT, mame STRING, age INT™\nof = spark createDetaFrameldata, schema=schemal\n# Scheme String with Flow and Boolean Types\npivscgic = “INT, mame STRING, salary FLOAT, is_asctive BOOLEAN”\n= [C1, “Alice, 0000.75, True), (2, \"Heb\", 6000050, False]\npad = spert createOetaframeldsts, schema=schemal\n# Scheme String with Dare ang Tintestane\nfrom datetime import dete. datetime\nschema = “id INT, name STRING, join_date DATE, last login TIMESTAMP\"\nGata = (C1, “Alice, datel2023, 1, 15), datetime|2024, 3, 10, 14, 30, OM,\n(2, \"Bod\", date{2023, 1, 15). datetime{2024, 3, 10, 14, 30, OF)\n@ = spark createDataFrameldata, schema=schemal\n~\nUsing a List of Dictionaries\nfram pyspark.sql import SoarkSessian\nspark = SparkSession. builder. appName\"Exampie\"|.getOrcreatat}\ndata = [\n{\"id*: 1, “name: “Alice”, “age: 29},\n{\"id*: 2, “name: \"Bob\", “age”: 35}\n@ = sport createDetaframeldatal\nof shoe)\nReading Files\n# Basic CSV fies\nOf = spark read format! csy\") kad “/pathyto/saenple csv\")\n#csv with header\nGf = spark read. option header*, Truel. csel\"/pattitosamgle.cay\")\n# muitinie aotions\nGf = spark read option! inferSchema’, True). option! delimiter’.\".\").csvi\"/path/to!san\n7 mith deivied schema\nfrom pyspark.sql.types import StructType. Structfield, StongType. IntegerType\nschema = StructTyped[\nStructFiehi(Cname*, StringTypet}. True),\nStructField(*age”. IntegerTypel), True!\nIt\n@ > spark read fonmat(csy\") schemalschema) load\" /paltvtasampie cay\")\nOe OnE nS nT OTD ST re Oe SOT eT .\n# Sasic SOW He\n@ = spark resd.format! json\"). load|\"/pathito/sam@le.json\"}\n# /SOW with srolti-ine records\nGf & spark read.option| multiline\", Truel.|son(\"/pathyto/sample json\")\n# (SOW with a defined schema\nfrom pyspark.sql.types import StructType. StructField, StingType. IntegerType\nschema = StructTypel[\nStructFicki(*name\", StringTypet}, True),\nStrvctFieki( age”. IntegerTypel), True)\nIh\nOf > spark read fonmat( json\") schemalschema) load /pathtosample jsan*)\nHere's the full set of examples for writing files in PySpark, covering CS¥, JEON, Parquet,\nORC, amd Delta formats:\nWriting Files\nCSV Files",
+  "company": "General",
+  "field": "PySpark/Spark",
+  "topics": [
+   "career",
+   "cheatsheet"
+  ]
+ },
+ {
   "id": "7393478765290582016",
   "author": "Gunja Singh",
   "author_url": "https://www.linkedin.com/in/ACoAAF8-9vgBiQ0nthh_6w0bw-q49JHKYYMchGE",
@@ -1896,6 +1941,26 @@
   ]
  },
  {
+  "id": "7392301034758602752",
+  "author": "Sindhu B",
+  "author_url": "https://www.linkedin.com/in/ACoAAD5zRswBQ3G_113i6DCzs9wcjdQFQEQugJA",
+  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7392301034758602752/",
+  "time": "1yr",
+  "text": "[OCR from post images]\nAmerican Express Data Analyst\nInterview Questions\nExperience: 0-3 Years\nCTC: 17-19 LPA\nPrepared By Mandar Patil\nSQL Questions:\n1. Write a query to find duplicate rows in a table.\nTa detect dughcates, identity columens that should be unique and group\nOy them.\nExample:\nSELECT column], ¢oluenn2, OOUNT(*) AS count\nFROM your_table\nGROUP BY columml, column?\nMAVING QOUNT|*) >a;\nExplanation:\n* GROUP BY combines rows with the same values in the specified\ncolurnns.\n* HAVING COUNT[\"] > 1 filters those combieations that otour mare\nthan ance, indicating duplicates,\nTip: Add ROW NUMBERS) or RANK) with CTE to highlight or delete\nduplicates if needed\nMandarPat\n2. Explain the difference between INNER JOIN and OUTER\nJOIN with examples.\nINNER JOIN:\nReturns only matching records from both tables.\nSELECT ¢.name, d.department_name\nFROM emmlayees @\nONNER JOWN departments d ON e.department_id = d.department_id;\n* Output: Only employees who belong to a department\nLEFT OUTER JOIN:\nReturns all records fram the left table, and matching records from the\nright table, Hf na match, WULL is returned,\nSELECT ¢.name, d.department_name\nFROM ammloyees @\nLEFT JOON departments d ON e.department_id = d.departrent_id;\n* Qutput: All employees, with department info where available,\nRIGHT OUTER JOIN:\nReturns all records fram the right table, and matching records fram the\nlett.\nFULL OUTER JIM:\nReturns all records from both tables, matching where possible.\nKey Difference:\n* INNER JOON = intersection [matched data only)\n* OUTER JOON = union + NULLS [matched + umatched data}\nMandarPat\n3. Write a query to fetch the second-highest salary from\nan employee table.\nOption 1; Using DISTINCT, ORDER BY, and LOMIT [MySQL/PostgresQL)\nSELECT DISTINCT salary\nFROM employees\nORDER BY salary DESC\nLIMIT 1 OFFSET 1;\nOption 2: Using subquery (Gemerkc SOL)\nSELECT MAX|salary}\nFROM employees\nWHERE salary < (SELECT MAX[Salaery) FROM empires |;\nExplanation:\n* The subquery fetches the highest salary.\n* The outer query fieds the maximum salary bess than the highest —\ngiving the second highest.\n4,How do you use GROUP BY and HAVING together?\nProvide an example.\nUse GROUP BY to group data and HAVING to filter aggregated results\n(uMfike WHERE, which filters raw rors),\nSELECT department_id, COUNT/\") AS emp_count\nFROM employees\nGROUP BY department_id\nHAVING COUNT|\") > 5:\nExplanation:\n* Groups employees by department.\n* Filters groups where the count of employees is more than 5.\nMandar Pat|\n5. Write a query to find employees earning more than\ntheir managers.\nAssure the table employees hag\nemp_id, name, salary, manager_id\nSELECT ename AS employee_name, ¢.salary, m.name 4S manager_name,\nm.salary AS manager_salary\nFROM ermmlayees e\nICQN employees im OM emanagerid = memp id\nWHERE e-salary > m.salary:\nExplanation:\n* SelF-join: matches employees [e) with their managers [m)\n* Filters thase where employee's salary > manager's salary.\n6, What is a window function in SOL? Provide examples of\nROW_NUMBER and RANK.\nDefinition:\nA window function performs calculations across a set of table rows\nrelated to the current row — without collapsing rows like GROUP BY.\nSyntax:\nFUNCTION NAME) OVER (PARTITION BY column ORDER BY column)\nExample: ROW_NMUMBER(}\nAssigns a unique sequential number to each row within a partition.\nSELECT name, department, salary,\nROW _NUMBER() OVER (PARTITION BY department ORDER BY salary\nDESC) AS row_mum\nFROM employees;\nMandarPat\nEach employee with the same department pets a row number based on\nsalary rank [highest first).\nExample: RANK)\nAssigns the same rank to rows with equal values, but skips the next\nrarikes}.\nSELECT name, department, salary.\nRANK() OVER (PARTITION BY department ORDER BY salary DESC) AS\nrari _rum\nFROM employees;\n* 2 employees have the same salary, both get rank 1, and the next\ngets rank 3,\n7. Write a query to fetch the top 3 performing products\nbased on sales,\nAssume table sales_data has:\nproduct_id, product_name, total sales\nSELECT product_id, product_name, total_sales\nFROM sales_data\nORDER AY total_sales DESC\nLIT 3;\nAltermate using RANK) (if ties matter):\nSELECT product_id, product_name, total_sales\nFROM [\nSELECT *, RANK{) OVER (ORDER BY total_sales DESC) AS rank_num\nFROM sales data\n] ranked_sales\nWHERE rank_nian <- 3;\nMaida Patil",
+  "company": "American Express",
+  "field": "SQL",
+  "topics": [
+   "window-functions",
+   "joins",
+   "groupby",
+   "dedup",
+   "cte",
+   "second-highest",
+   "optimization",
+   "career"
+  ]
+ },
+ {
   "id": "7392043051998830592",
   "author": "Aditya Bansal",
   "author_url": "https://www.linkedin.com/in/ACoAAB8c2Z8Bcu4nHPJW24bZAavnMChCO7Q0wCQ",
@@ -1936,6 +2001,37 @@
   "field": "DSA",
   "topics": [
    "career",
+   "cheatsheet"
+  ]
+ },
+ {
+  "id": "7387704972622262272",
+  "author": "Surbhi Goyal",
+  "author_url": "https://www.linkedin.com/in/ACoAACN2Wz0BAtXYDTNFKXbgQKMrYbd7fEgJXAU",
+  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7387704972622262272/",
+  "time": "1yr",
+  "text": "[OCR from post images]\nSnowflake Data €LLIPSDS\nEOUCATION\nEngineering Roadmap\nCloud & Data Warehouse Foundations\nDescription: basics of cloud computing and modern\ndata warehouse design\nSnowflake Architecture Deep Dive\nDescription: Understand Snowflake’s architecture\nvirtual warehouses, micro-partitions, andcompute\n& storage\n==)\nData Loading & File Formats\nDescription: Load data into Snowflake and\nWork with CSV, JSON, and Parquet.\nQuerying & Transformations\nDescription: Write advanced SQL in Snowflake\nTime Travel & Cloning\nDescription: Use Time Travel to recover past data\nwww.educationellipse.com\n€ELLIPS>\nPerformance Tuning & Cost Optimization\nDescription: control costs using clustering, caching, query\nplans, and auto-suspend.\nRole-Based Access Control (RBAC)\nDescription: Secure Snowflake using roles, grants, and\nleast-privilege access policies.\nData Sharing & Marketplace\nDescription: Share live datasets across\naccounts securely. Explore Snowflake\nMarketplace for external data.\n—————\nSnowpark & Python UDFs\nDescription: Write Python code inside Snowflake using\nSnowpark. Build complex logic with UDFs\n———=f}\nReal-World Projects & Integrations\nDescription: Build ETL and streaming pipelines with Airflow,\ndbtFivetran, and Kafka. Use Git & Cl/CD.\nwww.educationellipse.com",
+  "company": "General",
+  "field": "Snowflake",
+  "topics": [
+   "delta-lake",
+   "streaming",
+   "optimization",
+   "system-design",
+   "career"
+  ]
+ },
+ {
+  "id": "7384105468132175873",
+  "author": "Srilaxmi Nelluri",
+  "author_url": "https://www.linkedin.com/in/ACoAADK7r80BtpA-83LDNBGaz8lSWpC07fJ2e24",
+  "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7384105468132175873/",
+  "time": "1yr",
+  "text": "[OCR from post images]\nSOL\nCheat Sheet\nSihe_ coding wrard\n1. Creating Tables:\nCREATE TABLE table_name (\ncolumn! datatype,\ncolumn2 datatype,\ncolumn3 datatype\n3\n2. Inserting Data:\nINSERT INTO table_name (column), column2)\nVALUES (valuel, value2);\nWeb Developer »\nSihe_ coding wrard\n3. Selecting Data:\nSELECT columnt, column2\nFROM table_name;\n4. Selecting All Columns:\nSELECT. *\nFROM table_name;\n5. Updating Data:\nUPDATE table_name\nSET column! = valuel, column2 = value2\nWHERE condition;\nW oD\nWeb Developer (0) »>\n@ihe_ coding ward\n6. Deleting Data:\nDELETE FROM table_name\nWHERE condition;\n7. Dropping Tables:\nDROP TABLE table_name;\n8. Altering Tables:\nALTER TABLE table_name\nADD column_name datatype;\nComment \"SQL\" for SQL CheatSheet\na\nWeb Developer (0s) »\n®the_coding_witard\n9. Joins:\nINNER JOIN\nSELECT columni, column2\nFROM table1\nINNER JOIN table2\nON table1.column = table2.column;\nLEFT JOIN\nSELECT column1, column2\nFROM table’\nLEFT JOIN table2\nON tablel.column = table2.column;\nRIGHT JOIN\nSELECT columni, column2\nFROM table’\nRIGHT JOIN table2\nON tablel.column = table2.column:;\na>",
+  "company": "General",
+  "field": "SQL",
+  "topics": [
+   "joins",
    "cheatsheet"
   ]
  },

@@ -1,0 +1,22 @@
+Row and Column
+
+© Arow is a horizontal arrangement of data moving froen right ta bett, it is
+often referred to as a record of a tuple. It represents individual data
+entries.
+
+® Acolumn és a vertical arrangement of data moving from top to bottom. it
+is often referred to as an attribute or a field. & represents the
+characteristics or properties of the data.
+
+txamole- 4 “Qustomers” table might have columns like CustomeriD, Name,
+Ernail, and Phone with each row representing a different customer.
+
+® SQL stands for Structured Query Language was initially developed by
+SM.
+
+© = Witially it was called as SEQUEL (Structure English Query Language}
+
+* SQLs 2 programming language used to ieiteract with database,
+
+* SOL allows you to create, read, update, and delete (CRUD) data ins
+relational database.
