@@ -86,7 +86,11 @@
     optAll.value = "";
     optAll.textContent = labelAll;
     select.appendChild(optAll);
-    const sorted = [...counts.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+    const sorted = [...counts.entries()].sort((a, b) => {
+      const la = fmt ? fmt(a[0], a[1]) : a[0];
+      const lb = fmt ? fmt(b[0], b[1]) : b[0];
+      return la.localeCompare(lb);
+    });
     for (const [v, c] of sorted) {
       const o = document.createElement("option");
       o.value = v;
