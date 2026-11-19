@@ -25,6 +25,15 @@
     "cloud": "Cloud",
     "sql-basics": "SQL basics",
     "sql-coding": "SQL coding",
+    "spark-internals": "Spark internals",
+    "databricks": "Databricks",
+    "adf": "ADF",
+    "cicd": "CI/CD",
+    "file-formats": "File formats",
+    "analytics-design": "Analytics design",
+    "python-coding": "Python coding",
+    "gaps-islands": "Gaps & islands",
+    "general": "General",
   };
   const topicLabel = (t) => TOPIC_LABELS[t] || t;
 

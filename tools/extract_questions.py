@@ -290,27 +290,38 @@ def detect_field(q: str, post_field: str) -> str:
 
 
 TOPICS_Q = [
+    ("behavioral", r"tell me about|describe (a|an|your)|have you (ever|handled|worked)|conflicting (requirements|priorities)|stakeholders?|client communication|production (failure|issue)|took ownership|tight deadline|cross-functional|business decision|under pressure|non-technical"),
     ("window-functions", r"window function|row_number|dense_rank|\brank\b|lag\b|lead\b|partition by|ntile"),
     ("joins", r"\bjoin\b|inner join|left join|full outer|self join|anti join|cross join|broadcast join|shuffle join"),
     ("aggregations", r"group by|having|aggregat|count\(|sum\(|avg\(|conditional aggregation|pivot"),
-    ("cte", r"\bcte\b|common table expression|recursive"),
+    ("cte", r"\bctes?\b|common table expression|recursive"),
+    ("gaps-islands", r"gap[s]? (in|analysis)|islands|sequential (id|ids)|last \d+ months but not|previous \d+ months"),
     ("nulls", r"\bnull\b|coalesce|nvl|isnull|fillna|dropna|missing (values|data|records)"),
-    ("dedup", r"duplicat|dedup|dropduplicates"),
+    ("dedup", r"duplicat|dedup|dropduplicates|first occurrence"),
     ("topn-ranking", r"second (highest|largest|most)|2nd highest|nth highest|nth (record|salary)|top[- ]?\d|top n\b|highest (salary|paid)|kth"),
     ("consecutive", r"consecutive"),
-    ("running-total", r"running total|cumulative|moving average|rolling"),
-    ("pyspark", r"pyspark|dataframe|rdd|withcolumn|explode"),
-    ("delta-lake", r"delta lake|delta table|time travel|z-order|\boptimize\b|vacuum|merge\b"),
+    ("running-total", r"running total|running balance|cumulative|moving average|rolling"),
     ("scd", r"\bscd\b|slowly changing"),
+    ("delta-lake", r"delta lake|delta table|delta live|delta\b|\bdlt\b|time travel|z-order|vacuum|merge into|change data feed"),
     ("streaming", r"streaming|kafka|watermark|exactly-once|real.?time|late.?arriving"),
-    ("data-modeling", r"star schema|snowflake schema|fact (table|and)|dimension|olap|oltp|lakehouse|data (warehouse|lake)|schema (evolution|drift)|normali"),
-    ("optimization", r"optimi[sz]|performance|slow|query plan|explain|index|shuffle|skew|salting|broadcast|cach|repartition|coalesce|partition|small file"),
-    ("etl-cdc", r"\betl\b|\belt\b|\bcdc\b|incremental|idempotent|data quality|audit"),
+    ("spark-internals", r"\bdag\b|\bstage\b|\btasks?\b|spark\s?(ui|context|session|driver|executor|architecture|memory|internals)|sparkcontext|sparksession|lazy evaluation|narrow (and|vs) wide|catalyst|aqe|adaptive query|fault tolerance|transformation and action|mapreduce|hadoop"),
+    ("databricks", r"databricks|unity catalog|auto loader|cluster siz|notebook|all-purpose cluster|job cluster"),
+    ("adf", r"copy activity|mapping data flow|wrangling|linked service|integration runtime|\btriggers?\b|lookup activity|foreach|metadata-driven|pipeline (runs?|failed|failure|design)"),
+    ("cicd", r"\bci/?cd\b|flake8|black formatter|\byaml\b|git (stash|pull|merge|rebase)|unit tests?|deployment|devops"),
+    ("file-formats", r"\bcsv\b|\bexcel\b|\bjson\b|\bparquet\b|\borc\b|\bavro\b|delimiter|comma|file format"),
+    ("analytics-design", r"design an analytics|kpi|\bengagement\b|retention|dashboard|metrics|social media platform|e-?commerce platform|funnel|filter bots|interaction|measure .*(success|performance)"),
+    ("ml-ai", r"langchain|langgraph|\bagents?\b|cortex|snowpark|machine learning|\bmse\b|\brmse\b|embedding|\bllm\b|\brag\b|model training"),
+    ("python-coding", r"second[- ]largest|non[- ]repeating|missing number|longest substring|max(imum)? occurring|factorial|fibonacci|frequency of words|sort a list|merge (multiple|two)|smallest and largest|revers(e|ing)|mirror(ed)? sequence"),
+    ("data-modeling", r"star schema|snowflake schema|fact (table|and)|dimension|olap|oltp|lakehouse|data (warehouse|lake)|schema (evolution|drift|change)|normali|bronze|silver|gold|medallion|database schema|design .{0,20}schema"),
+    ("pyspark", r"pyspark|dataframe|rdd|withcolumn|explode|udf|\bspark\b"),
+    ("optimization", r"optimi[sz]|performance|slow|query plan|explain plan|\bindex(es)?\b|shuffle|skew|salting|broadcast|cach|repartition|coalesce|partition|small file|bottleneck|oom|executor|pushdown"),
+    ("etl-cdc", r"\betl\b|\belt\b|\bcdc\b|incremental|idempotent|data quality|audit|backfill|staging|bronze layer|metadata column|reconcile|monitor|alert|root cause|observability|validate|anomal|newly inserted|cleaning|accurate|missing (hourly|data)"),
+    ("system-design", r"design (the|an|a)|architecture|scal(e|ing) a pipeline|backpressure|recommendation engine|cap theorem|multithreading|data structure to|distributed system|ingestion architecture|high.?velocity|transient table|temporary table|authentication|access-control|security"),
     ("python", r"python|pandas|numpy|decorator|generator|list comprehension|mutable|immutable"),
-    ("dsa", r"linked list|binary search|sliding window|two.pointer|lru|anagram|palindrome|time complexit|heap|\bdsa\b"),
-    ("power-bi", r"power ?bi|\bdax\b"),
-    ("cloud", r"\bazure\b|\badf\b|data factory|adls|synapse|event hub|\baws\b|\bs3\b|\bglue\b|redshift|lambda|kinesis|\bgcp\b|bigquery|dataflow|pub/sub|snowflake|fabric"),
-    ("sql-basics", r"\bwhere\b|\bhaving\b|union|truncate|delete\b|drop\b|primary key|unique|constraint|execution order|isnull"),
+    ("dsa", r"linked list|binary search|sliding window|two.pointer|lru|anagram|palindrome|time complexit|heap|\bdsa\b|array|string\b|sort(ing)? (a|the|without)|stream of integers"),
+    ("power-bi", r"power ?bi|\bdax\b|sumx"),
+    ("cloud", r"\bazure\b|\badf\b|data factory|adls|synapse|event hub|\baws\b|\bs3\b|\bglue\b|redshift|lambda|kinesis|\bgcp\b|bigquery|dataflow|pub/sub|snowflake|fabric|snowpark|cortex"),
+    ("sql-basics", r"\bwhere\b|\bhaving\b|union|truncate|delete\b|drop\b|primary key|foreign key|unique|constraint|execution order|isnull|case (when|statement)|syntax|transaction|\bcount\b|what is a database"),
 ]
 
 
@@ -398,6 +409,16 @@ def main():
         })
 
     questions.sort(key=lambda x: x["sources"][0], reverse=True)
+
+    # reshuffle: group questions by primary topic (first hit), biggest groups first,
+    # newest sources within each group — so the bank reads topic-by-topic
+    def primary_topic(q):
+        return q["topics"][0] if q["topics"] else "general"
+
+    psize = Counter(primary_topic(q) for q in questions)
+    group_rank = {t: i for i, t in enumerate(sorted(psize, key=lambda t: (t == "general", -psize[t], t)))}
+    questions.sort(key=lambda q: (group_rank[primary_topic(q)], -int(q["sources"][0])))
+
     # ensure unique ids (a question may repeat if two clusters share the first source)
     seen = set()
     for i, q in enumerate(questions):
@@ -415,6 +436,8 @@ def main():
     print("\ncompanies:", Counter(q['company'] for q in questions).most_common(12))
     print("\nexp:", Counter(q['exp'] for q in questions).most_common())
     print("\ntop topics:", Counter(t for q in questions for t in q['topics']).most_common(15))
+    print("\nprimary-topic groups:", Counter(q['topics'][0] if q['topics'] else 'general' for q in questions).most_common())
+    print("no-topic remaining:", sum(1 for q in questions if not q['topics']))
 
 
 if __name__ == "__main__":
